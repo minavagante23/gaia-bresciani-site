@@ -17,6 +17,43 @@ export interface Article {
 
 const articles: Article[] = [
   {
+    slug: 'ansia-sociale-timidezza',
+    date: '21 giugno 2026',
+    publishedAt: '2026-06-21T00:00:00.000Z',
+    readTime: '6 min',
+    title: 'Ansia sociale: quando la timidezza limita la vita quotidiana',
+    excerpt:
+      'Rossore, paura di essere giudicati, evitamento di situazioni sociali: come riconoscere l\'ansia sociale, distinguerla dalla semplice timidezza e quando può essere utile un percorso psicologico.',
+    tags: ['Ansia', 'Relazioni'],
+    content: [
+      'Essere timidi non è un problema. Molte persone si sentono un po\' a disagio in contesti nuovi, davanti a un gruppo o quando devono parlare di sé. L\'ansia sociale è diversa: non è solo imbarazzo passeggero, ma una paura persistente di essere osservati, giudicati o umiliati, che può condizionare lavoro, studio, relazioni e momenti quotidiani che per altri sembrano semplici.',
+      { type: 'h2', text: 'Timidezza o ansia sociale: come capire la differenza' },
+      'La timidezza diventa un disagio da osservare quando la paura delle situazioni sociali dura nel tempo, è sproporzionata rispetto al contesto e porta a evitare ciò che conta. Non si tratta solo di "non essere portati per la gente": spesso chi convive con ansia sociale desidera relazionarsi, ma il corpo e la mente reagiscono come se ci fosse un pericolo reale.',
+      { type: 'h2', text: 'I segnali più comuni' },
+      'Alcuni segnali che si ripetono con frequenza:',
+      {
+        type: 'list',
+        items: [
+          'paura intensa di parlare in pubblico, fare domande o esporre un\'opinione',
+          'disagio marcato quando si è al centro dell\'attenzione, anche per poco tempo',
+          'evitare feste, cene, riunioni o chiamate per timore di imbarazzo',
+          'preoccupazione anticipatoria: si pensa alla situazione sociale giorni prima',
+          'sintomi fisici come rossore, tremore, sudorazione, nodo alla gola o tachicardia',
+          'dopo un incontro sociale, rivivere mentalmente ogni frase per paura di aver "detto qualcosa di sbagliato"',
+        ],
+      },
+      { type: 'h2', text: 'Il circolo che mantiene il problema' },
+      'L\'ansia sociale si alimenta spesso con l\'evitamento. Se una situazione fa paura, evitarla porta sollievo immediato. Nel breve periodo funziona; nel lungo periodo, però, la mente impara che quella situazione è davvero pericolosa e la paura si rafforza. Così si restringe sempre di più lo spazio di vita: meno opportunità, meno relazioni, meno fiducia in sé.',
+      'Un altro meccanismo frequente è l\'attenzione ipervigile al giudizio altrui. Chi è in ansia sociale tende a leggere nei volti degli altri segnali di critica o rifiuto, anche quando non ci sono. Questo aumenta l\'imbarazzo e conferma la convinzione di non essere "all\'altezza".',
+      { type: 'h2', text: 'Cosa può aiutare, in concreto' },
+      'Alcuni passi utili possono essere preparare gradualmente situazioni temute invece di evitarle del tutto, osservare come il corpo reagisce senza fuggire subito, e imparare a distinguere tra il giudizio immaginato e quello reale. Non si tratta di "diventare estroversi": si tratta di recuperare libertà nelle relazioni e nelle situazioni che contano davvero.',
+      'Quando l\'ansia è molto intensa, tecniche di respirazione o grounding possono aiutare nel momento, ma da sole raramente bastano se il problema è radicato e si ripete da tempo.',
+      { type: 'h2', text: 'Quando può servire un percorso psicologico' },
+      'Un percorso psicologico può essere utile quando l\'ansia sociale limita scuola, lavoro, amicizie o la vita di coppia, quando l\'evitamento diventa la strategia principale o quando il disagio è accompagnato da bassa autostima, insonnia o attacchi d\'ansia. L\'obiettivo non è cancellare la sensibilità, ma costruire un rapporto più stabile con gli altri e con sé stessi: imparare a stare in situazioni sociali senza sentirsi in costante allerta.',
+      'Se ti riconosci in questi segnali e sei in zona Credaro, Sarnico o basso Lago d\'Iseo, un primo colloquio può aiutarti a capire quanto il disagio incide sulla tua vita e da dove partire per affrontarlo con gradualità.',
+    ],
+  },
+  {
     slug: 'perfezionismo-ansia-da-prestazione',
     date: '2 giugno 2026',
     publishedAt: '2026-06-02T00:00:00.000Z',
@@ -360,6 +397,10 @@ export interface ArticleHero {
 }
 
 const articleHeroes: Record<string, ArticleHero> = {
+  'ansia-sociale-timidezza': {
+    src: '/assets/approfondimenti/approfondimenti-ansia-sociale.webp',
+    alt: 'Ansia sociale: disagio in contesti con altre persone e paura del giudizio',
+  },
   'perfezionismo-ansia-da-prestazione': {
     src: '/assets/approfondimenti/approfondimenti-perfezionismo.webp',
     alt: 'Perfezionismo e ansia da prestazione: pressione di dover fare tutto bene',
