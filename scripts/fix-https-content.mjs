@@ -22,19 +22,18 @@ function walk(dir, files = []) {
   return files;
 }
 
-function injectCssPreload(html) {
-  const match = html.match(/<link rel="stylesheet" href="(\/_next\/static\/css\/[^"]+\.css)"/);
-  if (!match) return html;
+function makeCssNonBlocking(html) {
+  const stylesheetPattern =
+    /<link rel="stylesheet" href="(\/_next\/static\/css\/[^"]+\.css)"[^>]*\/?>/g;
 
-  const href = match[1];
-  if (html.includes(`as="style" href="${href}"`)) {
-    return html;
-  }
+  return html.replace(stylesheetPattern, (tag, href) => {
+    if (tag.includes('onload=')) return tag;
 
-  return html.replace(
-    `<link rel="stylesheet" href="${href}"`,
-    `<link rel="preload" as="style" href="${href}" /><link rel="stylesheet" href="${href}"`,
-  );
+    return [
+      `<link rel="preload" as="style" href="${href}" onload="this.onload=null;this.rel='stylesheet'" />`,
+      `<noscript><link rel="stylesheet" href="${href}" /></noscript>`,
+    ].join('');
+  });
 }
 
 function dedupeImagePreload(html) {
@@ -68,7 +67,7 @@ for (const file of walk(outDir)) {
     next = next.replaceAll(from, to);
   }
 
-  next = injectCssPreload(next);
+  next = makeCssNonBlocking(next);
   next = dedupeImagePreload(next);
 
   if (next !== original) {

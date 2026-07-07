@@ -116,6 +116,7 @@ export default function Hero() {
                   height={HERO_IMAGE.height}
                   decoding="sync"
                   fetchPriority="high"
+                  sizes="(max-width: 1024px) 300px, 350px"
                   className="h-full w-full object-cover"
                 />
               </div>
