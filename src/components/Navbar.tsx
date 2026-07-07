@@ -25,9 +25,10 @@ export default function Navbar() {
         <Link
           href="/"
           title={linkTitle('/')}
-          className="touch-target font-serif text-primary font-bold text-lg lg:text-xl tracking-tight"
+          className="touch-target font-serif text-primary font-bold text-lg lg:text-xl gap-x-2 sm:gap-x-2.5 flex-wrap"
         >
-          <span className="hidden sm:inline">Psicologa e Psicoterapeuta </span>Gaia Bresciani
+          <span className="hidden sm:inline tracking-tight">Psicologa e Psicoterapeuta</span>
+          <span className="tracking-tight">Gaia Bresciani</span>
         </Link>
 
         <div className="hidden lg:flex items-center gap-8">

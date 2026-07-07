@@ -2,8 +2,6 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {
   buildContentSecurityPolicy,
-  collectScriptHashes,
-  collectStyleHashes,
   injectCspMeta,
 } from './csp-policy.mjs';
 import { formatHeadersFile } from './security-headers.mjs';
@@ -44,9 +42,7 @@ function dedupeImagePreload(html) {
 }
 
 function applyCsp(html) {
-  const scriptHashes = collectScriptHashes(html);
-  const styleHashes = collectStyleHashes(html);
-  const policy = buildContentSecurityPolicy(scriptHashes, styleHashes);
+  const policy = buildContentSecurityPolicy();
   return injectCspMeta(html, policy);
 }
 

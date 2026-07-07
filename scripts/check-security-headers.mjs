@@ -46,15 +46,26 @@ if (metaCsp?.includes('frame-ancestors')) {
   missing += 1;
 }
 
-if (metaCsp?.includes('require-trusted-types-for')) {
-  console.log('require-trusted-types-for (meta CSP): present');
+if (metaCsp?.includes('https://platform.docplanner.com')) {
+  console.log('platform.docplanner.com (meta CSP): present');
 } else {
-  console.error('require-trusted-types-for: missing');
+  console.error('platform.docplanner.com: missing in meta CSP (widget MioDottore)');
   missing += 1;
 }
 
-if (metaCsp?.includes('trusted-types')) {
-  console.log('trusted-types (meta CSP): present');
+if (metaCsp?.includes('strict-dynamic')) {
+  console.error('strict-dynamic: present in meta CSP (blocca gli script statici Next.js)');
+  missing += 1;
+} else {
+  console.log('strict-dynamic (meta CSP): absent');
+}
+
+const frameSrc = metaCsp?.split(';').find((d) => d.trim().startsWith('frame-src'));
+if (frameSrc?.includes('https://platform.docplanner.com')) {
+  console.log('frame-src platform.docplanner.com (meta CSP): present');
+} else {
+  console.error('frame-src: missing https://platform.docplanner.com (widget MioDottore)');
+  missing += 1;
 }
 
 const xfo = head.headers.get('x-frame-options');
