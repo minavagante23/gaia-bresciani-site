@@ -1,5 +1,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import {
+  buildContentSecurityPolicy,
+  collectScriptHashes,
+  collectStyleHashes,
+  injectCspMeta,
+} from './csp-policy.mjs';
+import { formatHeadersFile } from './security-headers.mjs';
 
 const outDir = path.join(process.cwd(), 'out');
 const replacements = [
@@ -22,20 +29,6 @@ function walk(dir, files = []) {
   return files;
 }
 
-function makeCssNonBlocking(html) {
-  const stylesheetPattern =
-    /<link rel="stylesheet" href="(\/_next\/static\/css\/[^"]+\.css)"[^>]*\/?>/g;
-
-  return html.replace(stylesheetPattern, (tag, href) => {
-    if (tag.includes('onload=')) return tag;
-
-    return [
-      `<link rel="preload" as="style" href="${href}" onload="this.onload=null;this.rel='stylesheet'" />`,
-      `<noscript><link rel="stylesheet" href="${href}" /></noscript>`,
-    ].join('');
-  });
-}
-
 function dedupeImagePreload(html) {
   const preloadPattern =
     /<link rel="preload" as="image" href="\/assets\/psicologa-sarnico-gaia-bresciani\.webp"[^>]*>/g;
@@ -48,6 +41,13 @@ function dedupeImagePreload(html) {
     seen = true;
     return tag;
   });
+}
+
+function applyCsp(html) {
+  const scriptHashes = collectScriptHashes(html);
+  const styleHashes = collectStyleHashes(html);
+  const policy = buildContentSecurityPolicy(scriptHashes, styleHashes);
+  return injectCspMeta(html, policy);
 }
 
 if (!fs.existsSync(outDir)) {
@@ -67,14 +67,18 @@ for (const file of walk(outDir)) {
     next = next.replaceAll(from, to);
   }
 
-  next = makeCssNonBlocking(next);
   next = dedupeImagePreload(next);
+  next = applyCsp(next);
 
   if (next !== original) {
     fs.writeFileSync(file, next, 'utf8');
     updatedFiles += 1;
   }
 }
+
+const headersPath = path.join(outDir, '_headers');
+fs.writeFileSync(headersPath, formatHeadersFile(), 'utf8');
+console.log('Security headers template written to out/_headers (for Cloudflare).');
 
 for (const file of walk(outDir)) {
   if (!/\.(css|js|txt)$/.test(file)) continue;

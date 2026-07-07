@@ -18,6 +18,10 @@ const config: Config = {
           /* Variante "funzionale" per testo e CTA: contrasto AA col bianco (4.8:1) */
           deep: '#9C6644',
         },
+        /* Testo secondario con contrasto AA su sfondo #F9F7F2 */
+        muted: '#4A5F65',
+        subtle: '#566B71',
+        whatsapp: '#128C7E',
       },
       fontFamily: {
         serif: ['var(--font-fraunces)', 'Georgia', 'Times New Roman', 'serif'],

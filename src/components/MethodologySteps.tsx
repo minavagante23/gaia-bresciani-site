@@ -56,7 +56,7 @@ export default function MethodologySteps() {
             <Link
               href="/psicologa-sarnico"
               title={linkTitle('/psicologa-sarnico')}
-              className="text-accent-deep hover:underline"
+              className="link-inline"
             >
               la pagina dedicata a Sarnico e al basso Lago d&apos;Iseo
             </Link>

@@ -25,7 +25,7 @@ export default function QuoteSection() {
           </Link>
         </AnimatedSection>
 
-        <AnimatedSection delay={0.15}>
+        <AnimatedSection>
           <div className="relative max-w-3xl mx-auto text-center px-4 sm:px-12">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-3 text-accent/15 text-[5rem] sm:text-[8rem] font-serif leading-none select-none" aria-hidden="true">
               &ldquo;
@@ -37,7 +37,7 @@ export default function QuoteSection() {
                 ma creatore del proprio futuro.
               </p>
               <footer className="mt-6">
-                <cite className="not-italic text-sm text-primary/50 font-sans">
+                <cite className="not-italic text-sm text-muted font-sans">
                   Alfred Adler &mdash; Fondatore della Psicologia Individuale
                 </cite>
               </footer>

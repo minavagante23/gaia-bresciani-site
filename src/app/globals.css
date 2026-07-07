@@ -68,7 +68,7 @@
   }
 
   .eyebrow {
-    @apply text-accent-deep font-sans text-[0.72rem] sm:text-sm font-semibold tracking-[0.22em] uppercase mb-3 sm:mb-4;
+    @apply text-primary-light font-sans text-[0.72rem] sm:text-sm font-semibold tracking-[0.22em] uppercase mb-3 sm:mb-4;
   }
 
   .heading-xl {
@@ -93,11 +93,11 @@
   }
 
   .body-lg {
-    @apply text-[1rem] sm:text-lg leading-[1.82] text-primary/85;
+    @apply text-[1rem] sm:text-lg leading-[1.82] text-primary;
   }
 
   .body-md {
-    @apply text-[0.98rem] sm:text-base leading-[1.82] text-primary/80;
+    @apply text-[0.98rem] sm:text-base leading-[1.82] text-muted;
   }
 
   .glass {
@@ -132,6 +132,18 @@
     @apply inline-flex items-center justify-center border-2 border-primary/20 text-primary px-6 sm:px-7 py-3.5 rounded-full
            text-sm font-medium tracking-wide transition-all duration-300
            hover:border-primary/40 hover:bg-primary/5 active:scale-[0.98];
+  }
+
+  .link-inline {
+    @apply text-accent-deep font-medium underline underline-offset-[3px] decoration-accent-deep/70 hover:decoration-accent-deep;
+  }
+
+  .touch-target {
+    @apply inline-flex items-center min-h-12 min-w-12 py-2;
+  }
+
+  .touch-target-block {
+    @apply flex items-center min-h-12 py-2;
   }
 
   .section-lazy {

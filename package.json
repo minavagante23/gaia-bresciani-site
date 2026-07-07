@@ -4,10 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run check:encoding && next build && node scripts/optimize-images.mjs && node scripts/fix-https-content.mjs",
+    "build": "npm run check:encoding && next build && node scripts/optimize-images.mjs --out-only && node scripts/fix-https-content.mjs",
+    "optimize:images": "node scripts/optimize-images.mjs",
+    "optimize:images:source": "node scripts/optimize-images.mjs --public-only",
     "start": "next start",
     "lint": "next lint",
-    "check:encoding": "node scripts/check-encoding.mjs"
+    "check:encoding": "node scripts/check-encoding.mjs",
+    "check:headers": "node scripts/check-security-headers.mjs"
   },
   "dependencies": {
     "framer-motion": "^11.0.0",

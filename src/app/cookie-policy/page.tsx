@@ -29,7 +29,7 @@ export default function CookiePolicyPage() {
                 <strong>Dott.ssa Gaia Bresciani</strong> &ndash; Psicologa e Psicoterapeuta<br />
                 Via Piave 7, 24060 Credaro (BG)<br />
                 Email:{' '}
-                <a href="mailto:gaia.bresciani23@gmail.com" className="text-accent-deep hover:underline">
+                <a href="mailto:gaia.bresciani23@gmail.com" className="link-inline">
                   gaia.bresciani23@gmail.com
                 </a><br />
                 P.IVA: 04558220168
@@ -76,7 +76,7 @@ export default function CookiePolicyPage() {
                       <th className="text-left px-4 py-2.5 font-semibold text-primary/80 border-b border-primary/10">Durata</th>
                     </tr>
                   </thead>
-                  <tbody className="text-primary/65">
+                  <tbody className="text-muted">
                     <tr>
                       <td className="px-4 py-2.5 border-b border-primary/[0.06]"><code className="text-xs bg-primary/[0.04] px-1.5 py-0.5 rounded">cookie_consent</code></td>
                       <td className="px-4 py-2.5 border-b border-primary/[0.06]">Memorizza le preferenze di consenso dell&apos;utente</td>
@@ -104,13 +104,13 @@ export default function CookiePolicyPage() {
                       <th className="text-left px-4 py-2.5 font-semibold text-primary/80 border-b border-primary/10">Privacy Policy</th>
                     </tr>
                   </thead>
-                  <tbody className="text-primary/65">
+                  <tbody className="text-muted">
                     <tr>
                       <td className="px-4 py-2.5 border-b border-primary/[0.06]">Google Maps</td>
                       <td className="px-4 py-2.5 border-b border-primary/[0.06]">Google LLC</td>
                       <td className="px-4 py-2.5 border-b border-primary/[0.06]">Visualizzazione mappe interattive nella pagina Contatti</td>
                       <td className="px-4 py-2.5 border-b border-primary/[0.06]">
-                        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-accent-deep hover:underline">
+                        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="link-inline">
                           Link
                         </a>
                       </td>
@@ -132,7 +132,7 @@ export default function CookiePolicyPage() {
               <h2 className="heading-md mb-3">Servizi esterni senza cookie</h2>
               <p className="body-md mb-3">
                 Il modulo di contatto utilizza il servizio{' '}
-                <a href="https://formspree.io" target="_blank" rel="noopener noreferrer" className="text-accent-deep hover:underline">Formspree</a>{' '}
+                <a href="https://formspree.io" target="_blank" rel="noopener noreferrer" className="link-inline">Formspree</a>{' '}
                 per l&apos;invio dei messaggi. Formspree riceve i dati inseriti nel modulo
                 (nome, email, telefono, messaggio) al momento dell&apos;invio, ma non installa
                 cookie sul dispositivo dell&apos;utente durante la navigazione.
@@ -189,10 +189,10 @@ export default function CookiePolicyPage() {
                 le impostazioni del proprio browser:
               </p>
               <ul className="list-disc pl-6 space-y-1 body-md">
-                <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer" className="text-accent-deep hover:underline">Google Chrome</a></li>
-                <li><a href="https://support.mozilla.org/it/kb/Attivare%20e%20disattivare%20i%20cookie" target="_blank" rel="noopener noreferrer" className="text-accent-deep hover:underline">Mozilla Firefox</a></li>
-                <li><a href="https://support.apple.com/it-it/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer" className="text-accent-deep hover:underline">Safari</a></li>
-                <li><a href="https://support.microsoft.com/it-it/microsoft-edge/eliminare-i-cookie-in-microsoft-edge-63947406-40ac-c3b8-9956-218d1d5a4d49" target="_blank" rel="noopener noreferrer" className="text-accent-deep hover:underline">Microsoft Edge</a></li>
+                <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer" className="link-inline">Google Chrome</a></li>
+                <li><a href="https://support.mozilla.org/it/kb/Attivare%20e%20disattivare%20i%20cookie" target="_blank" rel="noopener noreferrer" className="link-inline">Mozilla Firefox</a></li>
+                <li><a href="https://support.apple.com/it-it/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer" className="link-inline">Safari</a></li>
+                <li><a href="https://support.microsoft.com/it-it/microsoft-edge/eliminare-i-cookie-in-microsoft-edge-63947406-40ac-c3b8-9956-218d1d5a4d49" target="_blank" rel="noopener noreferrer" className="link-inline">Microsoft Edge</a></li>
               </ul>
               <p className="body-md mt-3">
                 La disattivazione dei cookie tecnici potrebbe compromettere
@@ -216,21 +216,21 @@ export default function CookiePolicyPage() {
               <p className="body-md mt-3">
                 Le richieste possono essere indirizzate al Titolare del Trattamento
                 all&apos;indirizzo{' '}
-                <a href="mailto:gaia.bresciani23@gmail.com" className="text-accent-deep hover:underline">
+                <a href="mailto:gaia.bresciani23@gmail.com" className="link-inline">
                   gaia.bresciani23@gmail.com
                 </a>.
               </p>
               <p className="body-md mt-2">
                 L&apos;utente ha inoltre il diritto di proporre reclamo all&apos;Autorit&agrave;
                 Garante per la protezione dei dati personali:{' '}
-                <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer" className="text-accent-deep hover:underline">
+                <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer" className="link-inline">
                   www.garanteprivacy.it
                 </a>.
               </p>
             </div>
 
             <div className="pt-4">
-              <Link href="/privacy-policy" className="text-accent-deep hover:underline font-medium">
+              <Link href="/privacy-policy" className="link-inline">
                 &larr; Consulta anche la Privacy Policy
               </Link>
             </div>

@@ -43,7 +43,7 @@ export default function EmdrPage() {
                 href="https://emdr.it/emdr-2023/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-accent-deep font-semibold hover:underline"
+                className="link-inline font-semibold"
               >
                 EMDR
               </a>{' '}
@@ -57,27 +57,27 @@ export default function EmdrPage() {
                 href="https://emdr.it/terapeuti/lombardia/provincia/bergamo/comune/credaro/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-accent-deep hover:underline"
+                className="link-inline"
               >
                 terapeuti EMDR della Lombardia
               </a>.
             </p>
             <p className="body-md">
               Per informazioni su sedi e spostamenti, visita la pagina{' '}
-              <Link href="/psicologa-sarnico" className="text-accent-deep hover:underline">
+              <Link href="/psicologa-sarnico" className="link-inline">
                 zona Sarnico e Lago d&apos;Iseo
               </Link>.
             </p>
             <p className="body-md">
               Se desideri un primo confronto prima di iniziare, puoi usare la pagina{' '}
-              <Link href="/contatti" className="text-accent-deep hover:underline">
+              <Link href="/contatti" className="link-inline">
                 contatti
               </Link>{' '}
               per indicare disponibilità e sede preferita.
             </p>
           </AnimatedSection>
 
-          <AnimatedSection delay={0.2} className="lg:col-span-2">
+          <AnimatedSection className="lg:col-span-2">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-soft-lg">
               <Image
                 src="/assets/terapia-emdr-lago-iseo.webp"
@@ -101,7 +101,7 @@ export default function EmdrPage() {
           {indications.map((item, i) => {
             const Icon = item.icon;
             return (
-              <AnimatedSection key={item.text} delay={i * 0.08}>
+              <AnimatedSection key={item.text}>
                 <div className="card-base p-5 flex flex-col items-center text-center h-full">
                   <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center mb-3">
                     <Icon size={20} strokeWidth={1.6} className="text-accent" />
@@ -129,7 +129,7 @@ export default function EmdrPage() {
             </p>
             <p className="body-md">
               Se vuoi una panoramica più ampia sul lavoro clinico, puoi leggere anche la pagina{' '}
-              <Link href="/terapia" className="text-accent-deep hover:underline">
+              <Link href="/terapia" className="link-inline">
                 terapia individuale e di coppia
               </Link>.
             </p>

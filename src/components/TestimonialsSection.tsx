@@ -36,7 +36,7 @@ export default function TestimonialsSection() {
                 ))}
               </div>
 
-              <p className="text-sm text-primary/70 leading-relaxed flex-1 italic">
+              <p className="text-sm text-primary-light leading-relaxed flex-1 italic">
                 &ldquo;{review.text}&rdquo;
               </p>
 

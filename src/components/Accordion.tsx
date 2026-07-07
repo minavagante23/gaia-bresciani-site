@@ -56,7 +56,7 @@ export default function Accordion({ items }: AccordionProps) {
                 >
                   <div className="px-5 sm:px-6 pb-5 sm:pb-6">
                     <div className="h-px bg-primary/[0.06] mb-4" />
-                    <p className="text-sm sm:text-base leading-relaxed text-primary/70">
+                    <p className="text-sm sm:text-base leading-relaxed text-primary-light">
                       {item.answer}
                     </p>
                   </div>

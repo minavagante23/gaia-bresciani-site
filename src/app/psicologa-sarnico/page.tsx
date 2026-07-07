@@ -50,7 +50,7 @@ export default function ZonaSarnicoPage() {
           {highlights.map((item, i) => {
             const Icon = item.icon;
             return (
-              <AnimatedSection key={item.title} delay={i * 0.1}>
+              <AnimatedSection key={item.title}>
                 <div className="card-base p-6 h-full">
                   <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
                     <Icon size={20} strokeWidth={1.6} className="text-accent" />
@@ -112,7 +112,7 @@ export default function ZonaSarnicoPage() {
               <p className="body-md">
                 Quando indicato, puo essere integrato un lavoro specifico sul
                 trauma con{' '}
-                <Link href="/emdr" className="text-accent-deep hover:underline">
+                <Link href="/emdr" className="link-inline">
                   approccio EMDR
                 </Link>.
               </p>
@@ -143,7 +143,7 @@ export default function ZonaSarnicoPage() {
             <p className="body-md">
               Se preferisci evitare lo spostamento, e possibile iniziare
               o proseguire il percorso con{' '}
-              <Link href="/contatti" className="text-accent-deep hover:underline">
+              <Link href="/contatti" className="link-inline">
                 colloqui online
               </Link>{' '}
               sicuri e riservati.
@@ -158,11 +158,11 @@ export default function ZonaSarnicoPage() {
             <Clock size={20} className="text-accent shrink-0 mt-0.5" />
             <p className="body-md">
               Approfondisci i trattamenti:{' '}
-              <Link href="/terapia" className="text-accent-deep hover:underline">
+              <Link href="/terapia" className="link-inline">
                 terapia individuale e di coppia
               </Link>{' '}
               e{' '}
-              <Link href="/emdr" className="text-accent-deep hover:underline">
+              <Link href="/emdr" className="link-inline">
                 terapia EMDR
               </Link>.
             </p>

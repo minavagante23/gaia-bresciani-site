@@ -41,7 +41,7 @@ export default function ConsentIframe({ src, title, className, mapsUrl }: Consen
       </div>
       <div>
         <p className="text-sm font-medium text-primary mb-1">Mappa non disponibile</p>
-        <p className="text-xs text-primary/55 leading-relaxed max-w-xs">
+        <p className="text-xs text-muted leading-relaxed max-w-xs">
           Per visualizzare la mappa interattiva, accetta i cookie funzionali.
         </p>
       </div>

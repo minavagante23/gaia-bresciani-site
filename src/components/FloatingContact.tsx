@@ -17,7 +17,7 @@ export default function FloatingContact() {
         href={WHATSAPP_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex flex-[1.3] items-center justify-center gap-2 rounded-full bg-[#25D366] px-4 py-3 text-sm font-medium text-white active:scale-[0.98] transition-transform"
+        className="flex flex-[1.3] items-center justify-center gap-2 rounded-full bg-whatsapp px-4 py-3 text-sm font-semibold text-white active:scale-[0.98] transition-transform"
         aria-label="Scrivi su WhatsApp alla Dott.ssa Gaia Bresciani, risposta entro 24 ore"
         title="Scrivi su WhatsApp a Gaia Bresciani"
       >

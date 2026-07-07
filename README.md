@@ -42,7 +42,7 @@ Il deploy avviene automaticamente tramite GitHub Actions ad ogni push su `main`.
 Per collegare `www.gaiabrescianipsicologa.it`:
 
 1. In **Settings > Pages > Custom domain** inserisci `www.gaiabrescianipsicologa.it`
-2. Spunta **Enforce HTTPS**
+2. Spunta **Enforce HTTPS** (obbligatorio; da solo non basta per l'header HSTS in audit)
 3. Nel pannello DNS del provider (TopHost) configura:
 
 | Tipo  | Nome | Valore                          |
@@ -60,6 +60,29 @@ www.gaiabrescianipsicologa.it
 ```
 
 5. Attendi 10-30 minuti per la propagazione DNS
+
+### Header di sicurezza (HSTS, COOP, ecc.)
+
+GitHub Pages **non permette** header HTTP personalizzati dal codice. Per superare gli audit serve **Cloudflare** (piano gratuito) davanti al dominio:
+
+1. Crea account su [Cloudflare](https://dash.cloudflare.com) e aggiungi `gaiabrescianipsicologa.it`
+2. Cambia i nameserver su TopHost con quelli indicati da Cloudflare
+3. DNS: record `CNAME` `www` → `<username>.github.io` (proxy **attivo**, nuvola arancione)
+4. SSL/TLS → Overview → **Full**
+5. SSL/TLS → Edge Certificates → **Enable HSTS** → inizia con **1 mese** di max-age, poi aumenta gradualmente
+6. **Rules → Transform Rules → Modify response header** → aggiungi per tutte le richieste:
+   - `Cross-Origin-Opener-Policy: same-origin`
+   - `Cross-Origin-Resource-Policy: same-site`
+   - `X-Content-Type-Options: nosniff`
+   - `Referrer-Policy: strict-origin-when-cross-origin`
+   - `Permissions-Policy: camera=(), microphone=(), geolocation=()`
+   - `X-Frame-Options: SAMEORIGIN`
+
+   (Valori anche in `out/_headers` dopo ogni build, come riferimento.)
+
+7. Verifica: `npm run check:headers`
+
+Non attivare subito HSTS `preload` o `includeSubDomains` finché tutti i sottodomini non usano HTTPS.
 
 ### Verifica deploy
 

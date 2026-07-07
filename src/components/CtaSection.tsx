@@ -57,14 +57,14 @@ export default function CtaSection() {
                 </a>
               </div>
 
-              <p className="text-white/40 text-xs mt-8">
+              <p className="text-white/75 text-xs mt-8">
                 Sedute da 70 a 100 &euro; &middot; Detraibili al 19% &middot; Fattura sanitaria
               </p>
             </div>
           </div>
         </AnimatedSection>
 
-        <AnimatedSection delay={0.1}>
+        <AnimatedSection>
           <div className="card-base card-glow p-6 sm:p-8 max-w-2xl mx-auto">
             <h3 className="heading-md mb-4 text-center">Prenota su MioDottore</h3>
             <p className="body-md text-center mb-6">

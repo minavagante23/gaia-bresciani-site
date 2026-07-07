@@ -71,7 +71,7 @@ export default function TerapiaPage() {
           ].map((item, i) => {
             const Icon = item.icon;
             return (
-              <AnimatedSection key={item.title} delay={i * 0.1}>
+              <AnimatedSection key={item.title}>
                 <div className="card-base p-7">
                   <div className="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
                     <Icon size={22} strokeWidth={1.6} className="text-accent" />
@@ -96,7 +96,7 @@ export default function TerapiaPage() {
               </p>
               <p className="body-md">
                 Quando indicato, integro la{' '}
-                <Link href="/emdr" className="text-accent-deep hover:underline">
+                <Link href="/emdr" className="link-inline">
                   terapia EMDR
                 </Link>{' '}
                 per elaborare traumi, blocchi emotivi e stati di allerta persistenti.

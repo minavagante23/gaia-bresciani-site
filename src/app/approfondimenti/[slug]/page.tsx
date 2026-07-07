@@ -112,7 +112,7 @@ export default function ArticlePage({ params }: PageProps) {
             </div>
           </AnimatedSection>
 
-          <AnimatedSection delay={0.1}>
+          <AnimatedSection>
             <div className="space-y-5">
               {article.content.map((block, i) => {
                 if (typeof block === 'string') {
@@ -144,24 +144,24 @@ export default function ArticlePage({ params }: PageProps) {
 
           <RelatedArticles articles={relatedArticles} />
 
-          <AnimatedSection delay={0.15}>
+          <AnimatedSection>
             <div className="mt-12 pt-8 border-t border-primary/[0.08]">
               <div className="card-base p-6 mb-6 bg-accent/[0.04]">
-                <p className="text-sm text-primary/65 leading-relaxed">
+                <p className="text-sm text-muted leading-relaxed">
                   Se ti riconosci in quello che hai letto, puoi approfondire{' '}
-                  <Link href="/terapia" className="text-accent-deep hover:underline">
+                  <Link href="/terapia" className="link-inline">
                     terapia individuale e di coppia
                   </Link>
                   , valutare se può esserti utile un lavoro{' '}
-                  <Link href="/emdr" className="text-accent-deep hover:underline">
+                  <Link href="/emdr" className="link-inline">
                     EMDR
                   </Link>{' '}
                   oppure vedere come raggiungere lo studio dalla{' '}
-                  <Link href="/psicologa-sarnico" className="text-accent-deep hover:underline">
+                  <Link href="/psicologa-sarnico" className="link-inline">
                     zona di Sarnico e del basso Lago d&apos;Iseo
                   </Link>
                   . Per informazioni e disponibilità, trovi i riferimenti nella pagina{' '}
-                  <Link href="/contatti" className="text-accent-deep hover:underline">
+                  <Link href="/contatti" className="link-inline">
                     Contatti
                   </Link>
                   .

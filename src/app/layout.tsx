@@ -293,7 +293,6 @@ export default function RootLayout({
         <style dangerouslySetInnerHTML={{ __html: CRITICAL_CSS }} />
         <meta httpEquiv="X-DNS-Prefetch-Control" content="on" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
-        <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://platform.docplanner.com; style-src 'self' 'unsafe-inline' https://platform.docplanner.com; img-src 'self' data: https:; font-src 'self' https://platform.docplanner.com; frame-src https://www.google.com https://maps.google.com https://www.miodottore.it; connect-src 'self' https://formspree.io https://platform.docplanner.com; form-action 'self' https://formspree.io https://www.miodottore.it; object-src 'none'; base-uri 'self'; upgrade-insecure-requests; block-all-mixed-content" />
         <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
         <link
           rel="preload"
@@ -303,11 +302,8 @@ export default function RootLayout({
           fetchPriority="high"
         />
         <link rel="alternate" type="text/markdown" href="/llms.txt" title="llms.txt" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `if('serviceWorker'in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js')})}`,
-          }}
-        />
+        <script src="/trusted-types.js" />
+        <script src="/register-sw.js" defer />
       </head>
       <body className="bg-background text-primary antialiased">
         <a

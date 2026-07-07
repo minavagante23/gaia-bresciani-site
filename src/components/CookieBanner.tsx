@@ -72,11 +72,11 @@ export default function CookieBanner() {
                   <h2 className="font-serif font-semibold text-base text-primary mb-2">
                     Questo sito utilizza i cookie
                   </h2>
-                  <p className="text-sm text-primary/65 leading-relaxed mb-4">
+                  <p className="text-sm text-muted leading-relaxed mb-4">
                     Utilizziamo cookie tecnici necessari al funzionamento del sito e, con il tuo
                     consenso, cookie funzionali per le mappe interattive di Google Maps.
                     Puoi accettare, rifiutare o personalizzare le tue preferenze.{' '}
-                    <Link href="/cookie-policy" title={linkTitle('/cookie-policy')} className="text-accent-deep hover:underline">
+                    <Link href="/cookie-policy" title={linkTitle('/cookie-policy')} className="link-inline">
                       Cookie Policy
                     </Link>
                   </p>
@@ -107,7 +107,7 @@ export default function CookieBanner() {
                   className="shrink-0 w-8 h-8 flex items-center justify-center rounded-lg hover:bg-primary/5 transition-colors"
                   aria-label="Chiudi e rifiuta cookie non necessari"
                 >
-                  <X size={16} className="text-primary/40" />
+                  <X size={16} className="text-muted" />
                 </button>
               </div>
             </div>
@@ -130,11 +130,11 @@ export default function CookieBanner() {
             </div>
 
             <div className="px-6 py-5 space-y-5">
-              <p className="text-sm text-primary/65 leading-relaxed">
+              <p className="text-sm text-muted leading-relaxed">
                 Scegli quali categorie di cookie autorizzare. I cookie tecnici sono sempre
                 attivi perch&eacute; necessari al funzionamento del sito.
                 Per maggiori informazioni consulta la{' '}
-                <Link href="/cookie-policy" title={linkTitle('/cookie-policy')} className="text-accent-deep hover:underline">
+                <Link href="/cookie-policy" title={linkTitle('/cookie-policy')} className="link-inline">
                   Cookie Policy
                 </Link>.
               </p>
@@ -147,7 +147,7 @@ export default function CookieBanner() {
                     Sempre attivi
                   </span>
                 </div>
-                <p className="text-xs text-primary/55 leading-relaxed">
+                <p className="text-xs text-muted leading-relaxed">
                   Necessari per la navigazione e il funzionamento del sito.
                   Includono il cookie di memorizzazione delle preferenze di consenso.
                   Non richiedono consenso (art. 122 D.lgs. 196/2003).
@@ -173,7 +173,7 @@ export default function CookieBanner() {
                                     after:shadow-sm" />
                   </label>
                 </div>
-                <p className="text-xs text-primary/55 leading-relaxed">
+                <p className="text-xs text-muted leading-relaxed">
                   Consentono funzionalit&agrave; aggiuntive come le mappe interattive
                   di Google Maps nella pagina Contatti. Questi cookie sono impostati
                   da Google e possono tracciare la navigazione su altri siti.

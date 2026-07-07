@@ -101,7 +101,7 @@ export default function ServicesBentoGrid() {
                 </h3>
                 <p
                   className={`text-sm leading-relaxed ${
-                    service.accent ? 'text-white/80' : 'text-primary/65'
+                    service.accent ? 'text-white/85' : 'text-muted'
                   }`}
                 >
                   {service.description}

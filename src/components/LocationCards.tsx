@@ -40,7 +40,7 @@ const locations = [
 
 export default function LocationCards() {
   return (
-    <section id="dove-ricevo" className="section-padding section-lazy section-wash">
+    <section id="dove-ricevo" className="section-padding section-lazy section-wash pb-28 lg:pb-28">
       <div className="section-container">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <p className="eyebrow">Dove ricevo</p>
@@ -54,7 +54,7 @@ export default function LocationCards() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {locations.map((loc) => {
             const Icon = loc.icon;
             return (
@@ -62,7 +62,7 @@ export default function LocationCards() {
                 key={loc.title}
                 href={loc.link}
                 title={loc.linkTitle}
-                className={`group card-base card-hover card-glow flex flex-col overflow-hidden ${
+                className={`group card-base card-hover card-glow flex flex-col overflow-hidden min-h-[17rem] ${
                   loc.primary ? 'ring-2 ring-accent/20 relative' : ''
                 }`}
               >
@@ -82,7 +82,7 @@ export default function LocationCards() {
                       </span>
                     )}
                     {!loc.primary && loc.title === 'Castenedolo (BS)' && (
-                      <span className="absolute top-3 right-3 text-[0.65rem] font-bold uppercase tracking-widest text-primary/70 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
+                      <span className="absolute top-3 right-3 text-[0.65rem] font-bold uppercase tracking-widest text-primary-light bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
                         Sede secondaria
                       </span>
                     )}

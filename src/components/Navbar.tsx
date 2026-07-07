@@ -25,7 +25,7 @@ export default function Navbar() {
         <Link
           href="/"
           title={linkTitle('/')}
-          className="font-serif text-primary font-bold text-lg lg:text-xl tracking-tight"
+          className="touch-target font-serif text-primary font-bold text-lg lg:text-xl tracking-tight"
         >
           <span className="hidden sm:inline">Psicologa e Psicoterapeuta </span>Gaia Bresciani
         </Link>
@@ -36,7 +36,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               title={linkTitle(link.href, link.label)}
-              className="link-underline text-primary/70 hover:text-primary transition-colors duration-200 text-[0.9rem] font-medium"
+              className="link-underline text-primary-light hover:text-primary transition-colors duration-200 text-[0.9rem] font-medium"
             >
               {link.label}
             </Link>

@@ -107,7 +107,7 @@ export default function ContattiPage() {
               <h3 className="font-serif font-semibold text-base text-primary">
                 Perché molte persone scelgono Credaro
               </h3>
-              <ul className="space-y-2 text-sm text-primary/65">
+              <ul className="space-y-2 text-sm text-muted">
                 <li>Raggiungibile in pochi minuti da Sarnico, Paratico, Villongo e Capriolo.</li>
                 <li>Parcheggio privato presente presso lo studio.</li>
                 <li>Una sede tranquilla, utile per dare continuità al percorso.</li>
@@ -118,21 +118,21 @@ export default function ContattiPage() {
               <h3 className="font-serif font-semibold text-base text-primary">
                 Altre modalità disponibili
               </h3>
-              <p className="text-sm text-primary/65 leading-relaxed">
+              <p className="text-sm text-muted leading-relaxed">
                 La sede di riferimento è a Credaro; quando utile, sono disponibili
                 anche colloqui online e una seconda sede a Castenedolo. Approfondisci{' '}
-                <Link href="/psicologa-sarnico" className="text-accent-deep hover:underline">
+                <Link href="/psicologa-sarnico" className="link-inline">
                   la pagina dedicata a Sarnico e Lago d&apos;Iseo
                 </Link>{' '}
                 e{' '}
-                <Link href="/terapia" className="text-accent-deep hover:underline">
+                <Link href="/terapia" className="link-inline">
                   terapia individuale e di coppia
                 </Link>.
               </p>
             </div>
           </AnimatedSection>
 
-          <AnimatedSection delay={0.15} className="lg:col-span-3">
+          <AnimatedSection className="lg:col-span-3">
             <div className="card-base p-6 sm:p-8" id="contact-form">
               <h2 className="heading-md mb-6">Scrivimi direttamente</h2>
               <p className="text-sm text-primary/60 mb-6">
@@ -152,7 +152,7 @@ export default function ContattiPage() {
         </AnimatedSection>
         <div className="grid md:grid-cols-2 gap-8">
           {studios.map((studio, i) => (
-            <AnimatedSection key={studio.name} delay={i * 0.1}>
+            <AnimatedSection key={studio.name}>
               <div className="space-y-4">
                 <div className="card-base p-5">
                   <div className="flex items-start gap-3">

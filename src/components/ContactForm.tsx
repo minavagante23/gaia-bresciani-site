@@ -121,7 +121,7 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} noValidate className="space-y-5">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-primary/70 mb-1.5">
+          <label htmlFor="name" className="block text-sm font-medium text-primary-light mb-1.5">
             Nome e Cognome *
           </label>
           <input
@@ -140,7 +140,7 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-primary/70 mb-1.5">
+          <label htmlFor="email" className="block text-sm font-medium text-primary-light mb-1.5">
             Email *
           </label>
           <input
@@ -161,7 +161,7 @@ export default function ContactForm() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-primary/70 mb-1.5">
+          <label htmlFor="phone" className="block text-sm font-medium text-primary-light mb-1.5">
             Telefono
           </label>
           <input
@@ -177,7 +177,7 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label htmlFor="preferred_office" className="block text-sm font-medium text-primary/70 mb-1.5">
+          <label htmlFor="preferred_office" className="block text-sm font-medium text-primary-light mb-1.5">
             Sede preferita *
           </label>
           <select
@@ -201,7 +201,7 @@ export default function ContactForm() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
-          <label htmlFor="preferred_time" className="block text-sm font-medium text-primary/70 mb-1.5">
+          <label htmlFor="preferred_time" className="block text-sm font-medium text-primary-light mb-1.5">
             Fascia oraria
           </label>
           <select
@@ -219,7 +219,7 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label htmlFor="subject" className="block text-sm font-medium text-primary/70 mb-1.5">
+          <label htmlFor="subject" className="block text-sm font-medium text-primary-light mb-1.5">
             Oggetto
           </label>
           <input
@@ -235,7 +235,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-          <label htmlFor="message" className="block text-sm font-medium text-primary/70 mb-1.5">
+          <label htmlFor="message" className="block text-sm font-medium text-primary-light mb-1.5">
             Messaggio *
           </label>
           <p className="text-xs text-primary/45 mb-2">
@@ -267,7 +267,7 @@ export default function ContactForm() {
         />
         <span className="text-sm text-primary/60 leading-relaxed">
           Ho letto e accetto la{' '}
-          <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" title={linkTitle('/privacy-policy')} className="text-accent-deep hover:underline">
+          <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" title={linkTitle('/privacy-policy')} className="link-inline">
             Privacy Policy
           </a>
         </span>

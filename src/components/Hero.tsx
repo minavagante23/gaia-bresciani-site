@@ -34,7 +34,7 @@ export default function Hero() {
               <span className="block text-accent-deep">non &egrave; facile</span>
             </h1>
 
-            <h2 className="text-lg lg:text-xl font-medium text-primary/70 max-w-xl">
+            <h2 className="text-lg lg:text-xl font-medium text-primary-light max-w-xl">
               Psicologa e Psicoterapeuta a Credaro, vicino a Sarnico e al Lago d&apos;Iseo
             </h2>
 
@@ -53,7 +53,7 @@ export default function Hero() {
                   <ShieldCheck size={16} className="shrink-0 text-accent" />
                   Approccio chiaro
                 </div>
-                <p className="mt-2 text-sm text-primary/65">
+                <p className="mt-2 text-sm text-muted">
                   Psicoterapia psicodinamica adleriana, con integrazione EMDR
                   quando indicata.
                 </p>
@@ -63,7 +63,7 @@ export default function Hero() {
                   <MapPin size={16} className="shrink-0 text-accent" />
                   Studio comodo
                 </div>
-                <p className="mt-2 text-sm text-primary/65">
+                <p className="mt-2 text-sm text-muted">
                   Credaro, vicino a Sarnico, con parcheggio privato presso lo
                   studio.
                 </p>
@@ -73,7 +73,7 @@ export default function Hero() {
                   <Clock3 size={16} className="shrink-0 text-accent" />
                   Primo passo semplice
                 </div>
-                <p className="mt-2 text-sm text-primary/65">
+                <p className="mt-2 text-sm text-muted">
                   Un primo contatto chiaro, senza pressione, per chi sente che
                   chiedere aiuto non &egrave; facile.
                 </p>
@@ -90,7 +90,7 @@ export default function Hero() {
               </a>
             </div>
 
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-4 text-sm text-primary/50">
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-4 text-sm text-muted">
               <span className="flex items-center gap-2">
                 <span className="h-2 w-2 rounded-full bg-accent" />
                 Primo colloquio orientativo
@@ -128,7 +128,7 @@ export default function Hero() {
                 title="Scheda professionale su Albo Psicologi Lombardia"
                 className="absolute bottom-4 left-4 block max-w-[240px] rounded-2xl border border-primary/[0.04] bg-white px-4 py-3 no-underline shadow-soft transition-shadow duration-300 hover:shadow-soft-lg md:bottom-5 md:left-5 lg:-left-7 lg:bottom-6"
               >
-                <p className="text-[0.65rem] font-medium uppercase tracking-wider text-primary/50">Albo Psicologi</p>
+                <p className="text-[0.65rem] font-medium uppercase tracking-wider text-subtle">Albo Psicologi</p>
                 <p className="mt-0.5 text-sm font-semibold text-primary">N. 22433 &mdash; Lombardia</p>
               </a>
             </div>

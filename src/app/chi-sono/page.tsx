@@ -77,7 +77,7 @@ export default function ChiSonoPage() {
                     href="https://www.opl.it/psicologi/22433/Bresciani-Gaia-Miriam-Teresa"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-accent-deep hover:underline"
+                    className="link-inline"
                   >
                     Albo Professionale degli Psicologi della Lombardia
                   </a>{' '}
@@ -94,7 +94,7 @@ export default function ChiSonoPage() {
                     href="https://www.scuolaadleriana.it/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-accent-deep hover:underline"
+                    className="link-inline"
                   >
                     Istituto Alfred Adler
                   </a>
@@ -112,7 +112,7 @@ export default function ChiSonoPage() {
             </dl>
           </AnimatedSection>
 
-          <AnimatedSection delay={0.2} className="lg:col-span-2 lg:sticky lg:top-28">
+          <AnimatedSection className="lg:col-span-2 lg:sticky lg:top-28">
             <div className="relative mx-auto max-w-[280px]">
               <div
                 className="absolute -inset-5 -z-10 bg-accent/12 blur-2xl gpu"
@@ -128,7 +128,7 @@ export default function ChiSonoPage() {
                   sizes="(max-width: 768px) 280px, 280px"
                 />
               </div>
-              <div className="mt-4 flex items-center gap-3 text-sm text-primary/55">
+              <div className="mt-4 flex items-center gap-3 text-sm text-muted">
                 <span className="h-px w-8 bg-accent/50" />
                 Studio di Credaro (BG)
               </div>
@@ -166,7 +166,7 @@ export default function ChiSonoPage() {
           ].map((item, i) => {
             const Icon = item.icon;
             return (
-              <AnimatedSection key={item.title} delay={i * 0.1}>
+              <AnimatedSection key={item.title}>
                 <div className="card-base p-7 relative overflow-hidden h-full">
                   <span
                     aria-hidden="true"

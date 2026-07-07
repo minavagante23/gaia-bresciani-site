@@ -41,7 +41,7 @@ export default function EsperienzaPage() {
             </p>
           </AnimatedSection>
 
-          <AnimatedSection delay={0.2} className="lg:col-span-2">
+          <AnimatedSection className="lg:col-span-2">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-soft-lg">
               <Image
                 src="/assets/consulenza-psicologica-online-bergamo.webp"
@@ -88,7 +88,7 @@ export default function EsperienzaPage() {
           ].map((item, i) => {
             const Icon = item.icon;
             return (
-              <AnimatedSection key={item.title} delay={i * 0.08}>
+              <AnimatedSection key={item.title}>
                 <div className="card-base p-6 h-full">
                   <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
                     <Icon size={20} strokeWidth={1.6} className="text-accent" />

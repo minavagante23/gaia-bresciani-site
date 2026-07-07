@@ -36,7 +36,7 @@ export default function ApprofondimentiPage() {
           {articles.map((article, i) => {
             const hero = getArticleHero(article.slug);
             return (
-            <AnimatedSection key={article.title} delay={i * 0.06}>
+            <AnimatedSection key={article.title}>
               <Link
                 href={`/approfondimenti/${article.slug}`}
                 className="group card-base card-hover overflow-hidden flex flex-col h-full"
