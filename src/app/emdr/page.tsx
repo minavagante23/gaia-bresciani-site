@@ -5,20 +5,17 @@ import Breadcrumb from '@/components/Breadcrumb';
 import PageHeader from '@/components/PageHeader';
 import AnimatedSection from '@/components/AnimatedSection';
 import InlineCta from '@/components/InlineCta';
+import { createPageMetadata } from '@/lib/seo';
 import { Zap, ShieldCheck, Brain, HeartPulse, AlertTriangle } from 'lucide-react';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: 'EMDR per traumi e ansia vicino Sarnico | Gaia Bresciani',
   description:
     'Terapia EMDR a Credaro per traumi, ansia e ricordi disturbanti. Un percorso graduale per ridurre attivazione emotiva e ritrovare equilibrio.',
-  alternates: { canonical: '/emdr' },
-  openGraph: {
-    title: 'EMDR per traumi e ansia vicino Sarnico | Gaia Bresciani',
-    description:
-      'EMDR a Credaro per traumi, ansia e blocchi emotivi, con valutazione iniziale e piano di lavoro personalizzato.',
-    images: ['/assets/og-share.webp'],
-  },
-};
+  path: '/emdr',
+  ogDescription:
+    'EMDR a Credaro per traumi, ansia e blocchi emotivi, con valutazione iniziale e piano di lavoro personalizzato.',
+});
 
 const indications = [
   { icon: AlertTriangle, text: 'Traumi psicologici singoli o ripetuti' },

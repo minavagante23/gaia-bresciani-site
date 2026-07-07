@@ -1,6 +1,7 @@
 import AnimatedSection from './AnimatedSection';
 import Image from 'next/image';
 import Link from 'next/link';
+import { linkTitle } from '@/lib/link-titles';
 
 export default function QuoteSection() {
   return (
@@ -11,7 +12,7 @@ export default function QuoteSection() {
             href="/psicologa-sarnico"
             className="group relative block max-w-md mx-auto rounded-2xl overflow-hidden shadow-soft-lg transition-[box-shadow,transform] duration-300 hover:shadow-soft-xl hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             aria-label="Psicologa a Sarnico e Lago d'Iseo: studio a Credaro e informazioni sulla zona"
-            title="Psicologa vicino a Sarnico e Lago d'Iseo"
+            title={linkTitle('/psicologa-sarnico')}
           >
             <Image
               src="/assets/psicologa-lago-iseo-sarnico.webp"

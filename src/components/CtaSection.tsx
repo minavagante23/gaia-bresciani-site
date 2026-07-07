@@ -1,6 +1,23 @@
 import AnimatedSection from './AnimatedSection';
-import MioDottoreWidget from './MioDottoreWidget';
+import DeferredMount from './DeferredMount';
 import { Phone, Mail } from 'lucide-react';
+import { linkTitle } from '@/lib/link-titles';
+import dynamic from 'next/dynamic';
+
+const MioDottoreWidget = dynamic(() => import('./MioDottoreWidget'), {
+  ssr: false,
+  loading: () => (
+    <a
+      href="https://www.miodottore.it/gaia-miriam-teresa-bresciani/psicoterapeuta-psicologo-clinico-psicologo/brescia"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+      title="Prenota un appuntamento su MioDottore"
+      className="btn-outline w-full justify-center"
+    >
+      Verifica disponibilit&agrave; su MioDottore
+    </a>
+  ),
+});
 
 export default function CtaSection() {
   return (
@@ -24,6 +41,7 @@ export default function CtaSection() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
                   href="tel:+393408389958"
+                  title={linkTitle('tel:+393408389958')}
                   className="btn-shine w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-accent-deep text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:bg-accent-dark hover:shadow-soft active:scale-[0.98]"
                 >
                   <Phone size={17} />
@@ -31,6 +49,7 @@ export default function CtaSection() {
                 </a>
                 <a
                   href="/contatti/#contact-form"
+                  title={linkTitle('/contatti/#contact-form')}
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 text-white border border-white/20 px-8 py-4 rounded-full font-medium transition-all duration-300 hover:bg-white/20 active:scale-[0.98]"
                 >
                   <Mail size={17} />
@@ -52,7 +71,9 @@ export default function CtaSection() {
               Scegli data e orario direttamente dal calendario.
               Puoi anche leggere le recensioni dei pazienti.
             </p>
-            <MioDottoreWidget />
+            <DeferredMount timeoutMs={4000}>
+              <MioDottoreWidget />
+            </DeferredMount>
           </div>
         </AnimatedSection>
       </div>

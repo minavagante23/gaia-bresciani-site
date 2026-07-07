@@ -6,20 +6,18 @@ import PageHeader from '@/components/PageHeader';
 import AnimatedSection from '@/components/AnimatedSection';
 import InlineCta from '@/components/InlineCta';
 import { getAllArticles, getArticleHero } from '@/lib/articles';
+import { createPageMetadata } from '@/lib/seo';
 import { ArrowUpRight, Clock } from 'lucide-react';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: 'Approfondimenti Psicologia Sarnico e Lago d\'Iseo | Gaia Bresciani',
   description:
     'Approfondimenti su ansia, panico, stress, burnout lavorativo, autostima, perfezionismo, adolescenza e terapia di coppia. Guide pratiche per orientarti prima di iniziare un percorso psicologico.',
-  alternates: { canonical: '/approfondimenti' },
-  openGraph: {
-    title: 'Approfondimenti | Psicologa Sarnico e Lago d\'Iseo | Gaia Bresciani',
-    description:
-      'Articoli pratici su ansia, stress e lavoro, burnout, relazioni, autostima, perfezionismo e adolescenza per capire meglio i sintomi e quando chiedere supporto psicologico.',
-    images: ['/assets/og-share.webp'],
-  },
-};
+  path: '/approfondimenti',
+  ogTitle: 'Approfondimenti | Psicologa Sarnico e Lago d\'Iseo | Gaia Bresciani',
+  ogDescription:
+    'Articoli pratici su ansia, stress e lavoro, burnout, relazioni, autostima, perfezionismo e adolescenza per capire meglio i sintomi e quando chiedere supporto psicologico.',
+});
 
 const articles = getAllArticles();
 

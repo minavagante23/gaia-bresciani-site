@@ -5,20 +5,18 @@ import Breadcrumb from '@/components/Breadcrumb';
 import PageHeader from '@/components/PageHeader';
 import AnimatedSection from '@/components/AnimatedSection';
 import InlineCta from '@/components/InlineCta';
+import { createPageMetadata } from '@/lib/seo';
 import { Compass, Layers, RefreshCw } from 'lucide-react';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: 'Terapia individuale e di coppia vicino Sarnico | Studio a Credaro',
   description:
     'Terapia individuale e di coppia con studio a Credaro, facilmente raggiungibile da Sarnico e basso Lago d\'Iseo. Primo colloquio per definire obiettivi e metodo.',
-  alternates: { canonical: '/terapia' },
-  openGraph: {
-    title: 'Terapia individuale e di coppia | Gaia Bresciani',
-    description:
-      'Percorsi individuali e di coppia per ansia, relazioni, autostima e fasi di cambiamento, con metodo chiaro e personalizzato.',
-    images: ['/assets/og-share.webp'],
-  },
-};
+  path: '/terapia',
+  ogTitle: 'Terapia individuale e di coppia | Gaia Bresciani',
+  ogDescription:
+    'Percorsi individuali e di coppia per ansia, relazioni, autostima e fasi di cambiamento, con metodo chiaro e personalizzato.',
+});
 
 export default function TerapiaPage() {
   return (

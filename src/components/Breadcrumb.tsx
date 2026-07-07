@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
+import { linkTitle } from '@/lib/link-titles';
 
 interface BreadcrumbItem {
   label: string;
@@ -25,6 +26,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
         >
           <Link
             href="/"
+            title={linkTitle('/')}
             itemProp="item"
             className="hover:text-primary/60 transition-colors"
           >
@@ -44,6 +46,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
             {item.href ? (
               <Link
                 href={item.href}
+                title={linkTitle(item.href, item.label)}
                 itemProp="item"
                 className="hover:text-primary/60 transition-colors"
               >

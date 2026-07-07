@@ -2,14 +2,15 @@ import type { Metadata } from 'next';
 import Breadcrumb from '@/components/Breadcrumb';
 import PageHeader from '@/components/PageHeader';
 import Link from 'next/link';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: 'Privacy Policy | Gaia Bresciani Psicologa',
   description:
     'Privacy policy del sito di Gaia Bresciani Psicologa: trattamento dati, finalità e diritti dell\'utente ai sensi del GDPR.',
-  alternates: { canonical: '/privacy-policy' },
+  path: '/privacy-policy',
   robots: { index: false, follow: true },
-};
+});
 
 export default function PrivacyPolicyPage() {
   return (

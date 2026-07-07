@@ -1,9 +1,6 @@
-'use client';
-
-import { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from '@/lib/motion';
 import Link from 'next/link';
-import { Phone, MessageCircle } from 'lucide-react';
+import { MessageCircle, Phone } from 'lucide-react';
+import { linkTitle } from '@/lib/link-titles';
 
 const WHATSAPP_URL =
   'https://wa.me/393408389958?text=' +
@@ -16,174 +13,114 @@ const navLinks = [
   { href: '/approfondimenti', label: 'Approfondimenti' },
   { href: '/faq', label: 'FAQ' },
   { href: '/contatti', label: 'Contatti' },
-];
+] as const;
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    let ticking = false;
-    const handleScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          setScrolled(window.scrollY > 20);
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const closeMenu = useCallback(() => setMenuOpen(false), []);
-
-  useEffect(() => {
-    requestAnimationFrame(() => {
-      document.body.style.overflow = menuOpen ? 'hidden' : '';
-    });
-    return () => {
-      requestAnimationFrame(() => { document.body.style.overflow = ''; });
-    };
-  }, [menuOpen]);
-
-  useEffect(() => {
-    const handleEsc = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && menuOpen) closeMenu();
-    };
-    document.addEventListener('keydown', handleEsc);
-    return () => document.removeEventListener('keydown', handleEsc);
-  }, [menuOpen, closeMenu]);
-
   return (
-    <>
-      <header
-        className={`fixed top-0 left-0 right-0 z-50 border-b border-primary/10 bg-white transition-[box-shadow] duration-300 ${
-          scrolled ? 'shadow-soft' : 'shadow-sm'
-        }`}
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-primary/10 bg-white shadow-sm">
+      <nav
+        className="section-container flex items-center justify-between h-16 lg:h-20"
+        aria-label="Navigazione principale"
       >
-        <nav
-          className="section-container flex items-center justify-between h-16 lg:h-20"
-          aria-label="Navigazione principale"
+        <Link
+          href="/"
+          title={linkTitle('/')}
+          className="font-serif text-primary font-bold text-lg lg:text-xl tracking-tight"
         >
-          <Link
-            href="/"
-            className="font-serif text-primary font-bold text-lg lg:text-xl tracking-tight"
-          >
-            <span className="hidden sm:inline">Psicologa e Psicoterapeuta </span>Gaia Bresciani
-          </Link>
+          <span className="hidden sm:inline">Psicologa e Psicoterapeuta </span>Gaia Bresciani
+        </Link>
 
-          <div className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="link-underline text-primary/70 hover:text-primary transition-colors duration-200 text-[0.9rem] font-medium"
-              >
-                {link.label}
-              </Link>
-            ))}
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-accent gap-2 py-2.5 px-5 text-[0.85rem]"
-              aria-label="Scrivi su WhatsApp alla Dott.ssa Gaia Bresciani"
+        <div className="hidden lg:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              title={linkTitle(link.href, link.label)}
+              className="link-underline text-primary/70 hover:text-primary transition-colors duration-200 text-[0.9rem] font-medium"
             >
-              <MessageCircle size={16} strokeWidth={2} />
-              Scrivimi su WhatsApp
-            </a>
-          </div>
-
-          <button
-            onClick={() => setMenuOpen((prev) => !prev)}
-            className="lg:hidden relative z-[60] w-11 h-11 flex items-center justify-center -mr-1"
-            aria-label={menuOpen ? 'Chiudi menu' : 'Apri menu'}
-            aria-expanded={menuOpen}
-            aria-controls="mobile-menu"
+              {link.label}
+            </Link>
+          ))}
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-accent gap-2 py-2.5 px-5 text-[0.85rem]"
+            aria-label="Scrivi su WhatsApp alla Dott.ssa Gaia Bresciani"
+            title="Scrivi su WhatsApp a Gaia Bresciani"
           >
-            <div className="w-6 flex flex-col items-end gap-[5px]">
-              <span
-                className={`h-[2px] bg-primary rounded-full transition-all duration-300 origin-center ${
-                  menuOpen ? 'w-6 rotate-45 translate-y-[7px]' : 'w-6'
-                }`}
-              />
-              <span
-                className={`h-[2px] bg-primary rounded-full transition-all duration-300 ${
-                  menuOpen ? 'w-0 opacity-0' : 'w-4'
-                }`}
-              />
-              <span
-                className={`h-[2px] bg-primary rounded-full transition-all duration-300 origin-center ${
-                  menuOpen ? 'w-6 -rotate-45 -translate-y-[7px]' : 'w-5'
-                }`}
-              />
-            </div>
-          </button>
-        </nav>
-      </header>
+            <MessageCircle size={16} strokeWidth={2} />
+            Scrivimi su WhatsApp
+          </a>
+        </div>
 
-      <AnimatePresence>
-        {menuOpen && (
-          <>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="fixed inset-0 bg-primary/60 backdrop-blur-md z-[55] lg:hidden"
-              onClick={closeMenu}
-              aria-hidden="true"
-            />
-            <motion.div
-              id="mobile-menu"
-              role="dialog"
-              aria-modal="true"
-              aria-label="Menu di navigazione"
-              initial={{ opacity: 0, x: '100%' }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: '100%' }}
-              transition={{ duration: 0.35, ease: [0.32, 0.72, 0, 1] }}
-              className="fixed top-0 right-0 bottom-0 w-[80%] max-w-sm bg-background z-[58] lg:hidden
-                         flex flex-col pt-24 px-8 pb-8 shadow-soft-xl overflow-y-auto overscroll-contain"
-            >
-              <div className="flex flex-col gap-1">
-                {navLinks.map((link, i) => (
-                  <motion.div
-                    key={link.href}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.1 + i * 0.06 }}
-                  >
-                    <Link
-                      href={link.href}
-                      onClick={closeMenu}
-                      className="block text-primary py-3 text-lg font-medium border-b border-primary/[0.06]
-                                 hover:text-accent-deep transition-colors"
-                    >
-                      {link.label}
-                    </Link>
-                  </motion.div>
-                ))}
-              </div>
+        <div className="lg:hidden">
+          <input
+            type="checkbox"
+            id="mobile-nav-toggle"
+            className="peer sr-only"
+            aria-hidden="true"
+          />
+          <label
+            htmlFor="mobile-nav-toggle"
+            className="relative z-[60] w-11 h-11 flex items-center justify-center -mr-1 cursor-pointer"
+            aria-label="Apri o chiudi menu di navigazione"
+          >
+            <span className="sr-only">Menu</span>
+            <span className="w-6 flex flex-col items-end gap-[5px]" aria-hidden="true">
+              <span className="mobile-nav-bar-top h-[2px] w-6 bg-primary rounded-full transition-all duration-300 origin-center" />
+              <span className="mobile-nav-bar-mid h-[2px] w-4 bg-primary rounded-full transition-all duration-300" />
+              <span className="mobile-nav-bar-bot h-[2px] w-5 bg-primary rounded-full transition-all duration-300 origin-center" />
+            </span>
+          </label>
 
-              <div className="mt-auto pt-8 flex flex-col gap-3">
-                <a href="tel:+393408389958" className="btn-accent text-center">
-                  <Phone size={16} className="mr-2" />
-                  Chiamami
-                </a>
-                <a
-                  href="mailto:gaia.bresciani23@gmail.com"
-                  className="btn-outline text-center"
+          <label
+            htmlFor="mobile-nav-toggle"
+            className="fixed inset-0 z-[55] bg-primary/60 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 peer-checked:opacity-100 peer-checked:pointer-events-auto"
+            aria-hidden="true"
+          />
+
+          <div
+            id="mobile-menu"
+            className="fixed top-0 right-0 bottom-0 w-[80%] max-w-sm bg-background z-[58]
+                       flex flex-col pt-24 px-8 pb-8 shadow-soft-xl overflow-y-auto overscroll-contain
+                       translate-x-full transition-transform duration-300 ease-out pointer-events-none
+                       peer-checked:translate-x-0 peer-checked:pointer-events-auto"
+          >
+            <div className="flex flex-col gap-1">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  title={linkTitle(link.href, link.label)}
+                  className="block text-primary py-3 text-lg font-medium border-b border-primary/[0.06]
+                             hover:text-accent-deep transition-colors"
                 >
-                  Scrivi una email
-                </a>
-              </div>
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
-    </>
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+
+            <div className="mt-auto pt-8 flex flex-col gap-3">
+              <a
+                href="tel:+393408389958"
+                title={linkTitle('tel:+393408389958')}
+                className="btn-accent text-center"
+              >
+                <Phone size={16} className="mr-2 inline" />
+                Chiamami
+              </a>
+              <a
+                href="mailto:gaia.bresciani23@gmail.com"
+                title={linkTitle('mailto:gaia.bresciani23@gmail.com')}
+                className="btn-outline text-center"
+              >
+                Scrivi una email
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
   );
 }

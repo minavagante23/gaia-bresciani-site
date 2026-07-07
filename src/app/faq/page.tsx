@@ -6,19 +6,17 @@ import AnimatedSection from '@/components/AnimatedSection';
 import Accordion from '@/components/Accordion';
 import InlineCta from '@/components/InlineCta';
 import FaqSchemaJsonLd from '@/components/FaqSchemaJsonLd';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: 'FAQ Psicologa a Sarnico e Lago d\'Iseo | Gaia Bresciani',
   description:
     'FAQ su primo colloquio, durata sedute, terapia online e problematiche trattate. Risposte chiare per chi cerca una psicologa tra Sarnico, Lago d\'Iseo e Brescia.',
-  alternates: { canonical: '/faq' },
-  openGraph: {
-    title: 'FAQ - Domande su psicoterapia e primo colloquio | Gaia Bresciani',
-    description:
-      'Risposte pratiche su psicoterapia: sedi, primo incontro, approccio clinico, durata del percorso e modalità online.',
-    images: ['/assets/og-share.webp'],
-  },
-};
+  path: '/faq',
+  ogTitle: 'FAQ - Domande su psicoterapia e primo colloquio | Gaia Bresciani',
+  ogDescription:
+    'Risposte pratiche su psicoterapia: sedi, primo incontro, approccio clinico, durata del percorso e modalità online.',
+});
 
 const faqItems = [
   {

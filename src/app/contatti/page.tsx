@@ -5,20 +5,18 @@ import PageHeader from '@/components/PageHeader';
 import AnimatedSection from '@/components/AnimatedSection';
 import ContactForm from '@/components/ContactForm';
 import ConsentIframe from '@/components/ConsentIframe';
+import { createPageMetadata } from '@/lib/seo';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: 'Contatti e primo colloquio | Studio a Credaro per chi arriva da Sarnico',
   description:
     'Contatti per un primo colloquio psicologico nello studio di Credaro, comodo per chi arriva da Sarnico e dal basso Lago d\'Iseo.',
-  alternates: { canonical: '/contatti' },
-  openGraph: {
-    title: 'Contatti | Studio a Credaro vicino Sarnico',
-    description:
-      'Contatti rapidi per fissare un primo colloquio e chiarire sede, orari e modalità del percorso.',
-    images: ['/assets/og-share.webp'],
-  },
-};
+  path: '/contatti',
+  ogTitle: 'Contatti | Studio a Credaro vicino Sarnico',
+  ogDescription:
+    'Contatti rapidi per fissare un primo colloquio e chiarire sede, orari e modalità del percorso.',
+});
 
 const contactInfo = [
   {

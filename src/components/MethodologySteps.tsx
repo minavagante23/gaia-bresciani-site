@@ -1,9 +1,6 @@
-'use client';
-
-import { motion, useInView, useReducedMotion } from '@/lib/motion';
-import { useRef } from 'react';
 import Link from 'next/link';
 import { MessageCircle, Compass, ClipboardList, TrendingUp } from 'lucide-react';
+import { linkTitle } from '@/lib/link-titles';
 
 const steps = [
   {
@@ -36,26 +33,7 @@ const steps = [
   },
 ];
 
-const containerVariants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.15 } },
-};
-
-const stepVariants = {
-  hidden: { opacity: 0, y: 30, willChange: 'transform, opacity' as const },
-  visible: {
-    opacity: 1,
-    y: 0,
-    willChange: 'auto' as const,
-    transition: { duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] },
-  },
-};
-
 export default function MethodologySteps() {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-60px' });
-  const reduce = useReducedMotion();
-
   return (
     <section id="metodo" className="section-padding section-lazy">
       <div className="section-container">
@@ -75,29 +53,26 @@ export default function MethodologySteps() {
           </p>
           <p className="text-sm text-primary/60 mt-4">
             Se vuoi capire come raggiungere lo studio, puoi vedere anche{' '}
-            <Link href="/psicologa-sarnico" className="text-accent-deep hover:underline">
+            <Link
+              href="/psicologa-sarnico"
+              title={linkTitle('/psicologa-sarnico')}
+              className="text-accent-deep hover:underline"
+            >
               la pagina dedicata a Sarnico e al basso Lago d&apos;Iseo
             </Link>
             .
           </p>
         </div>
 
-        <motion.div
-          ref={ref}
-          variants={containerVariants}
-          initial={reduce ? 'visible' : 'hidden'}
-          animate={reduce || isInView ? 'visible' : 'hidden'}
-          className="relative"
-        >
+        <div className="relative">
           <div className="hidden lg:block absolute top-24 left-[calc(12.5%+24px)] right-[calc(12.5%+24px)] h-[2px] bg-gradient-to-r from-accent/20 via-accent/40 to-accent/20" />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
             {steps.map((step) => {
               const Icon = step.icon;
               return (
-                <motion.div
+                <div
                   key={step.number}
-                  variants={stepVariants}
                   className="relative text-center lg:text-center"
                 >
                   <div className="relative inline-flex mb-6">
@@ -116,11 +91,11 @@ export default function MethodologySteps() {
                   <p className="body-md max-w-xs mx-auto">
                     {step.description}
                   </p>
-                </motion.div>
+                </div>
               );
             })}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

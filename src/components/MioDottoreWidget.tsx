@@ -42,6 +42,7 @@ export default function MioDottoreWidget() {
         href="https://www.miodottore.it/gaia-miriam-teresa-bresciani/psicoterapeuta-psicologo-clinico-psicologo/brescia"
         id="zl-url"
         rel="nofollow"
+        title="Prenota un appuntamento su MioDottore"
       >
         Verifica disponibilit&agrave; e recensioni su MioDottore
       </a>

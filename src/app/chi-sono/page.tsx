@@ -4,20 +4,17 @@ import Breadcrumb from '@/components/Breadcrumb';
 import PageHeader from '@/components/PageHeader';
 import AnimatedSection from '@/components/AnimatedSection';
 import InlineCta from '@/components/InlineCta';
+import { createPageMetadata } from '@/lib/seo';
 import { GraduationCap, Target, Handshake } from 'lucide-react';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: 'Chi sono | Psicologa vicino Sarnico con studio a Credaro',
   description:
     'Conosci Gaia Bresciani, psicologa e psicoterapeuta con studio a Credaro, punto di riferimento per chi vive tra Sarnico e basso Lago d\'Iseo.',
-  alternates: { canonical: '/chi-sono' },
-  openGraph: {
-    title: 'Chi sono | Psicologa vicino Sarnico con studio a Credaro',
-    description:
-      'Approccio clinico adleriano ed EMDR, con percorsi personalizzati per ansia, relazioni, autostima e momenti di crisi.',
-    images: ['/assets/og-share.webp'],
-  },
-};
+  path: '/chi-sono',
+  ogDescription:
+    'Approccio clinico adleriano ed EMDR, con percorsi personalizzati per ansia, relazioni, autostima e momenti di crisi.',
+});
 
 export default function ChiSonoPage() {
   return (

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run check:encoding && next build",
+    "build": "npm run check:encoding && next build && node scripts/fix-https-content.mjs",
     "start": "next start",
     "lint": "next lint",
     "check:encoding": "node scripts/check-encoding.mjs"

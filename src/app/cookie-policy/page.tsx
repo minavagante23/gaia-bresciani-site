@@ -2,14 +2,15 @@ import type { Metadata } from 'next';
 import Breadcrumb from '@/components/Breadcrumb';
 import PageHeader from '@/components/PageHeader';
 import Link from 'next/link';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: 'Cookie Policy | Gaia Bresciani Psicologa',
   description:
     'Cookie policy del sito di Gaia Bresciani Psicologa: tipi di cookie, gestione del consenso e diritti dell\'utente ai sensi del GDPR.',
-  alternates: { canonical: '/cookie-policy' },
+  path: '/cookie-policy',
   robots: { index: false, follow: true },
-};
+});
 
 export default function CookiePolicyPage() {
   return (

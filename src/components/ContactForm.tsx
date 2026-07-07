@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent, type ChangeEvent } from 'react';
 import { Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { linkTitle } from '@/lib/link-titles';
 
 interface FormData {
   name: string;
@@ -266,7 +267,7 @@ export default function ContactForm() {
         />
         <span className="text-sm text-primary/60 leading-relaxed">
           Ho letto e accetto la{' '}
-          <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-accent-deep hover:underline">
+          <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" title={linkTitle('/privacy-policy')} className="text-accent-deep hover:underline">
             Privacy Policy
           </a>
         </span>

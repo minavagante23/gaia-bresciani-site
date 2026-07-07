@@ -1,13 +1,11 @@
-import dynamic from 'next/dynamic';
 import Hero from '@/components/Hero';
-
-const ServicesBentoGrid = dynamic(() => import('@/components/ServicesBentoGrid'));
-const TestimonialsSection = dynamic(() => import('@/components/TestimonialsSection'));
-const MethodologySteps = dynamic(() => import('@/components/MethodologySteps'));
-const QuoteSection = dynamic(() => import('@/components/QuoteSection'));
-const InsightsGrid = dynamic(() => import('@/components/InsightsGrid'));
-const LocationCards = dynamic(() => import('@/components/LocationCards'));
-const CtaSection = dynamic(() => import('@/components/CtaSection'));
+import ServicesBentoGrid from '@/components/ServicesBentoGrid';
+import TestimonialsSection from '@/components/TestimonialsSection';
+import MethodologySteps from '@/components/MethodologySteps';
+import QuoteSection from '@/components/QuoteSection';
+import InsightsGrid from '@/components/InsightsGrid';
+import LocationCards from '@/components/LocationCards';
+import CtaSection from '@/components/CtaSection';
 
 export default function HomePage() {
   return (

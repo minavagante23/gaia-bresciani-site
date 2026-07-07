@@ -1,29 +1,7 @@
-'use client';
-
-import { motion, useInView } from '@/lib/motion';
-import { useRef } from 'react';
 import { Star, ExternalLink } from 'lucide-react';
 import { MIODOTTORE_REVIEWS_URL, reviews } from '@/lib/reviews';
 
-const containerVariants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.1 } },
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 25, willChange: 'transform, opacity' as const },
-  visible: {
-    opacity: 1,
-    y: 0,
-    willChange: 'auto' as const,
-    transition: { duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] },
-  },
-};
-
 export default function TestimonialsSection() {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-60px' });
-
   return (
     <section className="section-padding bg-white/50 section-lazy section-wash">
       <div className="section-container">
@@ -42,17 +20,10 @@ export default function TestimonialsSection() {
           </p>
         </div>
 
-        <motion.div
-          ref={ref}
-          variants={containerVariants}
-          initial="hidden"
-          animate={isInView ? 'visible' : 'hidden'}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {reviews.map((review, i) => (
-            <motion.div
+            <div
               key={i}
-              variants={cardVariants}
               className="card-base card-hover card-glow p-6 flex flex-col"
             >
               <div className="flex items-center gap-0.5 mb-4">
@@ -60,12 +31,12 @@ export default function TestimonialsSection() {
                   <Star
                     key={j}
                     size={14}
-                    className="text-amber-400 fill-amber-400 transition-transform duration-300 group-hover:scale-110"
+                    className="text-amber-400 fill-amber-400"
                   />
                 ))}
               </div>
 
-              <p className="text-sm text-primary/70 leading-relaxed flex-1 italic transition-colors duration-300 group-hover:text-primary/80">
+              <p className="text-sm text-primary/70 leading-relaxed flex-1 italic">
                 &ldquo;{review.text}&rdquo;
               </p>
 
@@ -77,15 +48,16 @@ export default function TestimonialsSection() {
                   {review.source}
                 </span>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         <div className="text-center mt-10">
           <a
             href={MIODOTTORE_REVIEWS_URL}
             target="_blank"
             rel="noopener noreferrer"
+            title="Leggi tutte le recensioni su MioDottore"
             className="btn-outline btn-shine py-3 px-6 text-sm gap-2 inline-flex"
           >
             Leggi tutte le recensioni su MioDottore

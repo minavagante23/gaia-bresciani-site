@@ -1,6 +1,16 @@
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { MapPin, Phone, Mail } from 'lucide-react';
-import CookiePreferencesButton from './CookiePreferencesButton';
+import { linkTitle } from '@/lib/link-titles';
+
+const CookiePreferencesButton = dynamic(() => import('./CookiePreferencesButton'), {
+  ssr: false,
+  loading: () => (
+    <Link href="/cookie-policy" title={linkTitle('/cookie-policy')} className="hover:text-white/60 transition-colors">
+      Gestisci cookie
+    </Link>
+  ),
+});
 
 const footerLinks = [
   { href: '/chi-sono', label: 'Chi sono' },
@@ -23,7 +33,7 @@ export default function Footer() {
       <div className="section-container py-16 lg:py-20 pb-28 lg:pb-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link href="/" className="font-serif text-white font-bold text-xl block mb-4">
+            <Link href="/" title={linkTitle('/')} className="font-serif text-white font-bold text-xl block mb-4">
               Gaia Bresciani
             </Link>
             <p className="text-sm text-white/50 leading-relaxed max-w-xs">
@@ -41,6 +51,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
+                    title={linkTitle(link.href, link.label)}
                     className="text-sm text-white/55 hover:text-accent transition-colors duration-200"
                   >
                     {link.label}
@@ -59,6 +70,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
+                    title={linkTitle(link.href, link.label)}
                     className="text-sm text-white/55 hover:text-accent transition-colors duration-200"
                   >
                     {link.label}
@@ -92,6 +104,7 @@ export default function Footer() {
               <li>
                 <a
                   href="tel:+393408389958"
+                  title={linkTitle('tel:+393408389958')}
                   className="flex gap-3 text-sm hover:text-accent transition-colors"
                 >
                   <Phone size={16} className="text-accent shrink-0 mt-0.5" />
@@ -101,6 +114,7 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:gaia.bresciani23@gmail.com"
+                  title={linkTitle('mailto:gaia.bresciani23@gmail.com')}
                   className="flex gap-3 text-sm hover:text-accent transition-colors"
                 >
                   <Mail size={16} className="text-accent shrink-0 mt-0.5" />
@@ -115,6 +129,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Profilo LinkedIn di Gaia Bresciani"
+                title="Profilo LinkedIn di Gaia Bresciani"
                 className="w-11 h-11 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent/20 transition-colors"
               >
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="text-white/70">
@@ -126,6 +141,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Pagina Facebook dello studio"
+                title="Pagina Facebook dello studio di psicologia"
                 className="w-11 h-11 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent/20 transition-colors"
               >
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="text-white/70">
@@ -142,10 +158,10 @@ export default function Footer() {
           </p>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-white/40">
             <span>P.I. 04558220168</span>
-            <Link href="/privacy-policy" className="hover:text-white/60 transition-colors">
+            <Link href="/privacy-policy" title={linkTitle('/privacy-policy')} className="hover:text-white/60 transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/cookie-policy" className="hover:text-white/60 transition-colors">
+            <Link href="/cookie-policy" title={linkTitle('/cookie-policy')} className="hover:text-white/60 transition-colors">
               Cookie Policy
             </Link>
             <CookiePreferencesButton />

@@ -1,7 +1,3 @@
-'use client';
-
-import { motion, useInView, useReducedMotion } from '@/lib/motion';
-import { useRef } from 'react';
 import {
   Brain,
   Heart,
@@ -58,28 +54,7 @@ const services = [
   },
 ];
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.1 },
-  },
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 30, willChange: 'transform, opacity' as const },
-  visible: {
-    opacity: 1,
-    y: 0,
-    willChange: 'auto' as const,
-    transition: { duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] },
-  },
-};
-
 export default function ServicesBentoGrid() {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-80px' });
-  const reduce = useReducedMotion();
-
   return (
     <section id="servizi" className="section-padding bg-white/50 section-lazy section-wash">
       <div className="section-container">
@@ -92,19 +67,12 @@ export default function ServicesBentoGrid() {
           </p>
         </div>
 
-        <motion.div
-          ref={ref}
-          variants={containerVariants}
-          initial={reduce ? 'visible' : 'hidden'}
-          animate={reduce || isInView ? 'visible' : 'hidden'}
-          className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5">
           {services.map((service) => {
             const Icon = service.icon;
             return (
-              <motion.div
+              <div
                 key={service.title}
-                variants={cardVariants}
                 className={`group relative card-base card-hover card-glow p-7 lg:p-8 cursor-default transition-[box-shadow,transform] duration-300 ${service.span} ${
                   service.accent
                     ? 'bg-gradient-to-br from-primary to-primary-light text-white'
@@ -146,10 +114,10 @@ export default function ServicesBentoGrid() {
                       : 'bg-accent/5 group-hover:bg-accent/45'
                   }`}
                 />
-              </motion.div>
+              </div>
             );
           })}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

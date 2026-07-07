@@ -1,7 +1,3 @@
-'use client';
-
-import { motion, useInView } from '@/lib/motion';
-import { useRef } from 'react';
 import Image from 'next/image';
 import { MapPin, Building2, Laptop } from 'lucide-react';
 
@@ -14,6 +10,7 @@ const locations = [
       'Via Piave 7 \u2014 comodo per Sarnico, Villongo, Paratico, Capriolo e Grumello del Monte.',
     link: '/psicologa-sarnico',
     linkLabel: 'Come raggiungermi',
+    linkTitle: 'Come raggiungere lo studio di Credaro da Sarnico',
     primary: true,
     image: '/assets/studio-psicologia-credaro.webp',
   },
@@ -25,6 +22,7 @@ const locations = [
       'Piazza Martiri della Libert\u00e0 7 \u2014 riferimento per Brescia, Rezzato, Mazzano e dintorni.',
     link: '/contatti',
     linkLabel: 'Informazioni sede',
+    linkTitle: 'Informazioni sulla sede di Castenedolo',
     image: '/assets/studio-psicologa-sarnico.webp',
   },
   {
@@ -35,29 +33,12 @@ const locations = [
       'Colloqui da remoto sicuri e riservati, per chi ha difficolt\u00e0 logistiche o vive fuori zona.',
     link: '#contatti',
     linkLabel: 'Prenota online',
+    linkTitle: 'Prenota un colloquio online',
     image: '/assets/consulenza-psicologica-online-bergamo.webp',
   },
 ];
 
-const containerVariants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.12 } },
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 25, willChange: 'transform, opacity' as const },
-  visible: {
-    opacity: 1,
-    y: 0,
-    willChange: 'auto' as const,
-    transition: { duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] },
-  },
-};
-
 export default function LocationCards() {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-60px' });
-
   return (
     <section id="dove-ricevo" className="section-padding section-lazy section-wash">
       <div className="section-container">
@@ -73,39 +54,28 @@ export default function LocationCards() {
           </p>
         </div>
 
-        <motion.div
-          ref={ref}
-          variants={containerVariants}
-          initial="hidden"
-          animate={isInView ? 'visible' : 'hidden'}
-          className="grid grid-cols-1 md:grid-cols-3 gap-5"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {locations.map((loc) => {
             const Icon = loc.icon;
             return (
-              <motion.a
+              <a
                 key={loc.title}
                 href={loc.link}
-                variants={cardVariants}
+                title={loc.linkTitle}
                 className={`group card-base card-hover card-glow flex flex-col overflow-hidden ${
                   loc.primary ? 'ring-2 ring-accent/20 relative' : ''
                 }`}
               >
                 {loc.image && (
-                  <div className="relative h-40 w-full">
-                    <motion.div
-                      whileHover={{ scale: 1.04 }}
-                      transition={{ duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] }}
-                      className="absolute inset-0"
-                    >
-                      <Image
-                        src={loc.image}
-                        alt={`Studio ${loc.title}`}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, 33vw"
-                      />
-                    </motion.div>
+                  <div className="relative h-40 w-full overflow-hidden">
+                    <Image
+                      src={loc.image}
+                      alt={`Studio ${loc.title}`}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      loading="lazy"
+                    />
                     {loc.primary && (
                       <span className="absolute top-3 right-3 text-[0.65rem] font-bold uppercase tracking-widest text-accent-deep bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
                         Sede principale
@@ -135,10 +105,10 @@ export default function LocationCards() {
                     <span className="transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
                   </span>
                 </div>
-              </motion.a>
+              </a>
             );
           })}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

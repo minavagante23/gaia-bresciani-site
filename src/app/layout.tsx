@@ -1,10 +1,9 @@
 import type { Metadata, Viewport } from 'next';
 import { Fraunces, Inter } from 'next/font/google';
 import Navbar from '@/components/Navbar';
-import ScrollProgressBar from '@/components/ScrollProgressBar';
 import Footer from '@/components/Footer';
-import CookieBanner from '@/components/CookieBanner';
-import FloatingContact from '@/components/FloatingContact';
+import DeferredChrome from '@/components/DeferredChrome';
+import { SITE_URL, siteConfig } from '@/lib/seo';
 import './globals.css';
 
 export const viewport: Viewport = {
@@ -18,21 +17,37 @@ const fraunces = Fraunces({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-fraunces',
-  weight: ['400', '500', '600', '700'],
+  weight: ['700'],
+  adjustFontFallback: true,
+  preload: true,
+  fallback: ['Georgia', 'Times New Roman', 'serif'],
 });
 
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter',
-  weight: ['400', '500'],
+  weight: ['400'],
+  adjustFontFallback: true,
+  preload: false,
+  fallback: ['system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
 });
+
+const CRITICAL_CSS = `
+  html,body{margin:0;background:#F9F7F2;color:#2D464C}
+  body{font-family:system-ui,-apple-system,sans-serif;line-height:1.7}
+  header{background:#fff;border-bottom:1px solid rgba(45,70,76,.1)}
+  h1,h2,h3{font-family:Georgia,'Times New Roman',serif;color:#2D464C}
+`.replace(/\s+/g, ' ').trim();
 
 export const metadata: Metadata = {
   title: 'Psicologa a Credaro vicino Sarnico e Lago d\'Iseo | Gaia Bresciani',
   description:
     'Gaia Bresciani, psicologa e psicoterapeuta a Credaro, vicino a Sarnico e Lago d\'Iseo. Percorsi in presenza per ansia, relazioni, autostima e traumi.',
-  metadataBase: new URL('https://www.gaiabrescianipsicologa.it'),
+  metadataBase: new URL(SITE_URL),
+  authors: [{ name: siteConfig.author, url: SITE_URL }],
+  creator: siteConfig.author,
+  publisher: siteConfig.name,
   alternates: {
     canonical: '/',
   },
@@ -40,17 +55,17 @@ export const metadata: Metadata = {
     title: 'Psicologa a Credaro vicino Sarnico e Lago d\'Iseo | Gaia Bresciani',
     description:
       'Studio di psicologia a Credaro, comodo per Sarnico e basso Lago d\'Iseo. Primo colloquio per ansia, relazioni, autostima e traumi.',
-    url: 'https://www.gaiabrescianipsicologa.it/',
-    siteName: 'Gaia Bresciani Psicologa',
+    url: `${SITE_URL}/`,
+    siteName: siteConfig.name,
     images: [
       {
-        url: '/assets/og-share.webp',
+        url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Gaia Bresciani, psicologa e psicoterapeuta a Credaro vicino Sarnico e Lago d\'Iseo',
+        alt: siteConfig.ogImageAlt,
       },
     ],
-    locale: 'it_IT',
+    locale: siteConfig.locale,
     type: 'website',
   },
   twitter: {
@@ -58,7 +73,7 @@ export const metadata: Metadata = {
     title: 'Psicologa a Credaro vicino Sarnico e Lago d\'Iseo | Gaia Bresciani',
     description:
       'Percorsi psicologici in presenza a Credaro, vicino a Sarnico e Lago d\'Iseo, con primo colloquio orientativo.',
-    images: ['/assets/og-share.webp'],
+    images: [siteConfig.ogImage],
   },
   robots: {
     index: true,
@@ -90,13 +105,13 @@ function SchemaOrgJsonLd() {
   const personSchema = {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    '@id': 'https://www.gaiabrescianipsicologa.it/#person',
+    '@id': `${SITE_URL}/#person`,
     name: 'Gaia Bresciani',
     jobTitle: 'Psicologa e Psicoterapeuta',
     description:
       'Psicologa e Psicoterapeuta specializzata in Psicoterapia Psicodinamica Adleriana e Terapia EMDR. Studio a Credaro (BG), servizio per Sarnico, Lago d\'Iseo e dintorni.',
-    url: 'https://www.gaiabrescianipsicologa.it',
-    image: 'https://www.gaiabrescianipsicologa.it/assets/psicologa-gaia-bresciani.webp',
+    url: SITE_URL,
+    image: `${SITE_URL}/assets/psicologa-gaia-bresciani.webp`,
     email: 'gaia.bresciani23@gmail.com',
     telephone: '+393408389958',
     address: {
@@ -132,14 +147,14 @@ function SchemaOrgJsonLd() {
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': ['Psychologist', 'MedicalBusiness', 'LocalBusiness'],
-    '@id': 'https://www.gaiabrescianipsicologa.it/#localbusiness',
+    '@id': `${SITE_URL}/#localbusiness`,
     name: 'Gaia Bresciani \u2013 Psicologa e Psicoterapeuta',
     alternateName: 'Studio Psicologia Gaia Bresciani',
     image: [
-      'https://www.gaiabrescianipsicologa.it/assets/psicologa-gaia-bresciani.webp',
-      'https://www.gaiabrescianipsicologa.it/assets/psicologa-lago-iseo-sarnico.webp',
+      `${SITE_URL}/assets/psicologa-gaia-bresciani.webp`,
+      `${SITE_URL}/assets/psicologa-lago-iseo-sarnico.webp`,
     ],
-    logo: 'https://www.gaiabrescianipsicologa.it/assets/psicologa-gaia-bresciani.webp',
+    logo: `${SITE_URL}/assets/psicologa-gaia-bresciani.webp`,
     description:
       'Psicologa e Psicoterapeuta specializzata in Psicoterapia Psicodinamica Adleriana e Terapia EMDR. Studio a Credaro (BG) e Castenedolo (BS), servizio per Sarnico, Lago d\'Iseo e zone limitrofe.',
     address: [
@@ -164,7 +179,7 @@ function SchemaOrgJsonLd() {
     hasMap: 'https://www.google.com/maps/place/Gaia+Bresciani+Psicologa/',
     telephone: '+393408389958',
     email: 'gaia.bresciani23@gmail.com',
-    url: 'https://www.gaiabrescianipsicologa.it',
+    url: SITE_URL,
     priceRange: '\u20ac70-\u20ac100',
     paymentAccepted: 'Cash, Bank Transfer',
     currenciesAccepted: 'EUR',
@@ -238,10 +253,10 @@ function SchemaOrgJsonLd() {
   const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    '@id': 'https://www.gaiabrescianipsicologa.it/#website',
+    '@id': `${SITE_URL}/#website`,
     name: 'Gaia Bresciani Psicologa',
-    url: 'https://www.gaiabrescianipsicologa.it',
-    publisher: { '@id': 'https://www.gaiabrescianipsicologa.it/#localbusiness' },
+    url: SITE_URL,
+    publisher: { '@id': `${SITE_URL}/#localbusiness` },
     inLanguage: 'it-IT',
   };
 
@@ -271,30 +286,32 @@ export default function RootLayout({
   return (
     <html lang="it" className={`${fraunces.variable} ${inter.variable}`}>
       <head>
-        <SchemaOrgJsonLd />
+        <style dangerouslySetInnerHTML={{ __html: CRITICAL_CSS }} />
         <meta httpEquiv="X-DNS-Prefetch-Control" content="on" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
         <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://platform.docplanner.com; style-src 'self' 'unsafe-inline' https://platform.docplanner.com; img-src 'self' data: https:; font-src 'self' https://platform.docplanner.com; frame-src https://www.google.com https://maps.google.com https://www.miodottore.it; connect-src 'self' https://formspree.io https://platform.docplanner.com; form-action 'self' https://formspree.io https://www.miodottore.it; object-src 'none'; base-uri 'self'; upgrade-insecure-requests; block-all-mixed-content" />
         <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
-        <link rel="dns-prefetch" href="https://formspree.io" />
-        <link rel="preconnect" href="https://formspree.io" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://platform.docplanner.com" />
-        <link rel="preconnect" href="https://platform.docplanner.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://www.google.com" />
+        <link
+          rel="preload"
+          as="image"
+          href="/assets/psicologa-sarnico-gaia-bresciani.webp"
+          type="image/webp"
+          fetchPriority="high"
+        />
       </head>
       <body className="bg-background text-primary antialiased">
         <a
           href="#main-content"
+          title="Salta alla navigazione principale del contenuto"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-lg"
         >
           Vai al contenuto principale
         </a>
         <Navbar />
-        <ScrollProgressBar />
+        <DeferredChrome timeoutMs={3000} />
         <main id="main-content">{children}</main>
         <Footer />
-        <FloatingContact />
-        <CookieBanner />
+        <SchemaOrgJsonLd />
       </body>
     </html>
   );

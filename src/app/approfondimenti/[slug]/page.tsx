@@ -12,6 +12,7 @@ import {
   getArticleHero,
   getRelatedArticles,
 } from '@/lib/articles';
+import { createPageMetadata } from '@/lib/seo';
 import { Clock, ArrowLeft } from 'lucide-react';
 
 interface PageProps {
@@ -26,23 +27,17 @@ export function generateMetadata({ params }: PageProps): Metadata {
   const article = getArticleBySlug(params.slug);
   if (!article) return {};
 
-  return {
+  const hero = getArticleHero(article.slug);
+
+  return createPageMetadata({
     title: `${article.title} | Gaia Bresciani Psicologa`,
     description: article.excerpt,
-    alternates: { canonical: `/approfondimenti/${article.slug}` },
-    openGraph: {
-      title: article.title,
-      description: article.excerpt,
-      type: 'article',
-      publishedTime: article.publishedAt,
-      images: [
-        {
-          url: getArticleHero(article.slug).src,
-          alt: getArticleHero(article.slug).alt,
-        },
-      ],
-    },
-  };
+    path: `/approfondimenti/${article.slug}`,
+    openGraphType: 'article',
+    publishedTime: article.publishedAt,
+    images: [{ url: hero.src, alt: hero.alt }],
+    twitterImage: hero.src,
+  });
 }
 
 export default function ArticlePage({ params }: PageProps) {

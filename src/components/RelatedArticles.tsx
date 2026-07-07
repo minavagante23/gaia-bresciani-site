@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { ArrowUpRight, Clock } from 'lucide-react';
 import type { Article } from '@/lib/articles';
 import { getArticleHero } from '@/lib/articles';
+import { linkTitle } from '@/lib/link-titles';
 
 interface RelatedArticlesProps {
   articles: Article[];
@@ -23,6 +24,7 @@ export default function RelatedArticles({ articles }: RelatedArticlesProps) {
             <li key={related.slug}>
               <Link
                 href={`/approfondimenti/${related.slug}`}
+                title={linkTitle(`/approfondimenti/${related.slug}`, related.title)}
                 className="group card-base card-hover overflow-hidden flex flex-col h-full"
               >
                 <div className="relative aspect-[16/9] overflow-hidden bg-primary/[0.04]">

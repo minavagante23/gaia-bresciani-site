@@ -57,6 +57,7 @@ export default function ConsentIframe({ src, title, className, mapsUrl }: Consen
             href={mapsUrl}
             target="_blank"
             rel="noopener noreferrer"
+            title="Apri la sede in Google Maps"
             className="btn-accent py-2 px-4 text-xs gap-1.5"
           >
             <MapPin size={13} />

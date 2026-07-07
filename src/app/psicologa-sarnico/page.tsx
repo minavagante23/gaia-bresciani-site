@@ -4,20 +4,18 @@ import Breadcrumb from '@/components/Breadcrumb';
 import PageHeader from '@/components/PageHeader';
 import AnimatedSection from '@/components/AnimatedSection';
 import InlineCta from '@/components/InlineCta';
+import { createPageMetadata } from '@/lib/seo';
 import { MapPin, Users, Clock, Target } from 'lucide-react';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: 'Psicologa vicino Sarnico | Studio a Credaro per il basso Lago d\'Iseo',
   description:
     'Informazioni pratiche per chi vive tra Sarnico e il basso Lago d\'Iseo e desidera raggiungere lo studio di Credaro per un primo colloquio.',
-  alternates: { canonical: '/psicologa-sarnico' },
-  openGraph: {
-    title: 'Psicologa vicino Sarnico | Studio a Credaro',
-    description:
-      'Tempi di percorrenza, aree servite e prime informazioni utili per chi desidera raggiungere la sede di Credaro.',
-    images: ['/assets/og-share.webp'],
-  },
-};
+  path: '/psicologa-sarnico',
+  ogTitle: 'Psicologa vicino Sarnico | Studio a Credaro',
+  ogDescription:
+    'Tempi di percorrenza, aree servite e prime informazioni utili per chi desidera raggiungere la sede di Credaro.',
+});
 
 const highlights = [
   {
