@@ -17,6 +17,45 @@ export interface Article {
 
 const articles: Article[] = [
   {
+    slug: 'elaborazione-lutto-perdita',
+    date: '7 luglio 2026',
+    publishedAt: '2026-07-07T00:00:00.000Z',
+    readTime: '7 min',
+    title: 'Elaborazione del lutto: quando la perdita non trova spazio',
+    excerpt:
+      'Separazione, lutto per un caro o fine di un\'epoca: come riconoscere i segnali di un dolore non elaborato, cosa mantiene il sofferto e quando può essere utile un percorso psicologico.',
+    tags: ['Benessere emotivo', 'Lutto'],
+    content: [
+      'Perdere qualcuno, una relazione, un lavoro o un progetto a cui si era legati non è solo un evento da superare. È un\'esperienza che scuote il modo in cui ci si sente al mondo. A volte il dolore è evidente e condiviso; altre volte resta più silenzioso, come una fatica che non trova parole ma condiziona sonno, energia e relazioni.',
+      { type: 'h2', text: 'Cosa si intende per elaborazione del lutto' },
+      'Elaborare un lutto non significa dimenticare o "andare avanti" in fretta. Significa trovare un modo per integrare la perdita nella propria storia, senza che il dolore occupi tutto lo spazio disponibile. Non esiste un tempo giusto: ognuno ha i propri ritmi, e il percorso raramente è lineare.',
+      'Ci sono perdite riconosciute socialmente, come la morte di una persona cara, e altre meno visibili ma altrettanto reali: la fine di una relazione, un trasferimento, un licenziamento, un aborto, la malattia di un familiare, la perdita di un\'identità legata a un ruolo. Anche queste richiedono spazio e attenzione.',
+      { type: 'h2', text: 'I segnali che il dolore resta bloccato' },
+      'Quando il lutto non trova una forma di elaborazione, alcuni segnali tendono a ripetersi nel tempo:',
+      {
+        type: 'list',
+        items: [
+          'sensazione di vuoto o intorpidimento emotivo che non si attenua',
+          'difficoltà a parlare della perdita o, al contrario, bisogno costante di riparlarne senza sollievo',
+          'colpa persistente per ciò che si è fatto o non si è fatto',
+          'irritabilità, isolamento o distacco dalle persone care',
+          'difficoltà a riprendere attività quotidiane anche mesi dopo l\'evento',
+          'sintomi fisici come stanchezza, insonnia, tensione muscolare o calo di appetito',
+        ],
+      },
+      'Non ogni sofferenza prolungata indica un problema clinico: il dolore può durare a lungo. Diventa utile osservarlo quando interferisce in modo stabile con il funzionamento quotidiano e con la possibilità di ricostruire un minimo di equilibrio.',
+      { type: 'h2', text: 'Le convinzioni che mantengono il blocco' },
+      'Spesso ciò che ostacola l\'elaborazione non è solo il dolore in sé, ma le convinzioni che lo accompagnano. "Devo essere forte", "Non ho il diritto di soffrire così", "Se smetto di pensarci, perdo anche l\'ultimo legame". Queste frasi interiori spingono a reprimere emozioni o a vivere in un presente sospeso, come se la vita dovesse restare in pausa finché il dolore non scompare da solo.',
+      'Un altro meccanismo frequente è l\'evitamento: non aprire certi armadi, non passare da luoghi legati alla perdita, non nominare ciò che è successo. Nel breve periodo protegge; nel lungo periodo, però, il ricordo resta intatto e spesso più doloroso.',
+      { type: 'h2', text: 'Cosa può aiutare, in concreto' },
+      'Alcuni passi utili possono essere concedersi il permesso di sentire senza giudizio, ritrovare piccole routine che diano struttura alla giornata, parlare con qualcuno di fiducia e distinguere tra ricordo e prigionia nel passato. Non si tratta di forzare la positività: si tratta di creare spazi in cui il dolore possa essere riconosciuto senza occupare ogni aspetto della vita.',
+      'Quando la perdita è legata a eventi traumatici o improvvisi, il corpo può conservare un\'attivazione intensa che le parole da sole faticano a sciogliere. In questi casi, approcci che lavorano anche sulla memoria emotiva possono integrare il dialogo psicologico.',
+      { type: 'h2', text: 'Quando può servire un percorso psicologico' },
+      'Un percorso psicologico può essere utile quando il dolore resta isolato e senza sfogo, quando la colpa o la rabbia diventano centrali, quando compaiono segnali di depressione o ansia persistente, o quando la perdita ha scatenato un cambiamento profondo difficile da sostenere da soli. L\'obiettivo non è chiudere un capitolo in fretta, ma costruire un rapporto più tollerabile con ciò che è accaduto e ritrovare gradualmente senso e direzione.',
+      'Se stai attraversando una perdita e ti riconosci in questi segnali, un primo colloquio può aiutarti a capire da dove partire e quale tipo di supporto è più adatto a ciò che stai vivendo.',
+    ],
+  },
+  {
     slug: 'ansia-sociale-timidezza',
     date: '21 giugno 2026',
     publishedAt: '2026-06-21T00:00:00.000Z',
@@ -397,6 +436,10 @@ export interface ArticleHero {
 }
 
 const articleHeroes: Record<string, ArticleHero> = {
+  'elaborazione-lutto-perdita': {
+    src: '/assets/approfondimenti/approfondimenti-lutto.webp',
+    alt: 'Elaborazione del lutto: spazio silenzioso per il dolore e la ricostruzione',
+  },
   'ansia-sociale-timidezza': {
     src: '/assets/approfondimenti/approfondimenti-ansia-sociale.webp',
     alt: 'Ansia sociale: disagio in contesti con altre persone e paura del giudizio',
