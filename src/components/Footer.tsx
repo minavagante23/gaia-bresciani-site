@@ -23,7 +23,9 @@ const footerLinks = [
 ];
 
 const zoneLinks = [
-  { href: '/psicologa-sarnico', label: 'Credaro - zona Sarnico e Lago d\'Iseo' },
+  { href: '/psicologa-sarnico', label: 'Sarnico e dintorni' },
+  { href: '/psicologa-villongo', label: 'Villongo e Val Calepio' },
+  { href: '/psicologa-lago-iseo', label: 'Lago d\'Iseo' },
   { href: '/contatti', label: 'Castenedolo - zona Brescia' },
 ];
 

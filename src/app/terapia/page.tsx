@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import PageHeader from '@/components/PageHeader';
@@ -87,35 +86,20 @@ export default function TerapiaPage() {
 
       <section className="section-container pb-16">
         <AnimatedSection>
-          <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-center">
-            <div className="space-y-4 flex-1">
-              <h2 className="heading-lg mb-4">L&apos;approccio psicodinamico adleriano</h2>
-              <p className="body-md">
-                L&apos;approccio adleriano considera la persona nella sua
-                globalit&agrave;: storia, emozioni, legami, valori e contesto di vita.
-              </p>
-              <p className="body-md">
-                Quando indicato, integro la{' '}
-                <Link href="/emdr" className="link-inline">
-                  terapia EMDR
-                </Link>{' '}
-                per elaborare traumi, blocchi emotivi e stati di allerta persistenti.
-              </p>
-            </div>
-            <div className="shrink-0 w-[160px]">
-              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-soft-lg">
-                <Image
-                  src="/assets/alfred-adler.webp"
-                  alt="Alfred Adler, fondatore della Psicologia Individuale Adleriana"
-                  fill
-                  className="object-cover object-top"
-                  sizes="160px"
-                />
-              </div>
-              <p className="text-xs text-primary/45 text-center mt-3">
-                Alfred Adler &mdash; Psicologia Individuale
-              </p>
-            </div>
+          <div className="max-w-3xl space-y-4">
+            <h2 className="heading-lg mb-4">L&apos;approccio psicodinamico adleriano</h2>
+            <p className="body-md">
+              L&apos;approccio adleriano, fondato sulla Psicologia Individuale di
+              Alfred Adler, considera la persona nella sua globalit&agrave;:
+              storia, emozioni, legami, valori e contesto di vita.
+            </p>
+            <p className="body-md">
+              Quando indicato, integro la{' '}
+              <Link href="/emdr" className="link-inline">
+                terapia EMDR
+              </Link>{' '}
+              per elaborare traumi, blocchi emotivi e stati di allerta persistenti.
+            </p>
           </div>
         </AnimatedSection>
       </section>

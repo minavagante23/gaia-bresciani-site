@@ -8,9 +8,9 @@ import { createPageMetadata } from '@/lib/seo';
 import { MapPin, Users, Clock, Target } from 'lucide-react';
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'Psicologa vicino Sarnico | Studio a Credaro per il basso Lago d\'Iseo',
+  title: 'Psicologa vicino Sarnico | Studio a Credaro a 5 minuti dal centro',
   description:
-    'Informazioni pratiche per chi vive tra Sarnico e il basso Lago d\'Iseo e desidera raggiungere lo studio di Credaro per un primo colloquio.',
+    'Psicologa e psicoterapeuta a 5 minuti da Sarnico: studio a Credaro, comodo anche da Paratico e Capriolo. Informazioni pratiche per il primo colloquio.',
   path: '/psicologa-sarnico',
   ogTitle: 'Psicologa vicino Sarnico | Studio a Credaro',
   ogDescription:
@@ -164,6 +164,14 @@ export default function ZonaSarnicoPage() {
               e{' '}
               <Link href="/emdr" className="link-inline">
                 terapia EMDR
+              </Link>. Vivi in Val Calepio o sul lago? Consulta le pagine
+              dedicate a{' '}
+              <Link href="/psicologa-villongo" className="link-inline">
+                Villongo
+              </Link>{' '}
+              e al{' '}
+              <Link href="/psicologa-lago-iseo" className="link-inline">
+                Lago d&apos;Iseo
               </Link>.
             </p>
           </div>
