@@ -29,14 +29,16 @@ export default function Hero() {
               Studio zona Lago d&apos;Iseo
             </p>
 
-            <h1 className="heading-xl text-balance">
+            {/* Titolo emotivo visivamente dominante, ma l'H1 semantico è la riga
+                professionale con le keyword locali (fattore on-page local pack). */}
+            <p className="heading-xl text-balance">
               <span className="block">So che chiedere aiuto</span>
               <span className="block text-accent-deep">non &egrave; facile</span>
-            </h1>
+            </p>
 
-            <h2 className="text-lg lg:text-xl font-medium text-primary-light max-w-xl">
+            <h1 className="text-lg lg:text-xl font-medium text-primary-light max-w-xl">
               Psicologa e Psicoterapeuta a Credaro, vicino a Sarnico e al Lago d&apos;Iseo
-            </h2>
+            </h1>
 
             <p className="body-lg max-w-xl">
               So che chiedere aiuto non &egrave; facile. Sono Gaia Bresciani,
