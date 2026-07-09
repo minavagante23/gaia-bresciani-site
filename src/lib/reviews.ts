@@ -1,3 +1,5 @@
+import { SITE_URL } from '@/lib/seo';
+
 export interface Review {
   name: string;
   text: string;
@@ -35,3 +37,41 @@ export const reviews: Review[] = [
     source: 'MioDottore',
   },
 ];
+
+export function getAggregateRatingSchema() {
+  const reviewCount = reviews.length;
+  const ratingValue = reviews.reduce((sum, review) => sum + review.rating, 0) / reviewCount;
+
+  return {
+    '@type': 'AggregateRating',
+    ratingValue: ratingValue.toFixed(1),
+    reviewCount: String(reviewCount),
+    bestRating: '5',
+    worstRating: '1',
+  };
+}
+
+export function getReviewsSchema() {
+  return reviews.map((review, index) => ({
+    '@type': 'Review',
+    '@id': `${SITE_URL}/#review-${index + 1}`,
+    author: {
+      '@type': 'Person',
+      name: review.name,
+    },
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: String(review.rating),
+      bestRating: '5',
+      worstRating: '1',
+    },
+    reviewBody: review.text,
+    publisher: {
+      '@type': 'Organization',
+      name: review.source,
+    },
+    itemReviewed: {
+      '@id': `${SITE_URL}/#localbusiness`,
+    },
+  }));
+}

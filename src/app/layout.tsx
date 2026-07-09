@@ -3,6 +3,7 @@ import { Fraunces, Inter } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import DeferredChrome from '@/components/DeferredChrome';
+import { getAggregateRatingSchema, getReviewsSchema } from '@/lib/reviews';
 import { SITE_URL, siteConfig } from '@/lib/seo';
 import './globals.css';
 
@@ -252,6 +253,8 @@ function SchemaOrgJsonLd() {
         identifier: '22433',
       },
     },
+    aggregateRating: getAggregateRatingSchema(),
+    review: getReviewsSchema(),
   };
 
   const websiteSchema = {

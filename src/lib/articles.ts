@@ -52,7 +52,7 @@ const articles: Article[] = [
       'Quando la perdita è legata a eventi traumatici o improvvisi, il corpo può conservare un\'attivazione intensa che le parole da sole faticano a sciogliere. In questi casi, approcci che lavorano anche sulla memoria emotiva possono integrare il dialogo psicologico.',
       { type: 'h2', text: 'Quando può servire un percorso psicologico' },
       'Un percorso psicologico può essere utile quando il dolore resta isolato e senza sfogo, quando la colpa o la rabbia diventano centrali, quando compaiono segnali di depressione o ansia persistente, o quando la perdita ha scatenato un cambiamento profondo difficile da sostenere da soli. L\'obiettivo non è chiudere un capitolo in fretta, ma costruire un rapporto più tollerabile con ciò che è accaduto e ritrovare gradualmente senso e direzione.',
-      'Se stai attraversando una perdita e ti riconosci in questi segnali, un primo colloquio può aiutarti a capire da dove partire e quale tipo di supporto è più adatto a ciò che stai vivendo.',
+      'Se stai attraversando una perdita e ti riconosci in questi segnali, un primo colloquio può aiutarti a capire da dove partire e quale tipo di supporto è più adatto a ciò che stai vivendo. Se vivi tra Credaro, Sarnico o il basso Lago d\'Iseo, ricevo in presenza a Credaro, in uno studio comodo da raggiungere in pochi minuti.',
     ],
   },
   {
@@ -157,6 +157,7 @@ const articles: Article[] = [
       'Alcuni passi utili possono essere ridurre la stimolazione mentale nelle ore serali, evitare di usare il letto come luogo di lavoro o di allarme, osservare se ci sono abitudini che mantengono l\'attivazione e non cercare di "forzarsi" a dormire. Ma quando il sonno \u00e8 compromesso da settimane e l\'ansia prende sempre pi\u00f9 spazio, non conviene aspettare che passi da solo.',
       { type: 'h2', text: 'Quando chiedere aiuto' },
       'Un percorso psicologico pu\u00f2 aiutare a capire cosa mantiene l\'insonnia, distinguere tra stress temporaneo e ansia pi\u00f9 strutturata, e costruire strategie concrete per regolare l\'attivazione emotiva. Dormire meglio non significa solo riposare: significa recuperare lucidit\u00e0, energia e una sensazione pi\u00f9 stabile di sicurezza interna.',
+      'Se l\'insonnia e l\'ansia condizionano le tue giornate e vivi tra Credaro, Sarnico o il basso Lago d\'Iseo, un primo colloquio in presenza pu\u00f2 aiutarti a capire cosa mantiene il circolo e da dove iniziare.',
     ],
   },
   {
@@ -191,6 +192,7 @@ const articles: Article[] = [
       'I primi passi non sono solo "staccare di pi\u00f9", che spesso non basta se il carico resta strutturale. Pu\u00f2 aiutare ridefinire priorit\u00e0 realistiche, recuperare momenti di disconnessione veri (non solo pausa con lo smartphone), parlarne con il medico di base se compaiono sintomi fisici importanti e valutare con la propria azienda eventuali aggiustamenti, dove possibile.',
       { type: 'h2', text: 'Il ruolo del percorso psicologico' },
       'Un percorso psicologico affianca queste scelte: serve a mettere ordine tra emozioni, senso di colpa e paure legate alla performance, e a costruire strategie pi\u00f9 stabili di regolazione dello stress. Intervenire prima che il burnout diventi cronico di solito rende il recupero pi\u00f9 rapido e la ripresa di energia pi\u00f9 credibile.',
+      'Se il burnout condiziona lavoro e vita privata e vivi tra Sarnico, Villongo o il basso Lago d\'Iseo, possiamo valutare insieme un percorso in studio a Credaro, comodo da raggiungere in pochi minuti.',
     ],
   },
   {
@@ -222,6 +224,7 @@ const articles: Article[] = [
       { type: 'h2', text: 'I primi passi' },
       'Il primo passo \u00e8 riconoscere il meccanismo. Non per giudicarsi, ma per capire che la relazione con s\u00e9 stessi \u00e8 la base da cui partire. Un percorso psicologico pu\u00f2 aiutare a esplorare queste dinamiche in modo sicuro: comprendere da dove nasce il bisogno, distinguere tra amore e dipendenza, e costruire gradualmente un\'autonomia emotiva che non escluda la vicinanza, ma la renda pi\u00f9 libera.',
       'Se ti riconosci in queste parole, sappi che chiedere aiuto non significa essere deboli. Significa voler stare meglio nelle relazioni a partire da quella con te stessa/o.',
+      'Se vivi tra Credaro, Sarnico o il basso Lago d\'Iseo, un primo colloquio in presenza a Credaro può essere il punto di partenza per ritrovare equilibrio nelle relazioni.',
     ],
   },
   {
@@ -254,6 +257,7 @@ const articles: Article[] = [
       'Fermare il rimuginio non significa smettere di pensare. Significa imparare a riconoscere quando il pensiero \u00e8 diventato una trappola e non uno strumento. Alcune strategie utili: scrivere i pensieri per "svuotare" la mente, darsi un tempo limitato per riflettere su una questione, e soprattutto tornare al presente attraverso l\'attenzione alle sensazioni fisiche.',
       { type: 'h2', text: 'Quando chiedere aiuto' },
       'Quando il rimuginio diventa una costante e influenza la qualit\u00e0 della vita, un percorso psicologico pu\u00f2 aiutare a comprenderne le radici e a sviluppare strumenti concreti per interrompere il circolo.',
+      'Se il rimuginio mentale limita sonno, decisioni e qualit\u00e0 della vita e vivi in zona Sarnico, Credaro o basso Lago d\'Iseo, un confronto in studio pu\u00f2 aiutarti a capire da dove partire.',
     ],
   },
   {
@@ -285,6 +289,7 @@ const articles: Article[] = [
       'Uno degli aspetti pi\u00f9 insidiosi \u00e8 che chi vive questa condizione spesso si sente in colpa. "Non ho motivo di stare cos\u00ec", "Altri stanno peggio". Ma la stanchezza emotiva non ha bisogno di giustificazioni: \u00e8 un segnale che il corpo e la mente stanno chiedendo attenzione.',
       { type: 'h2', text: 'Primi passi utili' },
       'I primi passi utili includono: ridurre dove possibile gli impegni non essenziali, parlare con qualcuno di fiducia di come ci si sente, e soprattutto non aspettare che la situazione si risolva da sola. Se la stanchezza emotiva dura da settimane e influenza il funzionamento quotidiano, pu\u00f2 essere il momento di affidarsi a un percorso psicologico per comprendere cosa la mantiene e come recuperare energia e chiarezza.',
+      'Se ti riconosci in questi segnali e vivi tra Credaro, Sarnico o il basso Lago d\'Iseo, un primo colloquio in presenza pu\u00f2 aiutarti a capire cosa sta consumando le tue energie e da dove ripartire.',
     ],
   },
   {
@@ -318,6 +323,7 @@ const articles: Article[] = [
       'La bassa autostima ha quasi sempre radici nella storia personale: messaggi ricevuti durante l\'infanzia, esperienze di svalutazione, confronti sistematici con fratelli o compagni, oppure un ambiente familiare in cui l\'errore veniva vissuto come fallimento.',
       { type: 'h2', text: 'Il percorso psicologico' },
       'Un percorso psicologico non punta a "gonfiare" l\'autostima con frasi motivazionali. Il lavoro \u00e8 pi\u00f9 profondo: esplorare come si \u00e8 costruita questa immagine di s\u00e9, riconoscere le convinzioni che la mantengono, e sperimentare gradualmente un modo diverso di guardarsi, pi\u00f9 realistico e pi\u00f9 compassionevole.',
+      'Se la bassa autostima condiziona relazioni, lavoro o scelte quotidiane e vivi in zona Credaro, Sarnico o basso Lago d\'Iseo, un primo colloquio in studio pu\u00f2 aiutarti a capire da dove partire.',
     ],
   },
   {
@@ -351,6 +357,7 @@ const articles: Article[] = [
       'Alcune strategie concrete: stabilire insieme delle regole sull\'uso (non imposte dall\'alto), creare momenti quotidiani senza dispositivi, e soprattutto essere un modello coerente, difficile chiedere a un adolescente di staccarsi dal telefono se noi stessi siamo sempre connessi.',
       { type: 'h2', text: 'Quando rivolgersi a un professionista' },
       'Se un adolescente mostra segni di disagio legati ai social, ritiro sociale, ansia, disturbi alimentari, autolesionismo, \u00e8 importante non minimizzare e valutare un confronto con un professionista.',
+      'Se vivi tra Sarnico, Villongo o il basso Lago d\'Iseo e stai valutando un supporto per un figlio adolescente, ricevo in presenza a Credaro: il primo colloquio serve a capire insieme la situazione e la strada pi\u00f9 adatta.',
     ],
   },
   {
@@ -383,6 +390,7 @@ const articles: Article[] = [
       { type: 'h2', text: 'Come funziona un percorso per l\'ansia' },
       'Un percorso psicologico per l\'ansia non si limita a insegnare tecniche di rilassamento. Lavora sulle radici: comprendere cosa alimenta l\'ansia, quali pensieri e situazioni la attivano, e come il corpo e la mente possono imparare a regolarla in modo pi\u00f9 efficace.',
       'L\'ansia si pu\u00f2 affrontare. Non serve aspettare che diventi insostenibile per chiedere aiuto: prima si interviene, pi\u00f9 veloce \u00e8 il percorso.',
+      'Se l\'ansia o gli attacchi di panico limitano la tua vita e vivi tra Credaro, Sarnico o il basso Lago d\'Iseo, un primo colloquio in presenza a Credaro pu\u00f2 aiutarti a capire da dove iniziare.',
     ],
   },
   {
@@ -414,6 +422,7 @@ const articles: Article[] = [
       '\u00c8 normale sentirsi a disagio all\'idea di parlare dei propri problemi di coppia davanti a un estraneo. Ma nella maggior parte dei casi, dopo il primo incontro, entrambi i partner riferiscono di sentirsi pi\u00f9 leggeri per aver finalmente trovato uno spazio dove poter parlare apertamente.',
       { type: 'h2', text: 'Quanto dura il percorso' },
       'La durata del percorso varia: alcune coppie beneficiano di pochi incontri focalizzati, altre richiedono un lavoro pi\u00f9 lungo. L\'importante \u00e8 la disponibilit\u00e0 di entrambi a mettersi in gioco.',
+      'Se vivete tra Sarnico, Paratico o il basso Lago d\'Iseo e state valutando un supporto di coppia, il primo colloquio si svolge di norma in presenza a Credaro, in uno studio comodo da raggiungere per entrambi.',
     ],
   },
 ];
