@@ -77,7 +77,7 @@ const faqItems = [
   {
     question: 'Lavori anche nel weekend o in orari serali?',
     answer:
-      'Sono disponibili alcune fasce flessibili, comprese opzioni serali e, quando possibile, il sabato mattina.',
+      'Sì: dal lunedì al venerdì ricevo su appuntamento anche in fascia serale (fino alle 21) e il sabato dalle 9 alle 16:30.',
   },
 ];
 

@@ -153,8 +153,13 @@ function SchemaOrgJsonLd() {
     '@context': 'https://schema.org',
     '@type': ['Psychologist', 'MedicalBusiness', 'LocalBusiness'],
     '@id': `${SITE_URL}/#localbusiness`,
-    name: 'Gaia Bresciani \u2013 Psicologa e Psicoterapeuta',
-    alternateName: 'Studio Psicologia Gaia Bresciani',
+    // Nome identico carattere per carattere alla scheda Google Business Profile:
+    // ogni difformità indebolisce la riconciliazione dell'entità nel local pack.
+    name: 'Psicologa Psicoterapeuta - Dr.ssa Gaia Bresciani',
+    alternateName: [
+      'Gaia Bresciani \u2013 Psicologa e Psicoterapeuta',
+      'Studio Psicologia Gaia Bresciani',
+    ],
     image: [
       `${SITE_URL}/assets/psicologa-gaia-bresciani.webp`,
       `${SITE_URL}/assets/psicologa-lago-iseo-sarnico.webp`,
@@ -180,8 +185,9 @@ function SchemaOrgJsonLd() {
         addressCountry: 'IT',
       },
     ],
-    geo: { '@type': 'GeoCoordinates', latitude: '45.6670', longitude: '9.9310' },
-    hasMap: 'https://www.google.com/maps/place/Gaia+Bresciani+Psicologa/',
+    // Coordinate e CID identici al pin della scheda Google Business Profile.
+    geo: { '@type': 'GeoCoordinates', latitude: '45.6595748', longitude: '9.9261865' },
+    hasMap: 'https://maps.google.com/?cid=12753596495629000798',
     telephone: '+393408389958',
     email: 'gaia.bresciani23@gmail.com',
     url: SITE_URL,
@@ -191,7 +197,9 @@ function SchemaOrgJsonLd() {
     sameAs: [
       'https://www.facebook.com/StudioPrivatoViaPiave7CredaroBG/',
       'https://www.linkedin.com/in/gaia-bresciani-357aa8106/',
-      'https://www.google.com/maps/place/Gaia+Bresciani+Psicologa/',
+      'https://www.opl.it/psicologi/22433/Bresciani-Gaia-Miriam-Teresa',
+      'https://www.miodottore.it/gaia-miriam-teresa-bresciani/psicoterapeuta-psicologo-clinico-psicologo/brescia',
+      'https://maps.google.com/?cid=12753596495629000798',
     ],
     areaServed: [
       {
@@ -210,18 +218,20 @@ function SchemaOrgJsonLd() {
       geoMidpoint: { '@type': 'GeoCoordinates', latitude: '45.6690', longitude: '9.9615' },
       geoRadius: '20000',
     },
+    // Orari allineati alla scheda Google Business Profile (Lun-Ven 07-21, Sab 09-16:30):
+    // un conflitto orari schema/GBP genera un segnale di entità incoerente.
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-        opens: '09:00',
-        closes: '18:00',
+        opens: '07:00',
+        closes: '21:00',
       },
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: 'Saturday',
         opens: '09:00',
-        closes: '13:00',
+        closes: '16:30',
       },
     ],
     hasOfferCatalog: {

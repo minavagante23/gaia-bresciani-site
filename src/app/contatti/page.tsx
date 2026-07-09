@@ -34,7 +34,7 @@ const contactInfo = [
   {
     icon: Clock,
     label: 'Orari',
-    value: 'Lun-Ven 9-18, Sab 9-13',
+    value: 'Lun-Ven 7-21, Sab 9-16:30',
   },
 ];
 
