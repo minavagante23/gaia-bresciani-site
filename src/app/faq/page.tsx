@@ -97,9 +97,17 @@ export default function FaqPage() {
           <div className="max-w-3xl mx-auto">
             <Accordion items={faqItems} />
             <p className="text-sm text-primary/60 mt-8">
-              Se vuoi informazioni pratiche sugli spostamenti, puoi vedere anche la pagina{' '}
+              Se vuoi informazioni pratiche sugli spostamenti, puoi vedere le pagine dedicate a{' '}
               <Link href="/psicologa-sarnico" className="link-inline">
-                dedicata a Sarnico e al basso Lago d&apos;Iseo
+                Sarnico e al basso Lago d&apos;Iseo
+              </Link>
+              ,{' '}
+              <Link href="/psicologa-villongo" className="link-inline">
+                Villongo e Val Calepio
+              </Link>{' '}
+              e{' '}
+              <Link href="/psicologa-lago-iseo" className="link-inline">
+                Lago d&apos;Iseo
               </Link>
               . Per una panoramica sui percorsi disponibili puoi consultare anche{' '}
               <Link href="/terapia" className="link-inline">

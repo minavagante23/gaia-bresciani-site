@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { MapPin, Building2, Laptop } from 'lucide-react';
 
 const locations = [
@@ -109,6 +110,17 @@ export default function LocationCards() {
             );
           })}
         </div>
+
+        <p className="text-center text-sm text-primary/60 mt-10">
+          Altre zone servite:{' '}
+          <Link href="/psicologa-villongo" className="link-inline">
+            Villongo e Val Calepio
+          </Link>
+          {' · '}
+          <Link href="/psicologa-lago-iseo" className="link-inline">
+            Lago d&apos;Iseo
+          </Link>
+        </p>
       </div>
     </section>
   );

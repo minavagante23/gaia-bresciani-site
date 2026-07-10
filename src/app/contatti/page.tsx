@@ -120,14 +120,24 @@ export default function ContattiPage() {
               </h3>
               <p className="text-sm text-muted leading-relaxed">
                 La sede di riferimento è a Credaro; quando utile, sono disponibili
-                anche colloqui online e una seconda sede a Castenedolo. Approfondisci{' '}
+                anche colloqui online e una seconda sede a Castenedolo. Approfondisci le pagine
+                dedicate a{' '}
                 <Link href="/psicologa-sarnico" className="link-inline">
-                  la pagina dedicata a Sarnico e Lago d&apos;Iseo
+                  Sarnico e Lago d&apos;Iseo
+                </Link>
+                ,{' '}
+                <Link href="/psicologa-villongo" className="link-inline">
+                  Villongo e Val Calepio
                 </Link>{' '}
                 e{' '}
+                <Link href="/psicologa-lago-iseo" className="link-inline">
+                  Lago d&apos;Iseo
+                </Link>
+                , oppure consulta{' '}
                 <Link href="/terapia" className="link-inline">
                   terapia individuale e di coppia
-                </Link>.
+                </Link>
+                .
               </p>
             </div>
           </AnimatedSection>

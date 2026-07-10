@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import PageHeader from '@/components/PageHeader';
 import AnimatedSection from '@/components/AnimatedSection';
@@ -110,6 +111,13 @@ export default function ChiSonoPage() {
                 </dd>
               </div>
             </dl>
+            <p className="body-md">
+              Per il percorso formativo e la pratica clinica in dettaglio,{' '}
+              <Link href="/esperienza" className="link-inline">
+                scopri la mia esperienza clinica
+              </Link>
+              .
+            </p>
           </AnimatedSection>
 
           <AnimatedSection className="lg:col-span-2 lg:sticky lg:top-28">
