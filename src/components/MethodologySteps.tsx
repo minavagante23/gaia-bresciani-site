@@ -46,12 +46,12 @@ export default function MethodologySteps() {
             Un percorso strutturato e trasparente, pensato per
             accompagnarti con chiarezza in ogni fase.
           </p>
-          <p className="text-sm text-primary/60 mt-4">
+          <p className="text-sm text-muted mt-4">
             Ti rispondo entro 24 ore lavorative. Il primo colloquio serve a
             capire se questo spazio pu\u00f2 essere davvero utile per la tua
             situazione.
           </p>
-          <p className="text-sm text-primary/60 mt-4">
+          <p className="text-sm text-muted mt-4">
             Se vuoi capire come raggiungere lo studio, puoi vedere anche{' '}
             <Link
               href="/psicologa-sarnico"

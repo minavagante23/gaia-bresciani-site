@@ -130,7 +130,7 @@
   }
 
   .link-inline {
-    @apply text-accent-deep font-medium underline underline-offset-[3px] decoration-accent-deep/70 hover:decoration-accent-deep;
+    @apply text-primary-light font-medium underline underline-offset-[3px] decoration-primary-light/70 hover:text-primary hover:decoration-primary;
   }
 
   .touch-target {
@@ -196,7 +196,7 @@
 
   .section-index {
     @apply font-serif font-bold select-none pointer-events-none;
-    color: rgba(45, 70, 76, 0.06);
+    color: rgba(45, 70, 76, 0.22);
     line-height: 0.8;
   }
 
