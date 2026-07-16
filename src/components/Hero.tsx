@@ -109,15 +109,16 @@ export default function Hero() {
                 style={{ borderRadius: '60% 40% 55% 45% / 55% 50% 50% 45%' }}
                 aria-hidden="true"
               />
-              <div className="photo-grade relative aspect-[3/4] w-[300px] overflow-hidden rounded-[200px_200px_28px_28px] shadow-soft-lg lg:w-[350px]">
+              <div className="photo-grade hero-photo relative aspect-[3/4] w-[300px] overflow-hidden rounded-[200px_200px_28px_28px] shadow-soft-lg lg:w-[350px]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={HERO_IMAGE.src}
                   alt={HERO_IMAGE.alt}
                   width={HERO_IMAGE.width}
                   height={HERO_IMAGE.height}
-                  decoding="sync"
+                  decoding="async"
                   fetchPriority="high"
+                  loading="eager"
                   sizes="(max-width: 1024px) 300px, 350px"
                   className="h-full w-full object-cover"
                 />

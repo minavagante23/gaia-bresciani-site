@@ -47,14 +47,9 @@
     @apply outline-2 outline-offset-2 outline-accent-deep;
   }
 
-  img, video {
+  video {
     content-visibility: auto;
     contain-intrinsic-size: auto 300px;
-  }
-
-  /* Coherent warm photographic grade across every photo on the site */
-  img {
-    filter: saturate(0.94) contrast(1.03) sepia(0.06);
   }
 }
 
@@ -152,6 +147,12 @@
     contain: layout style paint;
   }
 
+  .section-lazy img,
+  .section-lazy video {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 300px;
+  }
+
   .section-wash {
     @apply relative isolate;
   }
@@ -204,6 +205,10 @@
     @apply relative isolate;
   }
 
+  .photo-grade img {
+    filter: saturate(0.94) contrast(1.03) sepia(0.06);
+  }
+
   .photo-grade::after {
     content: '';
     position: absolute;
@@ -217,6 +222,24 @@
       rgba(209, 166, 132, 0.2)
     );
     mix-blend-mode: soft-light;
+  }
+
+  .hero-photo img {
+    filter: none;
+  }
+
+  .hero-photo::after {
+    opacity: 0.5;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-photo img {
+    filter: saturate(0.94) contrast(1.03) sepia(0.06);
+  }
+
+  .hero-photo::after {
+    opacity: 1;
   }
 }
 
