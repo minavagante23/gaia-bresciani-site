@@ -121,7 +121,7 @@ export default function FaqPage() {
 
       <InlineCta
         title="Vuoi chiarire dubbi prima di iniziare?"
-        subtitle="Scrivimi dal modulo contatti: ti rispondo entro 24 ore lavorative."
+        subtitle="Scrivimi su WhatsApp: ti rispondo entro 24 ore lavorative."
       />
     </>
   );

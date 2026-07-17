@@ -1,5 +1,12 @@
-import { ArrowRight, Clock3, MapPin, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Clock3, MapPin, MessageCircle, ShieldCheck } from 'lucide-react';
 import { linkTitle } from '@/lib/link-titles';
+import {
+  CTA_PRIMARY_LABEL,
+  CTA_TRUST_LINE,
+  WHATSAPP_ARIA,
+  WHATSAPP_TITLE,
+  WHATSAPP_URL,
+} from '@/lib/contact';
 
 const HERO_IMAGE = {
   src: '/assets/psicologa-sarnico-gaia-bresciani.webp',
@@ -83,8 +90,16 @@ export default function Hero() {
             </div>
 
             <div className="flex flex-wrap gap-4 pt-2">
-              <a href="#contatti" title={linkTitle('#contatti')} className="btn-primary btn-shine gap-2">
-                Prenota un colloquio
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={WHATSAPP_TITLE}
+                aria-label={WHATSAPP_ARIA}
+                className="btn-primary btn-shine gap-2"
+              >
+                <MessageCircle size={16} />
+                {CTA_PRIMARY_LABEL}
                 <ArrowRight size={16} />
               </a>
               <a href="#metodo" title={linkTitle('#metodo')} className="btn-outline">
@@ -92,13 +107,15 @@ export default function Hero() {
               </a>
             </div>
 
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-4 text-sm text-muted">
+            <p className="pt-1 text-sm text-muted">{CTA_TRUST_LINE}</p>
+
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-2 text-sm text-muted">
               <span className="flex items-center gap-2">
                 <span className="h-2 w-2 rounded-full bg-accent" />
                 Primo colloquio orientativo
               </span>
               <span>Credaro (BG) &middot; Vicino a Sarnico</span>
-              <span>Parcheggio privato &middot; Online quando utile</span>
+              <span>Parcheggio privato</span>
             </div>
           </div>
 

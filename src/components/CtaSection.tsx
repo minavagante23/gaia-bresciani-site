@@ -1,7 +1,15 @@
 import AnimatedSection from './AnimatedSection';
 import DeferredMount from './DeferredMount';
-import { Phone, Mail } from 'lucide-react';
+import { MessageCircle, Phone } from 'lucide-react';
 import { linkTitle } from '@/lib/link-titles';
+import {
+  CTA_PRIMARY_LABEL,
+  CTA_TRUST_LINE,
+  PHONE_HREF,
+  WHATSAPP_ARIA,
+  WHATSAPP_TITLE,
+  WHATSAPP_URL,
+} from '@/lib/contact';
 import dynamic from 'next/dynamic';
 
 const MioDottoreWidget = dynamic(() => import('./MioDottoreWidget'), {
@@ -30,32 +38,47 @@ export default function CtaSection() {
 
             <div className="relative z-10 max-w-2xl mx-auto">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-white mb-5 text-balance">
-                Possiamo iniziare con un primo colloquio
+                Possiamo iniziare con un primo colloquio in presenza
               </h2>
               <p className="text-white/70 text-base sm:text-lg leading-relaxed mb-10 max-w-lg mx-auto">
-                Se per te &egrave; pi&ugrave; comodo raggiungere Credaro, possiamo
-                fissare un appuntamento in presenza e valutare insieme come
-                procedere. Ti rispondo entro 24 ore lavorative.
+                Scrivimi su WhatsApp: valutiamo insieme un appuntamento nello
+                studio di Credaro, comodo da Sarnico e dal basso Lago d&apos;Iseo.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
-                  href="tel:+393408389958"
-                  title={linkTitle('tel:+393408389958')}
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={WHATSAPP_TITLE}
+                  aria-label={WHATSAPP_ARIA}
                   className="btn-shine w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-accent-deep text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:bg-accent-dark hover:shadow-soft active:scale-[0.98]"
                 >
-                  <Phone size={17} />
-                  Prenota un colloquio
+                  <MessageCircle size={17} />
+                  {CTA_PRIMARY_LABEL}
                 </a>
+                <a
+                  href={PHONE_HREF}
+                  title={linkTitle(PHONE_HREF)}
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 text-white border border-white/20 px-8 py-4 rounded-full font-medium transition-all duration-300 hover:bg-white/20 active:scale-[0.98]"
+                >
+                  <Phone size={17} />
+                  Oppure chiamami
+                </a>
+              </div>
+
+              <p className="text-white/75 text-sm mt-6">{CTA_TRUST_LINE}</p>
+
+              <p className="text-white/55 text-xs mt-4">
+                Preferisci il modulo?{' '}
                 <a
                   href="/contatti/#contact-form"
                   title={linkTitle('/contatti/#contact-form')}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 text-white border border-white/20 px-8 py-4 rounded-full font-medium transition-all duration-300 hover:bg-white/20 active:scale-[0.98]"
+                  className="underline underline-offset-2 hover:text-white/80"
                 >
-                  <Mail size={17} />
-                  Scrivimi direttamente
+                  Scrivimi dalla pagina Contatti
                 </a>
-              </div>
+              </p>
 
               <p className="text-white/75 text-xs mt-8">
                 Sedute da 70 a 100 &euro; &middot; Detraibili al 19% &middot; Fattura sanitaria
@@ -66,7 +89,7 @@ export default function CtaSection() {
 
         <AnimatedSection>
           <div className="card-base card-glow p-6 sm:p-8 max-w-2xl mx-auto">
-            <h3 className="heading-md mb-4 text-center">Prenota su MioDottore</h3>
+            <h3 className="heading-md mb-4 text-center">Oppure prenota su MioDottore</h3>
             <p className="body-md text-center mb-6">
               Scegli data e orario direttamente dal calendario.
               Puoi anche leggere le recensioni dei pazienti.

@@ -1,10 +1,13 @@
 import Link from 'next/link';
 import { MessageCircle, Phone } from 'lucide-react';
 import { linkTitle } from '@/lib/link-titles';
-
-const WHATSAPP_URL =
-  'https://wa.me/393408389958?text=' +
-  encodeURIComponent('Salve, vorrei informazioni per un primo colloquio.');
+import {
+  CTA_PRIMARY_SHORT,
+  PHONE_HREF,
+  WHATSAPP_ARIA,
+  WHATSAPP_TITLE,
+  WHATSAPP_URL,
+} from '@/lib/contact';
 
 const navLinks = [
   { href: '/chi-sono', label: 'Chi sono' },
@@ -47,11 +50,11 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             className="btn-accent gap-2 py-2.5 px-5 text-[0.85rem]"
-            aria-label="Scrivi su WhatsApp alla Dott.ssa Gaia Bresciani"
-            title="Scrivi su WhatsApp a Gaia Bresciani"
+            aria-label={WHATSAPP_ARIA}
+            title={WHATSAPP_TITLE}
           >
             <MessageCircle size={16} strokeWidth={2} />
-            Scrivimi su WhatsApp
+            {CTA_PRIMARY_SHORT}
           </a>
         </div>
 
@@ -104,19 +107,23 @@ export default function Navbar() {
 
             <div className="mt-auto pt-8 flex flex-col gap-3">
               <a
-                href="tel:+393408389958"
-                title={linkTitle('tel:+393408389958')}
-                className="btn-accent text-center"
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-accent text-center gap-2"
+                aria-label={WHATSAPP_ARIA}
+                title={WHATSAPP_TITLE}
+              >
+                <MessageCircle size={16} className="inline" />
+                {CTA_PRIMARY_SHORT}
+              </a>
+              <a
+                href={PHONE_HREF}
+                title={linkTitle(PHONE_HREF)}
+                className="btn-outline text-center"
               >
                 <Phone size={16} className="mr-2 inline" />
                 Chiamami
-              </a>
-              <a
-                href="mailto:gaia.bresciani23@gmail.com"
-                title={linkTitle('mailto:gaia.bresciani23@gmail.com')}
-                className="btn-outline text-center"
-              >
-                Scrivi una email
               </a>
             </div>
           </div>

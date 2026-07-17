@@ -6,7 +6,14 @@ import AnimatedSection from '@/components/AnimatedSection';
 import ContactForm from '@/components/ContactForm';
 import ConsentIframe from '@/components/ConsentIframe';
 import { createPageMetadata } from '@/lib/seo';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import {
+  CTA_PRIMARY_LABEL,
+  CTA_TRUST_LINE,
+  WHATSAPP_ARIA,
+  WHATSAPP_TITLE,
+  WHATSAPP_URL,
+} from '@/lib/contact';
+import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
 
 export const metadata: Metadata = createPageMetadata({
   title: 'Contatti e primo colloquio | Studio a Credaro per chi arriva da Sarnico',
@@ -62,8 +69,27 @@ export default function ContattiPage() {
       <PageHeader
         eyebrow="Contatti"
         title="Contatti e primo colloquio"
-        subtitle="Se vuoi, puoi indicarmi sede preferita, fascia oraria e una breve descrizione della situazione, così da orientare meglio il primo contatto."
+        subtitle="Il modo più rapido per fissare un colloquio in presenza è WhatsApp. In alternativa puoi chiamarmi o usare il modulo qui sotto."
       />
+
+      <section className="section-container pb-8">
+        <AnimatedSection>
+          <div className="card-base p-6 sm:p-8 max-w-2xl mx-auto text-center bg-gradient-to-br from-primary/[0.02] to-accent/[0.04]">
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={WHATSAPP_TITLE}
+              aria-label={WHATSAPP_ARIA}
+              className="btn-primary gap-2 w-full sm:w-auto"
+            >
+              <MessageCircle size={16} />
+              {CTA_PRIMARY_LABEL}
+            </a>
+            <p className="text-sm text-muted mt-4">{CTA_TRUST_LINE}</p>
+          </div>
+        </AnimatedSection>
+      </section>
 
       <section className="section-container pb-16">
         <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">

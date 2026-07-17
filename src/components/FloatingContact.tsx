@@ -1,11 +1,12 @@
-import { Mail, MessageCircle } from 'lucide-react';
+import { MessageCircle, Phone } from 'lucide-react';
 import { linkTitle } from '@/lib/link-titles';
-
-const WHATSAPP_URL =
-  'https://wa.me/393408389958?text=' +
-  encodeURIComponent(
-    'Salve, vorrei informazioni per un primo colloquio.'
-  );
+import {
+  CTA_PRIMARY_SHORT,
+  PHONE_HREF,
+  WHATSAPP_ARIA,
+  WHATSAPP_TITLE,
+  WHATSAPP_URL,
+} from '@/lib/contact';
 
 export default function FloatingContact() {
   return (
@@ -17,21 +18,21 @@ export default function FloatingContact() {
         href={WHATSAPP_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex flex-[1.3] items-center justify-center gap-2 rounded-full bg-whatsapp px-4 py-3 text-sm font-semibold text-white active:scale-[0.98] transition-transform"
-        aria-label="Scrivi su WhatsApp alla Dott.ssa Gaia Bresciani, risposta entro 24 ore"
-        title="Scrivi su WhatsApp a Gaia Bresciani"
+        className="flex flex-[1.6] items-center justify-center gap-2 rounded-full bg-whatsapp px-4 py-3 text-sm font-semibold text-white active:scale-[0.98] transition-transform"
+        aria-label={WHATSAPP_ARIA}
+        title={WHATSAPP_TITLE}
       >
         <MessageCircle size={17} strokeWidth={2} />
-        WhatsApp &middot; risposta in 24h
+        {CTA_PRIMARY_SHORT}
       </a>
       <a
-        href="/contatti/#contact-form"
-        title={linkTitle('/contatti/#contact-form')}
+        href={PHONE_HREF}
+        title={linkTitle(PHONE_HREF)}
         className="flex flex-1 items-center justify-center gap-2 rounded-full bg-accent-deep px-4 py-3 text-sm font-medium text-white active:scale-[0.98] transition-transform"
-        aria-label="Vai al modulo di contatto"
+        aria-label="Chiama Gaia Bresciani"
       >
-        <Mail size={17} strokeWidth={2} />
-        Scrivimi
+        <Phone size={17} strokeWidth={2} />
+        Chiama
       </a>
     </div>
   );
