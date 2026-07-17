@@ -46,7 +46,7 @@ const CRITICAL_CSS = `
 `.replace(/\s+/g, ' ').trim();
 
 export const metadata: Metadata = {
-  title: 'Psicologa a Credaro vicino Sarnico e Lago d\'Iseo | Gaia Bresciani',
+  title: 'Psicologa a Credaro, Sarnico e Lago d\'Iseo | Gaia Bresciani',
   description:
     'Gaia Bresciani, psicologa e psicoterapeuta a Credaro, vicino a Sarnico e Lago d\'Iseo. Percorsi in presenza per ansia, relazioni, autostima e traumi.',
   metadataBase: new URL(SITE_URL),
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Psicologa a Credaro vicino Sarnico e Lago d\'Iseo | Gaia Bresciani',
+    title: 'Psicologa a Credaro, Sarnico e Lago d\'Iseo | Gaia Bresciani',
     description:
       'Studio di psicologia a Credaro, comodo per Sarnico e basso Lago d\'Iseo. Primo colloquio per ansia, relazioni, autostima e traumi.',
     url: `${SITE_URL}/`,
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Psicologa a Credaro vicino Sarnico e Lago d\'Iseo | Gaia Bresciani',
+    title: 'Psicologa a Credaro, Sarnico e Lago d\'Iseo | Gaia Bresciani',
     description:
       'Percorsi psicologici in presenza a Credaro, vicino a Sarnico e Lago d\'Iseo, con primo colloquio orientativo.',
     images: [siteConfig.ogImage],
