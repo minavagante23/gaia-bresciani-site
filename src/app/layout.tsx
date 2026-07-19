@@ -3,6 +3,7 @@ import { Fraunces, Inter } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import DeferredChrome from '@/components/DeferredChrome';
+import HolidayNotice from '@/components/HolidayNotice';
 import { getAggregateRatingSchema, getReviewsSchema } from '@/lib/reviews';
 import { SITE_URL, siteConfig } from '@/lib/seo';
 import './globals.css';
@@ -328,7 +329,10 @@ export default function RootLayout({
         </a>
         <Navbar />
         <DeferredChrome timeoutMs={3000} />
-        <main id="main-content">{children}</main>
+        <main id="main-content">
+          <HolidayNotice />
+          {children}
+        </main>
         <Footer />
         <SchemaOrgJsonLd />
       </body>
