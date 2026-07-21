@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import {
   Brain,
   Heart,
@@ -6,6 +7,7 @@ import {
   Users,
   Monitor,
 } from 'lucide-react';
+import { linkTitle } from '@/lib/link-titles';
 
 const services = [
   {
@@ -13,6 +15,7 @@ const services = [
     title: 'Ansia e Attacchi di Panico',
     description:
       'Quando senti di essere sempre in allerta, fatichi a respirare o perdi lucidità nei momenti di stress.',
+    href: '/approfondimenti/ansia-attacchi-panico',
     span: 'md:col-span-2',
     accent: true,
   },
@@ -21,6 +24,7 @@ const services = [
     title: 'Relazioni che fanno soffrire',
     description:
       'Per capire cosa si ripete nei rapporti affettivi, familiari o personali e ritrovare più equilibrio.',
+    href: '/approfondimenti/dipendenza-affettiva',
     span: '',
   },
   {
@@ -28,6 +32,7 @@ const services = [
     title: 'Autostima e senso di sé',
     description:
       'Quando prevalgono giudizio, insicurezza, fatica a scegliere o bisogno costante di conferme.',
+    href: '/approfondimenti/autostima-bassa',
     span: '',
   },
   {
@@ -35,6 +40,7 @@ const services = [
     title: 'Terapia EMDR',
     description:
       'Per elaborare traumi, esperienze che tornano addosso e blocchi emotivi che il solo ragionamento non scioglie.',
+    href: '/emdr',
     span: 'md:col-span-2',
     accent: true,
   },
@@ -43,6 +49,7 @@ const services = [
     title: 'Terapia di Coppia',
     description:
       'Quando il dialogo si rompe, i conflitti si ripetono o la relazione sembra ferma sempre negli stessi punti.',
+    href: '/terapia',
     span: '',
   },
   {
@@ -50,6 +57,7 @@ const services = [
     title: 'Sedute Online',
     description:
       'Una possibilità utile quando serve continuità, hai poco tempo o non riesci a raggiungere lo studio con regolarità.',
+    href: '/contatti',
     span: '',
   },
 ];
@@ -71,9 +79,11 @@ export default function ServicesBentoGrid() {
           {services.map((service) => {
             const Icon = service.icon;
             return (
-              <div
+              <Link
                 key={service.title}
-                className={`group relative card-base card-hover card-glow p-7 lg:p-8 cursor-default transition-[box-shadow,transform] duration-300 ${service.span} ${
+                href={service.href}
+                title={linkTitle(service.href, service.title)}
+                className={`group relative card-base card-hover card-glow p-7 lg:p-8 block no-underline transition-[box-shadow,transform] duration-300 ${service.span} ${
                   service.accent
                     ? 'bg-gradient-to-br from-primary to-primary-light text-white'
                     : ''
@@ -114,7 +124,7 @@ export default function ServicesBentoGrid() {
                       : 'bg-accent/5 group-hover:bg-accent/45'
                   }`}
                 />
-              </div>
+              </Link>
             );
           })}
         </div>

@@ -129,6 +129,27 @@ export default function ArticlePage({ params }: PageProps) {
                     </h2>
                   );
                 }
+                if (block.type === 'cta') {
+                  return (
+                    <aside
+                      key={i}
+                      className="card-base p-5 sm:p-6 my-2 bg-accent/[0.04] border border-accent/10"
+                    >
+                      <p className="body-md leading-[1.75]">
+                        {block.before}{' '}
+                        {block.links.map((link, j) => (
+                          <span key={link.href}>
+                            {j > 0 && (j === block.links.length - 1 ? ' o ' : ', ')}
+                            <Link href={link.href} className="link-inline">
+                              {link.label}
+                            </Link>
+                          </span>
+                        ))}
+                        {block.after ?? '.'}
+                      </p>
+                    </aside>
+                  );
+                }
                 return (
                   <ul key={i} className="space-y-2 pl-5 list-disc marker:text-accent">
                     {block.items.map((item, j) => (

@@ -43,7 +43,7 @@ export default function Hero() {
               <span className="block text-accent-deep">non &egrave; facile</span>
             </p>
 
-            <h1 className="text-lg lg:text-xl font-medium text-primary-light max-w-xl">
+            <h1 className="font-serif text-xl lg:text-2xl font-semibold text-primary max-w-xl text-balance">
               Psicologa e Psicoterapeuta a Credaro, vicino a Sarnico e al Lago d&apos;Iseo
             </h1>
 

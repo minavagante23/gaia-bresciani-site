@@ -16,13 +16,13 @@ import {
 import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'Contatti e primo colloquio | Studio a Credaro per chi arriva da Sarnico',
+  title: 'Prenota un primo colloquio | Psicologa a Credaro vicino Sarnico',
   description:
-    'Contatti per un primo colloquio psicologico nello studio di Credaro, comodo per chi arriva da Sarnico e dal basso Lago d\'Iseo.',
+    'Vuoi iniziare un percorso di psicoterapia? Prenota un primo colloquio a Credaro, comodo da Sarnico e Lago d\'Iseo. WhatsApp, telefono o modulo: risposta entro 24 ore.',
   path: '/contatti',
-  ogTitle: 'Contatti | Studio a Credaro vicino Sarnico',
+  ogTitle: 'Prenota un primo colloquio | Gaia Bresciani',
   ogDescription:
-    'Contatti rapidi per fissare un primo colloquio e chiarire sede, orari e modalità del percorso.',
+    'Contatti rapidi per fissare un primo colloquio in presenza a Credaro o chiarire sede, orari e modalità del percorso.',
 });
 
 const contactInfo = [
@@ -74,6 +74,25 @@ export default function ContattiPage() {
 
       <section className="section-container pb-8">
         <AnimatedSection>
+          <div className="max-w-2xl mx-auto mb-6 space-y-3 text-center">
+            <p className="body-md">
+              Il primo contatto serve solo a chiarire la richiesta, la sede e
+              una fascia oraria possibile. Non serve arrivare con tutto
+              &ldquo;chiaro&rdquo;: basta descrivere cosa stai vivendo, anche in
+              poche righe.
+            </p>
+            <p className="text-sm text-muted">
+              Riservatezza garantita. Costi e durata delle sedute li trovi nella{' '}
+              <Link href="/faq" className="link-inline">
+                FAQ
+              </Link>
+              ; per capire il metodo puoi leggere{' '}
+              <Link href="/terapia" className="link-inline">
+                terapia individuale e di coppia
+              </Link>
+              .
+            </p>
+          </div>
           <div className="card-base p-6 sm:p-8 max-w-2xl mx-auto text-center bg-gradient-to-br from-primary/[0.02] to-accent/[0.04]">
             <a
               href={WHATSAPP_URL}

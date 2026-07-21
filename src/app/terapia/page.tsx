@@ -8,9 +8,9 @@ import { createPageMetadata } from '@/lib/seo';
 import { Compass, Layers, RefreshCw } from 'lucide-react';
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'Terapia individuale e di coppia vicino Sarnico | Studio a Credaro',
+  title: 'Terapia individuale e di coppia a Credaro | Vicino Sarnico',
   description:
-    'Terapia individuale e di coppia con studio a Credaro, facilmente raggiungibile da Sarnico e basso Lago d\'Iseo. Primo colloquio per definire obiettivi e metodo.',
+    'Percorso di psicoterapia individuale o di coppia a Credaro, comodo da Sarnico e Lago d\'Iseo. Primo colloquio per obiettivi, tempi e metodo chiaro.',
   path: '/terapia',
   ogTitle: 'Terapia individuale e di coppia | Gaia Bresciani',
   ogDescription:
@@ -24,7 +24,7 @@ export default function TerapiaPage() {
       <PageHeader
         eyebrow="Percorsi terapeutici"
         title="Terapia individuale e di coppia"
-        subtitle="Ci sono fasi in cui si continua ad andare avanti, ma cresce un senso di fatica, confusione o distanza nelle relazioni."
+        subtitle="Un percorso chiaro per ansia, relazioni, autostima e momenti di blocco, con studio a Credaro vicino a Sarnico."
       />
 
       <section className="section-container pb-16">
@@ -33,14 +33,57 @@ export default function TerapiaPage() {
             <p className="body-md">
               Nel percorso terapeutico lavoriamo per comprendere cosa mantiene
               il disagio e come recuperare stabilit&agrave; emotiva, chiarezza e
-              direzione.
+              direzione. Non parto da etichette generiche: partiamo da quello
+              che oggi pesa nella tua vita e da obiettivi realistici da
+              condividere fin dal primo colloquio.
             </p>
             <p className="body-md">
-              Ricevo a Credaro, in una sede comoda anche per chi arriva da
-              Sarnico e dal basso Lago d&apos;Iseo. Quando serve, resta
-              disponibile anche una sede secondaria nell&apos;area di Brescia.
+              Ricevo a Credaro, in una sede comoda anche per chi arriva da{' '}
+              <Link href="/psicologa-sarnico" className="link-inline">
+                Sarnico e dal basso Lago d&apos;Iseo
+              </Link>
+              . Quando serve, resta disponibile anche una sede secondaria
+              nell&apos;area di Brescia e, in alcuni casi, la continuit&agrave;
+              online.
             </p>
           </div>
+        </AnimatedSection>
+      </section>
+
+      <section className="section-container pb-16">
+        <AnimatedSection>
+          <h2 className="heading-lg mb-4">Per chi &egrave; pensata</h2>
+          <p className="body-md max-w-3xl mb-6">
+            La terapia individuale &egrave; utile quando ansia, stress,
+            difficolt&agrave; relazionali, bassa autostima o un senso di blocco
+            iniziano a condizionare sonno, lavoro o relazioni. La terapia di
+            coppia &egrave; indicata quando il dialogo si spezza, i conflitti si
+            ripetono o la distanza emotiva diventa difficile da gestire da soli.
+          </p>
+          <p className="body-md max-w-3xl">
+            Tra i temi pi&ugrave; frequenti:{' '}
+            <Link href="/approfondimenti/ansia-attacchi-panico" className="link-inline">
+              ansia e attacchi di panico
+            </Link>
+            ,{' '}
+            <Link href="/approfondimenti/dipendenza-affettiva" className="link-inline">
+              dinamiche di dipendenza affettiva
+            </Link>
+            ,{' '}
+            <Link href="/approfondimenti/autostima-bassa" className="link-inline">
+              autostima fragile
+            </Link>
+            ,{' '}
+            <Link href="/approfondimenti/stanchezza-emotiva" className="link-inline">
+              stanchezza emotiva
+            </Link>{' '}
+            e crisi di coppia. Se vuoi una panoramica dedicata al lavoro a due,
+            puoi leggere anche l&apos;approfondimento sulla{' '}
+            <Link href="/approfondimenti/terapia-di-coppia" className="link-inline">
+              terapia di coppia
+            </Link>
+            .
+          </p>
         </AnimatedSection>
       </section>
 
@@ -65,9 +108,9 @@ export default function TerapiaPage() {
             {
               icon: RefreshCw,
               title: 'Approccio integrato',
-              text: 'L\'approccio adleriano considera la persona nella sua globalit\u00e0. Quando indicato, integro la terapia EMDR.',
+              text: "L'approccio adleriano considera la persona nella sua globalità. Quando indicato, integro la terapia EMDR.",
             },
-          ].map((item, i) => {
+          ].map((item) => {
             const Icon = item.icon;
             return (
               <AnimatedSection key={item.title}>
@@ -87,6 +130,26 @@ export default function TerapiaPage() {
       <section className="section-container pb-16">
         <AnimatedSection>
           <div className="max-w-3xl space-y-4">
+            <h2 className="heading-lg mb-4">Individuale e di coppia: come scegliere</h2>
+            <p className="body-md">
+              Nel percorso individuale lo spazio &egrave; dedicato a te: storia,
+              emozioni, schemi che si ripetono e obiettivi personali. Nella
+              terapia di coppia lavoriamo sulla comunicazione, sui cicli di
+              conflitto e su ci&ograve; che rende difficile sentirsi ascoltati.
+            </p>
+            <p className="body-md">
+              Non sempre &egrave; necessario scegliere subito: nel primo
+              colloquio valutiamo insieme se ha pi&ugrave; senso partire da un
+              lavoro individuale, da un percorso a due, o da un&apos;integrazione
+              successiva.
+            </p>
+          </div>
+        </AnimatedSection>
+      </section>
+
+      <section className="section-container pb-16">
+        <AnimatedSection>
+          <div className="max-w-3xl space-y-4">
             <h2 className="heading-lg mb-4">L&apos;approccio psicodinamico adleriano</h2>
             <p className="body-md">
               L&apos;approccio adleriano, fondato sulla Psicologia Individuale di
@@ -99,6 +162,35 @@ export default function TerapiaPage() {
                 terapia EMDR
               </Link>{' '}
               per elaborare traumi, blocchi emotivi e stati di allerta persistenti.
+            </p>
+          </div>
+        </AnimatedSection>
+      </section>
+
+      <section className="section-container pb-16">
+        <AnimatedSection>
+          <div className="max-w-3xl space-y-4">
+            <h2 className="heading-lg mb-4">Tempi, costi e primo colloquio</h2>
+            <p className="body-md">
+              Una seduta dura circa 50 minuti. La durata del percorso dipende
+              dagli obiettivi e dalla complessit&agrave; della situazione: lo
+              definiamo insieme in modo trasparente. Il compenso di una seduta
+              &egrave; compreso tra 70 e 100 euro, a seconda del tipo di
+              percorso; i dettagli pratici li trovi anche nella pagina{' '}
+              <Link href="/faq" className="link-inline">
+                FAQ
+              </Link>
+              .
+            </p>
+            <p className="body-md">
+              Il primo colloquio serve a chiarire la richiesta, capire se il
+              percorso &egrave; adatto e definire i passi successivi, senza
+              pressione. Per disponibilit&agrave; e sede puoi scrivere dalla
+              pagina{' '}
+              <Link href="/contatti" className="link-inline">
+                Contatti
+              </Link>
+              .
             </p>
           </div>
         </AnimatedSection>

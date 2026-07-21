@@ -10,7 +10,7 @@ import { MapPin, Users, Clock, Target } from 'lucide-react';
 export const metadata: Metadata = createPageMetadata({
   title: 'Psicologa vicino Sarnico | Studio a Credaro a 5 minuti dal centro',
   description:
-    'Psicologa e psicoterapeuta a 5 minuti da Sarnico: studio a Credaro, comodo anche da Paratico e Capriolo. Informazioni pratiche per il primo colloquio.',
+    'Psicologa e psicoterapeuta a 5 minuti da Sarnico: studio a Credaro, comodo anche da Paratico, Capriolo e basso Lago d\'Iseo. Informazioni per il primo colloquio.',
   path: '/psicologa-sarnico',
   ogTitle: 'Psicologa vicino Sarnico | Studio a Credaro',
   ogDescription:
@@ -26,12 +26,12 @@ const highlights = [
   {
     icon: Users,
     title: 'Primo colloquio',
-    text: 'Di norma il primo incontro si svolge in presenza a Credaro; in alcuni casi puo essere utile valutare anche la modalita online.',
+    text: 'Di norma il primo incontro si svolge in presenza a Credaro; in alcuni casi può essere utile valutare anche la modalità online.',
   },
   {
     icon: Target,
     title: 'Ambiti frequenti',
-    text: 'Ansia, attacchi di panico, stress, difficolta relazionali, crisi di coppia, traumi e transizioni.',
+    text: 'Ansia, attacchi di panico, stress, difficoltà relazionali, crisi di coppia, traumi e transizioni.',
   },
 ];
 
@@ -41,8 +41,8 @@ export default function ZonaSarnicoPage() {
       <Breadcrumb items={[{ label: 'Zona Sarnico e Lago d\'Iseo' }]} />
       <PageHeader
         eyebrow="Area servita"
-        title="Una sede comoda per chi vive tra Sarnico e Lago d'Iseo"
-        subtitle="Qui trovi alcune informazioni pratiche se stai valutando un primo colloquio a Credaro."
+        title="Psicologa vicino Sarnico: studio a Credaro in 5 minuti"
+        subtitle="Informazioni pratiche per chi cerca una psicologa o psicoterapeuta tra Sarnico, basso Lago d'Iseo e Val Calepio."
       />
 
       <section className="section-container pb-16">
@@ -78,13 +78,20 @@ export default function ZonaSarnicoPage() {
               <p className="body-md">
                 Questo rende il percorso pratico anche per chi vive a Paratico,
                 Villongo, Capriolo e nei comuni del basso Lago d&apos;Iseo,
-                con tempi di spostamento contenuti e la possibilita di
+                con tempi di spostamento contenuti e la possibilit&agrave; di
                 organizzare appuntamenti compatibili con lavoro e famiglia.
               </p>
               <p className="body-md">
                 Molte persone arrivano in studio per affrontare ansia,
-                stanchezza emotiva, difficolta relazionali o momenti di
+                stanchezza emotiva, difficolt&agrave; relazionali o momenti di
                 cambiamento che stanno diventando difficili da sostenere da soli.
+              </p>
+              <p className="body-md">
+                Se cerchi una psicologa per la zona del Lago d&apos;Iseo o un
+                psicoterapeuta raggiungibile dalla provincia di Bergamo e
+                Brescia senza spostamenti lunghi, Credaro &egrave; spesso una
+                soluzione pratica: pochi minuti da Sarnico, parcheggio privato e
+                continuit&agrave; del percorso pi&ugrave; semplice da mantenere.
               </p>
             </div>
 
@@ -92,12 +99,12 @@ export default function ZonaSarnicoPage() {
               <h2 className="heading-lg">Come funziona il primo colloquio</h2>
               <p className="body-md">
                 Il primo incontro serve a comprendere la domanda di aiuto e valutare la
-                strada piu adatta. Raccogliamo i principali elementi del problema, la
-                sua evoluzione e le risorse gia presenti.
+                strada pi&ugrave; adatta. Raccogliamo i principali elementi del problema, la
+                sua evoluzione e le risorse gi&agrave; presenti.
               </p>
               <p className="body-md">
-                Si chiariscono anche aspetti pratici: frequenza, modalita in presenza
-                o online, e aspettative realistiche sul percorso. L&apos;obiettivo e
+                Si chiariscono anche aspetti pratici: frequenza, modalit&agrave; in presenza
+                o online, e aspettative realistiche sul percorso. L&apos;obiettivo &egrave;
                 dare una prima cornice chiara, senza forzare decisioni premature.
               </p>
             </div>
@@ -105,12 +112,12 @@ export default function ZonaSarnicoPage() {
             <div className="space-y-4">
               <h2 className="heading-lg">Obiettivi del percorso e tempi</h2>
               <p className="body-md">
-                Il lavoro inizia con la riduzione dei sintomi piu urgenti: gestione
+                Il lavoro inizia con la riduzione dei sintomi pi&ugrave; urgenti: gestione
                 dell&apos;ansia, miglioramento del sonno, regolazione emotiva. In una fase
                 successiva si approfondiscono i nodi relazionali e gli schemi ricorrenti.
               </p>
               <p className="body-md">
-                Quando indicato, puo essere integrato un lavoro specifico sul
+                Quando indicato, pu&ograve; essere integrato un lavoro specifico sul
                 trauma con{' '}
                 <Link href="/emdr" className="link-inline">
                   approccio EMDR
@@ -138,10 +145,10 @@ export default function ZonaSarnicoPage() {
             <p className="body-md">
               Per molte persone questo aspetto pratico conta: poter raggiungere
               lo studio senza spostamenti lunghi o complessi aiuta a mantenere
-              costanza e continuita nel percorso.
+              costanza e continuit&agrave; nel percorso.
             </p>
             <p className="body-md">
-              Se preferisci evitare lo spostamento, e possibile iniziare
+              Se preferisci evitare lo spostamento, &egrave; possibile iniziare
               o proseguire il percorso con{' '}
               <Link href="/contatti" className="link-inline">
                 colloqui online
@@ -179,7 +186,7 @@ export default function ZonaSarnicoPage() {
       </section>
 
       <InlineCta
-        title="Vuoi verificare disponibilita per un primo colloquio?"
+        title="Vuoi verificare disponibilità per un primo colloquio?"
         subtitle="Indicami la zona da cui arrivi e la fascia oraria preferita: ti rispondo entro 24 ore lavorative."
       />
     </>

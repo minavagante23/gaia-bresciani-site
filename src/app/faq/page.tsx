@@ -109,9 +109,25 @@ export default function FaqPage() {
               <Link href="/psicologa-lago-iseo" className="link-inline">
                 Lago d&apos;Iseo
               </Link>
-              . Per una panoramica sui percorsi disponibili puoi consultare anche{' '}
+              . Per i percorsi disponibili consulta{' '}
               <Link href="/terapia" className="link-inline">
                 terapia individuale e di coppia
+              </Link>{' '}
+              e{' '}
+              <Link href="/emdr" className="link-inline">
+                terapia EMDR
+              </Link>
+              . Su temi frequenti puoi leggere anche gli approfondimenti su{' '}
+              <Link href="/approfondimenti/ansia-attacchi-panico" className="link-inline">
+                ansia
+              </Link>
+              ,{' '}
+              <Link href="/approfondimenti/dipendenza-affettiva" className="link-inline">
+                dipendenza affettiva
+              </Link>{' '}
+              e{' '}
+              <Link href="/approfondimenti/stanchezza-emotiva" className="link-inline">
+                stanchezza emotiva
               </Link>
               .
             </p>

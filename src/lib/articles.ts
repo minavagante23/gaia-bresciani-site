@@ -1,7 +1,13 @@
 export type ContentBlock =
   | string
   | { type: 'h2'; text: string }
-  | { type: 'list'; items: string[] };
+  | { type: 'list'; items: string[] }
+  | {
+      type: 'cta';
+      before: string;
+      links: { href: string; label: string }[];
+      after?: string;
+    };
 
 export interface Article {
   slug: string;
@@ -199,30 +205,48 @@ const articles: Article[] = [
     slug: 'dipendenza-affettiva',
     date: '7 aprile 2026',
     publishedAt: '2026-04-07T00:00:00.000Z',
-    readTime: '7 min',
+    updatedAt: '2026-07-21T00:00:00.000Z',
+    readTime: '8 min',
     title: 'Dipendenza affettiva: quando l\'amore diventa un bisogno',
     excerpt:
-      'Riconoscere i segnali della dipendenza affettiva, capire da dove nasce e quali sono i primi passi per ritrovare un equilibrio nelle relazioni.',
+      'Segnali della dipendenza affettiva, perché nasce e come un percorso psicologico aiuta a ritrovare autonomia emotiva senza rinunciare alla vicinanza.',
     tags: ['Relazioni', 'Dipendenza affettiva'],
     content: [
-      'Capita a tutti, prima o poi, di provare un forte attaccamento verso qualcuno. Ma quando il legame con l\'altra persona diventa l\'unica fonte di sicurezza, e la sua assenza genera un vuoto insostenibile, si pu\u00f2 parlare di dipendenza affettiva.',
-      { type: 'h2', text: 'Non \u00e8 amare troppo' },
-      'Non si tratta di amare troppo. Si tratta di sentire che senza l\'altro non si \u00e8 abbastanza, di cercare conferme continue, di adattare i propri bisogni per paura di perdere la relazione. Chi vive questa condizione spesso lo fa in silenzio, confondendo la sofferenza con l\'intensit\u00e0 dell\'amore.',
-      { type: 'h2', text: 'I segnali pi\u00f9 frequenti' },
-      'Tra i segnali che si ripetono pi\u00f9 spesso:',
+      'Capita a tutti, prima o poi, di provare un forte attaccamento verso qualcuno. Ma quando il legame con l\'altra persona diventa l\'unica fonte di sicurezza, e la sua assenza genera un vuoto insostenibile, si può parlare di dipendenza affettiva.',
+      { type: 'h2', text: 'Non è amare troppo' },
+      'Non si tratta di amare troppo. Si tratta di sentire che senza l\'altro non si è abbastanza, di cercare conferme continue, di adattare i propri bisogni per paura di perdere la relazione. Chi vive questa condizione spesso lo fa in silenzio, confondendo la sofferenza con l\'intensità dell\'amore.',
+      'In una relazione equilibrata la vicinanza è una scelta: arricchisce, ma non è l\'unica ancora. Nella dipendenza affettiva, invece, la relazione diventa necessaria per sentirsi stabili. Quando l\'altro si allontana, anche solo emotivamente, possono emergere ansia, rumore mentale, senso di vuoto o panico.',
+      { type: 'h2', text: 'I segnali più frequenti' },
+      'Tra i segnali che si ripetono più spesso:',
       {
         type: 'list',
         items: [
-          'difficolt\u00e0 a prendere decisioni senza il parere del partner',
+          'difficoltà a prendere decisioni senza il parere del partner',
           'paura costante di essere lasciati',
           'rinuncia ai propri interessi e alle amicizie per assecondare l\'altro',
-          'senso di vuoto o ansia quando si \u00e8 da soli',
+          'senso di vuoto o ansia quando si è da soli',
+          'tendenza a giustificare comportamenti che fanno soffrire, pur di non perdere il legame',
+          'oscillazione tra idealizzazione dell\'altro e senso di inadeguatezza personale',
         ],
       },
+      'Non tutti questi segnali, presi isolatamente, indicano un problema clinico. Conta la frequenza, l\'intensità e quanto la dinamica limita libertà, sonno, lavoro o relazioni significative.',
       { type: 'h2', text: 'Da dove nasce' },
-      'La dipendenza affettiva ha spesso radici nella storia personale: esperienze di trascuratezza emotiva nell\'infanzia, modelli familiari instabili, o relazioni passate in cui il valore personale era condizionato dal comportamento dell\'altro. Non \u00e8 una colpa: \u00e8 un modo che la mente ha trovato per proteggersi dal dolore della solitudine.',
-      { type: 'h2', text: 'I primi passi' },
-      'Il primo passo \u00e8 riconoscere il meccanismo. Non per giudicarsi, ma per capire che la relazione con s\u00e9 stessi \u00e8 la base da cui partire. Un percorso psicologico pu\u00f2 aiutare a esplorare queste dinamiche in modo sicuro: comprendere da dove nasce il bisogno, distinguere tra amore e dipendenza, e costruire gradualmente un\'autonomia emotiva che non escluda la vicinanza, ma la renda pi\u00f9 libera.',
+      'La dipendenza affettiva ha spesso radici nella storia personale: esperienze di trascuratezza emotiva nell\'infanzia, modelli familiari instabili, o relazioni passate in cui il valore personale era condizionato dal comportamento dell\'altro. Non è una colpa: è un modo che la mente ha trovato per proteggersi dal dolore della solitudine.',
+      'A volte si intreccia con una bassa autostima: se il valore di sé sembra dipendere dallo sguardo dell\'altro, ogni distanza viene letta come rifiuto. In altri casi emerge dopo una separazione, un lutto o un periodo di forte isolamento, quando il bisogno di contatto diventa più urgente del bisogno di ascoltarsi.',
+      {
+        type: 'cta',
+        before:
+          'Riconoscere la dipendenza affettiva è già un primo passo. Se desideri affrontare questo nodo in modo strutturato, puoi approfondire',
+        links: [
+          { href: '/terapia', label: 'terapia individuale e di coppia' },
+          { href: '/contatti', label: 'contattarmi per un primo colloquio' },
+        ],
+      },
+      { type: 'h2', text: 'Cosa aiuta, in concreto' },
+      'Il primo passo è riconoscere il meccanismo. Non per giudicarsi, ma per capire che la relazione con sé stessi è la base da cui partire. Può aiutare ricostruire piccoli spazi personali (interessi, amicizie, routine), osservare quando si chiede rassicurazione e distinguere tra bisogno di vicinanza e paura di abbandono.',
+      'Un percorso psicologico può aiutare a esplorare queste dinamiche in modo sicuro: comprendere da dove nasce il bisogno, distinguere tra amore e dipendenza, e costruire gradualmente un\'autonomia emotiva che non escluda la vicinanza, ma la renda più libera. Quando la relazione di coppia è in crisi, può essere utile anche un lavoro a due, se entrambi sono disponibili.',
+      { type: 'h2', text: 'Quando chiedere aiuto' },
+      'Può essere il momento di chiedere supporto quando la paura di perdere l\'altro guida le scelte principali, quando la solitudine diventa intollerabile, quando si resta in relazioni che fanno soffrire, o quando ansia e ruminazione occupano gran parte della giornata. L\'obiettivo non è "non aver più bisogno di nessuno", ma poter stare in relazione senza perdere sé stessi.',
       'Se ti riconosci in queste parole, sappi che chiedere aiuto non significa essere deboli. Significa voler stare meglio nelle relazioni a partire da quella con te stessa/o.',
       'Se vivi tra Credaro, Sarnico o il basso Lago d\'Iseo, un primo colloquio in presenza a Credaro può essere il punto di partenza per ritrovare equilibrio nelle relazioni.',
     ],
@@ -264,66 +288,99 @@ const articles: Article[] = [
     slug: 'stanchezza-emotiva',
     date: '2 marzo 2026',
     publishedAt: '2026-03-02T00:00:00.000Z',
-    readTime: '6 min',
+    updatedAt: '2026-07-21T00:00:00.000Z',
+    readTime: '8 min',
     title: 'Stanchezza emotiva: segnali, cause e primi passi utili',
     excerpt:
-      'Quando la fatica emotiva dura da tempo, pu\u00f2 influenzare sonno, relazioni e lucidit\u00e0.',
+      'Quando la fatica emotiva dura da settimane: come riconoscerla, cosa la mantiene e quando un percorso psicologico aiuta a recuperare energia e chiarezza.',
     tags: ['Benessere emotivo', 'Stress'],
     content: [
-      'Ci sono periodi in cui tutto sembra richiedere uno sforzo sproporzionato. Non si tratta di stanchezza fisica: le ore di sonno possono essere sufficienti, eppure ci si sveglia gi\u00e0 senza energia. La motivazione cala, le relazioni pesano, e anche piccole decisioni quotidiane diventano faticose.',
-      { type: 'h2', text: 'Cos\'\u00e8 la stanchezza emotiva' },
-      'La stanchezza emotiva \u00e8 il risultato di un sovraccarico prolungato. Pu\u00f2 nascere da situazioni lavorative stressanti, difficolt\u00e0 relazionali, un lutto non elaborato, o semplicemente dall\'accumulo di tante piccole tensioni che non trovano sfogo.',
-      { type: 'h2', text: 'I segnali pi\u00f9 comuni' },
-      'I segnali pi\u00f9 comuni includono:',
+      'Ci sono periodi in cui tutto sembra richiedere uno sforzo sproporzionato. Non si tratta di stanchezza fisica: le ore di sonno possono essere sufficienti, eppure ci si sveglia già senza energia. La motivazione cala, le relazioni pesano, e anche piccole decisioni quotidiane diventano faticose.',
+      { type: 'h2', text: 'Cos\'è la stanchezza emotiva' },
+      'La stanchezza emotiva è il risultato di un sovraccarico prolungato. Può nascere da situazioni lavorative stressanti, difficoltà relazionali, un lutto non elaborato, o semplicemente dall\'accumulo di tante piccole tensioni che non trovano sfogo. Diversamente dalla stanchezza fisica, non basta una notte di riposo: spesso torna al mattino, come una nebbia che rende tutto più lento e pesante.',
+      'A volte si confonde con demotivazione o "carattere". In realtà è un segnale: la mente e il corpo stanno consumando risorse per tenere insieme situazioni che, da sole, non riescono più a sostenere.',
+      { type: 'h2', text: 'I segnali più comuni' },
+      'I segnali più comuni includono:',
       {
         type: 'list',
         items: [
-          'irritabilit\u00e0 insolita',
+          'irritabilità insolita',
           'distacco emotivo dalle persone care',
-          'difficolt\u00e0 di concentrazione',
+          'difficoltà di concentrazione',
           'sensazione di vuoto o apatia',
-          'disturbi del sonno e calo di interesse per ci\u00f2 che prima dava piacere',
+          'disturbi del sonno e calo di interesse per ciò che prima dava piacere',
+          'sensazione di essere "sempre in debito" con lavoro, famiglia o impegni',
         ],
       },
+      'Quando questi segnali durano settimane e iniziano a toccare sonno, relazioni o rendimento, vale la pena non sottovalutarli. La stanchezza emotiva può anche intrecciarsi con burnout, ruminazione mentale o fasi di ansia che consumano energie senza una causa unica e chiara.',
       { type: 'h2', text: 'Il senso di colpa' },
-      'Uno degli aspetti pi\u00f9 insidiosi \u00e8 che chi vive questa condizione spesso si sente in colpa. "Non ho motivo di stare cos\u00ec", "Altri stanno peggio". Ma la stanchezza emotiva non ha bisogno di giustificazioni: \u00e8 un segnale che il corpo e la mente stanno chiedendo attenzione.',
+      'Uno degli aspetti più insidiosi è che chi vive questa condizione spesso si sente in colpa. "Non ho motivo di stare così", "Altri stanno peggio". Ma la stanchezza emotiva non ha bisogno di giustificazioni: è un segnale che il corpo e la mente stanno chiedendo attenzione.',
+      'Il senso di colpa, paradossalmente, aumenta il carico: ci si spinge a fare di più, a sembrare "in forma", a non deludere. Così il recupero diventa ancora più difficile.',
+      {
+        type: 'cta',
+        before:
+          'Se la stanchezza emotiva sta diventando una costante, può aiutare capire come funziona un',
+        links: [
+          { href: '/terapia', label: 'percorso di terapia individuale' },
+          { href: '/contatti', label: 'primo colloquio senza impegno' },
+        ],
+      },
       { type: 'h2', text: 'Primi passi utili' },
-      'I primi passi utili includono: ridurre dove possibile gli impegni non essenziali, parlare con qualcuno di fiducia di come ci si sente, e soprattutto non aspettare che la situazione si risolva da sola. Se la stanchezza emotiva dura da settimane e influenza il funzionamento quotidiano, pu\u00f2 essere il momento di affidarsi a un percorso psicologico per comprendere cosa la mantiene e come recuperare energia e chiarezza.',
-      'Se ti riconosci in questi segnali e vivi tra Credaro, Sarnico o il basso Lago d\'Iseo, un primo colloquio in presenza pu\u00f2 aiutarti a capire cosa sta consumando le tue energie e da dove ripartire.',
+      'I primi passi utili includono: ridurre dove possibile gli impegni non essenziali, parlare con qualcuno di fiducia di come ci si sente, e soprattutto non aspettare che la situazione si risolva da sola. Può aiutare anche recuperare piccole routine di riposo reale (non solo scrolling), e distinguere tra "devo" e "posso rinviare".',
+      'Se la stanchezza emotiva dura da settimane e influenza il funzionamento quotidiano, può essere il momento di affidarsi a un percorso psicologico per comprendere cosa la mantiene e come recuperare energia e chiarezza. Il lavoro non è solo "staccare": è capire quali pressioni interne ed esterne stanno consumando le risorse.',
+      { type: 'h2', text: 'Quando chiedere aiuto' },
+      'Vale la pena rivolgersi a un professionista quando la fatica emotiva non migliora con il riposo, quando compare distacco dalle persone care, quando il sonno resta frammentato, o quando si ha la sensazione di funzionare "in automatico". Un primo colloquio serve a mettere ordine: capire se si tratta di stress prolungato, di un burnout, di un lutto non elaborato o di un disagio che richiede un lavoro più strutturato.',
+      'Se ti riconosci in questi segnali e vivi tra Credaro, Sarnico o il basso Lago d\'Iseo, un primo colloquio in presenza può aiutarti a capire cosa sta consumando le tue energie e da dove ripartire.',
     ],
   },
   {
     slug: 'autostima-bassa',
     date: '16 febbraio 2026',
     publishedAt: '2026-02-16T00:00:00.000Z',
-    readTime: '7 min',
+    updatedAt: '2026-07-21T00:00:00.000Z',
+    readTime: '8 min',
     title: 'Autostima bassa: segnali, errori comuni e percorso psicologico',
     excerpt:
-      'Come riconoscere autosvalutazione e paura del giudizio, con primi passi concreti.',
+      'Come riconoscere autosvalutazione e paura del giudizio, distinguere autostima e sicurezza, e quando un percorso psicologico aiuta a cambiare il rapporto con sé.',
     tags: ['Autostima', 'Benessere emotivo'],
     content: [
-      'L\'autostima \u00e8 il modo in cui ci percepiamo: il valore che ci attribuiamo, la fiducia nelle nostre capacit\u00e0, la convinzione di meritare rispetto e affetto. Quando \u00e8 bassa, ogni aspetto della vita quotidiana ne risente.',
+      'L\'autostima è il modo in cui ci percepiamo: il valore che ci attribuiamo, la fiducia nelle nostre capacità, la convinzione di meritare rispetto e affetto. Quando è bassa, ogni aspetto della vita quotidiana ne risente.',
       { type: 'h2', text: 'Come si riconosce la bassa autostima' },
       'Chi convive con una bassa autostima spesso non se ne rende conto in modo chiaro. Alcuni segnali ricorrenti:',
       {
         type: 'list',
         items: [
-          'difficolt\u00e0 ad accettare complimenti',
+          'difficoltà ad accettare complimenti',
           'tendenza a paragonarsi costantemente agli altri',
           'paura intensa del giudizio',
-          'rinuncia a opportunit\u00e0 per paura di fallire',
-          'difficolt\u00e0 a porre dei limiti nelle relazioni',
+          'rinuncia a opportunità per paura di fallire',
+          'difficoltà a porre dei limiti nelle relazioni',
+          'voce interiore critica che commenta ogni scelta',
         ],
       },
-      { type: 'h2', text: 'L\'errore pi\u00f9 comune' },
-      'Un errore comune \u00e8 pensare che l\'autostima dipenda dai risultati. "Quando raggiunger\u00f2 quel traguardo, star\u00f2 meglio". In realt\u00e0, il meccanismo funziona al contrario: \u00e8 la percezione di s\u00e9 che condiziona il modo in cui si affrontano le sfide, non viceversa.',
+      'Questi segnali possono apparire "normali" perché accompagnano da anni. Diventano rilevanti quando guidano decisioni importanti: lavoro, relazioni, studio, o quando producono ansia, evitamento e fatica cronica.',
+      { type: 'h2', text: 'L\'errore più comune' },
+      'Un errore comune è pensare che l\'autostima dipenda dai risultati. "Quando raggiungerò quel traguardo, starò meglio". In realtà, il meccanismo funziona al contrario: è la percezione di sé che condiziona il modo in cui si affrontano le sfide, non viceversa.',
+      'Per questo il perfezionismo e l\'ansia da prestazione spesso camminano insieme alla bassa autostima: si alza l\'asticella per sentirsi "abbastanza", ma il sollievo dura poco e il giudizio interno resta.',
       { type: 'h2', text: 'Autostima e sicurezza non sono la stessa cosa' },
-      'Un altro malinteso frequente riguarda la differenza tra autostima e sicurezza di s\u00e9. Si pu\u00f2 apparire sicuri e competenti all\'esterno, ma sentirsi profondamente inadeguati dentro. Questa discrepanza genera una fatica invisibile che nel tempo pu\u00f2 portare a burnout, ansia o ritiro sociale.',
+      'Un altro malinteso frequente riguarda la differenza tra autostima e sicurezza di sé. Si può apparire sicuri e competenti all\'esterno, ma sentirsi profondamente inadeguati dentro. Questa discrepanza genera una fatica invisibile che nel tempo può portare a burnout, ansia o ritiro sociale.',
+      {
+        type: 'cta',
+        before:
+          'Se ti riconosci in questo scarto tra come appari e come ti senti, puoi approfondire',
+        links: [
+          { href: '/terapia', label: 'come funziona la terapia individuale' },
+          { href: '/contatti', label: 'fissare un primo colloquio' },
+        ],
+      },
       { type: 'h2', text: 'Da dove nasce' },
-      'La bassa autostima ha quasi sempre radici nella storia personale: messaggi ricevuti durante l\'infanzia, esperienze di svalutazione, confronti sistematici con fratelli o compagni, oppure un ambiente familiare in cui l\'errore veniva vissuto come fallimento.',
+      'La bassa autostima ha quasi sempre radici nella storia personale: messaggi ricevuti durante l\'infanzia, esperienze di svalutazione, confronti sistematici con fratelli o compagni, oppure un ambiente familiare in cui l\'errore veniva vissuto come fallimento. Non è una sentenza definitiva: è un apprendimento che può essere rivisto.',
       { type: 'h2', text: 'Il percorso psicologico' },
-      'Un percorso psicologico non punta a "gonfiare" l\'autostima con frasi motivazionali. Il lavoro \u00e8 pi\u00f9 profondo: esplorare come si \u00e8 costruita questa immagine di s\u00e9, riconoscere le convinzioni che la mantengono, e sperimentare gradualmente un modo diverso di guardarsi, pi\u00f9 realistico e pi\u00f9 compassionevole.',
-      'Se la bassa autostima condiziona relazioni, lavoro o scelte quotidiane e vivi in zona Credaro, Sarnico o basso Lago d\'Iseo, un primo colloquio in studio pu\u00f2 aiutarti a capire da dove partire.',
+      'Un percorso psicologico non punta a "gonfiare" l\'autostima con frasi motivazionali. Il lavoro è più profondo: esplorare come si è costruita questa immagine di sé, riconoscere le convinzioni che la mantengono, e sperimentare gradualmente un modo diverso di guardarsi, più realistico e più compassionevole.',
+      'Nella pratica, questo può significare lavorare su paura del giudizio, bisogno di conferma, difficoltà a dire no e schemi relazionali in cui ci si mette in secondo piano. L\'obiettivo non è diventare "invulnerabili", ma poter scegliere senza partire già sconfitti.',
+      { type: 'h2', text: 'Quando chiedere aiuto' },
+      'Può essere utile chiedere supporto quando la critica interna limita scelte importanti, quando le relazioni sono segnate da paura di non bastare, o quando ansia e perfezionismo consumano energie ogni giorno. Un primo colloquio serve a capire da dove partire e quale tipo di lavoro è più adatto.',
+      'Se la bassa autostima condiziona relazioni, lavoro o scelte quotidiane e vivi in zona Credaro, Sarnico o basso Lago d\'Iseo, un primo colloquio in studio può aiutarti a capire da dove partire.',
     ],
   },
   {
