@@ -79,7 +79,7 @@ export default function CookiePolicyPage() {
                   <tbody className="text-muted">
                     <tr>
                       <td className="px-4 py-2.5 border-b border-primary/[0.06]"><code className="text-xs bg-primary/[0.04] px-1.5 py-0.5 rounded">cookie_consent</code></td>
-                      <td className="px-4 py-2.5 border-b border-primary/[0.06]">Memorizza le preferenze di consenso dell&apos;utente</td>
+                      <td className="px-4 py-2.5 border-b border-primary/[0.06]">Memorizza le preferenze di consenso dell&apos;utente (flag Secure su HTTPS)</td>
                       <td className="px-4 py-2.5 border-b border-primary/[0.06]">180 giorni</td>
                     </tr>
                   </tbody>
@@ -111,6 +111,16 @@ export default function CookiePolicyPage() {
                       <td className="px-4 py-2.5 border-b border-primary/[0.06]">Visualizzazione mappe interattive nella pagina Contatti</td>
                       <td className="px-4 py-2.5 border-b border-primary/[0.06]">
                         <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="link-inline">
+                          Link
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-2.5 border-b border-primary/[0.06]">MioDottore</td>
+                      <td className="px-4 py-2.5 border-b border-primary/[0.06]">Docplanner</td>
+                      <td className="px-4 py-2.5 border-b border-primary/[0.06]">Widget calendario e recensioni</td>
+                      <td className="px-4 py-2.5 border-b border-primary/[0.06]">
+                        <a href="https://www.miodottore.it/documenti/informativa-sulla-privacy" target="_blank" rel="noopener noreferrer" className="link-inline">
                           Link
                         </a>
                       </td>

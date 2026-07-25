@@ -1,24 +1,48 @@
-const SHARED_DIRECTIVES = [
-  "default-src 'self'",
-  "frame-ancestors 'self'",
-  "img-src 'self' data: https:",
-  "font-src 'self' https://platform.docplanner.com",
-  'frame-src https://www.google.com https://maps.google.com https://www.miodottore.it https://platform.docplanner.com',
-  "connect-src 'self' https://formspree.io https://platform.docplanner.com https://www.miodottore.it",
-  "form-action 'self' https://formspree.io https://www.miodottore.it",
-  "object-src 'none'",
-  "base-uri 'self'",
-  'upgrade-insecure-requests',
-  'block-all-mixed-content',
-];
+import crypto from 'node:crypto';
 
-/** CSP compatibile con Next.js static export e widget MioDottore/Docplanner. */
-export function buildContentSecurityPolicy() {
+const DOCPLANNER = 'https://platform.docplanner.com';
+const MIODOTTORE = 'https://www.miodottore.it';
+const FORMSPREE = 'https://formspree.io';
+
+/**
+ * Extract sha256 hashes for inline <script> without src (incl. JSON-LD).
+ * With hashes present, browsers ignore 'unsafe-inline' for script-src.
+ */
+export function extractInlineScriptHashes(html) {
+  const hashes = new Set();
+  const re = /<script\b(?![^>]*\bsrc\s*=)[^>]*>([\s\S]*?)<\/script>/gi;
+  let match;
+  while ((match = re.exec(html)) !== null) {
+    const content = match[1];
+    const digest = crypto.createHash('sha256').update(content, 'utf8').digest('base64');
+    hashes.add(`'sha256-${digest}'`);
+  }
+  return [...hashes];
+}
+
+/**
+ * CSP for Next.js static export + MioDottore.
+ * script-src uses per-page hashes instead of 'unsafe-inline'.
+ * style-src keeps 'unsafe-inline' (React style attributes / Tailwind runtime).
+ */
+export function buildContentSecurityPolicy(options = {}) {
+  const scriptHashes = options.scriptHashes ?? [];
+  const scriptSrc = ["'self'", DOCPLANNER, ...scriptHashes].join(' ');
+
   return [
-    ...SHARED_DIRECTIVES.slice(0, 1),
-    "script-src 'self' 'unsafe-inline' https://platform.docplanner.com",
-    "style-src 'self' 'unsafe-inline' https://platform.docplanner.com",
-    ...SHARED_DIRECTIVES.slice(1),
+    "default-src 'self'",
+    `script-src ${scriptSrc}`,
+    `style-src 'self' 'unsafe-inline' ${DOCPLANNER}`,
+    "frame-ancestors 'self'",
+    "img-src 'self' data: https:",
+    `font-src 'self' ${DOCPLANNER}`,
+    `frame-src https://www.google.com https://maps.google.com ${MIODOTTORE} ${DOCPLANNER}`,
+    `connect-src 'self' ${FORMSPREE} ${DOCPLANNER} ${MIODOTTORE}`,
+    `form-action 'self' ${FORMSPREE} ${MIODOTTORE}`,
+    "object-src 'none'",
+    "base-uri 'self'",
+    'upgrade-insecure-requests',
+    'block-all-mixed-content',
   ].join('; ');
 }
 

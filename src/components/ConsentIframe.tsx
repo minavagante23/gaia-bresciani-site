@@ -29,6 +29,8 @@ export default function ConsentIframe({ src, title, className, mapsUrl }: Consen
         title={title}
         loading="lazy"
         allowFullScreen
+        referrerPolicy="strict-origin-when-cross-origin"
+        sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms"
         className={className}
       />
     );

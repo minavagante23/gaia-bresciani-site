@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, type FormEvent, type ChangeEvent } from 'react';
+import { useState, useRef, type FormEvent, type ChangeEvent } from 'react';
 import { Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { linkTitle } from '@/lib/link-titles';
 
@@ -28,6 +28,8 @@ const initialData: FormData = {
   privacy: false,
 };
 
+const MIN_SUBMIT_MS = 2500;
+
 function validate(data: FormData): FormErrors {
   const errors: FormErrors = {};
   if (!data.name.trim()) errors.name = 'Inserisci il tuo nome';
@@ -45,6 +47,9 @@ export default function ContactForm() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [touched, setTouched] = useState<Set<string>>(new Set());
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
+  const [honeypot, setHoneypot] = useState('');
+  const [formError, setFormError] = useState<string | null>(null);
+  const mountedAt = useRef(Date.now());
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -68,17 +73,29 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    setFormError(null);
     const newErrors = validate(data);
     setErrors(newErrors);
     setTouched(new Set(Object.keys(data)));
 
     if (Object.keys(newErrors).length > 0) return;
 
+    // Honeypot filled → fake success (do not tip off bots)
+    if (honeypot.trim()) {
+      setStatus('sent');
+      return;
+    }
+
+    if (Date.now() - mountedAt.current < MIN_SUBMIT_MS) {
+      setFormError('Attendi un momento e riprova.');
+      return;
+    }
+
     setStatus('sending');
     try {
       const res = await fetch('https://formspree.io/f/xnnpnvqy', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
           name: data.name,
           _replyto: data.email,
@@ -88,12 +105,14 @@ export default function ContactForm() {
           subject: data.subject,
           message: data.message,
           _subject: 'Nuova richiesta primo colloquio dal sito',
+          _gotcha: '',
         }),
       });
       if (res.ok) {
         setStatus('sent');
         setData(initialData);
         setTouched(new Set());
+        mountedAt.current = Date.now();
       } else {
         setStatus('error');
       }
@@ -118,7 +137,21 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="space-y-5">
+    <form onSubmit={handleSubmit} noValidate className="relative space-y-5">
+      {/* Formspree honeypot — hidden from users, filled by many bots */}
+      <div className="absolute -left-[9999px] h-0 w-0 overflow-hidden" aria-hidden="true">
+        <label htmlFor="company_website">Non compilare</label>
+        <input
+          type="text"
+          id="company_website"
+          name="_gotcha"
+          tabIndex={-1}
+          autoComplete="off"
+          value={honeypot}
+          onChange={(e) => setHoneypot(e.target.value)}
+        />
+      </div>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-primary-light mb-1.5">
@@ -291,10 +324,10 @@ export default function ContactForm() {
         )}
       </button>
 
-      {status === 'error' && (
+      {(status === 'error' || formError) && (
         <div className="flex items-center gap-2 text-red-500 text-sm">
           <AlertCircle size={16} />
-          Si &egrave; verificato un errore. Riprova o contattami direttamente.
+          {formError ?? 'Si è verificato un errore. Riprova o contattami direttamente.'}
         </div>
       )}
     </form>

@@ -316,7 +316,6 @@ export default function RootLayout({
           fetchPriority="high"
         />
         <link rel="alternate" type="text/markdown" href="/llms.txt" title="llms.txt" />
-        <script src="/trusted-types.js" />
         <script src="/register-sw.js" defer />
       </head>
       <body className="bg-background text-primary antialiased">

@@ -23,6 +23,57 @@ export interface Article {
 
 const articles: Article[] = [
   {
+    slug: 'separazione-fine-relazione',
+    date: '23 luglio 2026',
+    publishedAt: '2026-07-23T00:00:00.000Z',
+    readTime: '8 min',
+    title: 'Separazione: come affrontare la fine di una relazione',
+    excerpt:
+      'Fine di una storia, separazione o divorzio: come riconoscere i segnali di un distacco difficile da elaborare, cosa può aiutare nei primi mesi e quando può essere utile un percorso psicologico.',
+    tags: ['Relazioni', 'Separazione'],
+    content: [
+      'La fine di una relazione non è solo la chiusura di un capitolo. È un cambiamento che tocca identità, abitudini, progetti condivisi e spesso anche il modo in cui ci si sente al sicuro. Che si tratti di una separazione concordata, di una rottura improvvisa o di un divorzio lungo e conflittuale, il passaggio può lasciare confusione, rabbia, vuoto o un senso di sospensione difficile da spiegare.',
+      'Molte persone arrivano a questo punto dopo mesi di tentativi, silenzi o crisi ripetute. Altre lo subiscono senza averlo scelto. In entrambi i casi, il lavoro emotivo non finisce con la decisione: inizia lì.',
+      { type: 'h2', text: 'Perché la separazione scuote così tanto' },
+      'Una relazione, anche quando fa soffrire, organizza la vita quotidiana: orari, casa, amici, immagine di sé, idee sul futuro. Quando si interrompe, non si perde solo una persona: si perde una struttura. Per questo possono comparire ansia, insonnia, difficoltà a concentrarsi, calo di energia o la sensazione di non riconoscersi più.',
+      'Non è un segno di debolezza. È una reazione umana a una perdita che tocca più livelli insieme: affettivo, pratico e identitario. Anche chi ha scelto di andarsene può vivere lutto, colpa o sollievo misto a paura.',
+      { type: 'h2', text: 'I segnali che il distacco resta difficile' },
+      'Nei primi mesi è normale stare male. Diventa utile osservare il disagio quando alcuni segnali si prolungano o intensificano:',
+      {
+        type: 'list',
+        items: [
+          'pensieri ripetitivi sulla relazione o sul "cosa sarebbe successo se"',
+          'oscillazione continua tra rabbia, nostalgia e senso di fallimento',
+          'difficoltà a stare da soli o, al contrario, ritiro dalle relazioni',
+          'controllo frequente su ex partner, social o luoghi condivisi',
+          'insonnia, irritabilità o calo di interesse per ciò che prima contava',
+          'sensazione di non riuscire a riprendere decisioni semplici o progetti personali',
+        ],
+      },
+      'Questi segnali non indicano automaticamente un problema clinico. Contano durata, intensità e quanto interferiscono con lavoro, sonno, genitorialità o relazioni significative.',
+      { type: 'h2', text: 'Errori comuni dopo una rottura' },
+      'Uno degli errori più frequenti è chiedersi troppo presto di "andare avanti". Spingere il dolore sotto il tappeto non lo elimina: lo sposta. Un altro rischio è cercare subito una nuova relazione solo per riempire il vuoto. Può dare sollievo temporaneo, ma spesso ripropone gli stessi nodi non elaborati.',
+      'Succede anche di idealizzare l\'altro o, al contrario, di ridurlo a una versione solo negativa. Entrambe le letture semplificano una storia più complessa e rendono più difficile capire cosa è davvero successo — e cosa si vuole evitare in futuro.',
+      {
+        type: 'cta',
+        before:
+          'Se la separazione sta diventando un peso quotidiano, può aiutare capire come funziona un',
+        links: [
+          { href: '/terapia', label: 'percorso di terapia individuale' },
+          { href: '/contatti', label: 'primo colloquio senza impegno' },
+        ],
+      },
+      { type: 'h2', text: 'Cosa può aiutare nei primi mesi' },
+      'Alcuni passi concreti possono rendere il passaggio più sostenibile: ricostruire piccole routine personali, limitare i contatti non necessari quando riaprono ferite, parlare con persone di fiducia senza trasformare ogni conversazione in un processo, e distinguere tra ricordare e rimanere bloccati nel passato.',
+      'Se ci sono figli, conta anche proteggere uno spazio in cui il conflitto genitoriale non diventi il centro della loro vita. Non serve essere "perfetti": serve più chiarezza e meno carica emotiva riversata su di loro.',
+      'Quando la relazione era segnata da dipendenza affettiva, paura dell\'abbandono o cicli di riavvicinamento e distanza, il distacco può essere ancora più intenso. In questi casi il lavoro non è solo "superare l\'ex", ma ricostruire un senso di sé più stabile.',
+      { type: 'h2', text: 'Quando può servire un percorso psicologico' },
+      'Un percorso psicologico può essere utile quando il dolore resta isolato e senza sfogo, quando la rabbia o la colpa diventano centrali, quando compare ansia persistente, o quando la separazione riattiva ferite più antiche. L\'obiettivo non è cancellare ciò che si è vissuto, ma integrarlo: capire cosa è finito, cosa si porta avanti e come riprendere direzione senza restare prigionieri della storia precedente.',
+      'A volte aiuta anche distinguere se serve un lavoro individuale o, in fase ancora di crisi, uno spazio di coppia. Se la relazione non è ancora chiusa e il dialogo è ancora possibile, può essere utile valutare un supporto dedicato; se invece la rottura è già avvenuta, il lavoro individuale è spesso la strada più chiara.',
+      'Se stai attraversando una separazione e vivi tra Credaro, Sarnico o il basso Lago d\'Iseo, un primo colloquio in presenza a Credaro può aiutarti a mettere ordine tra emozioni, decisioni pratiche e passi successivi.',
+    ],
+  },
+  {
     slug: 'elaborazione-lutto-perdita',
     date: '7 luglio 2026',
     publishedAt: '2026-07-07T00:00:00.000Z',
@@ -502,6 +553,10 @@ export interface ArticleHero {
 }
 
 const articleHeroes: Record<string, ArticleHero> = {
+  'separazione-fine-relazione': {
+    src: '/assets/approfondimenti/approfondimenti-separazione.webp',
+    alt: 'Separazione e fine di una relazione: spazio per elaborare il distacco',
+  },
   'elaborazione-lutto-perdita': {
     src: '/assets/approfondimenti/approfondimenti-lutto.webp',
     alt: 'Elaborazione del lutto: spazio silenzioso per il dolore e la ricostruzione',

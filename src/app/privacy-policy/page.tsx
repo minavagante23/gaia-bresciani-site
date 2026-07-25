@@ -113,12 +113,22 @@ export default function PrivacyPolicyPage() {
               </p>
 
               <h3 className="font-serif font-semibold text-lg mt-5 mb-2">Google Maps (mappe interattive)</h3>
-              <p className="body-md">
+              <p className="body-md mb-3">
                 Nella pagina Contatti, previo consenso dell&apos;utente, vengono caricate
                 mappe interattive fornite da Google LLC. Google pu&ograve; impostare cookie
                 e raccogliere dati secondo la propria informativa.{' '}
                 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="link-inline">
                   Privacy Policy di Google
+                </a>.
+              </p>
+
+              <h3 className="font-serif font-semibold text-lg mt-5 mb-2">MioDottore / Docplanner (prenotazioni)</h3>
+              <p className="body-md">
+                Previo consenso ai cookie funzionali, pu&ograve; essere caricato il widget di
+                prenotazione MioDottore (Docplanner). Il fornitore pu&ograve; impostare cookie
+                e trattare dati secondo la propria informativa.{' '}
+                <a href="https://www.miodottore.it/documenti/informativa-sulla-privacy" target="_blank" rel="noopener noreferrer" className="link-inline">
+                  Privacy Policy di MioDottore
                 </a>.
               </p>
             </div>
@@ -148,11 +158,11 @@ export default function PrivacyPolicyPage() {
             <div>
               <h2 className="heading-md mb-3">Trasferimento dati extra-UE</h2>
               <p className="body-md">
-                L&apos;utilizzo dei servizi Formspree e Google Maps pu&ograve; comportare
-                il trasferimento di dati verso gli Stati Uniti. Il trasferimento avviene
-                sulla base delle garanzie previste dal Data Privacy Framework (DPF)
-                UE-USA o, ove applicabili, delle clausole contrattuali standard (SCC)
-                approvate dalla Commissione Europea.
+                L&apos;utilizzo dei servizi Formspree, Google Maps e MioDottore pu&ograve;
+                comportare il trasferimento di dati verso Paesi terzi (in particolare USA).
+                Il trasferimento avviene sulla base delle garanzie previste dal Data Privacy
+                Framework (DPF) UE-USA o, ove applicabili, delle clausole contrattuali
+                standard (SCC) approvate dalla Commissione Europea.
               </p>
             </div>
 

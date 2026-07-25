@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {
   buildContentSecurityPolicy,
+  extractInlineScriptHashes,
   injectCspMeta,
 } from './csp-policy.mjs';
 import { formatHeadersFile } from './security-headers.mjs';
@@ -42,7 +43,8 @@ function dedupeImagePreload(html) {
 }
 
 function applyCsp(html) {
-  const policy = buildContentSecurityPolicy();
+  const scriptHashes = extractInlineScriptHashes(html);
+  const policy = buildContentSecurityPolicy({ scriptHashes });
   return injectCspMeta(html, policy);
 }
 
@@ -74,7 +76,7 @@ for (const file of walk(outDir)) {
 
 const headersPath = path.join(outDir, '_headers');
 fs.writeFileSync(headersPath, formatHeadersFile(), 'utf8');
-console.log('Security headers template written to out/_headers (for Cloudflare).');
+console.log('Security headers template written to out/_headers (riferimento; non applicato da GitHub Pages).');
 
 for (const file of walk(outDir)) {
   if (!/\.(css|js|txt)$/.test(file)) continue;

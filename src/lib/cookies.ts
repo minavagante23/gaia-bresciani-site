@@ -24,7 +24,8 @@ export function getConsent(): CookieConsent | null {
 
 export function setConsent(consent: CookieConsent) {
   const value = encodeURIComponent(JSON.stringify(consent));
-  document.cookie = `${COOKIE_NAME}=${value}; path=/; max-age=${MAX_AGE}; SameSite=Lax`;
+  const secure = typeof location !== 'undefined' && location.protocol === 'https:' ? '; Secure' : '';
+  document.cookie = `${COOKIE_NAME}=${value}; path=/; max-age=${MAX_AGE}; SameSite=Lax${secure}`;
 }
 
 export function hasFunctionalConsent(): boolean {

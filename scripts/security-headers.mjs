@@ -1,4 +1,4 @@
-/** Header HTTP di sicurezza (richiedono Cloudflare o CDN davanti a GitHub Pages). */
+/** Header HTTP di sicurezza (riferimento; GitHub Pages non li applica dal repo). */
 export const HTTP_SECURITY_HEADERS = {
   'Cross-Origin-Opener-Policy': 'same-origin',
   'Cross-Origin-Resource-Policy': 'same-site',

@@ -1,13 +1,31 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { Calendar } from 'lucide-react';
+import { hasFunctionalConsent } from '@/lib/cookies';
 
+/**
+ * Docplanner CDN does not send Access-Control-Allow-Origin, so SRI cannot be used
+ * (browsers require CORS for integrity checks on cross-origin scripts).
+ * We gate the third-party script behind functional cookie consent instead.
+ */
 export default function MioDottoreWidget() {
   const containerRef = useRef<HTMLDivElement>(null);
   const loaded = useRef(false);
+  const [allowed, setAllowed] = useState(false);
 
   useEffect(() => {
-    if (loaded.current || !containerRef.current) return;
+    setAllowed(hasFunctionalConsent());
+
+    const handleChange = () => {
+      setAllowed(hasFunctionalConsent());
+    };
+    window.addEventListener('cookie-consent-change', handleChange);
+    return () => window.removeEventListener('cookie-consent-change', handleChange);
+  }, []);
+
+  useEffect(() => {
+    if (!allowed || loaded.current || !containerRef.current) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -17,6 +35,7 @@ export default function MioDottoreWidget() {
             const script = document.createElement('script');
             script.src = 'https://platform.docplanner.com/js/widget.js';
             script.async = true;
+            script.referrerPolicy = 'strict-origin-when-cross-origin';
             document.body.appendChild(script);
             observer.disconnect();
           }
@@ -27,7 +46,28 @@ export default function MioDottoreWidget() {
 
     observer.observe(containerRef.current);
     return () => observer.disconnect();
-  }, []);
+  }, [allowed]);
+
+  if (!allowed) {
+    return (
+      <div className="w-full rounded-xl border border-primary/[0.08] bg-primary/[0.03] px-6 py-10 text-center">
+        <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10">
+          <Calendar size={22} className="text-accent" />
+        </div>
+        <p className="mb-1 text-sm font-medium text-primary">Widget MioDottore non disponibile</p>
+        <p className="mx-auto mb-4 max-w-sm text-xs leading-relaxed text-muted">
+          Per caricare il calendario di prenotazione, accetta i cookie funzionali.
+        </p>
+        <button
+          type="button"
+          onClick={() => window.dispatchEvent(new Event('open-cookie-preferences'))}
+          className="btn-outline px-4 py-2 text-xs"
+        >
+          Gestisci cookie
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div ref={containerRef} className="w-full">
