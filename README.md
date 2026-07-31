@@ -71,10 +71,6 @@ GitHub Pages **non permette** header HTTP personalizzati (HSTS, COOP, X-Frame-Op
 
 Verifica CSP live: `npm run check:headers`
 
-### Dipendenze
-
-Dependabot apre PR settimanali per `npm` e mensili per GitHub Actions (`.github/dependabot.yml`).
-
 ### Verifica deploy
 
 Dopo il push, controlla lo stato in **Actions** nel repository. Il sito sara raggiungibile all'URL configurato.
