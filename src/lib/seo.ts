@@ -19,9 +19,15 @@ const defaultOgImage = {
   alt: siteConfig.ogImageAlt,
 };
 
-function pageUrl(path: string): string {
+/** Canonical e OG URL allineati a sitemap (trailing slash). */
+export function canonicalPath(path: string): string {
   const normalized = path.startsWith('/') ? path : `/${path}`;
-  return `${SITE_URL}${normalized.endsWith('/') ? normalized : `${normalized}/`}`;
+  if (normalized === '/') return '/';
+  return normalized.endsWith('/') ? normalized : `${normalized}/`;
+}
+
+function pageUrl(path: string): string {
+  return `${SITE_URL}${canonicalPath(path)}`;
 }
 
 type PageMetadataOptions = {
@@ -59,7 +65,7 @@ export function createPageMetadata({
     authors: [{ name: siteConfig.author, url: SITE_URL }],
     creator: siteConfig.author,
     publisher: siteConfig.name,
-    alternates: { canonical: path },
+    alternates: { canonical: canonicalPath(path) },
     robots,
     openGraph: {
       title: ogTitle ?? title,
