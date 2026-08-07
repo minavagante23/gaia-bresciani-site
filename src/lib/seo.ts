@@ -6,9 +6,9 @@ export const siteConfig = {
   url: SITE_URL,
   name: 'Gaia Bresciani Psicologa',
   locale: 'it_IT',
-  ogImage: '/assets/og-share.webp',
+  ogImage: '/assets/og-gaia-bresciani.webp',
   ogImageAlt:
-    'Gaia Bresciani, psicologa e psicoterapeuta a Credaro vicino Sarnico e Lago d\'Iseo',
+    'Ritratto di Gaia Bresciani, psicologa e psicoterapeuta a Credaro vicino Sarnico e Lago d\'Iseo',
   author: 'Gaia Bresciani',
 } as const;
 

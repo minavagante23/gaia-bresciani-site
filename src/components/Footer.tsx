@@ -159,10 +159,11 @@ export default function Footer() {
             &copy; 2026 Gaia Bresciani &mdash; Psicologa e Psicoterapeuta. Tutti i diritti riservati.
           </p>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-white/75">
-            <span>P.I. 04558220168</span>
+            <span>P.I. 04558220168 · </span>
             <Link href="/privacy-policy" title={linkTitle('/privacy-policy')} className="touch-target text-white/75 hover:text-white transition-colors">
               Privacy Policy
             </Link>
+            <span> · </span>
             <Link href="/cookie-policy" title={linkTitle('/cookie-policy')} className="touch-target text-white/75 hover:text-white transition-colors">
               Cookie Policy
             </Link>

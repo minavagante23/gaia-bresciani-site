@@ -28,7 +28,7 @@ function getTarget(relativePath) {
     return { width: 700, quality: 78 };
   }
 
-  if (relativePath === 'og-share.webp') {
+  if (relativePath === 'og-share.webp' || relativePath === 'og-gaia-bresciani.webp') {
     return { width: 1200, quality: 82 };
   }
 

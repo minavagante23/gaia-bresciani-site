@@ -163,7 +163,8 @@ function SchemaOrgJsonLd() {
     ],
     image: [
       `${SITE_URL}/assets/psicologa-gaia-bresciani.webp`,
-      `${SITE_URL}/assets/psicologa-lago-iseo-sarnico.webp`,
+      `${SITE_URL}/assets/og-gaia-bresciani.webp`,
+      `${SITE_URL}/assets/studio-psicologia-credaro.webp`,
     ],
     logo: `${SITE_URL}/assets/psicologa-gaia-bresciani.webp`,
     description:
