@@ -23,6 +23,54 @@ export interface Article {
 
 const articles: Article[] = [
   {
+    slug: 'vacanze-mente-staccare',
+    date: '11 agosto 2026',
+    publishedAt: '2026-08-11T00:00:00.000Z',
+    readTime: '6 min',
+    title: 'Vacanze: quando il corpo è in ferie ma la mente no',
+    excerpt:
+      'Telefono face down, valigia fatta, eppure i pensieri restano al lavoro: come riconoscere la difficoltà a staccare in vacanza, cosa aiuta davvero a riposare e quando può essere utile un confronto psicologico.',
+    tags: ['Benessere emotivo', 'Stress'],
+    content: [
+      'Arrivano le ferie. Si chiude il computer, si mettono i fuori ufficio, a volte si parte davvero. Eppure, dopo pochi giorni, molte persone notano qualcosa di strano: il corpo è in vacanza, ma la mente continua a lavorare. Controlli la mail "solo un attimo", ripassi una riunione sulla spiaggia, pensi già al rientro mentre dovresti riposare.',
+      'Non è un capriccio e non è "incapacità di godersi la vita". È un segnale frequente: quando lo stress è stato alto per mesi, spegnere l\'interruttore non è automatico. La mente, abituata all\'allerta, resta in modalità sorveglianza anche quando finalmente potrebbe rallentare.',
+      { type: 'h2', text: 'Perché staccare è più difficile di quanto sembra' },
+      'Durante l\'anno il lavoro, le responsabilità familiari e gli impegni quotidiani tengono la mente occupata in modo continuo. In vacanza, quando gli stimoli esterni calano, emerge tutto ciò che è rimasto in sospeso: preoccupazioni, decisioni rimandate, tensioni non dette, la sensazione di "non aver fatto abbastanza".',
+      'Si aggiunge spesso una pressione sottile: dover godersi le ferie. Se i giorni di riposo sono pochi, ogni giornata "sprecata" a ruminare o a sentirsi in colpa pesa di più. Così le vacanze smettono di essere uno spazio libero e diventano un compito da svolgere bene.',
+      { type: 'h2', text: 'I segnali che la mente non è ancora in ferie' },
+      'Alcuni segnali utili da osservare senza giudicarsi:',
+      {
+        type: 'list',
+        items: [
+          'controllare mail o chat di lavoro anche senza urgenze reali',
+          'difficoltà a stare senza fare nulla: serve sempre un piano, un\'attività, un impegno',
+          'pensieri ripetitivi sul rientro o su ciò che "resta da sistemare"',
+          'irritabilità o tensione fisica nonostante il riposo',
+          'sonno irregolare: si va a letto tardi o ci si sveglia con la mente già attiva',
+          'senso di colpa se si riposa davvero, come se "stare fermi" fosse uno spreco',
+        ],
+      },
+      'Questi segnali, presi da soli, non indicano un problema clinico. Contano quando diventano la regola delle ferie e lasciano poco spazio al recupero reale.',
+      { type: 'h2', text: 'Cosa può aiutare, in concreto' },
+      'Alcuni passi semplici possono rendere le vacanze più riposanti, senza trasformarle in un nuovo progetto di "self-care perfetto". Può aiutare scegliere una o due finestre fisse per messaggi e notizie, invece di controlli continui; lasciare spazi vuoti nella giornata senza riempirli subito; e dare tempo al corpo: nei primi giorni è normale non sentirsi subito "in modalità vacanza".',
+      'Utile anche distinguere tra riposo e distrazione. Scrollare ore sui social o riempire ogni ora di attività può stancare quanto lavorare. Il riposo che ricarica ha spesso una qualità diversa: camminare senza fretta, stare in acqua, parlare senza agenda, o anche non fare nulla per un pezzo della giornata.',
+      'Se si è in coppia o in famiglia, può aiutare chiarire aspettative: non tutti riposano allo stesso modo. Uno vuole silenzio, l\'altro movimento; uno vorrebbe staccare, l\'altro resta agganciato al telefono. Mettere in parole queste differenze riduce litigi inutili e rende le ferie più sostenibili.',
+      {
+        type: 'cta',
+        before:
+          'Se anche in vacanza la tensione resta alta, può aiutare capire come funziona un',
+        links: [
+          { href: '/terapia', label: 'percorso di terapia individuale' },
+          { href: '/contatti', label: 'primo colloquio senza impegno' },
+        ],
+      },
+      { type: 'h2', text: 'Quando può servire un percorso psicologico' },
+      'Un confronto psicologico può essere utile quando la difficoltà a staccare non riguarda solo queste ferie, ma si ripete da anni; quando lo stress torna appena finisce il riposo; o quando ansia, insonnia e irritabilità restano presenti anche lontano dal lavoro. L\'obiettivo non è "imparare a fare vacanze perfette", ma capire cosa tiene la mente in allerta e come recuperare uno spazio di quiete più stabile nel tempo.',
+      'A volte le ferie rivelano qualcosa di più profondo: stanchezza emotiva accumulata, burnout, perfezionismo, o la paura di rallentare perché "poi non si riparte più". In questi casi, le vacanze non bastano da sole — e non è una sconfitta riconoscerlo.',
+      'Se vivi tra Credaro, Sarnico o il basso Lago d\'Iseo e senti che anche in ferie la mente non trova pace, un primo colloquio in presenza a Credaro può aiutarti a capire da dove ripartire, senza pressione e senza giudizi.',
+    ],
+  },
+  {
     slug: 'separazione-fine-relazione',
     date: '23 luglio 2026',
     publishedAt: '2026-07-23T00:00:00.000Z',
@@ -553,6 +601,10 @@ export interface ArticleHero {
 }
 
 const articleHeroes: Record<string, ArticleHero> = {
+  'vacanze-mente-staccare': {
+    src: '/assets/approfondimenti/approfondimenti-vacanze-mente.webp',
+    alt: 'Vacanze e mente: terrazza quieta sul lago, libro chiuso e telefono a faccia in giù',
+  },
   'separazione-fine-relazione': {
     src: '/assets/approfondimenti/approfondimenti-separazione.webp',
     alt: 'Separazione e fine di una relazione: spazio per elaborare il distacco',
