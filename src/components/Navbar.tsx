@@ -1,4 +1,8 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 import { MessageCircle, Phone } from 'lucide-react';
 import { linkTitle } from '@/lib/link-titles';
 import {
@@ -19,6 +23,15 @@ const navLinks = [
 ] as const;
 
 export default function Navbar() {
+  const pathname = usePathname();
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [pathname]);
+
+  const closeMobileNav = () => setMobileOpen(false);
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-primary/10 bg-white shadow-sm">
       <nav
@@ -63,6 +76,8 @@ export default function Navbar() {
             type="checkbox"
             id="mobile-nav-toggle"
             className="peer sr-only"
+            checked={mobileOpen}
+            onChange={(e) => setMobileOpen(e.target.checked)}
             aria-hidden="true"
           />
           <label
@@ -97,6 +112,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   title={linkTitle(link.href, link.label)}
+                  onClick={closeMobileNav}
                   className="block text-primary py-3 text-lg font-medium border-b border-primary/[0.06]
                              hover:text-accent-deep transition-colors"
                 >
@@ -110,6 +126,7 @@ export default function Navbar() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={closeMobileNav}
                 className="btn-accent text-center gap-2"
                 aria-label={WHATSAPP_ARIA}
                 title={WHATSAPP_TITLE}
@@ -120,6 +137,7 @@ export default function Navbar() {
               <a
                 href={PHONE_HREF}
                 title={linkTitle(PHONE_HREF)}
+                onClick={closeMobileNav}
                 className="btn-outline text-center"
               >
                 <Phone size={16} className="mr-2 inline" />
