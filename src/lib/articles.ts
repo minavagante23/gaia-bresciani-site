@@ -23,6 +23,54 @@ export interface Article {
 
 const articles: Article[] = [
   {
+    slug: 'rientro-settembre-dopo-vacanze',
+    date: '1 settembre 2026',
+    publishedAt: '2026-09-01T00:00:00.000Z',
+    readTime: '6 min',
+    title: 'Rientro a settembre: ripartire dopo le vacanze senza forzarsi',
+    excerpt:
+      'Dopo le ferie arriva settembre: lavoro, scuola, ritmi e aspettative. Come affrontare il rientro con più leggerezza, riconoscere la fatica del ricominciare e capire quando un confronto può aiutare.',
+    tags: ['Benessere emotivo', 'Stress'],
+    content: [
+      'Le vacanze finiscono. Si richiude la valigia, si riaccende la sveglia, tornano mail, riunioni, compiti e impegni. Per molte persone settembre non è solo un cambio di mese: è un passaggio di stagione interiore. Anche quando le ferie sono andate bene, il rientro può arrivare con pesantezza, irritabilità o la sensazione di non essere ancora "pronti".',
+      'Non è un segno di ingratitudine e non significa che le vacanze siano state inutili. Il corpo e la mente hanno bisogno di tempo per passare da un ritmo all\'altro. Aspettarsi di ripartire al cento per cento dal primo giorno è spesso la prima fonte di stress del rientro.',
+      { type: 'h2', text: 'Perché ricominciare pesa più di quanto sembra' },
+      'In estate, anche se breve, la vita tende a rallentare: meno orari fissi, più luce, più spazio. A settembre tornano struttura, scadenze e confronti. Il contrasto può far sentire il carico quotidiano più intenso proprio perché, per qualche settimana, si era respirato un altro modo di stare.',
+      'Si aggiunge spesso una pressione sociale sottile: "ora si riparte", "bisogna essere produttivi", "gli altri sono già in modalità lavoro". Così il rientro smette di essere un passaggio graduale e diventa una prova da superare. Se le ferie non sono riuscite a riposare davvero, o se la mente ha continuato a lavorare anche in vacanza, settembre può arrivare ancora più faticoso.',
+      { type: 'h2', text: 'I segnali di un rientro che costa fatica' },
+      'Nei primi giorni è normale sentirsi spaesati. Diventa utile osservare alcuni segnali quando si prolungano o diventano invasivi:',
+      {
+        type: 'list',
+        items: [
+          'stanchezza che non passa dopo le prime notti a casa',
+          'irritabilità o demotivazione al pensiero della routine',
+          'difficoltà a concentrarsi o sensazione di "essere ancora in vacanza nella testa"',
+          'ansia da anticipazione la sera prima di riprendere lavoro o scuola',
+          'confronto continuo con "come si dovrebbe ripartire"',
+          'senso di vuoto o nostalgia delle ferie che toglie spazio al presente',
+        ],
+      },
+      'Questi segnali, da soli, non indicano un problema clinico. Contano quando rendono i primi giorni di settembre un peso costante e lasciano poco spazio a un rientro sostenibile.',
+      { type: 'h2', text: 'Cosa può aiutare, in concreto' },
+      'Alcuni passi semplici possono rendere il passaggio più leggero, senza trasformarlo in un nuovo progetto di "rientro perfetto". Può aiutare riprendere gradualmente orari e impegni, invece di riempire subito l\'agenda; tenere una o due abitudini buone delle ferie (una camminata, un ritmo di sonno più umano, un momento senza schermi); e abbassare le aspettative della prima settimana.',
+      'Utile anche distinguere tra ripartire e recuperare tutto in un colpo solo. Non serve rispondere a ogni mail, organizzare ogni impegno familiare e "essere già al massimo" nei primi giorni. Lasciare margine riduce la sensazione di essere già in debito con se stessi.',
+      'Se si è in famiglia, può aiutare nominare ad alta voce che il rientro costa fatica a tutti: adulti e ragazzi. Condividere questa fatica, senza drammatizzarla, rende settembre meno solitario e riduce litigi nati solo dalla tensione del passaggio.',
+      {
+        type: 'cta',
+        before:
+          'Se il rientro sta diventando un peso quotidiano, può aiutare capire come funziona un',
+        links: [
+          { href: '/terapia', label: 'percorso di terapia individuale' },
+          { href: '/contatti', label: 'primo colloquio senza impegno' },
+        ],
+      },
+      { type: 'h2', text: 'Quando può servire un percorso psicologico' },
+      'Un confronto psicologico può essere utile quando la fatica del rientro non riguarda solo questi giorni, ma si ripete ogni anno; quando ansia, insonnia o demotivazione restano alte anche dopo le prime settimane; o quando settembre riaccende una stanchezza emotiva che le ferie non hanno sciolto. L\'obiettivo non è "diventare più produttivi", ma capire cosa rende il ricominciare così pesante e come riprendere ritmo con più rispetto per sé.',
+      'A volte il rientro rivela qualcosa di più stabile: burnout, perfezionismo, difficoltà a staccare, o la paura di non farcela di fronte a ritmi che sembrano sempre troppo alti. In questi casi non è una sconfitta chiedere uno spazio per fermarsi e ripensare il modo in cui si riparte.',
+      'Se vivi tra Credaro, Sarnico o il basso Lago d\'Iseo e senti che settembre arriva più come un muro che come un nuovo inizio, un primo colloquio in presenza a Credaro può aiutarti a capire da dove ripartire, senza pressione e senza giudizi.',
+    ],
+  },
+  {
     slug: 'vacanze-mente-staccare',
     date: '11 agosto 2026',
     publishedAt: '2026-08-11T00:00:00.000Z',
@@ -601,6 +649,10 @@ export interface ArticleHero {
 }
 
 const articleHeroes: Record<string, ArticleHero> = {
+  'rientro-settembre-dopo-vacanze': {
+    src: '/assets/approfondimenti/approfondimenti-rientro-settembre.webp',
+    alt: 'Rientro a settembre: taccuino aperto e caffè vicino alla finestra, inizio di una nuova stagione',
+  },
   'vacanze-mente-staccare': {
     src: '/assets/approfondimenti/approfondimenti-vacanze-mente.webp',
     alt: 'Vacanze e mente: terrazza quieta sul lago, libro chiuso e telefono a faccia in giù',
