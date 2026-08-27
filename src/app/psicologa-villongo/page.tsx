@@ -5,7 +5,7 @@ import PageHeader from '@/components/PageHeader';
 import AnimatedSection from '@/components/AnimatedSection';
 import InlineCta from '@/components/InlineCta';
 import { createPageMetadata } from '@/lib/seo';
-import { MapPin, Users, Clock, Target } from 'lucide-react';
+import { MapPin, Users, Target } from 'lucide-react';
 
 export const metadata: Metadata = createPageMetadata({
   title: 'Psicologa vicino Villongo | Studio a Credaro, Val Calepio',
@@ -128,23 +128,20 @@ export default function ZonaVillongoPage() {
 
       <section className="section-container pb-8">
         <AnimatedSection>
-          <div className="card-base p-6 flex items-start gap-4">
-            <Clock size={20} className="text-accent shrink-0 mt-0.5" />
-            <p className="body-md">
-              Vivi più vicino al lago? Consulta le pagine dedicate a{' '}
-              <Link href="/psicologa-sarnico" className="link-inline">
-                Sarnico
-              </Link>{' '}
-              e al{' '}
-              <Link href="/psicologa-lago-iseo" className="link-inline">
-                Lago d&apos;Iseo
-              </Link>
-              , oppure approfondisci la{' '}
-              <Link href="/terapia" className="link-inline">
-                terapia individuale e di coppia
-              </Link>.
-            </p>
-          </div>
+          <p className="body-md max-w-3xl">
+            Vivi più vicino al lago? Consulta le pagine dedicate a{' '}
+            <Link href="/psicologa-sarnico" className="link-inline">
+              Sarnico
+            </Link>{' '}
+            e al{' '}
+            <Link href="/psicologa-lago-iseo" className="link-inline">
+              Lago d&apos;Iseo
+            </Link>
+            , oppure approfondisci la{' '}
+            <Link href="/terapia" className="link-inline">
+              terapia individuale e di coppia
+            </Link>.
+          </p>
         </AnimatedSection>
       </section>
 

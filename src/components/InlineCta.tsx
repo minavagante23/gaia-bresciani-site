@@ -1,6 +1,5 @@
 import AnimatedSection from './AnimatedSection';
-import { MessageCircle, Phone, FileText } from 'lucide-react';
-import Link from 'next/link';
+import { MessageCircle, Phone } from 'lucide-react';
 import { linkTitle } from '@/lib/link-titles';
 import {
   CTA_PRIMARY_LABEL,
@@ -41,10 +40,6 @@ export default function InlineCta({
             <Phone size={16} />
             Chiamami
           </a>
-          <Link href="/contatti/#contact-form" title={linkTitle('/contatti/#contact-form')} className="btn-outline gap-2 w-full sm:w-auto">
-            <FileText size={16} />
-            Compila il modulo
-          </Link>
         </div>
         <p className="text-sm text-muted mt-6">{CTA_TRUST_LINE}</p>
       </div>

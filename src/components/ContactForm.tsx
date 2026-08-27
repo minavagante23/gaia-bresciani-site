@@ -128,7 +128,7 @@ export default function ContactForm() {
 
   if (status === 'sent') {
     return (
-      <div className="card-base p-10 text-center">
+      <div className="py-6 text-center">
         <CheckCircle size={48} className="text-green-500 mx-auto mb-4" />
         <h3 className="heading-md mb-2">Messaggio inviato</h3>
         <p className="body-md">Riceverai una risposta entro 24 ore lavorative.</p>

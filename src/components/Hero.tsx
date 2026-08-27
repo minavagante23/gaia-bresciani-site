@@ -1,4 +1,4 @@
-import { ArrowRight, Clock3, MapPin, MessageCircle, ShieldCheck } from 'lucide-react';
+import { ArrowRight, MapPin, MessageCircle } from 'lucide-react';
 import { linkTitle } from '@/lib/link-titles';
 import {
   CTA_PRIMARY_LABEL,
@@ -55,39 +55,6 @@ export default function Hero() {
               traumatiche. Il mio approccio unisce ascolto clinico, chiarezza e
               obiettivi condivisi gi&agrave; dal primo colloquio.
             </p>
-
-            <div className="grid max-w-2xl gap-3 sm:grid-cols-3">
-              <div className="card-base p-4">
-                <div className="flex items-center gap-2 text-sm font-medium text-primary">
-                  <ShieldCheck size={16} className="shrink-0 text-accent" />
-                  Approccio chiaro
-                </div>
-                <p className="mt-2 text-sm text-muted">
-                  Psicoterapia psicodinamica adleriana, con integrazione EMDR
-                  quando indicata.
-                </p>
-              </div>
-              <div className="card-base p-4">
-                <div className="flex items-center gap-2 text-sm font-medium text-primary">
-                  <MapPin size={16} className="shrink-0 text-accent" />
-                  Studio comodo
-                </div>
-                <p className="mt-2 text-sm text-muted">
-                  Credaro, vicino a Sarnico, con parcheggio privato presso lo
-                  studio.
-                </p>
-              </div>
-              <div className="card-base p-4">
-                <div className="flex items-center gap-2 text-sm font-medium text-primary">
-                  <Clock3 size={16} className="shrink-0 text-accent" />
-                  Primo passo semplice
-                </div>
-                <p className="mt-2 text-sm text-muted">
-                  Un primo contatto chiaro, senza pressione, per chi sente che
-                  chiedere aiuto non &egrave; facile.
-                </p>
-              </div>
-            </div>
 
             <div className="flex flex-wrap gap-4 pt-2">
               <a

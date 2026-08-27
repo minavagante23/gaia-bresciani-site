@@ -69,17 +69,6 @@ export default function CtaSection() {
 
               <p className="text-white/75 text-sm mt-6">{CTA_TRUST_LINE}</p>
 
-              <p className="text-white/55 text-xs mt-4">
-                Preferisci il modulo?{' '}
-                <a
-                  href="/contatti/#contact-form"
-                  title={linkTitle('/contatti/#contact-form')}
-                  className="underline underline-offset-2 hover:text-white/80"
-                >
-                  Scrivimi dalla pagina Contatti
-                </a>
-              </p>
-
               <p className="text-white/75 text-xs mt-8">
                 Sedute da 70 a 100 &euro; &middot; Detraibili al 19% &middot; Fattura sanitaria
               </p>

@@ -72,125 +72,126 @@ export default function ContattiPage() {
         subtitle="Il modo più rapido per fissare un colloquio in presenza è WhatsApp. In alternativa puoi chiamarmi o usare il modulo qui sotto."
       />
 
-      <section className="section-container pb-8">
+      <section className="section-container pb-12 sm:pb-16">
         <AnimatedSection>
-          <div className="max-w-2xl mx-auto mb-6 space-y-3 text-center">
+          <div className="max-w-3xl space-y-5">
             <p className="body-md">
-              Il primo contatto serve solo a chiarire la richiesta, la sede e
-              una fascia oraria possibile. Non serve arrivare con tutto
-              &ldquo;chiaro&rdquo;: basta descrivere cosa stai vivendo, anche in
-              poche righe.
-            </p>
-            <p className="text-sm text-muted">
-              Riservatezza garantita. Costi e durata delle sedute li trovi nella{' '}
+              Il primo contatto serve solo a chiarire richiesta, sede e fascia oraria:
+              bastano poche righe su cosa stai vivendo. Riservatezza garantita; costi e
+              durata sono in{' '}
               <Link href="/faq" className="link-inline">
                 FAQ
               </Link>
-              ; per capire il metodo puoi leggere{' '}
+              , il metodo in{' '}
               <Link href="/terapia" className="link-inline">
                 terapia individuale e di coppia
               </Link>
               .
             </p>
-          </div>
-          <div className="card-base p-6 sm:p-8 max-w-2xl mx-auto text-center bg-gradient-to-br from-primary/[0.02] to-accent/[0.04]">
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              title={WHATSAPP_TITLE}
-              aria-label={WHATSAPP_ARIA}
-              className="btn-primary gap-2 w-full sm:w-auto"
-            >
-              <MessageCircle size={16} />
-              {CTA_PRIMARY_LABEL}
-            </a>
-            <p className="text-sm text-muted mt-4">{CTA_TRUST_LINE}</p>
+
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={WHATSAPP_TITLE}
+                aria-label={WHATSAPP_ARIA}
+                className="btn-primary gap-2 w-full sm:w-auto"
+              >
+                <MessageCircle size={16} />
+                {CTA_PRIMARY_LABEL}
+              </a>
+              <a href="#contact-form" className="btn-outline w-full sm:w-auto">
+                Oppure compila il modulo
+              </a>
+            </div>
+            <p className="text-sm text-muted">{CTA_TRUST_LINE}</p>
           </div>
         </AnimatedSection>
       </section>
 
       <section className="section-container pb-16">
-        <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
-          <AnimatedSection className="lg:col-span-2 space-y-8">
-            <div>
-              <h2 className="heading-md mb-6">Informazioni di contatto</h2>
-              <div className="space-y-5">
-                {contactInfo.map((item) => {
-                  const Icon = item.icon;
-                  const content = (
-                    <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
-                        <Icon size={18} strokeWidth={1.6} className="text-accent" />
+        <div className="grid lg:grid-cols-5 gap-6 lg:gap-8">
+          <AnimatedSection className="lg:col-span-2 h-full">
+            <div className="card-base p-6 sm:p-8 space-y-8 h-full flex flex-col">
+              <div>
+                <h2 className="heading-md mb-5">Informazioni di contatto</h2>
+                <ul className="space-y-4">
+                  {contactInfo.map((item) => {
+                    const Icon = item.icon;
+                    const content = (
+                      <div className="flex items-start gap-3.5">
+                        <div className="w-10 h-10 rounded-xl bg-accent/15 flex items-center justify-center shrink-0">
+                          <Icon size={18} strokeWidth={1.75} className="text-accent-deep" />
+                        </div>
+                        <div className="min-w-0 pt-0.5">
+                          <p className="text-sm font-medium text-primary-light mb-0.5">
+                            {item.label}
+                          </p>
+                          <p className="body-md text-primary !leading-snug break-words">
+                            {item.value}
+                          </p>
+                        </div>
                       </div>
-                      <div>
-                        <p className="text-xs text-primary/45 uppercase tracking-wider font-medium mb-0.5">
-                          {item.label}
-                        </p>
-                        <p className="text-sm font-medium text-primary">{item.value}</p>
-                      </div>
-                    </div>
-                  );
-                  return item.href ? (
-                    <a
-                      key={item.label}
-                      href={item.href}
-                      className="block hover:bg-primary/[0.02] rounded-xl p-2 -m-2 transition-colors"
-                    >
-                      {content}
-                    </a>
-                  ) : (
-                    <div key={item.label} className="p-2 -m-2">
-                      {content}
-                    </div>
-                  );
-                })}
+                    );
+                    return (
+                      <li key={item.label}>
+                        {item.href ? (
+                          <a
+                            href={item.href}
+                            className="block rounded-xl -mx-2 px-2 py-1.5 hover:bg-primary/[0.03] transition-colors"
+                          >
+                            {content}
+                          </a>
+                        ) : (
+                          <div className="px-2 -mx-2 py-1.5">{content}</div>
+                        )}
+                      </li>
+                    );
+                  })}
+                </ul>
               </div>
-            </div>
 
-            <div className="card-base p-5 space-y-3">
-              <h3 className="font-serif font-semibold text-base text-primary">
-                Perché molte persone scelgono Credaro
-              </h3>
-              <ul className="space-y-2 text-sm text-muted">
-                <li>Raggiungibile in pochi minuti da Sarnico, Paratico, Villongo e Capriolo.</li>
-                <li>Parcheggio privato presente presso lo studio.</li>
-                <li>Una sede tranquilla, utile per dare continuità al percorso.</li>
-              </ul>
-            </div>
+              <div className="space-y-3 border-t border-primary/10 pt-6">
+                <h3 className="heading-md">Perché molte persone scelgono Credaro</h3>
+                <ul className="space-y-2 body-md list-disc pl-5">
+                  <li>Raggiungibile in pochi minuti da Sarnico, Paratico, Villongo e Capriolo.</li>
+                  <li>Parcheggio privato presente presso lo studio.</li>
+                  <li>Una sede tranquilla, utile per dare continuità al percorso.</li>
+                </ul>
+              </div>
 
-            <div className="card-base p-5 space-y-3">
-              <h3 className="font-serif font-semibold text-base text-primary">
-                Altre modalità disponibili
-              </h3>
-              <p className="text-sm text-muted leading-relaxed">
-                La sede di riferimento è a Credaro; quando utile, sono disponibili
-                anche colloqui online e una seconda sede a Castenedolo. Approfondisci le pagine
-                dedicate a{' '}
-                <Link href="/psicologa-sarnico" className="link-inline">
-                  Sarnico e Lago d&apos;Iseo
-                </Link>
-                ,{' '}
-                <Link href="/psicologa-villongo" className="link-inline">
-                  Villongo e Val Calepio
-                </Link>{' '}
-                e{' '}
-                <Link href="/psicologa-lago-iseo" className="link-inline">
-                  Lago d&apos;Iseo
-                </Link>
-                , oppure consulta{' '}
-                <Link href="/terapia" className="link-inline">
-                  terapia individuale e di coppia
-                </Link>
-                .
-              </p>
+              <div className="space-y-3 border-t border-primary/10 pt-6 mt-auto">
+                <h3 className="heading-md">Altre modalità disponibili</h3>
+                <p className="body-md">
+                  La sede di riferimento è a Credaro; quando utile, sono disponibili
+                  anche colloqui online e una seconda sede a Castenedolo. Approfondisci le pagine
+                  dedicate a{' '}
+                  <Link href="/psicologa-sarnico" className="link-inline">
+                    Sarnico e Lago d&apos;Iseo
+                  </Link>
+                  ,{' '}
+                  <Link href="/psicologa-villongo" className="link-inline">
+                    Villongo e Val Calepio
+                  </Link>{' '}
+                  e{' '}
+                  <Link href="/psicologa-lago-iseo" className="link-inline">
+                    Lago d&apos;Iseo
+                  </Link>
+                  , oppure consulta{' '}
+                  <Link href="/terapia" className="link-inline">
+                    terapia individuale e di coppia
+                  </Link>
+                  .
+                </p>
+              </div>
             </div>
           </AnimatedSection>
 
-          <AnimatedSection className="lg:col-span-3">
-            <div className="card-base p-6 sm:p-8" id="contact-form">
-              <h2 className="heading-md mb-6">Scrivimi direttamente</h2>
-              <p className="text-sm text-primary/60 mb-6">
+          <AnimatedSection className="lg:col-span-3 h-full">
+            <div className="card-base p-6 sm:p-8 h-full" id="contact-form">
+              <h2 className="heading-md mb-3">Scrivimi direttamente</h2>
+              <p className="body-md mb-6">
                 Se per te è comodo raggiungere Credaro, puoi indicarlo nel modulo:
                 è la sede che propongo di default per chi arriva dalla zona di
                 Sarnico e del basso Lago d&apos;Iseo.
@@ -203,22 +204,21 @@ export default function ContattiPage() {
 
       <section className="section-container pb-16">
         <AnimatedSection>
-          <h2 className="heading-lg mb-10">Le sedi</h2>
+          <h2 className="heading-lg mb-3">Le sedi</h2>
+          <p className="body-md max-w-2xl mb-10">
+            Due sedi in presenza, più la possibilità di colloqui online quando serve.
+          </p>
         </AnimatedSection>
         <div className="grid md:grid-cols-2 gap-8">
-          {studios.map((studio, i) => (
+          {studios.map((studio) => (
             <AnimatedSection key={studio.name}>
               <div className="space-y-4">
-                <div className="card-base p-5">
-                  <div className="flex items-start gap-3">
-                    <MapPin size={18} className="text-accent shrink-0 mt-0.5" />
-                    <div>
-                      <h3 className="font-serif font-semibold text-base mb-0.5">
-                        {studio.name}
-                      </h3>
-                      <p className="text-sm text-primary/60">{studio.address}</p>
-                      <p className="text-xs text-primary/45 mt-1">{studio.area}</p>
-                    </div>
+                <div className="flex items-start gap-3">
+                  <MapPin size={18} className="text-accent-deep shrink-0 mt-1" />
+                  <div>
+                    <h3 className="heading-md mb-1">{studio.name}</h3>
+                    <p className="body-md !leading-snug">{studio.address}</p>
+                    <p className="text-sm text-muted mt-1">{studio.area}</p>
                   </div>
                 </div>
                 <ConsentIframe

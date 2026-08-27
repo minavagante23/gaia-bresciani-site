@@ -97,23 +97,19 @@ export default function EmdrPage() {
           <p className="body-lg max-w-3xl mb-10">Indicazioni cliniche più frequenti</p>
         </AnimatedSection>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
-          {indications.map((item, i) => {
+        <ul className="grid sm:grid-cols-2 gap-x-10 gap-y-4 max-w-3xl">
+          {indications.map((item) => {
             const Icon = item.icon;
             return (
-              <AnimatedSection key={item.text}>
-                <div className="card-base p-5 flex flex-col items-center text-center h-full">
-                  <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center mb-3">
-                    <Icon size={20} strokeWidth={1.6} className="text-accent" />
-                  </div>
-                  <p className="text-sm font-medium text-primary/80 leading-snug">
-                    {item.text}
-                  </p>
+              <li key={item.text} className="flex items-start gap-3">
+                <div className="w-9 h-9 rounded-xl bg-accent/15 flex items-center justify-center shrink-0">
+                  <Icon size={18} strokeWidth={1.75} className="text-accent-deep" />
                 </div>
-              </AnimatedSection>
+                <p className="body-md text-primary pt-1.5">{item.text}</p>
+              </li>
             );
           })}
-        </div>
+        </ul>
       </section>
 
       <section className="section-container pb-8">

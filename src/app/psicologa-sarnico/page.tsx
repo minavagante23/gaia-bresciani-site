@@ -5,7 +5,7 @@ import PageHeader from '@/components/PageHeader';
 import AnimatedSection from '@/components/AnimatedSection';
 import InlineCta from '@/components/InlineCta';
 import { createPageMetadata } from '@/lib/seo';
-import { MapPin, Users, Clock, Target } from 'lucide-react';
+import { MapPin, Users, Target } from 'lucide-react';
 
 export const metadata: Metadata = createPageMetadata({
   title: 'Psicologa vicino Sarnico | Studio a Credaro a 5 minuti dal centro',
@@ -161,27 +161,24 @@ export default function ZonaSarnicoPage() {
 
       <section className="section-container pb-8">
         <AnimatedSection>
-          <div className="card-base p-6 flex items-start gap-4">
-            <Clock size={20} className="text-accent shrink-0 mt-0.5" />
-            <p className="body-md">
-              Approfondisci i trattamenti:{' '}
-              <Link href="/terapia" className="link-inline">
-                terapia individuale e di coppia
-              </Link>{' '}
-              e{' '}
-              <Link href="/emdr" className="link-inline">
-                terapia EMDR
-              </Link>. Vivi in Val Calepio o sul lago? Consulta le pagine
-              dedicate a{' '}
-              <Link href="/psicologa-villongo" className="link-inline">
-                Villongo
-              </Link>{' '}
-              e al{' '}
-              <Link href="/psicologa-lago-iseo" className="link-inline">
-                Lago d&apos;Iseo
-              </Link>.
-            </p>
-          </div>
+          <p className="body-md max-w-3xl">
+            Approfondisci i trattamenti:{' '}
+            <Link href="/terapia" className="link-inline">
+              terapia individuale e di coppia
+            </Link>{' '}
+            e{' '}
+            <Link href="/emdr" className="link-inline">
+              terapia EMDR
+            </Link>. Vivi in Val Calepio o sul lago? Consulta le pagine
+            dedicate a{' '}
+            <Link href="/psicologa-villongo" className="link-inline">
+              Villongo
+            </Link>{' '}
+            e al{' '}
+            <Link href="/psicologa-lago-iseo" className="link-inline">
+              Lago d&apos;Iseo
+            </Link>.
+          </p>
         </AnimatedSection>
       </section>
 
