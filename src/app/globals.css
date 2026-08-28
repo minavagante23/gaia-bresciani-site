@@ -8,14 +8,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: clip;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  html::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-    display: none;
   }
 
   body {
@@ -23,14 +15,6 @@
     line-height: 1.7;
     text-rendering: optimizeLegibility;
     overflow-x: clip;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  body::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-    display: none;
   }
 
   h1, h2, h3, h4, h5, h6 {
