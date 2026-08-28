@@ -35,7 +35,7 @@ export default function Footer() {
       <div className="section-container py-16 lg:py-20 pb-28 lg:pb-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link href="/" title={linkTitle('/')} className="touch-target font-serif text-white font-bold text-xl mb-2">
+            <Link href="/" title={linkTitle('/')} className="inline-block font-serif text-white font-bold text-xl mb-2">
               Gaia Bresciani
             </Link>
             <p className="text-sm text-white/80 leading-relaxed max-w-xs">
