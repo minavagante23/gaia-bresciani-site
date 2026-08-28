@@ -11,6 +11,7 @@ export const LINK_TITLES = {
   '/psicologa-sarnico': 'Psicologa vicino Sarnico',
   '/psicologa-villongo': 'Psicologa vicino Villongo e Val Calepio',
   '/psicologa-lago-iseo': 'Psicologa per la zona del Lago d\'Iseo',
+  '/psicologa-online': 'Psicologa online - Colloqui in videochiamata',
   '/privacy-policy': 'Privacy Policy - Gaia Bresciani Psicologa',
   '/cookie-policy': 'Cookie Policy - Gaia Bresciani Psicologa',
   '#contatti': 'Vai alla sezione contatti',

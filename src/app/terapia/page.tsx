@@ -43,8 +43,11 @@ export default function TerapiaPage() {
                 Sarnico e dal basso Lago d&apos;Iseo
               </Link>
               . Quando serve, resta disponibile anche una sede secondaria
-              nell&apos;area di Brescia e, in alcuni casi, la continuit&agrave;
-              online.
+              nell&apos;area di Brescia e, in alcuni casi, la{' '}
+              <Link href="/psicologa-online" className="link-inline">
+                continuit&agrave; online
+              </Link>
+              .
             </p>
           </div>
         </AnimatedSection>

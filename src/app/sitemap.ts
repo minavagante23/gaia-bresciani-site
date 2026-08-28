@@ -48,6 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/psicologa-sarnico/', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: BUILD_LASTMOD },
     { path: '/psicologa-villongo/', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: BUILD_LASTMOD },
     { path: '/psicologa-lago-iseo/', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: BUILD_LASTMOD },
+    { path: '/psicologa-online/', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: BUILD_LASTMOD },
     { path: '/esperienza/', priority: 0.6, changeFrequency: 'monthly' as const, lastModified: BUILD_LASTMOD },
     { path: '/privacy-policy/', priority: 0.2, changeFrequency: 'yearly' as const, lastModified: DEFAULT_LASTMOD },
     { path: '/cookie-policy/', priority: 0.2, changeFrequency: 'yearly' as const, lastModified: DEFAULT_LASTMOD },

@@ -17,6 +17,7 @@ const footerLinks = [
   { href: '/esperienza', label: 'Esperienza' },
   { href: '/terapia', label: 'Servizi' },
   { href: '/emdr', label: 'EMDR' },
+  { href: '/psicologa-online', label: 'Terapia online' },
   { href: '/approfondimenti', label: 'Approfondimenti' },
   { href: '/faq', label: 'FAQ' },
   { href: '/contatti', label: 'Contatti' },
