@@ -8,9 +8,9 @@ import {
 import { formatHeadersFile } from './security-headers.mjs';
 
 const outDir = path.join(process.cwd(), 'out');
-const replacements = [
-  ['http://www.w3.org/2000/svg', 'https://www.w3.org/2000/svg'],
-];
+
+// Never rewrite http://www.w3.org/2000/svg to https://. That string is the
+// SVG namespace identifier, not a URL; changing it makes Lucide icons vanish.
 
 function walk(dir, files = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -20,7 +20,7 @@ function walk(dir, files = []) {
       continue;
     }
 
-    if (/\.(html|css|js|txt)$/.test(entry.name)) {
+    if (entry.name.endsWith('.html')) {
       files.push(fullPath);
     }
   }
@@ -56,14 +56,8 @@ if (!fs.existsSync(outDir)) {
 let updatedFiles = 0;
 
 for (const file of walk(outDir)) {
-  if (!file.endsWith('.html')) continue;
-
   const original = fs.readFileSync(file, 'utf8');
   let next = original;
-
-  for (const [from, to] of replacements) {
-    next = next.replaceAll(from, to);
-  }
 
   next = dedupeImagePreload(next);
   next = applyCsp(next);
@@ -77,21 +71,5 @@ for (const file of walk(outDir)) {
 const headersPath = path.join(outDir, '_headers');
 fs.writeFileSync(headersPath, formatHeadersFile(), 'utf8');
 console.log('Security headers template written to out/_headers (riferimento; non applicato da GitHub Pages).');
-
-for (const file of walk(outDir)) {
-  if (!/\.(css|js|txt)$/.test(file)) continue;
-
-  const original = fs.readFileSync(file, 'utf8');
-  let next = original;
-
-  for (const [from, to] of replacements) {
-    next = next.replaceAll(from, to);
-  }
-
-  if (next !== original) {
-    fs.writeFileSync(file, next, 'utf8');
-    updatedFiles += 1;
-  }
-}
 
 console.log(`Post-build optimizations applied to ${updatedFiles} file(s).`);
