@@ -72,7 +72,7 @@ const faqItems = [
   {
     question: 'Come posso fissare un appuntamento?',
     answer:
-      'Puoi contattarmi via telefono, email, modulo nella sezione Contatti o tramite MioDottore. Indica sede preferita e fascia oraria: ricevi una risposta entro 24 ore lavorative.',
+      'Il modo più rapido è WhatsApp: indica zona, fascia oraria e una riga su cosa stai vivendo. In alternativa puoi prenotare su MioDottore, oppure chiamarmi o usare il modulo Contatti. Risposta entro 24 ore lavorative.',
   },
   {
     question: 'Lavori anche nel weekend o in orari serali?',

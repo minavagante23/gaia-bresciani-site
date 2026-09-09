@@ -1,10 +1,11 @@
+import Link from 'next/link';
 import AnimatedSection from './AnimatedSection';
 import DeferredMount from './DeferredMount';
-import { MessageCircle, Phone } from 'lucide-react';
-import { linkTitle } from '@/lib/link-titles';
+import { MessageCircle } from 'lucide-react';
 import {
   CTA_PRIMARY_LABEL,
   CTA_TRUST_LINE,
+  MIODOTTORE_BOOKING_URL,
   PHONE_HREF,
   WHATSAPP_ARIA,
   WHATSAPP_TITLE,
@@ -16,7 +17,7 @@ const MioDottoreWidget = dynamic(() => import('./MioDottoreWidget'), {
   ssr: false,
   loading: () => (
     <a
-      href="https://www.miodottore.it/gaia-miriam-teresa-bresciani/psicoterapeuta-psicologo-clinico-psicologo/brescia"
+      href={MIODOTTORE_BOOKING_URL}
       target="_blank"
       rel="nofollow noopener noreferrer"
       title="Prenota un appuntamento su MioDottore"
@@ -45,29 +46,30 @@ export default function CtaSection() {
                 studio di Credaro, comodo da Sarnico e dal basso Lago d&apos;Iseo.
               </p>
 
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a
-                  href={WHATSAPP_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title={WHATSAPP_TITLE}
-                  aria-label={WHATSAPP_ARIA}
-                  className="btn-shine w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-accent-deep text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:bg-accent-dark hover:shadow-soft active:scale-[0.98]"
-                >
-                  <MessageCircle size={17} />
-                  {CTA_PRIMARY_LABEL}
-                </a>
-                <a
-                  href={PHONE_HREF}
-                  title={linkTitle(PHONE_HREF)}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 text-white border border-white/20 px-8 py-4 rounded-full font-medium transition-all duration-300 hover:bg-white/20 active:scale-[0.98]"
-                >
-                  <Phone size={17} />
-                  Oppure chiamami
-                </a>
-              </div>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={WHATSAPP_TITLE}
+                aria-label={WHATSAPP_ARIA}
+                className="btn-shine w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-accent-deep text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:bg-accent-dark hover:shadow-soft active:scale-[0.98]"
+              >
+                <MessageCircle size={17} />
+                {CTA_PRIMARY_LABEL}
+              </a>
 
               <p className="text-white/75 text-sm mt-6">{CTA_TRUST_LINE}</p>
+
+              <p className="text-white/55 text-sm mt-4">
+                Oppure{' '}
+                <a href={PHONE_HREF} className="text-white/80 underline-offset-2 hover:underline">
+                  chiama
+                </a>
+                {' · '}
+                <Link href="/contatti/#contact-form" className="text-white/80 underline-offset-2 hover:underline">
+                  modulo
+                </Link>
+              </p>
 
               <p className="text-white/75 text-xs mt-8">
                 Sedute da 70 a 100 &euro; &middot; Detraibili al 19% &middot; Fattura sanitaria
@@ -80,8 +82,8 @@ export default function CtaSection() {
           <div className="card-base card-glow p-6 sm:p-8 max-w-2xl mx-auto">
             <h3 className="heading-md mb-4 text-center">Oppure prenota su MioDottore</h3>
             <p className="body-md text-center mb-6">
-              Scegli data e orario direttamente dal calendario.
-              Puoi anche leggere le recensioni dei pazienti.
+              Secondo canale: scegli data e orario dal calendario,
+              con le recensioni dei pazienti.
             </p>
             <DeferredMount timeoutMs={4000}>
               <MioDottoreWidget />

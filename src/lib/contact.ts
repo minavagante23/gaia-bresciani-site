@@ -1,11 +1,15 @@
-/** Contatti e CTA primarie — canale #1 = WhatsApp per colloquio in presenza */
+/** Contatti e CTA — gerarchia: 1) WhatsApp 2) MioDottore 3) telefono / modulo */
 
 export const PHONE_HREF = 'tel:+393408389958';
 export const PHONE_DISPLAY = '+39 340 838 9958';
 export const EMAIL_HREF = 'mailto:gaia.bresciani23@gmail.com';
+export const EMAIL_DISPLAY = 'gaia.bresciani23@gmail.com';
+
+export const MIODOTTORE_BOOKING_URL =
+  'https://www.miodottore.it/gaia-miriam-teresa-bresciani/psicoterapeuta-psicologo-clinico-psicologo/brescia';
 
 export const WHATSAPP_MESSAGE =
-  'Salve, vorrei informazioni per un primo colloquio in presenza.';
+  'Salve, vorrei informazioni per un primo colloquio in presenza. Arrivo da … e preferirei la fascia …';
 
 export const WHATSAPP_URL =
   'https://wa.me/393408389958?text=' + encodeURIComponent(WHATSAPP_MESSAGE);
