@@ -1,4 +1,4 @@
-/** Google Analytics 4 — caricato solo dopo consenso analitici */
+/** Google Analytics 4 — tag in pagina, cookie solo dopo consenso analitici */
 
 export const GA_MEASUREMENT_ID = 'G-CE4E4BH1CY';
 
@@ -6,30 +6,21 @@ declare global {
   interface Window {
     dataLayer?: unknown[];
     gtag?: (...args: unknown[]) => void;
+    __gaPageviewSent?: boolean;
   }
 }
 
+/** Snippet in <head>: Consent Mode denied, pageview solo se il consenso è già salvato. */
+export const GTAG_INIT_SCRIPT =
+  `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;(function(){var g=false;try{var m=document.cookie.match(/(?:^|; )cookie_consent=([^;]*)/);if(m){var c=JSON.parse(decodeURIComponent(m[1]));g=c&&c.analytics===true;}}catch(e){}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:g?'granted':'denied',wait_for_update:500});gtag('js',new Date());gtag('config','${GA_MEASUREMENT_ID}',{anonymize_ip:true,send_page_view:g});if(g)window.__gaPageviewSent=true;})();`;
+
 export function loadGoogleAnalytics() {
-  if (typeof window === 'undefined') return;
-  if (document.getElementById('ga-gtag')) return;
+  if (typeof window === 'undefined' || !window.gtag) return;
 
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = function gtag(..._args: unknown[]) {
-    // GA4 si aspetta l'oggetto Arguments nella coda (snippet ufficiale)
-    // eslint-disable-next-line prefer-rest-params
-    window.dataLayer!.push(arguments);
-  };
-  window.gtag('js', new Date());
-  window.gtag('config', GA_MEASUREMENT_ID, {
-    anonymize_ip: true,
-    cookie_flags: 'SameSite=None;Secure',
-  });
-
-  const script = document.createElement('script');
-  script.id = 'ga-gtag';
-  script.async = true;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
-  document.head.appendChild(script);
+  window.gtag('consent', 'update', { analytics_storage: 'granted' });
+  if (window.__gaPageviewSent) return;
+  window.__gaPageviewSent = true;
+  window.gtag('event', 'page_view', { send_to: GA_MEASUREMENT_ID });
 }
 
 export function disableGoogleAnalytics() {

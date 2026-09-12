@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import DeferredChrome from '@/components/DeferredChrome';
 import { getAggregateRatingSchema, getReviewsSchema } from '@/lib/reviews';
+import { GA_MEASUREMENT_ID, GTAG_INIT_SCRIPT } from '@/lib/analytics';
 import { SITE_URL, siteConfig } from '@/lib/seo';
 import './globals.css';
 
@@ -316,6 +317,8 @@ export default function RootLayout({
           fetchPriority="high"
         />
         <link rel="alternate" type="text/markdown" href="/llms.txt" title="llms.txt" />
+        <script dangerouslySetInnerHTML={{ __html: GTAG_INIT_SCRIPT }} />
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
         <script src="/register-sw.js" defer />
       </head>
       <body className="bg-background text-primary antialiased">
