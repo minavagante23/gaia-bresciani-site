@@ -61,7 +61,7 @@ const studios = [
     name: 'Castenedolo (BS)',
     address: 'Piazza Martiri della Libertà 7, 25014',
     area: 'Area Brescia, Montichiari, Rezzato, Ghedi, Prevalle, Mazzano',
-    note: 'Sede secondaria, su disponibilità',
+    note: 'Sede secondaria',
     mapSrc: 'https://maps.google.com/maps?q=45.4710,10.3005&z=11&output=embed',
     mapsUrl: 'https://www.google.com/maps/search/Piazza+Martiri+della+Libertà+7,+Castenedolo+BS',
   },
@@ -229,8 +229,8 @@ export default function ContattiPage() {
         <AnimatedSection>
           <h2 className="heading-lg mb-3">Le sedi</h2>
           <p className="body-md max-w-2xl mb-10">
-            Credaro è la sede principale; Castenedolo e l&apos;online restano
-            disponibili quando servono.
+            Ricevo principalmente a Credaro e anche a Castenedolo. I colloqui
+            online restano disponibili quando servono.
           </p>
         </AnimatedSection>
         <div className="grid md:grid-cols-2 gap-8">

@@ -35,9 +35,8 @@ export default function EsperienzaPage() {
               in modo da dare direzione gi&agrave; dal primo colloquio.
             </p>
             <p className="body-md">
-              Ricevo principalmente in studio a Credaro. Quando necessario,
-              il percorso può proseguire anche online o nella sede secondaria
-              di Castenedolo.
+              Ricevo principalmente in studio a Credaro e anche a Castenedolo;
+              quando serve, il percorso può proseguire online.
             </p>
           </AnimatedSection>
 

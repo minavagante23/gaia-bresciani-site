@@ -22,7 +22,7 @@ const faqItems = [
   {
     question: 'Dove si trova lo studio?',
     answer:
-      'Ricevo in due sedi per offrire maggiore flessibilità: Credaro (BG), Via Piave 7, comodo per Sarnico, Villongo, Paratico, Capriolo e basso Lago d\'Iseo; Castenedolo (BS), Piazza Martiri della Libertà 7, pratico per Brescia, Montichiari, Rezzato, Mazzano, Ghedi e dintorni. In entrambe le sedi ricevo su appuntamento.',
+      'Ricevo principalmente a Credaro (BG), Via Piave 7, comodo per Sarnico, Villongo, Paratico, Capriolo e basso Lago d\'Iseo, e anche a Castenedolo (BS), Piazza Martiri della Libertà 7, pratico per Brescia, Montichiari, Rezzato, Mazzano, Ghedi e dintorni. In entrambe le sedi ricevo su appuntamento.',
   },
   {
     question: 'È previsto un primo incontro conoscitivo?',

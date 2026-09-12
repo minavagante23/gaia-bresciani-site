@@ -3,11 +3,10 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { MessageCircle, Phone } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 import { linkTitle } from '@/lib/link-titles';
 import {
   CTA_PRIMARY_SHORT,
-  PHONE_HREF,
   WHATSAPP_ARIA,
   WHATSAPP_TITLE,
   WHATSAPP_URL,
@@ -121,7 +120,7 @@ export default function Navbar() {
               ))}
             </div>
 
-            <div className="mt-auto pt-8 flex flex-col gap-3">
+            <div className="mt-auto pt-8">
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
@@ -133,15 +132,6 @@ export default function Navbar() {
               >
                 <MessageCircle size={16} className="inline" />
                 {CTA_PRIMARY_SHORT}
-              </a>
-              <a
-                href={PHONE_HREF}
-                title={linkTitle(PHONE_HREF)}
-                onClick={closeMobileNav}
-                className="btn-outline text-center"
-              >
-                <Phone size={16} className="mr-2 inline" />
-                Chiamami
               </a>
             </div>
           </div>

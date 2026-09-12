@@ -42,8 +42,8 @@ export default function TerapiaPage() {
               <Link href="/psicologa-sarnico" className="link-inline">
                 Sarnico e dal basso Lago d&apos;Iseo
               </Link>
-              . Quando serve, resta disponibile anche una sede secondaria
-              nell&apos;area di Brescia e, in alcuni casi, la{' '}
+              . Ricevo anche a Castenedolo, nell&apos;area di Brescia; in alcuni
+              casi &egrave; possibile la{' '}
               <Link href="/psicologa-online" className="link-inline">
                 continuit&agrave; online
               </Link>

@@ -18,9 +18,9 @@ const locations = [
   {
     icon: Building2,
     title: 'Castenedolo (BS)',
-    subtitle: 'Sede secondaria area Brescia',
+    subtitle: 'Area Brescia',
     description:
-      'Piazza Martiri della Libert\u00e0 7 \u2014 riferimento per Brescia, Rezzato, Mazzano e dintorni.',
+      'Piazza Martiri della Libert\u00e0 7 \u2014 per Brescia, Rezzato, Mazzano e dintorni.',
     link: '/contatti',
     linkLabel: 'Informazioni sede',
     linkTitle: 'Informazioni sulla sede di Castenedolo',
@@ -46,12 +46,12 @@ export default function LocationCards() {
         <div className="text-center max-w-2xl mx-auto mb-14">
           <p className="eyebrow">Dove ricevo</p>
           <h2 className="heading-lg mb-4">
-            Ricevo a Credaro e, in alcuni casi, anche a Castenedolo
+            Ricevo principalmente a Credaro e anche a Castenedolo
           </h2>
           <p className="body-lg">
-            La sede di Credaro &egrave; il riferimento principale per chi vive tra
-            Sarnico e il basso Lago d&apos;Iseo; Castenedolo resta disponibile
-            come alternativa per l&apos;area di Brescia.
+            Lo studio di Credaro &egrave; comodo per chi vive tra Sarnico e il
+            basso Lago d&apos;Iseo. Ricevo anche a Castenedolo, per l&apos;area
+            di Brescia.
           </p>
         </div>
 

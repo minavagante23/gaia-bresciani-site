@@ -37,8 +37,9 @@ export default function ChiSonoPage() {
                 Sarnico e dai comuni vicini del Lago d&apos;Iseo.
               </p>
               <p className="body-md">
-                Quando necessario, il percorso pu&ograve; proseguire anche online
-                o essere organizzato nella sede secondaria di Castenedolo.
+                Ricevo principalmente a Credaro e anche a Castenedolo; quando
+                &egrave; pi&ugrave; pratico, il percorso pu&ograve; proseguire
+                online.
               </p>
             </div>
 
