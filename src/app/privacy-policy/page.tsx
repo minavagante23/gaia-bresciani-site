@@ -21,7 +21,7 @@ export default function PrivacyPolicyPage() {
       <section className="section-container pb-20">
         <div className="max-w-3xl mx-auto">
           <div className="space-y-8 text-sm sm:text-base leading-relaxed text-primary/75">
-            <p className="body-md italic">Ultimo aggiornamento: 3 aprile 2026</p>
+            <p className="body-md italic">Ultimo aggiornamento: 12 settembre 2026</p>
 
             <div>
               <h2 className="heading-md mb-3">Titolare del trattamento</h2>
@@ -59,6 +59,8 @@ export default function PrivacyPolicyPage() {
                 implicita nell&apos;uso dei protocolli di comunicazione Internet (es. indirizzi IP,
                 orari delle richieste, metodo HTTP). Questi dati non sono associati a utenti
                 identificati e vengono utilizzati per garantire il funzionamento del servizio.
+                Con il consenso ai cookie analitici, Google Analytics 4 pu&ograve; inoltre
+                raccogliere dati aggregati di utilizzo (pagine visitate, percorsi), con IP anonimizzato.
               </p>
 
               <h3 className="font-serif font-semibold text-lg mt-5 mb-2">Dati forniti volontariamente</h3>
@@ -90,7 +92,11 @@ export default function PrivacyPolicyPage() {
                       <td className="px-4 py-2.5 border-b border-primary/[0.06]">Legittimo interesse del Titolare (art. 6.1.f GDPR)</td>
                     </tr>
                     <tr>
-                      <td className="px-4 py-2.5">Caricamento mappe interattive (Google Maps)</td>
+                      <td className="px-4 py-2.5 border-b border-primary/[0.06]">Caricamento mappe interattive (Google Maps)</td>
+                      <td className="px-4 py-2.5 border-b border-primary/[0.06]">Consenso dell&apos;interessato (art. 6.1.a GDPR)</td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-2.5">Statistiche di utilizzo (Google Analytics 4)</td>
                       <td className="px-4 py-2.5">Consenso dell&apos;interessato (art. 6.1.a GDPR)</td>
                     </tr>
                   </tbody>
@@ -123,12 +129,23 @@ export default function PrivacyPolicyPage() {
               </p>
 
               <h3 className="font-serif font-semibold text-lg mt-5 mb-2">MioDottore / Docplanner (prenotazioni)</h3>
-              <p className="body-md">
+              <p className="body-md mb-3">
                 Previo consenso ai cookie funzionali, pu&ograve; essere caricato il widget di
                 prenotazione MioDottore (Docplanner). Il fornitore pu&ograve; impostare cookie
                 e trattare dati secondo la propria informativa.{' '}
                 <a href="https://www.miodottore.it/documenti/informativa-sulla-privacy" target="_blank" rel="noopener noreferrer" className="link-inline">
                   Privacy Policy di MioDottore
+                </a>.
+              </p>
+
+              <h3 className="font-serif font-semibold text-lg mt-5 mb-2">Google Analytics 4</h3>
+              <p className="body-md">
+                Previo consenso ai cookie analitici, il sito utilizza Google Analytics 4
+                (Google LLC, ID misurazione G-CE4E4BH1CY) per statistiche aggregate sul
+                traffico. L&apos;IP &egrave; anonimizzato. Google pu&ograve; trattare i dati
+                secondo la propria informativa.{' '}
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="link-inline">
+                  Privacy Policy di Google
                 </a>.
               </p>
             </div>
@@ -151,15 +168,17 @@ export default function PrivacyPolicyPage() {
                 I dati forniti tramite il modulo di contatto sono conservati per il tempo
                 strettamente necessario a rispondere alla richiesta e, successivamente,
                 per il tempo previsto dagli obblighi di legge. I dati di navigazione
-                non vengono conservati oltre la sessione.
+                tecnici non vengono conservati oltre la sessione. I dati analitici di
+                Google Analytics sono conservati secondo le impostazioni del servizio
+                (tipicamente fino a 14 mesi).
               </p>
             </div>
 
             <div>
               <h2 className="heading-md mb-3">Trasferimento dati extra-UE</h2>
               <p className="body-md">
-                L&apos;utilizzo dei servizi Formspree, Google Maps e MioDottore pu&ograve;
-                comportare il trasferimento di dati verso Paesi terzi (in particolare USA).
+                L&apos;utilizzo dei servizi Formspree, Google Maps, MioDottore e Google Analytics
+                pu&ograve; comportare il trasferimento di dati verso Paesi terzi (in particolare USA).
                 Il trasferimento avviene sulla base delle garanzie previste dal Data Privacy
                 Framework (DPF) UE-USA o, ove applicabili, delle clausole contrattuali
                 standard (SCC) approvate dalla Commissione Europea.

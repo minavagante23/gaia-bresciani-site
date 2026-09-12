@@ -21,7 +21,7 @@ export default function CookiePolicyPage() {
       <section className="section-container pb-20">
         <div className="max-w-3xl mx-auto">
           <div className="space-y-8 text-sm sm:text-base leading-relaxed text-primary/75">
-            <p className="body-md italic">Ultimo aggiornamento: 3 aprile 2026</p>
+            <p className="body-md italic">Ultimo aggiornamento: 12 settembre 2026</p>
 
             <div>
               <h2 className="heading-md mb-3">Titolare del trattamento</h2>
@@ -130,11 +130,46 @@ export default function CookiePolicyPage() {
               </div>
 
               <h3 className="font-serif font-semibold text-lg mt-6 mb-2">
-                Cookie di profilazione e analitici
+                Cookie analitici &ndash; richiedono il consenso
+              </h3>
+              <p className="body-md mb-3">
+                Consentono di misurare in forma aggregata come viene utilizzato il sito
+                (pagine visitate, percorsi di navigazione). Vengono installati solo dopo
+                il consenso espresso tramite il banner. L&apos;indirizzo IP &egrave; anonimizzato.
+              </p>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm border border-primary/10 rounded-lg overflow-hidden">
+                  <thead className="bg-primary/[0.03]">
+                    <tr>
+                      <th className="text-left px-4 py-2.5 font-semibold text-primary/80 border-b border-primary/10">Servizio</th>
+                      <th className="text-left px-4 py-2.5 font-semibold text-primary/80 border-b border-primary/10">Fornitore</th>
+                      <th className="text-left px-4 py-2.5 font-semibold text-primary/80 border-b border-primary/10">Finalit&agrave;</th>
+                      <th className="text-left px-4 py-2.5 font-semibold text-primary/80 border-b border-primary/10">Privacy Policy</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-muted">
+                    <tr>
+                      <td className="px-4 py-2.5 border-b border-primary/[0.06]">Google Analytics 4</td>
+                      <td className="px-4 py-2.5 border-b border-primary/[0.06]">Google LLC</td>
+                      <td className="px-4 py-2.5 border-b border-primary/[0.06]">
+                        Statistiche di utilizzo del sito (ID misurazione G-CE4E4BH1CY). Cookie tipici: <code className="text-xs bg-primary/[0.04] px-1.5 py-0.5 rounded">_ga</code>, <code className="text-xs bg-primary/[0.04] px-1.5 py-0.5 rounded">_ga_*</code>
+                      </td>
+                      <td className="px-4 py-2.5 border-b border-primary/[0.06]">
+                        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="link-inline">
+                          Link
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h3 className="font-serif font-semibold text-lg mt-6 mb-2">
+                Cookie di profilazione
               </h3>
               <p className="body-md">
-                Questo sito <strong>non utilizza</strong> cookie di profilazione, cookie analitici
-                di terze parti, n&eacute; strumenti di tracciamento pubblicitario.
+                Questo sito <strong>non utilizza</strong> cookie di profilazione n&eacute;
+                strumenti di tracciamento pubblicitario.
               </p>
             </div>
 
@@ -157,16 +192,15 @@ export default function CookiePolicyPage() {
               </p>
               <ul className="list-disc pl-6 space-y-2 body-md mb-3">
                 <li>
-                  <strong>Accetta tutti</strong>: autorizza l&apos;installazione di tutti i cookie,
-                  inclusi quelli funzionali
+                  <strong>Accetta tutti</strong>: autorizza cookie funzionali e analitici
                 </li>
                 <li>
                   <strong>Rifiuta non necessari</strong>: autorizza solo i cookie tecnici.
-                  I servizi di terze parti (es. Google Maps) non verranno caricati
+                  Mappe, MioDottore e Google Analytics non verranno caricati
                 </li>
                 <li>
                   <strong>Personalizza</strong>: apre il pannello delle preferenze per
-                  scegliere singole categorie di cookie
+                  scegliere singole categorie di cookie (funzionali e/o analitici)
                 </li>
                 <li>
                   <strong>Chiusura (X)</strong>: equivale a &ldquo;Rifiuta non necessari&rdquo;

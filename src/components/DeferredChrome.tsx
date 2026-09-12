@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 const ScrollProgressBar = dynamic(() => import('./ScrollProgressBar'), { ssr: false });
 const FloatingContact = dynamic(() => import('./FloatingContact'), { ssr: false });
 const CookieBanner = dynamic(() => import('./CookieBanner'), { ssr: false });
+const GoogleAnalytics = dynamic(() => import('./GoogleAnalytics'), { ssr: false });
 
 interface DeferredChromeProps {
   timeoutMs?: number;
@@ -33,6 +34,7 @@ export default function DeferredChrome({ timeoutMs = 2500 }: DeferredChromeProps
       <ScrollProgressBar />
       <FloatingContact />
       <CookieBanner />
+      <GoogleAnalytics />
     </>
   );
 }

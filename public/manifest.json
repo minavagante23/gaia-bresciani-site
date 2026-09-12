@@ -4,8 +4,8 @@
   "description": "Psicologa e Psicoterapeuta a Sarnico, Lago d'Iseo e Castenedolo. Percorsi per ansia, relazioni, autostima e traumi.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#F9F7F2",
-  "theme_color": "#2D464C",
+  "background_color": "#F2F5F4",
+  "theme_color": "#243D42",
   "icons": [
     {
       "src": "/assets/icon-192.png",

@@ -15,6 +15,7 @@ export default function CookieBanner() {
   const [visible, setVisible] = useState(false);
   const [showPrefs, setShowPrefs] = useState(false);
   const [functional, setFunctional] = useState(false);
+  const [analytics, setAnalytics] = useState(false);
 
   useEffect(() => {
     const existing = getConsent();
@@ -25,6 +26,7 @@ export default function CookieBanner() {
     const handleOpen = () => {
       const current = getConsent();
       setFunctional(current?.functional ?? false);
+      setAnalytics(current?.analytics ?? false);
       setShowPrefs(true);
       setVisible(true);
     };
@@ -33,22 +35,22 @@ export default function CookieBanner() {
   }, []);
 
   const accept = useCallback(() => {
-    saveAndDispatch({ technical: true, functional: true, timestamp: Date.now() });
+    saveAndDispatch({ technical: true, functional: true, analytics: true, timestamp: Date.now() });
     setVisible(false);
     setShowPrefs(false);
   }, []);
 
   const reject = useCallback(() => {
-    saveAndDispatch({ technical: true, functional: false, timestamp: Date.now() });
+    saveAndDispatch({ technical: true, functional: false, analytics: false, timestamp: Date.now() });
     setVisible(false);
     setShowPrefs(false);
   }, []);
 
   const savePrefs = useCallback(() => {
-    saveAndDispatch({ technical: true, functional, timestamp: Date.now() });
+    saveAndDispatch({ technical: true, functional, analytics, timestamp: Date.now() });
     setVisible(false);
     setShowPrefs(false);
-  }, [functional]);
+  }, [functional, analytics]);
 
   if (!visible) return null;
 
@@ -61,7 +63,6 @@ export default function CookieBanner() {
         onClick={showPrefs ? (e) => { if (e.target === e.currentTarget) reject(); } : undefined}
       >
         {!showPrefs ? (
-          /* ───── FIRST LAYER: Banner ───── */
           <div className="mx-auto max-w-3xl mb-4 sm:mb-6 mx-4 sm:mx-6">
             <div className="bg-white rounded-2xl shadow-soft-xl border border-primary/[0.08] p-5 sm:p-6">
               <div className="flex items-start gap-4">
@@ -74,7 +75,8 @@ export default function CookieBanner() {
                   </h2>
                   <p className="text-sm text-muted leading-relaxed mb-4">
                     Utilizziamo cookie tecnici necessari al funzionamento del sito e, con il tuo
-                    consenso, cookie funzionali per le mappe interattive di Google Maps.
+                    consenso, cookie funzionali (mappe e prenotazioni) e cookie analitici
+                    (Google Analytics) per capire come viene usato il sito.
                     Puoi accettare, rifiutare o personalizzare le tue preferenze.{' '}
                     <Link href="/cookie-policy" title={linkTitle('/cookie-policy')} className="link-inline">
                       Cookie Policy
@@ -92,6 +94,7 @@ export default function CookieBanner() {
                       onClick={() => {
                         const current = getConsent();
                         setFunctional(current?.functional ?? false);
+                        setAnalytics(current?.analytics ?? false);
                         setShowPrefs(true);
                       }}
                       className="btn-outline py-2.5 px-5 text-sm flex-1 sm:flex-initial gap-1.5"
@@ -113,7 +116,6 @@ export default function CookieBanner() {
             </div>
           </div>
         ) : (
-          /* ───── SECOND LAYER: Preferences Panel ───── */
           <div
             className="bg-white rounded-2xl shadow-soft-xl border border-primary/[0.08] w-full max-w-lg max-h-[85vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
@@ -139,7 +141,6 @@ export default function CookieBanner() {
                 </Link>.
               </p>
 
-              {/* Technical - always on */}
               <div className="rounded-xl border border-primary/[0.08] p-4">
                 <div className="flex items-center justify-between mb-2">
                   <h3 className="font-semibold text-sm text-primary">Cookie tecnici</h3>
@@ -154,7 +155,6 @@ export default function CookieBanner() {
                 </p>
               </div>
 
-              {/* Functional */}
               <div className="rounded-xl border border-primary/[0.08] p-4">
                 <div className="flex items-center justify-between mb-2">
                   <h3 className="font-semibold text-sm text-primary">Cookie funzionali</h3>
@@ -175,8 +175,32 @@ export default function CookieBanner() {
                 </div>
                 <p className="text-xs text-muted leading-relaxed">
                   Consentono funzionalit&agrave; aggiuntive come le mappe interattive
-                  di Google Maps nella pagina Contatti. Questi cookie sono impostati
-                  da Google e possono tracciare la navigazione su altri siti.
+                  di Google Maps e il widget di prenotazione MioDottore. Questi cookie
+                  sono impostati da terze parti.
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-primary/[0.08] p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="font-semibold text-sm text-primary">Cookie analitici</h3>
+                  <label className="relative inline-flex items-center cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={analytics}
+                      onChange={(e) => setAnalytics(e.target.checked)}
+                      className="sr-only peer"
+                    />
+                    <div className="w-10 h-[22px] bg-primary/15 peer-focus:ring-2 peer-focus:ring-accent/30
+                                    rounded-full peer-checked:bg-accent transition-colors
+                                    after:content-[''] after:absolute after:top-[3px] after:left-[3px]
+                                    after:bg-white after:rounded-full after:h-4 after:w-4
+                                    after:transition-transform peer-checked:after:translate-x-[18px]
+                                    after:shadow-sm" />
+                  </label>
+                </div>
+                <p className="text-xs text-muted leading-relaxed">
+                  Google Analytics 4 (Google LLC) misura visite e percorsi di navigazione
+                  in forma aggregata, con IP anonimizzato. Si attivano solo con il tuo consenso.
                 </p>
               </div>
             </div>

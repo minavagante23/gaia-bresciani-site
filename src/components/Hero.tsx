@@ -23,24 +23,23 @@ export default function Hero() {
           className="absolute inset-0"
           style={{
             background:
-              'radial-gradient(120% 85% at 82% -10%, rgba(209,166,132,0.12), transparent 52%), radial-gradient(95% 75% at -5% 105%, rgba(45,70,76,0.06), transparent 55%)',
+              'radial-gradient(120% 85% at 82% -10%, rgba(90,125,116,0.14), transparent 52%), radial-gradient(95% 75% at -5% 105%, rgba(36,61,66,0.07), transparent 55%)',
           }}
         />
       </div>
 
       <div className="section-container w-full pt-24 pb-16 lg:pt-28 lg:pb-20">
         <div className="grid items-center gap-12 lg:grid-cols-5 lg:gap-16">
-          <div className="space-y-8 lg:col-span-3">
+          <div className="space-y-8 lg:col-span-3 hero-enter">
             <p className="eyebrow flex items-center gap-2">
               <MapPin size={14} strokeWidth={2.5} />
               Studio zona Lago d&apos;Iseo
             </p>
 
-            {/* Titolo emotivo visivamente dominante, ma l'H1 semantico è la riga
-                professionale con le keyword locali (fattore on-page local pack). */}
+            {/* Titolo emotivo visivamente dominante; H1 semantico con keyword locali. */}
             <p className="heading-xl text-balance">
-              <span className="block">So che chiedere aiuto</span>
-              <span className="block text-accent-deep">non &egrave; facile</span>
+              <span className="block">Un primo passo,</span>
+              <span className="block text-accent-deep">senza fretta</span>
             </p>
 
             <h1 className="font-serif text-xl lg:text-2xl font-semibold text-primary max-w-xl text-balance">
@@ -48,12 +47,9 @@ export default function Hero() {
             </h1>
 
             <p className="body-lg max-w-xl">
-              So che chiedere aiuto non &egrave; facile. Sono Gaia Bresciani,
-              psicologa e psicoterapeuta con studio a Credaro, vicino Sarnico e al
-              Lago d&apos;Iseo. Ricevo adulti e coppie che stanno attraversando
-              ansia, difficolt&agrave; relazionali, momenti di blocco o esperienze
-              traumatiche. Il mio approccio unisce ascolto clinico, chiarezza e
-              obiettivi condivisi gi&agrave; dal primo colloquio.
+              Sono Gaia Bresciani. Accompagno adulti e coppie con ansia, difficolt&agrave;
+              relazionali, blocchi o esperienze traumatiche. Dal primo colloquio:
+              ascolto clinico, chiarezza e obiettivi condivisi.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-2">
@@ -86,7 +82,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="flex justify-center lg:col-span-2 lg:justify-end">
+          <div className="flex justify-center lg:col-span-2 lg:justify-end hero-enter-delayed">
             <div className="relative">
               <div
                 className="absolute -inset-6 -z-10 bg-accent/15 blur-2xl gpu"

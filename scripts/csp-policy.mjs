@@ -3,6 +3,10 @@ import crypto from 'node:crypto';
 const DOCPLANNER = 'https://platform.docplanner.com';
 const MIODOTTORE = 'https://www.miodottore.it';
 const FORMSPREE = 'https://formspree.io';
+const GTAG = 'https://www.googletagmanager.com';
+const GA = 'https://www.google-analytics.com';
+const GA_REGION = 'https://region1.google-analytics.com';
+const ANALYTICS_GOOGLE = 'https://analytics.google.com';
 
 /**
  * Extract sha256 hashes for inline <script> without src (incl. JSON-LD).
@@ -21,13 +25,13 @@ export function extractInlineScriptHashes(html) {
 }
 
 /**
- * CSP for Next.js static export + MioDottore.
+ * CSP for Next.js static export + MioDottore + GA4 (consent-gated).
  * script-src uses per-page hashes instead of 'unsafe-inline'.
  * style-src keeps 'unsafe-inline' (React style attributes / Tailwind runtime).
  */
 export function buildContentSecurityPolicy(options = {}) {
   const scriptHashes = options.scriptHashes ?? [];
-  const scriptSrc = ["'self'", DOCPLANNER, ...scriptHashes].join(' ');
+  const scriptSrc = ["'self'", DOCPLANNER, GTAG, ...scriptHashes].join(' ');
 
   return [
     "default-src 'self'",
@@ -37,7 +41,7 @@ export function buildContentSecurityPolicy(options = {}) {
     "img-src 'self' data: https:",
     `font-src 'self' ${DOCPLANNER}`,
     `frame-src https://www.google.com https://maps.google.com ${MIODOTTORE} ${DOCPLANNER}`,
-    `connect-src 'self' ${FORMSPREE} ${DOCPLANNER} ${MIODOTTORE}`,
+    `connect-src 'self' ${FORMSPREE} ${DOCPLANNER} ${MIODOTTORE} ${GTAG} ${GA} ${GA_REGION} ${ANALYTICS_GOOGLE}`,
     `form-action 'self' ${FORMSPREE} ${MIODOTTORE}`,
     "object-src 'none'",
     "base-uri 'self'",
