@@ -23,6 +23,57 @@ export interface Article {
 
 const articles: Article[] = [
   {
+    slug: 'confini-personali-dire-di-no',
+    date: '14 settembre 2026',
+    publishedAt: '2026-09-14T00:00:00.000Z',
+    readTime: '7 min',
+    title: 'Confini personali: dire di no senza sentirsi in colpa',
+    excerpt:
+      'Accettare tutto per non deludere, poi restare esausti: come riconoscere confini deboli, perché il senso di colpa li sabota e quando un confronto psicologico può aiutare a ripristinarli.',
+    tags: ['Relazioni', 'Autostima'],
+    content: [
+      'C\'è un momento, in molte storie, in cui ci si accorge di aver detto sì troppo spesso. Sì a un favore che non si poteva sostenere, sì a una richiesta di lavoro fuori orario, sì a una conversazione che si sarebbe voluta chiudere. Si dice sì per tenere buono il clima, per non sembrare egoisti, per evitare un silenzio scomodo. Poi resta una stanchezza difficile da spiegare: non è solo fatica, è la sensazione di aver lasciato entrare troppe cose senza un filtro.',
+      'I confini personali non sono muri. Sono il modo in cui si protegge ciò che conta — tempo, energia, relazioni, rispetto di sé — senza chiudere le porte agli altri. Quando mancano, o quando esistono solo a parole, si finisce per funzionare in automatico: disponibili, adattabili, spesso apprezzati… e sempre più lontani da sé.',
+      { type: 'h2', text: 'Cosa sono davvero i confini' },
+      'Un confine è una linea chiara tra ciò che si può offrire e ciò che non si può, o non si vuole, sostenere. Può riguardare il tempo ("stasera non posso"), le emozioni ("non posso contenere questa rabbia al posto tuo"), il corpo, il denaro, o il modo in cui si viene trattati. Non è un rifiuto della relazione: è una condizione perché la relazione resti sostenibile.',
+      'Chi ha confini fragili spesso non li "sceglie" consapevolmente. Impara, nel tempo, che dire no costa: delusione altrui, senso di colpa, paura di perdere affetto o opportunità. Così il sì diventa la strategia più sicura — almeno nel breve periodo.',
+      { type: 'h2', text: 'I segnali di confini troppo porosi' },
+      'Alcuni segnali utili da osservare, senza giudicarsi:',
+      {
+        type: 'list',
+        items: [
+          'difficoltà a dire no anche quando si è già al limite',
+          'senso di colpa intenso dopo aver messo un limite, come se si fosse "cattivi"',
+          'rabbia trattenuta che esplode tardi, su dettagli piccoli',
+          'agenda piena di impegni altrui e poco spazio per sé',
+          'tendenza a giustificarsi troppo quando si rifiuta qualcosa',
+          'sensazione di essere sempre "disponibili" e mai abbastanza riposati',
+        ],
+      },
+      'Questi segnali, da soli, non indicano un problema clinico. Contano quando diventano la regola e lasciano poco spazio a riposo, scelte personali o relazioni equilibrate.',
+      { type: 'h2', text: 'Perché il senso di colpa sabota i limiti' },
+      'Il senso di colpa è spesso il guardiano dei confini deboli. Appare appena si prova a dire no: "Sto deludendo", "Sono egoista", "Se mi importasse davvero, lo farei". Così il limite viene ritirato prima ancora di essere messo. La relazione sembra salva, ma il prezzo lo paga chi ha rinunciato.',
+      'In molti casi questa dinamica ha radici antiche: ambienti in cui bisognava essere "bravi", utili, poco esigenti; o relazioni in cui il proprio bisogno veniva letto come un peso. Il corpo impara che stare al sicuro significa adattarsi. Da adulti, però, quel meccanismo continua a funzionare anche quando non serve più.',
+      {
+        type: 'cta',
+        before:
+          'Se mettere limiti ti lascia sempre in colpa, può aiutare capire come funziona un',
+        links: [
+          { href: '/terapia', label: 'percorso di terapia individuale' },
+          { href: '/contatti', label: 'primo colloquio senza impegno' },
+        ],
+      },
+      { type: 'h2', text: 'Cosa può aiutare, in concreto' },
+      'Alcuni passi semplici possono rendere i confini più praticabili, senza trasformarli in una nuova "performance". Può aiutare partire da un no piccolo e chiaro, invece di grandi dichiarazioni; dare una risposta breve senza troppe giustificazioni; e distinguere tra deludere qualcuno e fargli del male. Deludere fa parte delle relazioni adulte: non ogni disagio altrui è una prova di fallimento.',
+      'Utile anche osservare dove il sì nasce dalla paura e dove nasce da una scelta reale. Non tutti i sì sono un problema. Lo sono quelli detti per evitare conflitto, rifiuto o senso di colpa, quando dentro c\'è già un no. Rallentare prima di rispondere — anche solo "ti faccio sapere" — crea lo spazio per scegliere, non solo reagire.',
+      'Se si è in famiglia o in coppia, i confini si costruiscono anche nei dettagli: orari di riposo, tono delle discussioni, spazio per interessi personali. Metterli in parole riduce litigi nati dalla rabbia accumulata e rende più chiaro cosa si sta chiedendo all\'altro.',
+      { type: 'h2', text: 'Quando può servire un percorso psicologico' },
+      'Un confronto psicologico può essere utile quando dire no genera panico o colpa intensa; quando si resta in relazioni o ambienti che consumano energie senza margine di negoziazione; o quando i confini deboli si intrecciano con bassa autostima, dipendenza affettiva o burnout. L\'obiettivo non è diventare "duri" o distanti, ma poter stare vicino agli altri senza sparire.',
+      'A volte il lavoro sui confini rivela qualcosa di più stabile: la paura di non essere amati se si delude, il bisogno di essere indispensabili, o la difficoltà a tollerare il disagio altrui. In questi casi non basta "imparare a dire no": serve capire cosa rende il no così pericoloso.',
+      'Se vivi tra Credaro, Sarnico o il basso Lago d\'Iseo e senti che i tuoi sì ti stanno costando troppo, un primo colloquio in presenza a Credaro può aiutarti a capire da dove ripartire, senza pressione e senza giudizi.',
+    ],
+  },
+  {
     slug: 'rientro-settembre-dopo-vacanze',
     date: '1 settembre 2026',
     publishedAt: '2026-09-01T00:00:00.000Z',
@@ -649,6 +700,10 @@ export interface ArticleHero {
 }
 
 const articleHeroes: Record<string, ArticleHero> = {
+  'confini-personali-dire-di-no': {
+    src: '/assets/approfondimenti/approfondimenti-confini-personali.webp',
+    alt: 'Confini personali: taccuino chiuso sul tavolo e vista sul lago, spazio per un limite gentile',
+  },
   'rientro-settembre-dopo-vacanze': {
     src: '/assets/approfondimenti/approfondimenti-rientro-settembre.webp',
     alt: 'Rientro a settembre: taccuino aperto e caffè vicino alla finestra, inizio di una nuova stagione',
