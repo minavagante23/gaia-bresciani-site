@@ -47,9 +47,9 @@ const CRITICAL_CSS = `
 `.replace(/\s+/g, ' ').trim();
 
 export const metadata: Metadata = {
-  title: 'Psicologa e Psicoterapeuta a Credaro, vicino Sarnico | Gaia Bresciani',
+  title: 'Psicologa e Psicoterapeuta – Sarnico e Lago d\'Iseo | Gaia Bresciani',
   description:
-    'Terapia individuale, di coppia ed EMDR a Credaro (BG), a pochi minuti da Sarnico e dal Lago d\'Iseo. Primo colloquio conoscitivo, ricevo anche il sabato.',
+    'Cerchi uno psicologo o psicoterapeuta vicino a te? Studio a Credaro (BG), a 5 minuti da Sarnico e dal Lago d\'Iseo. Recensioni 5/5 su MioDottore. Terapia individuale, di coppia ed EMDR, anche il sabato e online.',
   metadataBase: new URL(SITE_URL),
   authors: [{ name: siteConfig.author, url: SITE_URL }],
   creator: siteConfig.author,
@@ -58,9 +58,9 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Psicologa e Psicoterapeuta a Credaro, vicino Sarnico | Gaia Bresciani',
+    title: 'Psicologa e Psicoterapeuta – Sarnico e Lago d\'Iseo | Gaia Bresciani',
     description:
-      'Terapia individuale, di coppia ed EMDR a Credaro (BG), a pochi minuti da Sarnico e dal Lago d\'Iseo. Primo colloquio conoscitivo, ricevo anche il sabato.',
+      'Cerchi uno psicologo o psicoterapeuta vicino a te? Studio a Credaro (BG), a 5 minuti da Sarnico e dal Lago d\'Iseo. Recensioni 5/5 su MioDottore. Terapia individuale, di coppia ed EMDR, anche il sabato e online.',
     url: `${SITE_URL}/`,
     siteName: siteConfig.name,
     images: [
@@ -76,9 +76,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Psicologa e Psicoterapeuta a Credaro, vicino Sarnico | Gaia Bresciani',
+    title: 'Psicologa e Psicoterapeuta – Sarnico e Lago d\'Iseo | Gaia Bresciani',
     description:
-      'Terapia individuale, di coppia ed EMDR a Credaro (BG), a pochi minuti da Sarnico e dal Lago d\'Iseo. Primo colloquio conoscitivo, ricevo anche il sabato.',
+      'Cerchi uno psicologo o psicoterapeuta vicino a te? Studio a Credaro (BG), a 5 minuti da Sarnico e dal Lago d\'Iseo. Recensioni 5/5 su MioDottore. Terapia individuale, di coppia ed EMDR, anche il sabato e online.',
     images: [siteConfig.ogImage],
   },
   robots: {
