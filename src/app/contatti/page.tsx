@@ -23,7 +23,7 @@ import { MapPin, Phone, Mail, Clock, MessageCircle, Car, ExternalLink } from 'lu
 export const metadata: Metadata = createPageMetadata({
   title: 'Prenota un primo colloquio | Psicologa a Credaro vicino Sarnico',
   description:
-    'Vuoi iniziare un percorso di psicoterapia? Scrivimi su WhatsApp per un primo colloquio a Credaro, comodo da Sarnico. Risposta entro 24 ore; parcheggio privato in studio.',
+    'Vuoi iniziare un percorso di psicoterapia? Scrivimi su WhatsApp per un primo colloquio a Credaro, comodo da Sarnico. Risposta entro 24 ore; parcheggio privato e gratuito in studio.',
   path: '/contatti',
   ogTitle: 'Prenota un primo colloquio | Gaia Bresciani',
   ogDescription:
@@ -44,7 +44,7 @@ const firstSteps = [
   {
     icon: Car,
     title: 'Come arrivare',
-    text: 'Studio a Via Piave 7, Credaro — circa 5 minuti da Sarnico. Parcheggio privato presso lo studio.',
+    text: 'Studio a Via Piave 7, Credaro — circa 5 minuti da Sarnico. Parcheggio privato e gratuito presso lo studio.',
   },
 ];
 
@@ -53,7 +53,7 @@ const studios = [
     name: 'Credaro (BG)',
     address: 'Via Piave 7, 24060',
     area: 'Area Sarnico, Lago d\'Iseo, Grumello, Paratico, Capriolo, Villongo',
-    note: 'Sede principale · Parcheggio privato',
+    note: 'Sede principale · Parcheggio privato e gratuito',
     mapSrc: 'https://maps.google.com/maps?q=Via%20Piave%207,%20Credaro%20BG&t=&z=13&ie=UTF8&iwloc=&output=embed',
     mapsUrl: 'https://www.google.com/maps/search/Via+Piave+7,+Credaro+BG',
   },

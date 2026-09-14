@@ -43,7 +43,7 @@ export default function Hero() {
             </p>
 
             <h1 className="font-serif text-xl lg:text-2xl font-semibold text-primary max-w-xl text-balance">
-              Psicologa e Psicoterapeuta a Credaro, vicino a Sarnico e al Lago d&apos;Iseo
+              Psicologa e Psicoterapeuta a Credaro (BG), vicino a Sarnico (BG) e al Lago d&apos;Iseo
             </h1>
 
             <p className="body-lg max-w-xl">
