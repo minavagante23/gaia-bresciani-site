@@ -6,23 +6,12 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: [
-          '/api/',
-          '/_next/',
-          // Redirect HTML legacy: non devono entrare nell'indice
-          '/approfondimenti-ansia-panico-sarnico.html',
-          '/approfondimenti-social-network-adolescenza.html',
-          '/cookie-policy.html',
-          '/esperienza-psicologa-villongo.html',
-          '/esperienza.html',
-          '/faq-psicologa-sarnico.html',
-          '/faq.html',
-          '/privacy-policy.html',
-          '/psicologa-lago-iseo.html',
-          '/psicologa-sarnico-contatti.html',
-          '/terapia-emdr-lago-iseo.html',
-          '/terapia-psicologica-sarnico.html',
-        ],
+        // Le pagine HTML legacy NON vanno bloccate qui: hanno gia' noindex +
+        // canonical + redirect, e Google deve poterle scansionare per vederli
+        // e consolidare i segnali sulle nuove URL. Bloccarle le lascerebbe
+        // nell'indice come risultati senza snippet.
+        // Niente disallow su /_next/: Google deve accedere a CSS/JS per il rendering.
+        disallow: ['/api/'],
       },
     ],
     host: 'https://www.gaiabrescianipsicologa.it',

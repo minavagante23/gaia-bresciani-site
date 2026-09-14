@@ -196,6 +196,14 @@ function SchemaOrgJsonLd() {
     priceRange: '\u20ac70-\u20ac100',
     paymentAccepted: 'Cash, Bank Transfer',
     currenciesAccepted: 'EUR',
+    // Allineato all'attributo "Parcheggio gratuito" della scheda Google Business Profile.
+    amenityFeature: [
+      {
+        '@type': 'LocationFeatureSpecification',
+        name: 'Parcheggio privato gratuito',
+        value: true,
+      },
+    ],
     sameAs: [
       'https://www.facebook.com/StudioPrivatoViaPiave7CredaroBG/',
       'https://www.linkedin.com/in/gaia-bresciani-357aa8106/',

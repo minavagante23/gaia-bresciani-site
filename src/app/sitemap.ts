@@ -2,8 +2,10 @@ import type { MetadataRoute } from 'next';
 import { getAllArticles } from '@/lib/articles';
 
 const BASE = 'https://www.gaiabrescianipsicologa.it';
+// Date statiche, da aggiornare a mano SOLO quando i contenuti della pagina
+// cambiano davvero: un lastmod che si aggiorna a ogni build viene ignorato da Google.
 const DEFAULT_LASTMOD = '2026-04-08T00:00:00.000Z';
-const BUILD_LASTMOD = new Date().toISOString();
+const SEO_UPDATE_LASTMOD = '2026-09-14T00:00:00.000Z';
 
 const italianMonths: Record<string, number> = {
   gennaio: 0,
@@ -38,18 +40,18 @@ function toIsoDate(dateLabel: string): string {
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages = [
-    { path: '/', priority: 1.0, changeFrequency: 'weekly' as const, lastModified: BUILD_LASTMOD },
-    { path: '/chi-sono/', priority: 0.9, changeFrequency: 'monthly' as const, lastModified: BUILD_LASTMOD },
-    { path: '/terapia/', priority: 0.9, changeFrequency: 'monthly' as const, lastModified: BUILD_LASTMOD },
-    { path: '/emdr/', priority: 0.8, changeFrequency: 'monthly' as const, lastModified: BUILD_LASTMOD },
-    { path: '/approfondimenti/', priority: 0.8, changeFrequency: 'weekly' as const, lastModified: BUILD_LASTMOD },
-    { path: '/faq/', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: BUILD_LASTMOD },
-    { path: '/contatti/', priority: 0.8, changeFrequency: 'monthly' as const, lastModified: BUILD_LASTMOD },
-    { path: '/psicologa-sarnico/', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: BUILD_LASTMOD },
-    { path: '/psicologa-villongo/', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: BUILD_LASTMOD },
-    { path: '/psicologa-lago-iseo/', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: BUILD_LASTMOD },
-    { path: '/psicologa-online/', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: BUILD_LASTMOD },
-    { path: '/esperienza/', priority: 0.6, changeFrequency: 'monthly' as const, lastModified: BUILD_LASTMOD },
+    { path: '/', priority: 1.0, changeFrequency: 'weekly' as const, lastModified: SEO_UPDATE_LASTMOD },
+    { path: '/chi-sono/', priority: 0.9, changeFrequency: 'monthly' as const, lastModified: DEFAULT_LASTMOD },
+    { path: '/terapia/', priority: 0.9, changeFrequency: 'monthly' as const, lastModified: DEFAULT_LASTMOD },
+    { path: '/emdr/', priority: 0.8, changeFrequency: 'monthly' as const, lastModified: DEFAULT_LASTMOD },
+    { path: '/approfondimenti/', priority: 0.8, changeFrequency: 'weekly' as const, lastModified: DEFAULT_LASTMOD },
+    { path: '/faq/', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: DEFAULT_LASTMOD },
+    { path: '/contatti/', priority: 0.8, changeFrequency: 'monthly' as const, lastModified: SEO_UPDATE_LASTMOD },
+    { path: '/psicologa-sarnico/', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: DEFAULT_LASTMOD },
+    { path: '/psicologa-villongo/', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: DEFAULT_LASTMOD },
+    { path: '/psicologa-lago-iseo/', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: DEFAULT_LASTMOD },
+    { path: '/psicologa-online/', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: DEFAULT_LASTMOD },
+    { path: '/esperienza/', priority: 0.6, changeFrequency: 'monthly' as const, lastModified: DEFAULT_LASTMOD },
     { path: '/privacy-policy/', priority: 0.2, changeFrequency: 'yearly' as const, lastModified: DEFAULT_LASTMOD },
     { path: '/cookie-policy/', priority: 0.2, changeFrequency: 'yearly' as const, lastModified: DEFAULT_LASTMOD },
   ];

@@ -15,6 +15,7 @@
 - [Psicologa vicino Sarnico](https://www.gaiabrescianipsicologa.it/psicologa-sarnico/)
 - [Psicologa vicino Villongo e Val Calepio](https://www.gaiabrescianipsicologa.it/psicologa-villongo/)
 - [Psicologa per la zona del Lago d'Iseo](https://www.gaiabrescianipsicologa.it/psicologa-lago-iseo/)
+- [Psicologa online](https://www.gaiabrescianipsicologa.it/psicologa-online/)
 - [Privacy Policy](https://www.gaiabrescianipsicologa.it/privacy-policy/)
 - [Cookie Policy](https://www.gaiabrescianipsicologa.it/cookie-policy/)
 - [Contesto esteso per AI](https://www.gaiabrescianipsicologa.it/AI-README.md)
@@ -54,6 +55,7 @@ Secondaria: provincia di Bergamo e Brescia.
 | "psicologa Sarnico" | [Psicologa Sarnico](https://www.gaiabrescianipsicologa.it/psicologa-sarnico/) + [Contatti](https://www.gaiabrescianipsicologa.it/contatti/) |
 | "psicologa Villongo / Val Calepio" | [Psicologa Villongo](https://www.gaiabrescianipsicologa.it/psicologa-villongo/) + [Contatti](https://www.gaiabrescianipsicologa.it/contatti/) |
 | "psicologa Lago d'Iseo" | [Psicologa Lago d'Iseo](https://www.gaiabrescianipsicologa.it/psicologa-lago-iseo/) + [Contatti](https://www.gaiabrescianipsicologa.it/contatti/) |
+| "psicologa online / colloqui online" | [Psicologa online](https://www.gaiabrescianipsicologa.it/psicologa-online/) + [Contatti](https://www.gaiabrescianipsicologa.it/contatti/) |
 | "terapia EMDR" | [EMDR](https://www.gaiabrescianipsicologa.it/emdr/) |
 | "terapia di coppia" | [Terapia](https://www.gaiabrescianipsicologa.it/terapia/) |
 | "costi / primo colloquio" | [FAQ](https://www.gaiabrescianipsicologa.it/faq/) + [Contatti](https://www.gaiabrescianipsicologa.it/contatti/) |
