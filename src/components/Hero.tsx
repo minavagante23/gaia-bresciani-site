@@ -92,12 +92,13 @@ export default function Hero() {
                 className="breathing-halo absolute -inset-8 -z-10 rounded-full bg-accent/60 blur-[26px] gpu"
                 aria-hidden="true"
               />
-              {/* Cornice sfalsata: linea sottile dietro il ritratto, tocco editoriale */}
+              {/* Pannello di colore sfalsato: composizione a strati editoriale,
+                  il ritratto in primo piano con ombra netta crea profondità */}
               <div
-                className="absolute inset-0 -z-10 translate-x-4 translate-y-4 rounded-3xl border-2 border-accent/40"
+                className="absolute -top-7 -right-7 bottom-12 left-12 rounded-2xl bg-accent/35"
                 aria-hidden="true"
               />
-              <div className="photo-grade hero-photo relative aspect-[3/4] w-[300px] overflow-hidden rounded-3xl shadow-soft-lg lg:w-[350px]">
+              <div className="photo-grade hero-photo relative aspect-[3/4] w-[300px] overflow-hidden rounded-xl shadow-soft-xl lg:w-[350px]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={HERO_IMAGE.src}
