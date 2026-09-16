@@ -85,16 +85,19 @@ export default function Hero() {
           <div className="flex justify-center lg:col-span-2 lg:justify-end hero-enter-delayed">
             <div className="relative">
               <div
-                className="breathing-halo-outer absolute -inset-12 -z-10 bg-accent/10 blur-3xl gpu"
-                style={{ borderRadius: '45% 55% 50% 50% / 50% 45% 55% 50%' }}
+                className="breathing-halo-outer absolute -inset-14 -z-10 rounded-full bg-accent/20 blur-3xl gpu"
                 aria-hidden="true"
               />
               <div
-                className="breathing-halo absolute -inset-6 -z-10 bg-accent/20 blur-2xl gpu"
-                style={{ borderRadius: '60% 40% 55% 45% / 55% 50% 50% 45%' }}
+                className="breathing-halo absolute -inset-8 -z-10 rounded-full bg-accent/60 blur-[26px] gpu"
                 aria-hidden="true"
               />
-              <div className="photo-grade hero-photo relative aspect-[3/4] w-[300px] overflow-hidden rounded-[200px_200px_28px_28px] shadow-soft-lg lg:w-[350px]">
+              {/* Cornice sfalsata: linea sottile dietro il ritratto, tocco editoriale */}
+              <div
+                className="absolute inset-0 -z-10 translate-x-4 translate-y-4 rounded-3xl border-2 border-accent/40"
+                aria-hidden="true"
+              />
+              <div className="photo-grade hero-photo relative aspect-[3/4] w-[300px] overflow-hidden rounded-3xl shadow-soft-lg lg:w-[350px]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={HERO_IMAGE.src}
