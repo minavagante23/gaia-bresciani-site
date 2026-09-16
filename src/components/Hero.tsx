@@ -85,7 +85,12 @@ export default function Hero() {
           <div className="flex justify-center lg:col-span-2 lg:justify-end hero-enter-delayed">
             <div className="relative">
               <div
-                className="absolute -inset-6 -z-10 bg-accent/15 blur-2xl gpu"
+                className="breathing-halo-outer absolute -inset-12 -z-10 bg-accent/10 blur-3xl gpu"
+                style={{ borderRadius: '45% 55% 50% 50% / 50% 45% 55% 50%' }}
+                aria-hidden="true"
+              />
+              <div
+                className="breathing-halo absolute -inset-6 -z-10 bg-accent/20 blur-2xl gpu"
                 style={{ borderRadius: '60% 40% 55% 45% / 55% 50% 50% 45%' }}
                 aria-hidden="true"
               />

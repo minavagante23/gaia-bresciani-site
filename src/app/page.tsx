@@ -6,6 +6,7 @@ import QuoteSection from '@/components/QuoteSection';
 import InsightsGrid from '@/components/InsightsGrid';
 import LocationCards from '@/components/LocationCards';
 import CtaSection from '@/components/CtaSection';
+import ScrollReveal from '@/components/ScrollReveal';
 
 export default function HomePage() {
   return (
@@ -18,6 +19,7 @@ export default function HomePage() {
       <InsightsGrid />
       <LocationCards />
       <CtaSection />
+      <ScrollReveal />
     </>
   );
 }

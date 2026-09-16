@@ -256,6 +256,27 @@
   }
 }
 
+/* Respiro: espansione/contrazione al ritmo di una respirazione calma (~6,4s).
+   Con prefers-reduced-motion l'animazione viene azzerata dal blocco globale in fondo. */
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.65;
+  }
+  50% {
+    transform: scale(1.09);
+    opacity: 1;
+  }
+}
+
+.breathing-halo {
+  animation: breathe 6.4s ease-in-out infinite;
+}
+
+.breathing-halo-outer {
+  animation: breathe 6.4s ease-in-out -2.2s infinite;
+}
+
 @keyframes hero-enter {
   from {
     opacity: 0;
@@ -351,6 +372,21 @@
   .reveal-mask {
     overflow: hidden;
     display: block;
+  }
+
+  /* Fade-up delle sezioni allo scroll: .reveal viene aggiunta SOLO via JS
+     (ScrollReveal), quindi senza JavaScript le sezioni restano visibili. */
+  .reveal {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+
+  .reveal-visible {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity 0.8s ease,
+      transform 0.8s cubic-bezier(0.21, 0.47, 0.32, 0.98);
   }
 }
 

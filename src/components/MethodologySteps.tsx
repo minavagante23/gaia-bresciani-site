@@ -48,7 +48,7 @@ export default function MethodologySteps() {
           </p>
           <p className="text-sm text-muted mt-4">
             Ti rispondo entro 24 ore lavorative. Il primo colloquio serve a
-            capire se questo spazio pu\u00f2 essere davvero utile per la tua
+            capire se questo spazio pu&ograve; essere davvero utile per la tua
             situazione.
           </p>
           <p className="text-sm text-muted mt-4">
