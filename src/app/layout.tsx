@@ -320,7 +320,7 @@ export default function RootLayout({
         <link
           rel="preload"
           as="image"
-          href="/assets/psicologa-sarnico-gaia-bresciani.webp"
+          href="/assets/psicologa-gaia-bresciani-cutout.webp"
           type="image/webp"
           fetchPriority="high"
         />

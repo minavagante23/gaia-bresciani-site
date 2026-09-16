@@ -9,10 +9,10 @@ import {
 } from '@/lib/contact';
 
 const HERO_IMAGE = {
-  src: '/assets/psicologa-sarnico-gaia-bresciani.webp',
+  src: '/assets/psicologa-gaia-bresciani-cutout.webp',
   alt: "Dott.ssa Gaia Bresciani, psicologa e psicoterapeuta a Sarnico e Lago d'Iseo",
-  width: 350,
-  height: 467,
+  width: 700,
+  height: 896,
 };
 
 export default function Hero() {
@@ -85,32 +85,31 @@ export default function Hero() {
           <div className="flex justify-center lg:col-span-2 lg:justify-end hero-enter-delayed">
             <div className="relative">
               <div
-                className="breathing-halo-outer absolute -inset-14 -z-10 rounded-full bg-accent/20 blur-3xl gpu"
+                className="breathing-halo absolute -inset-x-6 top-8 -bottom-4 -z-10 rounded-full bg-accent/30 blur-[26px] gpu"
                 aria-hidden="true"
               />
-              <div
-                className="breathing-halo absolute -inset-8 -z-10 rounded-full bg-accent/60 blur-[26px] gpu"
-                aria-hidden="true"
-              />
-              {/* Pannello di colore sfalsato: composizione a strati editoriale,
-                  il ritratto in primo piano con ombra netta crea profondità */}
-              <div
-                className="absolute -top-7 -right-7 bottom-12 left-12 rounded-2xl bg-accent/35"
-                aria-hidden="true"
-              />
-              <div className="photo-grade hero-photo relative aspect-[3/4] w-[300px] overflow-hidden rounded-xl shadow-soft-xl lg:w-[350px]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={HERO_IMAGE.src}
-                  alt={HERO_IMAGE.alt}
-                  width={HERO_IMAGE.width}
-                  height={HERO_IMAGE.height}
-                  decoding="async"
-                  fetchPriority="high"
-                  loading="eager"
-                  sizes="(max-width: 1024px) 300px, 350px"
-                  className="h-full w-full object-cover"
+              {/* Composizione cutout: pannello salvia come forma principale,
+                  figura scontornata in primo piano con la testa che sborda
+                  dal bordo superiore per dare profondità */}
+              <div className="relative w-[300px] lg:w-[350px]">
+                <div
+                  className="absolute inset-x-0 top-14 bottom-0 rounded-[2rem] bg-accent/35"
+                  aria-hidden="true"
                 />
+                <div className="relative overflow-hidden rounded-b-[2rem]">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={HERO_IMAGE.src}
+                    alt={HERO_IMAGE.alt}
+                    width={HERO_IMAGE.width}
+                    height={HERO_IMAGE.height}
+                    decoding="async"
+                    fetchPriority="high"
+                    loading="eager"
+                    sizes="(max-width: 1024px) 300px, 350px"
+                    className="w-full [filter:saturate(0.95)_contrast(1.03)_drop-shadow(0_20px_32px_rgba(36,61,66,0.25))]"
+                  />
+                </div>
               </div>
 
               <a

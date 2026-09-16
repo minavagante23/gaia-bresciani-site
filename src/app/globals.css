@@ -237,23 +237,6 @@
     mix-blend-mode: soft-light;
   }
 
-  .hero-photo img {
-    filter: none;
-  }
-
-  .hero-photo::after {
-    opacity: 0.5;
-  }
-}
-
-@media (min-width: 1024px) {
-  .hero-photo img {
-    filter: saturate(0.92) contrast(1.04) sepia(0.04);
-  }
-
-  .hero-photo::after {
-    opacity: 1;
-  }
 }
 
 /* Respiro: espansione/contrazione al ritmo di una respirazione calma (~6,4s).
@@ -271,10 +254,6 @@
 
 .breathing-halo {
   animation: breathe 6.4s ease-in-out infinite;
-}
-
-.breathing-halo-outer {
-  animation: breathe 6.4s ease-in-out -2.2s infinite;
 }
 
 @keyframes hero-enter {
