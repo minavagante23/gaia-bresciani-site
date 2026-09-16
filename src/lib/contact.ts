@@ -1,4 +1,4 @@
-/** Contatti e CTA — gerarchia: 1) WhatsApp 2) MioDottore 3) telefono / modulo */
+/** Contatti e CTA — WhatsApp solo nel chrome (header desktop / barra mobile). */
 
 export const PHONE_HREF = 'tel:+393408389958';
 export const PHONE_DISPLAY = '+39 340 838 9958';
@@ -14,7 +14,7 @@ export const WHATSAPP_MESSAGE =
 export const WHATSAPP_URL =
   'https://wa.me/393408389958?text=' + encodeURIComponent(WHATSAPP_MESSAGE);
 
-/** CTA primaria (hero, sezioni finali, InlineCta) */
+/** CTA primaria verso /contatti (hero, sezioni finali, InlineCta) */
 export const CTA_PRIMARY_LABEL = 'Prenota il primo colloquio in presenza';
 
 /** Variante corta (navbar, barra mobile) */

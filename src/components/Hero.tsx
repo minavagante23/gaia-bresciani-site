@@ -1,12 +1,7 @@
-import { ArrowRight, MapPin, MessageCircle } from 'lucide-react';
+import Link from 'next/link';
+import { ArrowRight, MapPin } from 'lucide-react';
 import { linkTitle } from '@/lib/link-titles';
-import {
-  CTA_PRIMARY_LABEL,
-  CTA_TRUST_LINE,
-  WHATSAPP_ARIA,
-  WHATSAPP_TITLE,
-  WHATSAPP_URL,
-} from '@/lib/contact';
+import { CTA_PRIMARY_LABEL, CTA_TRUST_LINE } from '@/lib/contact';
 
 const HERO_IMAGE = {
   src: '/assets/psicologa-gaia-bresciani-cutout.webp',
@@ -18,53 +13,39 @@ const HERO_IMAGE = {
 export default function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <div className="absolute inset-0 -z-10" aria-hidden="true">
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              'radial-gradient(120% 85% at 82% -10%, rgba(90,125,116,0.14), transparent 52%), radial-gradient(95% 75% at -5% 105%, rgba(36,61,66,0.07), transparent 55%)',
-          }}
-        />
-      </div>
-
       <div className="section-container w-full pt-24 pb-16 lg:pt-28 lg:pb-20">
         <div className="grid items-center gap-12 lg:grid-cols-5 lg:gap-16">
-          <div className="space-y-8 lg:col-span-3 hero-enter">
+          <div className="space-y-8 lg:col-span-3">
             <p className="eyebrow flex items-center gap-2">
               <MapPin size={14} strokeWidth={2.5} />
               Studio zona Lago d&apos;Iseo
             </p>
 
-            {/* Titolo emotivo visivamente dominante; H1 semantico con keyword locali. */}
-            <p className="heading-xl text-balance">
+            <h1 className="heading-xl text-balance">
               <span className="block">Un primo passo,</span>
               <span className="block text-accent-deep">senza fretta</span>
-            </p>
-
-            <h1 className="font-serif text-xl lg:text-2xl font-semibold text-primary max-w-xl text-balance">
-              Psicologa e Psicoterapeuta a Credaro (BG), vicino a Sarnico (BG) e al Lago d&apos;Iseo
             </h1>
 
+            <p className="font-serif text-xl lg:text-2xl font-semibold text-primary max-w-xl text-balance">
+              Psicologa e Psicoterapeuta a Credaro (BG), vicino a Sarnico (BG) e al Lago d&apos;Iseo
+            </p>
+
             <p className="body-lg max-w-xl">
-              Sono Gaia Bresciani. Accompagno adulti e coppie con ansia, difficolt&agrave;
-              relazionali, blocchi o esperienze traumatiche. Dal primo colloquio:
-              ascolto clinico, chiarezza e obiettivi condivisi.
+              Sono Gaia Bresciani. Accompagno adulti e coppie con ansia,
+              difficolt&agrave; relazionali, blocchi o esperienze traumatiche.
+              Dal primo colloquio: ascolto clinico, chiarezza e obiettivi
+              condivisi.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-2">
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                title={WHATSAPP_TITLE}
-                aria-label={WHATSAPP_ARIA}
-                className="btn-primary btn-shine gap-2"
+              <Link
+                href="/contatti"
+                title={linkTitle('/contatti')}
+                className="btn-primary gap-2"
               >
-                <MessageCircle size={16} />
                 {CTA_PRIMARY_LABEL}
                 <ArrowRight size={16} />
-              </a>
+              </Link>
               <a href="#metodo" title={linkTitle('#metodo')} className="btn-outline">
                 Scopri il percorso
               </a>
@@ -73,43 +54,31 @@ export default function Hero() {
             <p className="pt-1 text-sm text-muted">{CTA_TRUST_LINE}</p>
 
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-2 text-sm text-muted">
-              <span className="flex items-center gap-2">
-                <span className="h-2 w-2 rounded-full bg-accent" />
-                Primo colloquio orientativo
-              </span>
+              <span>Primo colloquio orientativo</span>
               <span>Credaro (BG) &middot; Vicino a Sarnico</span>
               <span>Parcheggio privato</span>
             </div>
           </div>
 
-          <div className="flex justify-center lg:col-span-2 lg:justify-end hero-enter-delayed">
-            <div className="relative">
+          <div className="flex justify-center lg:col-span-2 lg:justify-end">
+            <div className="relative w-[300px] lg:w-[350px]">
               <div
-                className="breathing-halo absolute -inset-x-6 top-8 -bottom-4 -z-10 rounded-full bg-accent/30 blur-[26px] gpu"
+                className="absolute inset-x-0 top-14 bottom-0 rounded-[2rem] bg-accent/35"
                 aria-hidden="true"
               />
-              {/* Composizione cutout: pannello salvia come forma principale,
-                  figura scontornata in primo piano con la testa che sborda
-                  dal bordo superiore per dare profondità */}
-              <div className="relative w-[300px] lg:w-[350px]">
-                <div
-                  className="absolute inset-x-0 top-14 bottom-0 rounded-[2rem] bg-accent/35"
-                  aria-hidden="true"
+              <div className="relative overflow-hidden rounded-b-[2rem]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={HERO_IMAGE.src}
+                  alt={HERO_IMAGE.alt}
+                  width={HERO_IMAGE.width}
+                  height={HERO_IMAGE.height}
+                  decoding="async"
+                  fetchPriority="high"
+                  loading="eager"
+                  sizes="(max-width: 1024px) 300px, 350px"
+                  className="w-full [filter:saturate(0.95)_contrast(1.03)_drop-shadow(0_20px_32px_rgba(36,61,66,0.25))]"
                 />
-                <div className="relative overflow-hidden rounded-b-[2rem]">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={HERO_IMAGE.src}
-                    alt={HERO_IMAGE.alt}
-                    width={HERO_IMAGE.width}
-                    height={HERO_IMAGE.height}
-                    decoding="async"
-                    fetchPriority="high"
-                    loading="eager"
-                    sizes="(max-width: 1024px) 300px, 350px"
-                    className="w-full [filter:saturate(0.95)_contrast(1.03)_drop-shadow(0_20px_32px_rgba(36,61,66,0.25))]"
-                  />
-                </div>
               </div>
 
               <a

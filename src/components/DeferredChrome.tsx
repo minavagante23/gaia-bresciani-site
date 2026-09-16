@@ -3,7 +3,6 @@
 import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
 
-const ScrollProgressBar = dynamic(() => import('./ScrollProgressBar'), { ssr: false });
 const FloatingContact = dynamic(() => import('./FloatingContact'), { ssr: false });
 const CookieBanner = dynamic(() => import('./CookieBanner'), { ssr: false });
 const GoogleAnalytics = dynamic(() => import('./GoogleAnalytics'), { ssr: false });
@@ -31,7 +30,6 @@ export default function DeferredChrome({ timeoutMs = 2500 }: DeferredChromeProps
 
   return (
     <>
-      <ScrollProgressBar />
       <FloatingContact />
       <CookieBanner />
       <GoogleAnalytics />

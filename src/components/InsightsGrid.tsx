@@ -33,7 +33,7 @@ export default function InsightsGrid() {
                 <Link
                   href={`/approfondimenti/${article.slug}`}
                   title={linkTitle(`/approfondimenti/${article.slug}`, article.title)}
-                  className="group card-base card-hover card-glow overflow-hidden flex flex-col h-full"
+                  className="group card-base card-hover overflow-hidden flex flex-col h-full"
                 >
                   <div className="relative aspect-[16/9] overflow-hidden bg-primary/[0.04]">
                     <Image

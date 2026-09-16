@@ -63,7 +63,7 @@ export default function LocationCards() {
                 key={loc.title}
                 href={loc.link}
                 title={loc.linkTitle}
-                className={`group card-base card-hover card-glow flex flex-col overflow-hidden min-h-[17rem] ${
+                className={`group card-base card-hover flex flex-col overflow-hidden min-h-[17rem] ${
                   loc.primary ? 'ring-2 ring-accent/20 relative' : ''
                 }`}
               >

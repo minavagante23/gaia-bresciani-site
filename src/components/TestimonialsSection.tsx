@@ -24,7 +24,7 @@ export default function TestimonialsSection() {
           {reviews.map((review, i) => (
             <div
               key={i}
-              className="card-base card-hover card-glow p-6 flex flex-col"
+              className="card-base card-hover p-6 flex flex-col"
             >
               <div className="flex items-center gap-0.5 mb-4">
                 {[...Array(review.rating)].map((_, j) => (
@@ -58,7 +58,7 @@ export default function TestimonialsSection() {
             target="_blank"
             rel="noopener noreferrer"
             title="Leggi tutte le recensioni su MioDottore"
-            className="btn-outline btn-shine py-3 px-6 text-sm gap-2 inline-flex"
+            className="btn-outline py-3 px-6 text-sm gap-2 inline-flex"
           >
             Leggi tutte le recensioni su MioDottore
             <ExternalLink size={14} />
