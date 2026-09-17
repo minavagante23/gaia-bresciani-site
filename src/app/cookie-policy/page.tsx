@@ -9,7 +9,6 @@ export const metadata: Metadata = createPageMetadata({
   description:
     'Cookie policy del sito di Gaia Bresciani Psicologa: tipi di cookie, gestione del consenso e diritti dell\'utente ai sensi del GDPR.',
   path: '/cookie-policy',
-  robots: { index: false, follow: true },
 });
 
 export default function CookiePolicyPage() {

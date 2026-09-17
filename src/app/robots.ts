@@ -6,12 +6,10 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        // Le pagine HTML legacy NON vanno bloccate qui: hanno gia' noindex +
-        // canonical + redirect, e Google deve poterle scansionare per vederli
-        // e consolidare i segnali sulle nuove URL. Bloccarle le lascerebbe
-        // nell'indice come risultati senza snippet.
-        // Niente disallow su /_next/: Google deve accedere a CSS/JS per il rendering.
-        disallow: ['/api/'],
+        // Nessun Disallow: sito statico (output: 'export'), niente /api/.
+        // Le HTML legacy non vanno bloccate: devono essere scansionabili
+        // cosi' Google vede noindex + canonical e consolida sulle URL nuove.
+        // Non bloccare /_next/: serve a Google per il rendering.
       },
     ],
     host: 'https://www.gaiabrescianipsicologa.it',
