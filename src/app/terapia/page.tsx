@@ -5,7 +5,6 @@ import PageHeader from '@/components/PageHeader';
 import AnimatedSection from '@/components/AnimatedSection';
 import InlineCta from '@/components/InlineCta';
 import { createPageMetadata } from '@/lib/seo';
-import { Compass, Layers, RefreshCw } from 'lucide-react';
 
 export const metadata: Metadata = createPageMetadata({
   title: 'Terapia individuale e di coppia a Credaro | Vicino Sarnico',
@@ -99,34 +98,25 @@ export default function TerapiaPage() {
         <div className="grid md:grid-cols-3 gap-6">
           {[
             {
-              icon: Compass,
               title: 'Partiamo dal presente',
               text: 'Sintomi, storia personale, relazioni e risorse disponibili come punto di partenza.',
             },
             {
-              icon: Layers,
               title: 'Obiettivi concreti',
               text: 'Nel primo colloquio condividiamo una lettura del problema e definiamo obiettivi misurabili.',
             },
             {
-              icon: RefreshCw,
               title: 'Approccio integrato',
               text: "L'approccio adleriano considera la persona nella sua globalità. Quando indicato, integro la terapia EMDR.",
             },
-          ].map((item) => {
-            const Icon = item.icon;
-            return (
+          ].map((item) => (
               <AnimatedSection key={item.title}>
                 <div className="card-base p-7">
-                  <div className="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
-                    <Icon size={22} strokeWidth={1.6} className="text-accent" />
-                  </div>
                   <h3 className="heading-md mb-2">{item.title}</h3>
                   <p className="body-md">{item.text}</p>
                 </div>
               </AnimatedSection>
-            );
-          })}
+          ))}
         </div>
       </section>
 

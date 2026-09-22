@@ -6,7 +6,6 @@ import PageHeader from '@/components/PageHeader';
 import AnimatedSection from '@/components/AnimatedSection';
 import InlineCta from '@/components/InlineCta';
 import { createPageMetadata } from '@/lib/seo';
-import { Zap, ShieldCheck, Brain, HeartPulse, AlertTriangle } from 'lucide-react';
 
 export const metadata: Metadata = createPageMetadata({
   title: 'EMDR per traumi e ansia vicino Sarnico | Gaia Bresciani',
@@ -18,11 +17,11 @@ export const metadata: Metadata = createPageMetadata({
 });
 
 const indications = [
-  { icon: AlertTriangle, text: 'Traumi psicologici singoli o ripetuti' },
-  { icon: HeartPulse, text: 'Lutti, separazioni o eventi critici' },
-  { icon: Zap, text: 'Ansia intensa e attacchi di panico' },
-  { icon: ShieldCheck, text: 'Blocchi emotivi e senso di inadeguatezza' },
-  { icon: Brain, text: 'Sintomi da stress post-traumatico' },
+  'Traumi psicologici singoli o ripetuti',
+  'Lutti, separazioni o eventi critici',
+  'Ansia intensa e attacchi di panico',
+  'Blocchi emotivi e senso di inadeguatezza',
+  'Sintomi da stress post-traumatico',
 ];
 
 export default function EmdrPage() {
@@ -97,18 +96,12 @@ export default function EmdrPage() {
           <p className="body-lg max-w-3xl mb-10">Indicazioni cliniche più frequenti</p>
         </AnimatedSection>
 
-        <ul className="grid sm:grid-cols-2 gap-x-10 gap-y-4 max-w-3xl">
-          {indications.map((item) => {
-            const Icon = item.icon;
-            return (
-              <li key={item.text} className="flex items-start gap-3">
-                <div className="w-9 h-9 rounded-xl bg-accent/15 flex items-center justify-center shrink-0">
-                  <Icon size={18} strokeWidth={1.75} className="text-accent-deep" />
-                </div>
-                <p className="body-md text-primary pt-1.5">{item.text}</p>
-              </li>
-            );
-          })}
+        <ul className="grid sm:grid-cols-2 gap-x-10 gap-y-3 max-w-3xl">
+          {indications.map((text) => (
+            <li key={text} className="body-md text-primary">
+              {text}
+            </li>
+          ))}
         </ul>
       </section>
 

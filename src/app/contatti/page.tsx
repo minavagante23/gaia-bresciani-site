@@ -18,7 +18,7 @@ import {
   WHATSAPP_TITLE,
   WHATSAPP_URL,
 } from '@/lib/contact';
-import { MapPin, Phone, Mail, Clock, MessageCircle, Car, ExternalLink } from 'lucide-react';
+import { MessageCircle, ExternalLink } from 'lucide-react';
 
 export const metadata: Metadata = createPageMetadata({
   title: 'Prenota un primo colloquio | Psicologa a Credaro vicino Sarnico',
@@ -32,17 +32,14 @@ export const metadata: Metadata = createPageMetadata({
 
 const firstSteps = [
   {
-    icon: MessageCircle,
     title: 'Cosa scrivere',
     text: 'Bastano zona da cui arrivi, fascia oraria preferita e una riga su cosa stai vivendo. Non serve raccontare tutto nel primo messaggio.',
   },
   {
-    icon: Clock,
     title: 'Tempi di risposta',
     text: 'Ti rispondo entro 24 ore lavorative. Se preferisci scegliere data e ora da sola/o, puoi usare MioDottore.',
   },
   {
-    icon: Car,
     title: 'Come arrivare',
     text: 'Studio a Via Piave 7, Credaro — circa 5 minuti da Sarnico. Parcheggio privato e gratuito presso lo studio.',
   },
@@ -81,22 +78,14 @@ export default function ContattiPage() {
         <AnimatedSection>
           <div className="max-w-3xl space-y-8">
             <ul className="space-y-6">
-              {firstSteps.map((step) => {
-                const Icon = step.icon;
-                return (
-                  <li key={step.title} className="flex gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-accent/15 flex items-center justify-center shrink-0">
-                      <Icon size={18} strokeWidth={1.75} className="text-accent-deep" />
-                    </div>
-                    <div>
+              {firstSteps.map((step) => (
+                  <li key={step.title}>
                       <h2 className="font-serif font-semibold text-base text-primary mb-1">
                         {step.title}
                       </h2>
                       <p className="body-md">{step.text}</p>
-                    </div>
                   </li>
-                );
-              })}
+              ))}
             </ul>
 
             <div className="space-y-4 pt-2">
@@ -169,43 +158,28 @@ export default function ContattiPage() {
                 <li>
                   <a
                     href={PHONE_HREF}
-                    className="flex items-start gap-3.5 rounded-xl -mx-2 px-2 py-1.5 hover:bg-primary/[0.03] transition-colors"
+                    className="block rounded-xl -mx-2 px-2 py-1.5 hover:bg-primary/[0.03] transition-colors"
                   >
-                    <div className="w-10 h-10 rounded-xl bg-accent/15 flex items-center justify-center shrink-0">
-                      <Phone size={18} strokeWidth={1.75} className="text-accent-deep" />
-                    </div>
-                    <div className="min-w-0 pt-0.5">
                       <p className="text-sm font-medium text-primary-light mb-0.5">Telefono</p>
                       <p className="body-md text-primary !leading-snug">{PHONE_DISPLAY}</p>
-                    </div>
                   </a>
                 </li>
                 <li>
                   <a
                     href={EMAIL_HREF}
-                    className="flex items-start gap-3.5 rounded-xl -mx-2 px-2 py-1.5 hover:bg-primary/[0.03] transition-colors"
+                    className="block rounded-xl -mx-2 px-2 py-1.5 hover:bg-primary/[0.03] transition-colors"
                   >
-                    <div className="w-10 h-10 rounded-xl bg-accent/15 flex items-center justify-center shrink-0">
-                      <Mail size={18} strokeWidth={1.75} className="text-accent-deep" />
-                    </div>
-                    <div className="min-w-0 pt-0.5">
                       <p className="text-sm font-medium text-primary-light mb-0.5">Email</p>
                       <p className="body-md text-primary !leading-snug break-words">
                         {EMAIL_DISPLAY}
                       </p>
-                    </div>
                   </a>
                 </li>
-                <li className="flex items-start gap-3.5 px-2 -mx-2 py-1.5">
-                  <div className="w-10 h-10 rounded-xl bg-accent/15 flex items-center justify-center shrink-0">
-                    <Clock size={18} strokeWidth={1.75} className="text-accent-deep" />
-                  </div>
-                  <div className="min-w-0 pt-0.5">
+                <li className="px-2 -mx-2 py-1.5">
                     <p className="text-sm font-medium text-primary-light mb-0.5">Orari</p>
                     <p className="body-md text-primary !leading-snug">
                       Lun-Ven 7-21, Sab 9-16:30
                     </p>
-                  </div>
                 </li>
               </ul>
             </div>
@@ -213,7 +187,7 @@ export default function ContattiPage() {
 
           <AnimatedSection className="lg:col-span-3 h-full">
             <div className="card-base p-6 sm:p-8 h-full" id="contact-form">
-              <h2 className="heading-md mb-3">Preferisci il modulo?</h2>
+              <h2 className="heading-md mb-3">Modulo di contatto</h2>
               <p className="body-md mb-6">
                 Utile se non usi WhatsApp. Indica sede preferita e fascia oraria:
                 per chi arriva da Sarnico e dal basso Lago d&apos;Iseo propongo di
@@ -237,14 +211,11 @@ export default function ContattiPage() {
           {studios.map((studio) => (
             <AnimatedSection key={studio.name}>
               <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <MapPin size={18} className="text-accent-deep shrink-0 mt-1" />
-                  <div>
+                <div>
                     <h3 className="heading-md mb-1">{studio.name}</h3>
                     <p className="body-md !leading-snug">{studio.address}</p>
                     <p className="text-sm text-muted mt-1">{studio.note}</p>
                     <p className="text-sm text-muted mt-0.5">{studio.area}</p>
-                  </div>
                 </div>
                 <ConsentIframe
                   src={studio.mapSrc}

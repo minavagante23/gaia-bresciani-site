@@ -1,10 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { MapPin, Building2, Laptop } from 'lucide-react';
 
 const locations = [
   {
-    icon: MapPin,
     title: 'Credaro (BG)',
     subtitle: 'Area Sarnico e Lago d\'Iseo',
     description:
@@ -16,7 +14,6 @@ const locations = [
     image: '/assets/studio-psicologia-credaro.webp',
   },
   {
-    icon: Building2,
     title: 'Castenedolo (BS)',
     subtitle: 'Area Brescia',
     description:
@@ -27,7 +24,6 @@ const locations = [
     image: '/assets/studio-psicologa-sarnico.webp',
   },
   {
-    icon: Laptop,
     title: 'Online',
     subtitle: 'Ovunque tu sia',
     description:
@@ -56,9 +52,7 @@ export default function LocationCards() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-          {locations.map((loc) => {
-            const Icon = loc.icon;
-            return (
+          {locations.map((loc) => (
               <a
                 key={loc.title}
                 href={loc.link}
@@ -91,10 +85,6 @@ export default function LocationCards() {
                 )}
 
                 <div className="p-7 lg:p-8 flex flex-col flex-1">
-                  <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-5">
-                    <Icon size={22} strokeWidth={1.6} className="text-accent" />
-                  </div>
-
                   <h3 className="heading-md mb-1 transition-transform duration-300 group-hover:translate-x-0.5">{loc.title}</h3>
                   <p className="text-sm text-accent-deep font-medium mb-3">
                     {loc.subtitle}
@@ -107,8 +97,7 @@ export default function LocationCards() {
                   </span>
                 </div>
               </a>
-            );
-          })}
+          ))}
         </div>
 
         <p className="text-center text-sm text-primary/60 mt-10">

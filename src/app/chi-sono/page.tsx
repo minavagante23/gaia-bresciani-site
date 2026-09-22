@@ -6,7 +6,6 @@ import PageHeader from '@/components/PageHeader';
 import AnimatedSection from '@/components/AnimatedSection';
 import InlineCta from '@/components/InlineCta';
 import { createPageMetadata } from '@/lib/seo';
-import { GraduationCap, Target, Handshake } from 'lucide-react';
 
 export const metadata: Metadata = createPageMetadata({
   title: 'Chi sono | Psicologa vicino Sarnico con studio a Credaro',
@@ -155,43 +154,25 @@ export default function ChiSonoPage() {
         <div className="grid md:grid-cols-3 gap-6">
           {[
             {
-              number: '01',
-              icon: Handshake,
               title: 'Accoglienza',
               text: 'Il primo incontro serve a comprendere cosa stai vivendo: sintomi, contesto e bisogno principale.',
             },
             {
-              number: '02',
-              icon: Target,
               title: 'Obiettivi concreti',
               text: 'Costruiamo un percorso sostenibile, con obiettivi realistici e una direzione clinica chiara.',
             },
             {
-              number: '03',
-              icon: GraduationCap,
               title: 'Metodo integrato',
               text: 'Approccio psicodinamico adleriano, con possibilità di integrare EMDR quando indicato.',
             },
-          ].map((item, i) => {
-            const Icon = item.icon;
-            return (
+          ].map((item) => (
               <AnimatedSection key={item.title}>
-                <div className="card-base p-7 relative overflow-hidden h-full">
-                  <span
-                    aria-hidden="true"
-                    className="section-index absolute top-4 right-5 text-5xl"
-                  >
-                    {item.number}
-                  </span>
-                  <div className="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center mb-4 relative z-10">
-                    <Icon size={22} strokeWidth={1.6} className="text-accent" />
-                  </div>
-                  <h3 className="heading-md mb-2 relative z-10">{item.title}</h3>
-                  <p className="body-md relative z-10">{item.text}</p>
+                <div className="card-base p-7 h-full">
+                  <h3 className="heading-md mb-2">{item.title}</h3>
+                  <p className="body-md">{item.text}</p>
                 </div>
               </AnimatedSection>
-            );
-          })}
+          ))}
         </div>
       </section>
 
