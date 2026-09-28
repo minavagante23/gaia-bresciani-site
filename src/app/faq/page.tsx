@@ -102,6 +102,10 @@ export default function FaqPage() {
                 Sarnico e al basso Lago d&apos;Iseo
               </Link>
               ,{' '}
+              <Link href="/psicologa-palazzolo" className="link-inline">
+                Palazzolo sull&apos;Oglio
+              </Link>
+              ,{' '}
               <Link href="/psicologa-villongo" className="link-inline">
                 Villongo e Val Calepio
               </Link>{' '}

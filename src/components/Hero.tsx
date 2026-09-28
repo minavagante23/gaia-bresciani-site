@@ -5,7 +5,7 @@ import { CTA_PRIMARY_LABEL, CTA_TRUST_LINE } from '@/lib/contact';
 
 const HERO_IMAGE = {
   src: '/assets/psicologa-gaia-bresciani-cutout.webp',
-  alt: "Dott.ssa Gaia Bresciani, psicologa e psicoterapeuta a Sarnico e Lago d'Iseo",
+  alt: 'Dott.ssa Gaia Bresciani, psicologa e psicoterapeuta a Credaro, a 5 minuti da Sarnico',
   width: 700,
   height: 896,
 };
@@ -18,21 +18,20 @@ export default function Hero() {
           <div className="space-y-8 lg:col-span-3">
             <p className="eyebrow flex items-center gap-2">
               <MapPin size={14} strokeWidth={2.5} />
-              Studio zona Lago d&apos;Iseo
+              Studio a Credaro (BG)
             </p>
 
             <h1 className="heading-xl text-balance">
-              <span className="block">Un primo passo,</span>
-              <span className="block text-accent-deep">senza fretta</span>
+              <span className="block">Psicologa a Credaro,</span>
+              <span className="block text-accent-deep">a 5 minuti da Sarnico</span>
             </h1>
 
             <p className="font-serif text-xl lg:text-2xl font-semibold text-primary max-w-xl text-balance">
-              Psicologa e Psicoterapeuta a Credaro (BG), vicino a Sarnico (BG) e al Lago d&apos;Iseo
+              Sono Gaia Bresciani. Accompagno adulti e coppie con ansia,
+              difficolt&agrave; relazionali o esperienze traumatiche.
             </p>
 
             <p className="body-lg max-w-xl">
-              Sono Gaia Bresciani. Accompagno adulti e coppie con ansia,
-              difficolt&agrave; relazionali, blocchi o esperienze traumatiche.
               Dal primo colloquio: ascolto clinico, chiarezza e obiettivi
               condivisi.
             </p>
@@ -55,7 +54,7 @@ export default function Hero() {
 
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-2 text-sm text-muted">
               <span>Primo colloquio orientativo</span>
-              <span>Credaro (BG) &middot; Vicino a Sarnico</span>
+              <span>Credaro (BG) &middot; 5 min da Sarnico</span>
               <span>Parcheggio privato</span>
             </div>
           </div>

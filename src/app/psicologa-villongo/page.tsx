@@ -129,15 +129,15 @@ export default function ZonaVillongoPage() {
       <section className="section-container pb-8">
         <AnimatedSection>
           <p className="body-md max-w-3xl">
-            Vivi più vicino al lago? Consulta le pagine dedicate a{' '}
+            Altre zone del bacino:{' '}
             <Link href="/psicologa-sarnico" className="link-inline">
               Sarnico
-            </Link>{' '}
-            e al{' '}
-            <Link href="/psicologa-lago-iseo" className="link-inline">
-              Lago d&apos;Iseo
             </Link>
-            , oppure approfondisci la{' '}
+            {' · '}
+            <Link href="/psicologa-palazzolo" className="link-inline">
+              Palazzolo sull&apos;Oglio
+            </Link>
+            . Percorsi:{' '}
             <Link href="/terapia" className="link-inline">
               terapia individuale e di coppia
             </Link>.

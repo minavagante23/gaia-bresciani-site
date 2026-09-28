@@ -5,33 +5,29 @@ import PageHeader from '@/components/PageHeader';
 import AnimatedSection from '@/components/AnimatedSection';
 import InlineCta from '@/components/InlineCta';
 import { createPageMetadata } from '@/lib/seo';
-import { MapPin, Users, Target } from 'lucide-react';
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'Psicologa vicino Sarnico | Studio a Credaro a 5 minuti dal centro',
+  title: 'Psicologa per Sarnico | Studio a Credaro, 5 minuti',
   description:
-    'Psicologa e psicoterapeuta a 5 minuti da Sarnico: studio a Credaro, comodo anche da Paratico, Capriolo e basso Lago d\'Iseo. Informazioni per il primo colloquio.',
+    'Studio a Credaro, 5 minuti da Sarnico: parcheggio privato, anche il sabato, primo colloquio in presenza. Terapia individuale, di coppia ed EMDR.',
   path: '/psicologa-sarnico',
-  ogTitle: 'Psicologa vicino Sarnico | Studio a Credaro',
+  ogTitle: 'Psicologa per Sarnico | Studio a Credaro, 5 minuti',
   ogDescription:
-    'Tempi di percorrenza, aree servite e prime informazioni utili per chi desidera raggiungere la sede di Credaro.',
+    '5 minuti da Sarnico, parcheggio privato, anche il sabato. Il primo colloquio si svolge in presenza a Credaro.',
 });
 
 const highlights = [
   {
-    icon: MapPin,
-    title: 'Comuni serviti',
-    text: 'Sarnico, Paratico, Capriolo, Villongo, Credaro, Castelli Calepio, Grumello del Monte, Palazzolo sull\'Oglio.',
+    title: '5 minuti da Sarnico',
+    text: 'Via Piave 7, Credaro: 2 km dal centro, SP469. Parcheggio privato nello studio, senza girare per il lungolago.',
   },
   {
-    icon: Users,
-    title: 'Primo colloquio',
-    text: 'Di norma il primo incontro si svolge in presenza a Credaro; in alcuni casi può essere utile valutare anche la modalità online.',
+    title: 'Primo colloquio a Credaro',
+    text: 'Il primo incontro è in presenza a Credaro. Online solo se serve continuità, non come alternativa di default.',
   },
   {
-    icon: Target,
-    title: 'Ambiti frequenti',
-    text: 'Ansia, attacchi di panico, stress, difficoltà relazionali, crisi di coppia, traumi e transizioni.',
+    title: 'Anche il sabato',
+    text: 'Orari fino a sera nei giorni feriali e il sabato mattina-pomeriggio. EMDR quando indicato.',
   },
 ];
 
@@ -41,26 +37,20 @@ export default function ZonaSarnicoPage() {
       <Breadcrumb items={[{ label: 'Zona Sarnico e Lago d\'Iseo' }]} />
       <PageHeader
         eyebrow="Area servita"
-        title="Psicologa vicino Sarnico: studio a Credaro in 5 minuti"
-        subtitle="Informazioni pratiche per chi cerca una psicologa o psicoterapeuta tra Sarnico, basso Lago d'Iseo e Val Calepio."
+        title="Psicologa per Sarnico: studio a Credaro in 5 minuti"
+        subtitle="Parcheggio privato, anche il sabato. Il primo colloquio si svolge in presenza a Credaro, non in centro paese."
       />
 
       <section className="section-container pb-16">
         <div className="grid md:grid-cols-3 gap-5">
-          {highlights.map((item, i) => {
-            const Icon = item.icon;
-            return (
-              <AnimatedSection key={item.title}>
-                <div className="card-base p-6 h-full">
-                  <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
-                    <Icon size={20} strokeWidth={1.6} className="text-accent" />
-                  </div>
-                  <h3 className="font-serif font-semibold text-base mb-2">{item.title}</h3>
-                  <p className="body-md">{item.text}</p>
-                </div>
-              </AnimatedSection>
-            );
-          })}
+          {highlights.map((item) => (
+            <AnimatedSection key={item.title}>
+              <div className="card-base p-6 h-full">
+                <h3 className="font-serif font-semibold text-base mb-2">{item.title}</h3>
+                <p className="body-md">{item.text}</p>
+              </div>
+            </AnimatedSection>
+          ))}
         </div>
       </section>
 
@@ -68,60 +58,40 @@ export default function ZonaSarnicoPage() {
         <AnimatedSection>
           <div className="max-w-3xl space-y-8">
             <div className="space-y-4">
-              <h2 className="heading-lg">Un punto di riferimento vicino a Sarnico</h2>
+              <h2 className="heading-lg">Studio a Credaro, 5 minuti da Sarnico</h2>
               <p className="body-md">
-                Lo studio di Credaro si trova a <strong>soli 2 km dal centro di
-                Sarnico</strong>, raggiungibile in circa 5 minuti in auto lungo
-                la SP469. Dalla zona lungolago di Sarnico bastano pochi minuti
-                per arrivare allo studio di Via Piave 7, Credaro (BG).
+                Lo studio è in Via Piave 7 a Credaro (BG), a <strong>2 km dal
+                centro di Sarnico</strong>: circa 5 minuti in auto sulla SP469.
+                Dal lungolago si arriva senza attraversare il traffico del
+                centro e si parcheggia in cortile.
               </p>
               <p className="body-md">
-                Questo rende il percorso pratico anche per chi vive a Paratico,
-                Villongo, Capriolo e nei comuni del basso Lago d&apos;Iseo,
-                con tempi di spostamento contenuti e la possibilit&agrave; di
-                organizzare appuntamenti compatibili con lavoro e famiglia.
+                Per chi vive a Sarnico, Paratico, Capriolo o Villongo è lo
+                stesso bacino, con un accesso più semplice di una sede in
+                paese: orari anche serali e il sabato, parcheggio privato,
+                continuità del percorso più facile da mantenere.
               </p>
               <p className="body-md">
-                Molte persone arrivano in studio per affrontare ansia,
-                stanchezza emotiva, difficolt&agrave; relazionali o momenti di
-                cambiamento che stanno diventando difficili da sostenere da soli.
-              </p>
-              <p className="body-md">
-                Se cerchi una psicologa per la zona del Lago d&apos;Iseo o un
-                psicoterapeuta raggiungibile dalla provincia di Bergamo e
-                Brescia senza spostamenti lunghi, Credaro &egrave; spesso una
-                soluzione pratica: pochi minuti da Sarnico, parcheggio privato e
-                continuit&agrave; del percorso pi&ugrave; semplice da mantenere.
+                Le richieste più frequenti: ansia, attacchi di panico,
+                difficoltà relazionali, stanchezza emotiva, traumi. Quando
+                indicato, integro la{' '}
+                <Link href="/emdr" className="link-inline">
+                  terapia EMDR
+                </Link>
+                .
               </p>
             </div>
 
             <div className="space-y-4">
               <h2 className="heading-lg">Come funziona il primo colloquio</h2>
               <p className="body-md">
-                Il primo incontro serve a comprendere la domanda di aiuto e valutare la
-                strada pi&ugrave; adatta. Raccogliamo i principali elementi del problema, la
-                sua evoluzione e le risorse gi&agrave; presenti.
+                Il primo incontro è in presenza a Credaro. Serve a capire la
+                domanda, i tempi e se questo spazio è adatto: non è una
+                seduta “di prova” da remoto, salvo esigenze specifiche.
               </p>
               <p className="body-md">
-                Si chiariscono anche aspetti pratici: frequenza, modalit&agrave; in presenza
-                o online, e aspettative realistiche sul percorso. L&apos;obiettivo &egrave;
-                dare una prima cornice chiara, senza forzare decisioni premature.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <h2 className="heading-lg">Obiettivi del percorso e tempi</h2>
-              <p className="body-md">
-                Il lavoro inizia con la riduzione dei sintomi pi&ugrave; urgenti: gestione
-                dell&apos;ansia, miglioramento del sonno, regolazione emotiva. In una fase
-                successiva si approfondiscono i nodi relazionali e gli schemi ricorrenti.
-              </p>
-              <p className="body-md">
-                Quando indicato, pu&ograve; essere integrato un lavoro specifico sul
-                trauma con{' '}
-                <Link href="/emdr" className="link-inline">
-                  approccio EMDR
-                </Link>.
+                Si chiariscono frequenza, sede e aspettative. L&apos;obiettivo
+                è una prima cornice chiara, senza forzare decisioni.
               </p>
             </div>
           </div>
@@ -131,29 +101,23 @@ export default function ZonaSarnicoPage() {
       <section className="section-container pb-16">
         <AnimatedSection>
           <div className="max-w-3xl space-y-4">
-            <h2 className="heading-lg">Come raggiungere lo studio da Sarnico</h2>
+            <h2 className="heading-lg">Come arrivare da Sarnico</h2>
             <p className="body-md">
-              Da <strong>Sarnico centro</strong>: percorri Via Lantieri verso sud
-              e prosegui sulla SP469 in direzione Credaro. Lo studio si trova in
-              Via Piave 7, Credaro (BG), sulla destra. Tempo di percorrenza: circa 5 minuti.
+              Da <strong>Sarnico centro</strong>: Via Lantieri verso sud, poi
+              SP469 direzione Credaro. Via Piave 7 è sulla destra. Circa 5
+              minuti. Parcheggio privato presso lo studio.
             </p>
             <p className="body-md">
-              Da <strong>Paratico e Capriolo</strong>: segui la SP469 direzione
-              Sarnico. Credaro si incontra prima di raggiungere Sarnico.
-              Parcheggio privato presente presso lo studio.
+              Da <strong>Paratico e Capriolo</strong>: SP469 direzione Sarnico.
+              Credaro si incontra prima del centro di Sarnico.
             </p>
             <p className="body-md">
-              Per molte persone questo aspetto pratico conta: poter raggiungere
-              lo studio senza spostamenti lunghi o complessi aiuta a mantenere
-              costanza e continuit&agrave; nel percorso.
-            </p>
-            <p className="body-md">
-              Se preferisci evitare lo spostamento, &egrave; possibile iniziare
-              o proseguire il percorso con{' '}
-              <Link href="/contatti" className="link-inline">
-                colloqui online
-              </Link>{' '}
-              sicuri e riservati.
+              Se preferisci evitare lo spostamento dopo i primi incontri,
+              si può valutare la{' '}
+              <Link href="/psicologa-online" className="link-inline">
+                continuità online
+              </Link>
+              .
             </p>
           </div>
         </AnimatedSection>
@@ -162,22 +126,27 @@ export default function ZonaSarnicoPage() {
       <section className="section-container pb-8">
         <AnimatedSection>
           <p className="body-md max-w-3xl">
-            Approfondisci i trattamenti:{' '}
+            Approfondisci{' '}
             <Link href="/terapia" className="link-inline">
               terapia individuale e di coppia
-            </Link>{' '}
-            e{' '}
+            </Link>
+            {' '}e{' '}
             <Link href="/emdr" className="link-inline">
-              terapia EMDR
-            </Link>. Vivi in Val Calepio o sul lago? Consulta le pagine
-            dedicate a{' '}
+              EMDR
+            </Link>
+            . Altre zone del bacino:{' '}
             <Link href="/psicologa-villongo" className="link-inline">
               Villongo
-            </Link>{' '}
-            e al{' '}
+            </Link>
+            ,{' '}
+            <Link href="/psicologa-palazzolo" className="link-inline">
+              Palazzolo sull&apos;Oglio
+            </Link>
+            {' '}e{' '}
             <Link href="/psicologa-lago-iseo" className="link-inline">
               Lago d&apos;Iseo
-            </Link>.
+            </Link>
+            .
           </p>
         </AnimatedSection>
       </section>

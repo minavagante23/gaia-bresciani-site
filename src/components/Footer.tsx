@@ -1,16 +1,7 @@
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
 import { MapPin, Phone, Mail } from 'lucide-react';
 import { linkTitle } from '@/lib/link-titles';
-
-const CookiePreferencesButton = dynamic(() => import('./CookiePreferencesButton'), {
-  ssr: false,
-  loading: () => (
-    <Link href="/cookie-policy" title={linkTitle('/cookie-policy')} className="touch-target text-white/75 hover:text-white transition-colors">
-      Gestisci cookie
-    </Link>
-  ),
-});
+import CookiePreferencesButton from './CookiePreferencesButton';
 
 const footerLinks = [
   { href: '/chi-sono', label: 'Chi sono' },
@@ -25,6 +16,7 @@ const footerLinks = [
 
 const zoneLinks = [
   { href: '/psicologa-sarnico', label: 'Sarnico e dintorni' },
+  { href: '/psicologa-palazzolo', label: 'Palazzolo sull\'Oglio' },
   { href: '/psicologa-villongo', label: 'Villongo e Val Calepio' },
   { href: '/psicologa-lago-iseo', label: 'Lago d\'Iseo' },
   { href: '/contatti', label: 'Castenedolo - zona Brescia' },

@@ -106,6 +106,10 @@ export default function LocationCards() {
             Villongo e Val Calepio
           </Link>
           {' · '}
+          <Link href="/psicologa-palazzolo" className="link-inline">
+            Palazzolo sull&apos;Oglio
+          </Link>
+          {' · '}
           <Link href="/psicologa-lago-iseo" className="link-inline">
             Lago d&apos;Iseo
           </Link>

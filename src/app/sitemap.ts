@@ -5,7 +5,7 @@ const BASE = 'https://www.gaiabrescianipsicologa.it';
 // Date statiche, da aggiornare a mano SOLO quando i contenuti della pagina
 // cambiano davvero: un lastmod che si aggiorna a ogni build viene ignorato da Google.
 const DEFAULT_LASTMOD = '2026-04-08T00:00:00.000Z';
-const SEO_UPDATE_LASTMOD = '2026-09-14T00:00:00.000Z';
+const SEO_UPDATE_LASTMOD = '2026-09-28T00:00:00.000Z';
 
 const italianMonths: Record<string, number> = {
   gennaio: 0,
@@ -47,7 +47,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/approfondimenti/', priority: 0.8, changeFrequency: 'weekly' as const, lastModified: DEFAULT_LASTMOD },
     { path: '/faq/', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: DEFAULT_LASTMOD },
     { path: '/contatti/', priority: 0.8, changeFrequency: 'monthly' as const, lastModified: SEO_UPDATE_LASTMOD },
-    { path: '/psicologa-sarnico/', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: DEFAULT_LASTMOD },
+    { path: '/psicologa-sarnico/', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: SEO_UPDATE_LASTMOD },
+    { path: '/psicologa-palazzolo/', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: SEO_UPDATE_LASTMOD },
     { path: '/psicologa-villongo/', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: DEFAULT_LASTMOD },
     { path: '/psicologa-lago-iseo/', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: DEFAULT_LASTMOD },
     { path: '/psicologa-online/', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: DEFAULT_LASTMOD },
