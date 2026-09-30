@@ -23,6 +23,56 @@ export interface Article {
 
 const articles: Article[] = [
   {
+    slug: 'gelosia-nelle-relazioni',
+    date: '30 settembre 2026',
+    publishedAt: '2026-09-30T00:00:00.000Z',
+    readTime: '7 min',
+    title: 'Gelosia nelle relazioni: quando diventa un problema',
+    excerpt:
+      'Un pizzico di gelosia può essere umano. Quando però diventa controllo e allontana, conviene capire cosa sta proteggendo — e quando un confronto psicologico può aiutare.',
+    tags: ['Relazioni', 'Coppia'],
+    content: [
+      'Succede a molti: un messaggio a cui l\'altro risponde tardi, un\'uscita tra amici, un\'occhiata che sembra durare un secondo di troppo. Arriva una stretta al petto, un pensiero insistente, a volte la voglia di controllare. Poi, a volte, passa. Altre volte no: la gelosia resta, si ripete, e inizia a occupare spazio nella relazione e nella giornata.',
+      'La gelosia non è, di per sé, un difetto morale. È spesso un segnale: qualcosa di importante sembra a rischio — il legame, il posto che si ha nella vita dell\'altro, l\'immagine di sé. Il punto non è "eliminarla", ma capire quando resta un movimento umano e quando diventa un meccanismo che fa soffrire entrambi.',
+      { type: 'h2', text: 'Gelosia umana e gelosia che consuma' },
+      'In una forma leggera, la gelosia può dire "mi importi". In una forma più intensa può diventare sospetto, controllo, litigi ripetuti, ripensamenti notturni. La differenza non sta solo nell\'intensità emotiva, ma nelle conseguenze: quanto limita la libertà dell\'altro, quanto toglie sonno e lucidità, quanto rende la relazione un campo di verifica continua invece di uno spazio di fiducia.',
+      'Non tutte le gelosie nascono "dal nulla". A volte arrivano dopo un tradimento, un\'ambiguità reale, o messaggi poco chiari. Altre volte scattano anche quando fuori non c\'è un motivo evidente: lì conta di più la storia personale — paura di abbandono, bassa autostima, esperienze in cui l\'amore sembrava precario.',
+      { type: 'h2', text: 'I segnali da osservare' },
+      'Alcuni segnali utili, senza ridursi a un\'etichetta:',
+      {
+        type: 'list',
+        items: [
+          'bisogno frequente di controllare telefono, social o spostamenti',
+          'ripensare a lungo a dettagli piccoli, cercando prove',
+          'confronti o litigi che partono da sospetti e non da fatti chiari',
+          'difficoltà a stare bene quando l\'altro ha spazi propri',
+          'senso di panico o vuoto all\'idea di essere sostituiti',
+          'comportamenti di controllo che, dopo, lasciano colpa o vergogna',
+        ],
+      },
+      'Un segnale isolato non fa una diagnosi. Contano frequenza, intensità e quanto la dinamica impoverisce il rapporto: meno dialogo, più controllo; meno vicinanza, più tensione.',
+      { type: 'h2', text: 'Cosa protegge davvero la gelosia' },
+      'Spesso la gelosia non parla solo dell\'altro: parla di sé. Può proteggere dalla paura di non bastare, dal ricordo di essere stati traditi o messi da parte, dalla difficoltà a tollerare l\'incertezza. Controllare dà l\'illusione di ridurre il rischio. Nel breve periodo può calmare. Nel lungo periodo di solito alimenta distanza: l\'altro si sente sorvegliato, chi è geloso si sente mai abbastanza rassicurato.',
+      'In alcune storie la gelosia si intreccia con la dipendenza affettiva o con un\'autostima fragile: se il valore di sé sembra dipendere dallo sguardo del partner, ogni apertura verso il mondo esterno viene letta come minaccia. In altre storie è la relazione stessa a essere ambigua — e allora il lavoro non è solo "gestire la gelosia", ma chiarire cosa sta succedendo tra due persone.',
+      {
+        type: 'cta',
+        before:
+          'Se la gelosia sta diventando un nodo ricorrente, può aiutare un',
+        links: [
+          { href: '/terapia', label: 'percorso individuale o di coppia' },
+          { href: '/contatti', label: 'primo colloquio senza impegno' },
+        ],
+      },
+      { type: 'h2', text: 'Cosa può aiutare, in concreto' },
+      'Un primo passo è nominare cosa si prova senza trasformarlo subito in accusa: "mi sento in ansia" è diverso da "stai nascondendo qualcosa". Può aiutare anche osservare i trigger — orari, social, silenzi — e distinguere tra un dubbio basato su fatti e un pensiero che cerca conferme. Ridurre i controlli automatici, anche di poco, crea spazio per capire se la rassicurazione arriva davvero o se serve sempre di più.',
+      'Nella coppia conta la chiarezza: limiti condivisi sui confini della relazione, risposte oneste, meno ambiguità. Non significa rinunciare alla privacy o vivere sotto esame. Significa poter parlare di fiducia senza trasformare ogni conversazione in un processo.',
+      { type: 'h2', text: 'Quando può servire un percorso psicologico' },
+      'Un confronto può essere utile quando la gelosia regola le giornate, quando il controllo diventa abitudine, quando i litigi si ripetono sugli stessi punti, o quando dietro c\'è una paura di abbandono difficile da contenere da soli. A volte serve un lavoro individuale; altre volte, se entrambi sono disponibili, un percorso di coppia aiuta a capire il circolo a due.',
+      'L\'obiettivo non è "non essere mai gelosi". È poter stare in relazione con più fiducia e meno sorveglianza — verso l\'altro e verso sé stessi.',
+      'Se vivi tra Credaro, Sarnico o il basso Lago d\'Iseo e riconosci che la gelosia sta costando troppo, un primo colloquio in presenza a Credaro può aiutarti a capire da dove ripartire, senza giudizi.',
+    ],
+  },
+  {
     slug: 'confini-personali-dire-di-no',
     date: '14 settembre 2026',
     publishedAt: '2026-09-14T00:00:00.000Z',
@@ -700,6 +750,10 @@ export interface ArticleHero {
 }
 
 const articleHeroes: Record<string, ArticleHero> = {
+  'gelosia-nelle-relazioni': {
+    src: '/assets/approfondimenti/approfondimenti-gelosia.webp',
+    alt: 'Gelosia nelle relazioni: quando il sospetto occupa spazio tra due persone',
+  },
   'confini-personali-dire-di-no': {
     src: '/assets/approfondimenti/approfondimenti-confini-personali.webp',
     alt: 'Confini personali: taccuino chiuso sul tavolo e vista sul lago, spazio per un limite gentile',
