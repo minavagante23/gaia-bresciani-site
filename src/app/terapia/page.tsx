@@ -7,7 +7,7 @@ import InlineCta from '@/components/InlineCta';
 import { createPageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'Terapia individuale e di coppia a Credaro | Vicino Sarnico',
+  title: 'Terapia individuale e di coppia | Credaro, vicino Sarnico',
   description:
     'Percorso di psicoterapia individuale o di coppia a Credaro, comodo da Sarnico e Lago d\'Iseo. Primo colloquio per obiettivi, tempi e metodo chiaro.',
   path: '/terapia',

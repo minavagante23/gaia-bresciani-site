@@ -30,7 +30,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
   const hero = getArticleHero(article.slug);
 
   return createPageMetadata({
-    title: `${article.title} | Gaia Bresciani Psicologa`,
+    title: `${article.title} | Gaia Bresciani`,
     description: article.excerpt,
     path: `/approfondimenti/${article.slug}`,
     openGraphType: 'article',

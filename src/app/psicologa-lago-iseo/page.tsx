@@ -10,7 +10,7 @@ import { MapPin, Laptop, Target } from 'lucide-react';
 export const metadata: Metadata = createPageMetadata({
   title: 'Psicologa Lago d\'Iseo | Studio a Credaro, basso Sebino',
   description:
-    'Psicologa e psicoterapeuta per chi vive sul Lago d\'Iseo: studio a Credaro, comodo dalla riva bergamasca del Sebino, con possibilità di colloqui online.',
+    'Studio a Credaro per chi vive sul Lago d\'Iseo: pochi minuti dal basso Sebino, parcheggio privato, anche il sabato. Individuale, coppia ed EMDR.',
   path: '/psicologa-lago-iseo',
   ogTitle: 'Psicologa Lago d\'Iseo | Studio a Credaro',
   ogDescription:

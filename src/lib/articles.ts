@@ -506,7 +506,7 @@ const articles: Article[] = [
     readTime: '6 min',
     title: 'Ruminazione mentale e overthinking: segnali e come fermarsi',
     excerpt:
-      'Il rimuginio mentale pu\u00f2 consumare energie e lucidit\u00e0. Una guida pratica per riconoscerlo e interrompere il circolo.',
+      'Il rimuginio mentale può consumare energie e lucidità. Come riconoscere l\'overthinking, interrompere il circolo e capire quando un confronto psicologico aiuta.',
     tags: ['Benessere emotivo', 'Overthinking'],
     content: [
       'Ripensare a una conversazione per ore, immaginare scenari futuri catastrofici, analizzare ogni dettaglio di una situazione cercando la risposta perfetta: se ti succede spesso, probabilmente conosci bene il rimuginio mentale.',
@@ -638,7 +638,7 @@ const articles: Article[] = [
     readTime: '6 min',
     title: 'Social network e adolescenza: rischi, segnali e strategie',
     excerpt:
-      'Come i social influenzano autostima, relazioni e sonno nei pi\u00f9 giovani.',
+      'Come i social influenzano autostima, relazioni e sonno in adolescenza: rischi, segnali da osservare e quando può essere utile un confronto psicologico.',
     tags: ['Adolescenza', 'Social network'],
     content: [
       'I social network fanno parte della vita quotidiana degli adolescenti. Non si tratta di demonizzarli, ma di comprendere il loro impatto su una fase della vita in cui l\'identit\u00e0 \u00e8 ancora in costruzione e il bisogno di appartenenza \u00e8 fortissimo.',
@@ -672,7 +672,7 @@ const articles: Article[] = [
     readTime: '6 min',
     title: 'Ansia e attacchi di panico: quando chiedere aiuto',
     excerpt:
-      'Segnali, falsi miti e primi passi concreti per capire quando \u00e8 utile un supporto psicologico.',
+      'Ansia e attacchi di panico: come riconoscerli, cosa li alimenta e quando un percorso psicologico può aiutare a riprendere controllo, senza minimizzare i sintomi.',
     tags: ['Ansia', 'Attacchi di panico'],
     content: [
       'L\'ansia \u00e8 una risposta naturale del corpo. Diventa un problema quando \u00e8 sproporzionata rispetto alla situazione, si presenta senza un motivo apparente, oppure diventa cos\u00ec intensa da limitare la vita quotidiana.',
@@ -705,7 +705,7 @@ const articles: Article[] = [
     readTime: '5 min',
     title: 'Terapia di coppia: segnali precoci e cosa aspettarsi dal primo colloquio',
     excerpt:
-      'Quando \u00e8 utile chiedere un supporto di coppia e come si svolge il primo incontro.',
+      'Terapia di coppia: i segnali precoci, cosa aspettarsi dal primo colloquio e quando un percorso a due può sbloccare un circolo che da soli non si scioglie.',
     tags: ['Coppia', 'Relazioni'],
     content: [
       'La terapia di coppia non \u00e8 l\'ultimo tentativo prima della separazione. Al contrario, funziona meglio quando si interviene presto, prima che le incomprensioni si cristallizzino in rancori profondi.',

@@ -23,7 +23,7 @@ export default function Hero() {
 
             <h1 className="heading-xl text-balance">
               <span className="block">Psicologa a Credaro,</span>
-              <span className="block text-accent-deep">a 5 minuti da Sarnico</span>
+              <span className="block text-accent-deep">vicino a Sarnico</span>
             </h1>
 
             <p className="font-serif text-xl lg:text-2xl font-semibold text-primary max-w-xl text-balance">

@@ -10,11 +10,11 @@ import { createPageMetadata } from '@/lib/seo';
 import { ArrowUpRight, Clock } from 'lucide-react';
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'Approfondimenti Psicologia Sarnico e Lago d\'Iseo | Gaia Bresciani',
+  title: 'Approfondimenti | Ansia, relazioni, autostima',
   description:
     'Approfondimenti su ansia, panico, stress, burnout lavorativo, autostima, perfezionismo, adolescenza e terapia di coppia. Guide pratiche per orientarti prima di iniziare un percorso psicologico.',
   path: '/approfondimenti',
-  ogTitle: 'Approfondimenti | Psicologa Sarnico e Lago d\'Iseo | Gaia Bresciani',
+  ogTitle: 'Approfondimenti | Ansia, relazioni, autostima',
   ogDescription:
     'Articoli pratici su ansia, stress e lavoro, burnout, relazioni, autostima, perfezionismo e adolescenza per capire meglio i sintomi e quando chiedere supporto psicologico.',
 });

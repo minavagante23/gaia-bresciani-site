@@ -47,9 +47,9 @@ const CRITICAL_CSS = `
 `.replace(/\s+/g, ' ').trim();
 
 export const metadata: Metadata = {
-  title: 'Psicologa a Credaro | 5 min da Sarnico, parcheggio | Gaia Bresciani',
+  title: 'Psicologa a Credaro | 5 min da Sarnico, parcheggio',
   description:
-    'Studio a Credaro (BG), a 5 minuti da Sarnico. Parcheggio privato, anche il sabato. Terapia individuale, di coppia ed EMDR. Recensioni 5/5 su MioDottore.',
+    'Studio a Credaro (BG), 5 minuti da Sarnico. Parcheggio privato, anche sabato e sera. Individuale, coppia ed EMDR. Recensioni 5/5. Primo colloquio in presenza.',
   metadataBase: new URL(SITE_URL),
   authors: [{ name: siteConfig.author, url: SITE_URL }],
   creator: siteConfig.author,
@@ -58,9 +58,9 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Psicologa a Credaro | 5 min da Sarnico, parcheggio | Gaia Bresciani',
+    title: 'Psicologa a Credaro | 5 min da Sarnico | Gaia Bresciani',
     description:
-      'Studio a Credaro (BG), a 5 minuti da Sarnico. Parcheggio privato, anche il sabato. Terapia individuale, di coppia ed EMDR. Recensioni 5/5 su MioDottore.',
+      'Studio a Credaro (BG), 5 minuti da Sarnico. Parcheggio privato, anche sabato e sera. Individuale, coppia ed EMDR. Recensioni 5/5. Primo colloquio in presenza.',
     url: `${SITE_URL}/`,
     siteName: siteConfig.name,
     images: [
@@ -76,9 +76,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Psicologa a Credaro | 5 min da Sarnico, parcheggio | Gaia Bresciani',
+    title: 'Psicologa a Credaro | 5 min da Sarnico | Gaia Bresciani',
     description:
-      'Studio a Credaro (BG), a 5 minuti da Sarnico. Parcheggio privato, anche il sabato. Terapia individuale, di coppia ed EMDR. Recensioni 5/5 su MioDottore.',
+      'Studio a Credaro (BG), 5 minuti da Sarnico. Parcheggio privato, anche sabato e sera. Individuale, coppia ed EMDR. Recensioni 5/5. Primo colloquio in presenza.',
     images: [siteConfig.ogImage],
   },
   robots: {

@@ -9,11 +9,11 @@ import FaqSchemaJsonLd from '@/components/FaqSchemaJsonLd';
 import { createPageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'FAQ Psicologa a Sarnico e Lago d\'Iseo | Gaia Bresciani',
+  title: 'Primo colloquio, costi e orari | Psicologa a Credaro',
   description:
-    'FAQ su primo colloquio, durata sedute, terapia online e problematiche trattate. Risposte chiare per chi cerca una psicologa tra Sarnico, Lago d\'Iseo e Brescia.',
+    'Quanto costa, quanto dura, orari anche il sabato e come funziona il primo colloquio. Studio a Credaro, 5 minuti da Sarnico.',
   path: '/faq',
-  ogTitle: 'FAQ - Domande su psicoterapia e primo colloquio | Gaia Bresciani',
+  ogTitle: 'Primo colloquio, costi e orari | Gaia Bresciani',
   ogDescription:
     'Risposte pratiche su psicoterapia: sedi, primo incontro, approccio clinico, durata del percorso e modalità online.',
 });
@@ -88,7 +88,7 @@ export default function FaqPage() {
       <Breadcrumb items={[{ label: 'FAQ' }]} />
       <PageHeader
         eyebrow="Domande frequenti"
-        title="Tutto quello che devi sapere"
+        title="Primo colloquio, costi e orari"
         subtitle="Risposte chiare su primo colloquio, sedi, durata del percorso e modalità di lavoro."
       />
 

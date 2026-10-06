@@ -7,11 +7,11 @@ import InlineCta from '@/components/InlineCta';
 import { createPageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'Psicologa per Palazzolo sull\'Oglio | Studio a Credaro',
+  title: 'Psicologa per Palazzolo sull\'Oglio | 12 min da Credaro',
   description:
     'Studio a Credaro, circa 12 minuti da Palazzolo sull\'Oglio via Grumello. Parcheggio privato, anche il sabato, primo colloquio in presenza.',
   path: '/psicologa-palazzolo',
-  ogTitle: 'Psicologa per Palazzolo sull\'Oglio | Studio a Credaro',
+  ogTitle: 'Psicologa per Palazzolo sull\'Oglio | 12 min da Credaro',
   ogDescription:
     'Da Palazzolo a Credaro in circa 12 minuti. Parcheggio privato, anche il sabato, primo colloquio in presenza.',
 });

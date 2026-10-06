@@ -8,11 +8,11 @@ import { createPageMetadata } from '@/lib/seo';
 import { MapPin, Users, Target } from 'lucide-react';
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'Psicologa vicino Villongo | Studio a Credaro, Val Calepio',
+  title: 'Psicologa per Villongo | Studio a Credaro, Val Calepio',
   description:
     'Psicologa e psicoterapeuta a Credaro, a pochi minuti da Villongo. Informazioni pratiche per chi vive in Val Calepio e lungo la direttrice Bergamo-Sarnico.',
   path: '/psicologa-villongo',
-  ogTitle: 'Psicologa vicino Villongo | Studio a Credaro',
+  ogTitle: 'Psicologa per Villongo | Studio a Credaro',
   ogDescription:
     'Studio a Credaro, a pochi minuti da Villongo: aree servite, primo colloquio e come raggiungere lo studio dalla Val Calepio.',
 });

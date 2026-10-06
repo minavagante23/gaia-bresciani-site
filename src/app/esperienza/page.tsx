@@ -8,11 +8,11 @@ import { createPageMetadata } from '@/lib/seo';
 import { Briefcase, Users, BookOpen, Shield } from 'lucide-react';
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'Esperienza clinica e metodo | Psicologa vicino Sarnico, studio a Credaro',
+  title: 'Metodo e formazione | Psicologa a Credaro, Sarnico',
   description:
-    'Esperienza clinica e metodo di Gaia Bresciani, psicologa e psicoterapeuta con studio a Credaro per chi vive tra Sarnico e basso Lago d\'Iseo.',
+    'Come lavoro in terapia: metodo adleriano ed EMDR. Studio a Credaro, 5 minuti da Sarnico. Percorsi per adulti, coppie e adolescenti.',
   path: '/esperienza',
-  ogTitle: 'Esperienza clinica e metodo | Gaia Bresciani Psicologa',
+  ogTitle: 'Metodo e formazione | Gaia Bresciani Psicologa',
   ogDescription:
     'Metodo clinico chiaro e personalizzato, con studio a Credaro per chi cerca un riferimento vicino a Sarnico e basso Lago d\'Iseo.',
 });

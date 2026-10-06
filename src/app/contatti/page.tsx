@@ -21,9 +21,9 @@ import {
 import { MessageCircle, ExternalLink } from 'lucide-react';
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'Prenota un primo colloquio | Psicologa a Credaro vicino Sarnico',
+  title: 'Prenota un primo colloquio | Credaro, 5 min da Sarnico',
   description:
-    'Vuoi iniziare un percorso di psicoterapia? Scrivimi su WhatsApp per un primo colloquio a Credaro, comodo da Sarnico. Risposta entro 24 ore; parcheggio privato e gratuito in studio.',
+    'WhatsApp per un primo colloquio a Credaro, 5 minuti da Sarnico. Risposta entro 24 ore. Parcheggio privato, anche il sabato. Oppure MioDottore o telefono.',
   path: '/contatti',
   ogTitle: 'Prenota un primo colloquio | Gaia Bresciani',
   ogDescription:

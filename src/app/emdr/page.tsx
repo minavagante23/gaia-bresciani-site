@@ -8,7 +8,7 @@ import InlineCta from '@/components/InlineCta';
 import { createPageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'EMDR per traumi e ansia vicino Sarnico | Gaia Bresciani',
+  title: 'EMDR per traumi e ansia | Studio a Credaro, Sarnico',
   description:
     'Terapia EMDR a Credaro per traumi, ansia e ricordi disturbanti. Un percorso graduale per ridurre attivazione emotiva e ritrovare equilibrio.',
   path: '/emdr',

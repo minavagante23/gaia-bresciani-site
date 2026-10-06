@@ -11,11 +11,11 @@ import { createPageMetadata } from '@/lib/seo';
 import { MapPin, Clock, Globe, RefreshCw, ShieldCheck } from 'lucide-react';
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'Psicologa online: psicoterapia in videochiamata | Gaia Bresciani',
+  title: 'Psicologa online | Videochiamata, anche da Sarnico',
   description:
     'Percorsi di psicoterapia online in videochiamata con psicologa e psicoterapeuta iscritta all\'albo. Sedute riservate, anche alternate agli incontri in studio.',
   path: '/psicologa-online',
-  ogTitle: 'Psicologa online - Colloqui in videochiamata | Gaia Bresciani',
+  ogTitle: 'Psicologa online | Videochiamata, anche da Sarnico',
   ogDescription:
     'Come funzionano i colloqui psicologici online: modalità, riservatezza, efficacia e quando è preferibile la seduta in presenza.',
 });
