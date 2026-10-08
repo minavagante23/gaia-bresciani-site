@@ -94,7 +94,7 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/assets/favicon.ico', sizes: 'any' },
+      { url: '/favicon.ico', sizes: '48x48' },
       { url: '/assets/icon-192.png', type: 'image/png', sizes: '192x192' },
       { url: '/assets/icon-512.png', type: 'image/png', sizes: '512x512' },
     ],
