@@ -8,8 +8,8 @@ const locations = [
     description:
       'Via Piave 7 \u2014 comodo per Sarnico, Villongo, Paratico, Capriolo e Grumello del Monte.',
     link: '/psicologa-sarnico',
-    linkLabel: 'Come raggiungermi',
-    linkTitle: 'Come raggiungere lo studio di Credaro da Sarnico',
+    linkLabel: 'Psicologa vicino Sarnico',
+    linkTitle: "Psicologa Sarnico e Lago d'Iseo | Studio a Credaro (2 km)",
     primary: true,
     image: '/assets/studio-psicologia-credaro.webp',
   },
@@ -45,9 +45,11 @@ export default function LocationCards() {
             Ricevo principalmente a Credaro e anche a Castenedolo
           </h2>
           <p className="body-lg">
-            Lo studio di Credaro &egrave; comodo per chi vive tra Sarnico e il
-            basso Lago d&apos;Iseo. Ricevo anche a Castenedolo, per l&apos;area
-            di Brescia.
+            Lo studio di Credaro &egrave; comodo per chi vive nella{' '}
+            <Link href="/psicologa-sarnico" className="link-inline">
+              zona Sarnico e Lago d&apos;Iseo
+            </Link>
+            . Ricevo anche a Castenedolo, per l&apos;area di Brescia.
           </p>
         </div>
 

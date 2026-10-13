@@ -17,7 +17,11 @@ export default function CtaSection() {
           </h2>
           <p className="body-lg mb-8">
             Valutiamo insieme un appuntamento nello studio di Credaro, comodo
-            da Sarnico e dal basso Lago d&apos;Iseo.
+            da{' '}
+            <Link href="/psicologa-sarnico" className="link-inline">
+              Sarnico e dal basso Lago d&apos;Iseo
+            </Link>
+            .
           </p>
 
           <Link

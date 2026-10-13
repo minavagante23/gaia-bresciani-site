@@ -32,8 +32,11 @@ export default function ChiSonoPage() {
             <div className="space-y-4">
               <p className="body-lg">
                 Sono Gaia Bresciani, <strong>psicologa e psicoterapeuta</strong>.
-                Ricevo a Credaro, in una sede facilmente raggiungibile anche da
-                Sarnico e dai comuni vicini del Lago d&apos;Iseo.
+                Ricevo a Credaro, in una sede facilmente raggiungibile anche da{' '}
+                <Link href="/psicologa-sarnico" className="link-inline">
+                  Sarnico e dai comuni vicini del Lago d&apos;Iseo
+                </Link>
+                .
               </p>
               <p className="body-md">
                 Ricevo principalmente a Credaro e anche a Castenedolo; quando
@@ -181,8 +184,12 @@ export default function ChiSonoPage() {
           <div className="max-w-3xl space-y-4">
             <h2 className="heading-lg mb-4">Per chi cerca un supporto in zona</h2>
             <p className="body-md">
-              Se vivi tra Sarnico e il basso Lago d&apos;Iseo, puoi contare su
-              un riferimento stabile in presenza a Credaro.
+              Se vivi tra{' '}
+              <Link href="/psicologa-sarnico" className="link-inline">
+                zona Sarnico e Lago d&apos;Iseo
+              </Link>
+              , puoi contare su un riferimento stabile in presenza a Credaro
+              (circa 2 km / 5 minuti).
             </p>
             <p className="body-md">
               L&apos;obiettivo &egrave; aiutarti a <strong>ritrovare equilibrio</strong>,

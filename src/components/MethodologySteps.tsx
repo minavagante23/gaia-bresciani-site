@@ -47,7 +47,7 @@ export default function MethodologySteps() {
               title={linkTitle('/psicologa-sarnico')}
               className="link-inline"
             >
-              la pagina dedicata a Sarnico e al basso Lago d&apos;Iseo
+              psicologa vicino Sarnico e Lago d&apos;Iseo
             </Link>
             .
           </p>

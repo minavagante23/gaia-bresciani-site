@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import PageHeader from '@/components/PageHeader';
 import AnimatedSection from '@/components/AnimatedSection';
@@ -109,8 +110,12 @@ export default function EsperienzaPage() {
               Un ambiente riservato, tempi chiari e un piano di lavoro condiviso.
             </p>
             <p className="body-md">
-              Se vivi tra Sarnico e il basso Lago d&apos;Iseo, puoi trovare a
-              Credaro un riferimento vicino e continuativo.
+              Se vivi nella{' '}
+              <Link href="/psicologa-sarnico" className="link-inline">
+                zona Sarnico e Lago d&apos;Iseo
+              </Link>
+              , puoi trovare a Credaro un riferimento vicino e continuativo
+              (studio a 2 km / circa 5 minuti).
             </p>
           </div>
         </AnimatedSection>

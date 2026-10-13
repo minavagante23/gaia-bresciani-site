@@ -39,7 +39,7 @@ export default function TerapiaPage() {
             <p className="body-md">
               Ricevo a Credaro, in una sede comoda anche per chi arriva da{' '}
               <Link href="/psicologa-sarnico" className="link-inline">
-                Sarnico e dal basso Lago d&apos;Iseo
+                zona Sarnico e Lago d&apos;Iseo
               </Link>
               . Ricevo anche a Castenedolo, nell&apos;area di Brescia; in alcuni
               casi &egrave; possibile la{' '}

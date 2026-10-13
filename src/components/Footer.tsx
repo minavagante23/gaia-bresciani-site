@@ -15,7 +15,7 @@ const footerLinks = [
 ];
 
 const zoneLinks = [
-  { href: '/psicologa-sarnico', label: 'Sarnico e dintorni' },
+  { href: '/psicologa-sarnico', label: 'Psicologa vicino Sarnico' },
   { href: '/psicologa-palazzolo', label: 'Palazzolo sull\'Oglio' },
   { href: '/psicologa-villongo', label: 'Villongo e Val Calepio' },
   { href: '/psicologa-lago-iseo', label: 'Lago d\'Iseo' },

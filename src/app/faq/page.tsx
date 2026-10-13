@@ -99,7 +99,7 @@ export default function FaqPage() {
             <p className="text-sm text-primary/60 mt-8">
               Se vuoi informazioni pratiche sugli spostamenti, puoi vedere le pagine dedicate a{' '}
               <Link href="/psicologa-sarnico" className="link-inline">
-                Sarnico e al basso Lago d&apos;Iseo
+                psicologa vicino Sarnico
               </Link>
               ,{' '}
               <Link href="/psicologa-palazzolo" className="link-inline">
