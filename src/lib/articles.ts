@@ -23,6 +23,57 @@ export interface Article {
 
 const articles: Article[] = [
   {
+    slug: 'rabbia-quando-esplode-o-si-trattiene',
+    date: '17 ottobre 2026',
+    publishedAt: '2026-10-17T00:00:00.000Z',
+    readTime: '7 min',
+    title: 'Rabbia: quando esplode, quando si trattiene e quando chiedere aiuto',
+    excerpt:
+      'La rabbia può uscire a raffiche o restare sotto pelle per settimane. Come riconoscerne i segnali, cosa protegge davvero e quando un confronto psicologico può aiutare a gestirla senza distruggere relazioni.',
+    tags: ['Benessere emotivo', 'Rabbia'],
+    content: [
+      'A volte arriva come un lampo: voce alta, parole taglienti, una porta che sbatte. Altre volte non si vede quasi: si stringono i denti, si sorride per dovere, si accumula tensione fino a sentirsi stanchi senza un motivo chiaro. In entrambi i casi la rabbia c\'è. Cambia solo il modo in cui viene gestita — o evitata.',
+      'La rabbia non è un errore di carattere. È un\'emozione di confine: segnala che qualcosa di importante sembra violato — rispetto, tempo, giustizia, bisogno di spazio. Il problema non è provarla. Il problema nasce quando diventa l\'unica lingua disponibile, oppure quando viene repressa così a lungo da trasformarsi in rancore, ansia o stanchezza cronica.',
+      { type: 'h2', text: 'Due volti della stessa emozione' },
+      'Esiste una rabbia che esplode: litigi improvvisi, reazioni sproporzionate, senso di perdita di controllo. E esiste una rabbia che si trattiene: silenzi lunghi, ironia tagliente, difficoltà a dire "mi ha ferito", corpo contratto. Spesso sono due strategie diverse per la stessa sensazione di non essere ascoltati o rispettati.',
+      'Chi esplode di solito teme di non essere preso sul serio se resta calmo. Chi trattiene teme di rovinare la relazione, di sembrare "troppo", di riprodurre scene di rabbia viste da bambino. In entrambi i casi manca uno spazio intermedio: poter dire che si è arrabbiati senza distruggere e senza sparire.',
+      { type: 'h2', text: 'I segnali da osservare' },
+      'Alcuni segnali utili, senza etichettarsi troppo in fretta:',
+      {
+        type: 'list',
+        items: [
+          'scoppi frequenti su dettagli piccoli, seguiti da rimorso',
+          'difficoltà a nominare la rabbia: si parla di "stress" o "stanchezza" ma non di ciò che ha ferito',
+          'corpo in allerta: mascella tesa, stomaco chiuso, sonno agitato',
+          'pensieri ripetitivi su un torto subito, anche ore dopo',
+          'tendenza a far finta di niente e poi esplodere tardi, su un altro tema',
+          'paura del proprio carattere, o paura della rabbia altrui',
+        ],
+      },
+      'Un episodio isolato non dice molto. Contano frequenza, intensità e conseguenze: relazioni che si irrigidiscono, senso di colpa costante, o la sensazione di non potersi difendere senza "andare troppo oltre".',
+      { type: 'h2', text: 'Cosa protegge davvero la rabbia' },
+      'Sotto la rabbia c\'è spesso altro: umiliazione, paura di non contare, senso di ingiustizia, stanchezza di essere sempre disponibili. Esplodere può dare un sollievo breve e l\'illusione di riprendersi potere. Trattenere può dare l\'illusione di mantenere la pace. Nel tempo, però, entrambe le strategie lasciano un prezzo: distanza, incomprensioni, o un\'autocritica che dice "sono sbagliato/a a sentire questo".',
+      'In alcune storie la rabbia è legata a confini deboli: si accumula perché si è detto sì troppo spesso. In altre è legata a esperienze in cui non era sicuro esprimere disaccordo. Capire cosa sta proteggendo — e da cosa — è già un passo diverso dal solo "controllarsi".',
+      {
+        type: 'cta',
+        before:
+          'Se la rabbia sta diventando un tema ricorrente, può aiutare un',
+        links: [
+          { href: '/terapia', label: 'percorso di terapia individuale' },
+          { href: '/contatti', label: 'primo colloquio senza impegno' },
+        ],
+      },
+      { type: 'h2', text: 'Cosa può aiutare, in concreto' },
+      'Un primo passo è riconoscere la rabbia prima che esploda o si solidifichi: notare i segnali fisici, dare un nome a ciò che è successo ("mi sono sentito/a sminuito/a"), e distinguere tra il bisogno legittimo e il modo in cui lo si esprime. Può aiutare rallentare la risposta — anche solo qualche minuto — senza trasformare il silenzio in punizione.',
+      'Nella comunicazione conta la chiarezza: "quando succede X, mi sento Y e avrei bisogno di Z" è diverso da un attacco globale alla persona. Allo stesso modo, trattenere tutto e poi far finta di niente non protegge la relazione: lascia all\'altro un vuoto e a sé un carico. Imparare a mettere un limite piccolo e tempestivo riduce la necessità di esplodere dopo.',
+      'Se la rabbia arriva a ondate molto intense, può essere utile anche lavorare sul corpo: respiro, movimento, pause reali. Non per "eliminare" l\'emozione, ma per non lasciarle solo la strada dell\'esplosione o del congelamento.',
+      { type: 'h2', text: 'Quando può servire un percorso psicologico' },
+      'Un confronto può essere utile quando la rabbia regola le giornate, quando i litigi si ripetono sugli stessi punti, quando si ha paura di sé stessi, o quando si trattiene tutto e poi ci si ammala di tensione, insonnia o senso di vuoto. A volte serve capire come la rabbia si è imparata in famiglia; altre volte serve allenare un modo nuovo di difendersi senza distruggere.',
+      'L\'obiettivo non è diventare persone che non si arrabbiano mai. È poter sentire la rabbia, usarla come informazione e scegliere una risposta più chiara — verso gli altri e verso sé.',
+      'Se vivi tra Credaro, Sarnico o il basso Lago d\'Iseo e riconosci che la rabbia sta costando troppo in termini di relazioni o di benessere, un primo colloquio in presenza a Credaro può aiutarti a capire da dove ripartire, senza giudizi.',
+    ],
+  },
+  {
     slug: 'gelosia-nelle-relazioni',
     date: '30 settembre 2026',
     publishedAt: '2026-09-30T00:00:00.000Z',
@@ -750,6 +801,10 @@ export interface ArticleHero {
 }
 
 const articleHeroes: Record<string, ArticleHero> = {
+  'rabbia-quando-esplode-o-si-trattiene': {
+    src: '/assets/approfondimenti/approfondimenti-rabbia.webp',
+    alt: 'Rabbia: tensione contenuta e bisogno di dare forma a ciò che brucia sotto pelle',
+  },
   'gelosia-nelle-relazioni': {
     src: '/assets/approfondimenti/approfondimenti-gelosia.webp',
     alt: 'Gelosia nelle relazioni: quando il sospetto occupa spazio tra due persone',
