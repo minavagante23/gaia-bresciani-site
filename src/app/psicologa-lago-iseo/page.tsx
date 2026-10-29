@@ -41,8 +41,8 @@ export default function ZonaLagoIseoPage() {
       <Breadcrumb items={[{ label: 'Zona Lago d\'Iseo' }]} />
       <PageHeader
         eyebrow="Area servita"
-        title="Psicologa per chi vive sul Lago d'Iseo"
-        subtitle="Lo studio di Credaro è a pochi minuti dal basso Sebino: qui trovi le informazioni pratiche per organizzare un primo colloquio."
+        title="Psicologa Lago d'Iseo: studio a Credaro, basso Sebino"
+        subtitle="Cerchi una psicologa sul Lago d'Iseo? Lo studio è a Credaro, a pochi minuti da Sarnico e dal basso Sebino: parcheggio privato, anche il sabato, online se sei più lontano."
       />
 
       <section className="section-container pb-16">

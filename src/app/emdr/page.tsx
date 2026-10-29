@@ -31,7 +31,7 @@ export default function EmdrPage() {
       <PageHeader
         eyebrow="Terapia EMDR"
         title="EMDR per traumi e ansia vicino Sarnico"
-        subtitle="Un approccio psicoterapeutico riconosciuto per il trattamento di traumi, eventi stressanti e ricordi che continuano ad attivare sofferenza."
+        subtitle="Cerchi terapia EMDR vicino a Sarnico o al Lago d'Iseo? Approccio riconosciuto per traumi, eventi stressanti e ricordi che continuano ad attivare sofferenza, con studio a Credaro."
       />
 
       <section className="section-container pb-16">

@@ -89,7 +89,7 @@ export default function FaqPage() {
       <PageHeader
         eyebrow="Domande frequenti"
         title="Primo colloquio, costi e orari"
-        subtitle="Risposte chiare su primo colloquio, sedi, durata del percorso e modalità di lavoro."
+        subtitle="Quanto costa una seduta (70–100 €)? Dove ricevo (Credaro e Castenedolo)? Come funziona il primo colloquio e l'online? Risposte pratiche prima di scrivere."
       />
 
       <section className="section-container pb-8">

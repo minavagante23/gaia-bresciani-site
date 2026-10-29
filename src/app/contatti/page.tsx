@@ -71,7 +71,7 @@ export default function ContattiPage() {
       <PageHeader
         eyebrow="Contatti"
         title="Contatti e primo colloquio"
-        subtitle="WhatsApp è il modo più rapido. Qui sotto trovi cosa scrivere, i tempi di risposta e come arrivare in studio."
+        subtitle="Vuoi fissare un primo colloquio? WhatsApp è il modo più rapido (+39 340 838 9958). Qui: cosa scrivere, tempi di risposta, sedi a Credaro e Castenedolo, MioDottore."
       />
 
       <section className="section-container pb-12 sm:pb-16">

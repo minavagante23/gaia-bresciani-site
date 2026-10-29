@@ -23,7 +23,7 @@ export default function TerapiaPage() {
       <PageHeader
         eyebrow="Percorsi terapeutici"
         title="Terapia individuale e di coppia"
-        subtitle="Un percorso chiaro per ansia, relazioni, autostima e momenti di blocco, con studio a Credaro vicino a Sarnico."
+        subtitle="Cerchi terapia individuale o di coppia? Percorsi chiari per ansia, relazioni, autostima e momenti di blocco, con studio a Credaro vicino a Sarnico e Lago d'Iseo."
       />
 
       <section className="section-container pb-16">

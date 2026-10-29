@@ -37,8 +37,8 @@ export default function ZonaPalazzoloPage() {
       <Breadcrumb items={[{ label: 'Zona Palazzolo sull\'Oglio' }]} />
       <PageHeader
         eyebrow="Area servita"
-        title="Psicologa per Palazzolo sull&apos;Oglio: studio a Credaro"
-        subtitle="Circa 12 minuti in auto, parcheggio privato, anche il sabato. Il primo colloquio si svolge in presenza a Credaro."
+        title="Psicologa Palazzolo sull&apos;Oglio: studio a Credaro (12 min)"
+        subtitle="Cerchi una psicologa a Palazzolo sull&apos;Oglio? Ricevo a Credaro in circa 12 minuti: parcheggio privato, anche il sabato. Il primo colloquio è in presenza."
       />
 
       <section className="section-container pb-16">

@@ -1,16 +1,31 @@
 import type { MetadataRoute } from 'next';
 
+const AI_SEARCH_BOTS = [
+  'OAI-SearchBot',
+  'ChatGPT-User',
+  'GPTBot',
+  'ClaudeBot',
+  'Claude-SearchBot',
+  'anthropic-ai',
+  'PerplexityBot',
+  'Google-Extended',
+  'GoogleOther',
+  'Applebot-Extended',
+  'Bytespider',
+  'CCBot',
+] as const;
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
         userAgent: '*',
         allow: '/',
-        // Nessun Disallow: sito statico (output: 'export'), niente /api/.
-        // Le HTML legacy non vanno bloccate: devono essere scansionabili
-        // cosi' Google vede noindex + canonical e consolida sulle URL nuove.
-        // Non bloccare /_next/: serve a Google per il rendering.
       },
+      ...AI_SEARCH_BOTS.map((userAgent) => ({
+        userAgent,
+        allow: '/' as const,
+      })),
     ],
     host: 'https://www.gaiabrescianipsicologa.it',
     sitemap: 'https://www.gaiabrescianipsicologa.it/sitemap.xml',

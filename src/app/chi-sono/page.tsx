@@ -23,7 +23,7 @@ export default function ChiSonoPage() {
       <PageHeader
         eyebrow="Psicologa e Psicoterapeuta"
         title="Chi sono"
-        subtitle="Metto al centro la persona, non la diagnosi. Ogni percorso parte da te, dalla tua storia e da quello che stai vivendo."
+        subtitle="Gaia Bresciani, psicologa e psicoterapeuta a Credaro vicino a Sarnico. Metto al centro la persona, non la diagnosi: ogni percorso parte da te e da quello che stai vivendo."
       />
 
       <section className="section-container pb-20">

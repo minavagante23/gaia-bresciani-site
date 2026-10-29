@@ -131,6 +131,8 @@ function SchemaOrgJsonLd() {
     sameAs: [
       'https://www.facebook.com/StudioPrivatoViaPiave7CredaroBG/',
       'https://www.linkedin.com/in/gaia-bresciani-357aa8106/',
+      'https://www.opl.it/psicologi/22433/Bresciani-Gaia-Miriam-Teresa',
+      'https://www.miodottore.it/gaia-miriam-teresa-bresciani/psicoterapeuta-psicologo-clinico-psicologo/brescia',
     ],
     knowsAbout: [
       'Psicoterapia',
@@ -325,6 +327,8 @@ export default function RootLayout({
           fetchPriority="high"
         />
         <link rel="alternate" type="text/markdown" href="/llms.txt" title="llms.txt" />
+        <link rel="alternate" type="text/plain" href="/llms-full.txt" title="llms-full.txt" />
+        <link rel="alternate" type="text/markdown" href="/AI-README.md" title="AI-README" />
         <script dangerouslySetInnerHTML={{ __html: GTAG_INIT_SCRIPT }} />
         <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
         <script src="/register-sw.js" defer />

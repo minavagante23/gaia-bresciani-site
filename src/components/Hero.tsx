@@ -32,8 +32,9 @@ export default function Hero() {
             </p>
 
             <p className="body-lg max-w-xl">
-              Dal primo colloquio: ascolto clinico, chiarezza e obiettivi
-              condivisi.
+              Studio a Credaro, a circa 5 minuti da Sarnico, con parcheggio
+              privato. Dal primo colloquio: ascolto clinico, chiarezza e
+              obiettivi condivisi.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-2">

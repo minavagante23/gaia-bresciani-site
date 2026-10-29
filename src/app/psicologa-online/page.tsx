@@ -60,7 +60,7 @@ export default function PsicologaOnlinePage() {
       <PageHeader
         eyebrow="Terapia online"
         title="Psicologa online: colloqui in videochiamata"
-        subtitle="Un percorso psicologico serio anche a distanza: stessa cura, stessa riservatezza e la flessibilità di collegarsi da dove si è."
+        subtitle="Cerchi una psicologa online? Sedute in videochiamata con la stessa durata e struttura dello studio a Credaro: riservatezza, chiarezza e continuità anche da lontano."
       />
 
       <section className="section-container pb-16">

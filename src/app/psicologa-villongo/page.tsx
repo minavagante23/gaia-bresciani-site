@@ -41,8 +41,8 @@ export default function ZonaVillongoPage() {
       <Breadcrumb items={[{ label: 'Zona Villongo e Val Calepio' }]} />
       <PageHeader
         eyebrow="Area servita"
-        title="Psicologa a due passi da Villongo, in Val Calepio"
-        subtitle="Informazioni pratiche se vivi a Villongo o nei comuni della Val Calepio e stai valutando un primo colloquio."
+        title="Psicologa a Villongo e Val Calepio: studio a Credaro"
+        subtitle="Cerchi una psicologa a Villongo? Ricevo a Credaro, a pochi minuti dalla Val Calepio: parcheggio privato, anche il sabato. Il primo colloquio è in presenza."
       />
 
       <section className="section-container pb-16">
