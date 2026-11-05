@@ -34,7 +34,11 @@ export const LINKEDIN_URL =
 
 export const LINKEDIN_LABEL = 'Profilo LinkedIn di Gaia Bresciani';
 
+export const LINKEDIN_DISPLAY = 'Gaia Bresciani';
+
 export const FACEBOOK_URL =
   'https://www.facebook.com/StudioPrivatoViaPiave7CredaroBG/';
 
 export const FACEBOOK_LABEL = 'Pagina Facebook dello studio di psicologia';
+
+export const FACEBOOK_DISPLAY = 'Studio a Credaro';

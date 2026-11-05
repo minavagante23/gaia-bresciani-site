@@ -23,6 +23,57 @@ export interface Article {
 
 const articles: Article[] = [
   {
+    slug: 'solitudine-sentirsi-soli',
+    date: '5 novembre 2026',
+    publishedAt: '2026-11-05T00:00:00.000Z',
+    readTime: '7 min',
+    title: 'Solitudine: quando sentirsi soli non passa stando con gli altri',
+    excerpt:
+      'Si può essere circondati e sentirsi comunque isolati. Come riconoscere la solitudine emotiva, cosa la mantiene e quando un confronto psicologico può aiutare a ritrovare vicinanza.',
+    tags: ['Benessere emotivo', 'Relazioni'],
+    content: [
+      'C\'è una solitudine evidente: vivere da soli, avere pochi contatti, passare le sere senza sentire nessuno. E c\'è una solitudine più silenziosa: si è in famiglia, al lavoro, in una relazione, eppure resta la sensazione di non essere davvero raggiunti. Si parla, si ride, si organizzano impegni — ma dentro resta uno spazio vuoto difficile da nominare.',
+      'La solitudine non è solo "mancanza di gente". È spesso mancanza di riconoscimento: la sensazione di non poter mostrare ciò che si prova senza dover spiegare troppo, o di non trovare qualcuno disposto a stare lì senza risolvere subito. Per questo può durare anche quando l\'agenda è piena.',
+      { type: 'h2', text: 'Solitudine sociale e solitudine emotiva' },
+      'La solitudine sociale riguarda i contatti: pochi amici, poco tempo condiviso, reti che si assottigliano dopo un trasferimento, una separazione, un cambio di lavoro. La solitudine emotiva riguarda la qualità del legame: si può avere molte persone intorno e sentirsi comunque invisibili, o non potersi mostrare senza paura di deludere, disturbare o essere giudicati.',
+      'Le due forme a volte si intrecciano. Chi si sente emotivamente solo può ritirarsi, e il ritiro riduce ulteriormente i contatti. Chi ha pochi contatti può iniziare a pensare di non essere "interessante" o "degno" di vicinanza. In entrambi i casi il rischio è trasformare una fase difficile in una storia su di sé: "sono fatto/a così", "non riesco a stare con gli altri".',
+      { type: 'h2', text: 'I segnali da osservare' },
+      'Alcuni segnali utili, senza ridursi a un\'etichetta:',
+      {
+        type: 'list',
+        items: [
+          'sensazione di non poter parlare davvero di ciò che si prova',
+          'stanchezza dopo le interazioni, come se si fosse "recitato" un ruolo',
+          'scorrere ore sui social cercando vicinanza, poi sentirsi ancora più vuoti',
+          'difficoltà a chiedere aiuto o compagnia per paura di pesare',
+          'pensiero frequente di essere "di troppo" o non abbastanza interessanti',
+          'invidia o dolore davanti a relazioni altrui che sembrano più facili',
+        ],
+      },
+      'Un periodo di solitudine dopo un lutto, una separazione o un trasferimento può essere una risposta umana. Diventa più pesante quando dura a lungo, limita la vita quotidiana o si accompagna a senso di vuoto, insonnia, autocritica costante.',
+      { type: 'h2', text: 'Cosa mantiene la solitudine' },
+      'A volte la solitudine nasce da circostanze reali: lavoro che consuma tempo, distanza geografica, fine di un gruppo di amici. Altre volte è tenuta viva da meccanismi interni: aspettarsi di dover essere sempre "a posto" per meritare vicinanza; scegliere relazioni poco reciproche; evitare il rischio di mostrarsi vulnerabili; o restare in ambienti dove non c\'è spazio per i propri bisogni.',
+      'C\'è anche una solitudine che protegge. Dopo delusioni, tradimenti o giudizi ripetuti, tenersi a distanza può sembrare più sicuro. Funziona nel breve: meno rischio. Nel lungo periodo, però, conferma l\'idea che nessuno possa davvero stare vicino — e la solitudine si solidifica.',
+      {
+        type: 'cta',
+        before:
+          'Se la solitudine sta diventando un tema ricorrente, può aiutare un',
+        links: [
+          { href: '/terapia', label: 'percorso di terapia individuale' },
+          { href: '/contatti', label: 'primo colloquio senza impegno' },
+        ],
+      },
+      { type: 'h2', text: 'Cosa può aiutare, in concreto' },
+      'Un primo passo è distinguere tra "voglio stare da solo/a" e "mi sto isolando perché non so come avvicinarmi". Il riposo scelto ricarica; l\'isolamento difensivo spesso lascia più pesantezza. Può aiutare nominare a qualcuno di fiducia un pezzo piccolo di ciò che si vive, senza dover raccontare tutto. La vicinanza raramente nasce da grandi confessioni: nasce da piccoli gesti ripetuti di presenza.',
+      'Utile anche osservare dove si cerca sollievo: se solo online, se solo nel lavoro, se solo nella relazione di coppia. Nessun canale da solo regge tutto il bisogno di essere visti. Allargare un po\' — una passeggiata con una persona, un interesse condiviso, un contatto ripreso senza pretese — può riaprire possibilità senza forzare "a socializzare di più".',
+      'Se la solitudine è legata a vergogna, bassa autostima o paura del giudizio, i consigli pratici da soli bastano poco. Serve capire cosa rende la vicinanza così rischiosa, e costruire un\'esperienza diversa di essere ascoltati senza dover "meritare" il posto.',
+      { type: 'h2', text: 'Quando può servire un percorso psicologico' },
+      'Un confronto può essere utile quando la solitudine dura da mesi, quando si è circondati ma ci si sente invisibili, quando chiedere vicinanza genera panico o colpa, o quando dietro ci sono perdite non elaborate, relazioni poco reciproche, ansia sociale o un\'autocritica che dice "non valgo la presenza degli altri".',
+      'La terapia non sostituisce le relazioni della vita reale. Può però diventare uno spazio in cui sperimentare di essere ascoltati senza giudizio, e da lì riprendere fiducia verso fuori. L\'obiettivo non è "non stare mai soli": è non restare soli con ciò che pesa.',
+      'Se vivi tra Credaro, Sarnico o il basso Lago d\'Iseo e riconosci che la solitudine sta costando troppo, un primo colloquio in presenza a Credaro può aiutarti a capire da dove ripartire, senza pressione e senza giudizi.',
+    ],
+  },
+  {
     slug: 'rabbia-quando-esplode-o-si-trattiene',
     date: '17 ottobre 2026',
     publishedAt: '2026-10-17T00:00:00.000Z',
@@ -801,6 +852,10 @@ export interface ArticleHero {
 }
 
 const articleHeroes: Record<string, ArticleHero> = {
+  'solitudine-sentirsi-soli': {
+    src: '/assets/approfondimenti/approfondimenti-solitudine.webp',
+    alt: 'Solitudine: sedia vuota al tavolo e luce calda, quando la vicinanza manca anche in casa',
+  },
   'rabbia-quando-esplode-o-si-trattiene': {
     src: '/assets/approfondimenti/approfondimenti-rabbia.webp',
     alt: 'Rabbia: tensione contenuta e bisogno di dare forma a ciò che brucia sotto pelle',

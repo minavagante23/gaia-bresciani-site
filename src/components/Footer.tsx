@@ -119,7 +119,7 @@ export default function Footer() {
               </li>
             </ul>
 
-            <div className="flex items-center gap-3 mt-6">
+            <div className="flex items-center gap-2 mt-6">
               <SocialIconLink network="linkedin" variant="light" />
               <SocialIconLink network="facebook" variant="light" />
             </div>

@@ -11,6 +11,10 @@ import {
   CTA_TRUST_LINE,
   EMAIL_DISPLAY,
   EMAIL_HREF,
+  FACEBOOK_DISPLAY,
+  FACEBOOK_LABEL,
+  FACEBOOK_URL,
+  LINKEDIN_DISPLAY,
   LINKEDIN_LABEL,
   LINKEDIN_URL,
   MIODOTTORE_BOOKING_URL,
@@ -20,7 +24,7 @@ import {
   WHATSAPP_TITLE,
   WHATSAPP_URL,
 } from '@/lib/contact';
-import { MessageCircle, ExternalLink, Linkedin } from 'lucide-react';
+import { MessageCircle, ExternalLink } from 'lucide-react';
 
 export const metadata: Metadata = createPageMetadata({
   title: 'Prenota un primo colloquio | Credaro, 5 min da Sarnico',
@@ -190,18 +194,23 @@ export default function ContattiPage() {
                     rel="noopener noreferrer"
                     title={LINKEDIN_LABEL}
                     aria-label={LINKEDIN_LABEL}
-                    className="flex items-center gap-3 rounded-xl -mx-2 px-2 py-1.5 hover:bg-primary/[0.03] transition-colors"
+                    className="block rounded-xl -mx-2 px-2 py-1.5 hover:bg-primary/[0.03] transition-colors"
                   >
-                    <span
-                      className="inline-flex items-center justify-center w-10 h-10 shrink-0 rounded-full border border-primary/10 text-primary/70"
-                      aria-hidden="true"
-                    >
-                      <Linkedin size={16} strokeWidth={1.75} />
-                    </span>
-                    <span>
-                      <p className="text-sm font-medium text-primary-light mb-0.5">LinkedIn</p>
-                      <p className="body-md text-primary !leading-snug">Profilo professionale</p>
-                    </span>
+                    <p className="text-sm font-medium text-primary-light mb-0.5">LinkedIn</p>
+                    <p className="body-md text-primary !leading-snug">{LINKEDIN_DISPLAY}</p>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={FACEBOOK_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={FACEBOOK_LABEL}
+                    aria-label={FACEBOOK_LABEL}
+                    className="block rounded-xl -mx-2 px-2 py-1.5 hover:bg-primary/[0.03] transition-colors"
+                  >
+                    <p className="text-sm font-medium text-primary-light mb-0.5">Facebook</p>
+                    <p className="body-md text-primary !leading-snug">{FACEBOOK_DISPLAY}</p>
                   </a>
                 </li>
               </ul>
