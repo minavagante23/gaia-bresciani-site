@@ -28,3 +28,13 @@ export const WHATSAPP_TITLE =
 
 export const WHATSAPP_ARIA =
   'Prenota il primo colloquio in presenza su WhatsApp con Gaia Bresciani';
+
+export const LINKEDIN_URL =
+  'https://www.linkedin.com/in/gaia-bresciani-357aa8106/';
+
+export const LINKEDIN_LABEL = 'Profilo LinkedIn di Gaia Bresciani';
+
+export const FACEBOOK_URL =
+  'https://www.facebook.com/StudioPrivatoViaPiave7CredaroBG/';
+
+export const FACEBOOK_LABEL = 'Pagina Facebook dello studio di psicologia';

@@ -8,6 +8,8 @@ const AI_SEARCH_BOTS = [
   'Claude-SearchBot',
   'anthropic-ai',
   'PerplexityBot',
+  'Perplexity-User',
+  'Bingbot',
   'Google-Extended',
   'GoogleOther',
   'Applebot-Extended',
