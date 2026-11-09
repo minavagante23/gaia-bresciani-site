@@ -11,7 +11,7 @@ import { createPageMetadata } from '@/lib/seo';
 export const metadata: Metadata = createPageMetadata({
   title: "Psicologa Sarnico e Lago d'Iseo | Studio a Credaro (2 km) | Gaia Bresciani",
   description:
-    "Cerchi una psicologa a Sarnico? Lo studio è a Credaro, a 2 km dal centro (circa 5 minuti in auto): parcheggio privato, anche sabato e sera. Terapia individuale, di coppia ed EMDR.",
+    "Cerchi una psicologa a Sarnico? Lo studio è a Credaro, a 2 km dal centro (circa 5 minuti in auto): parcheggio privato, orari Lun–Ven 9–19. Terapia individuale, di coppia ed EMDR.",
   path: '/psicologa-sarnico',
   ogTitle: "Psicologa Sarnico e Lago d'Iseo | Studio a Credaro (2 km) | Gaia Bresciani",
   ogDescription:
@@ -28,8 +28,8 @@ const highlights = [
     text: 'Il primo incontro è in presenza a Credaro. Online solo se serve continuità, non come alternativa di default.',
   },
   {
-    title: 'Anche il sabato',
-    text: 'Orari fino a sera nei giorni feriali e il sabato mattina-pomeriggio. EMDR quando indicato.',
+    title: 'Orari Lun–Ven 9–19',
+    text: 'Dal lunedì al venerdì ricevo su appuntamento dalle 9 alle 19. Sabato e domenica lo studio è chiuso. EMDR quando indicato.',
   },
 ];
 
@@ -37,7 +37,7 @@ const faqItems = [
   {
     question: "C'\u00e8 uno studio di psicologia a Sarnico?",
     answer:
-      "Non ricevo in centro a Sarnico: lo studio \u00e8 a Credaro, Via Piave 7, a circa 2 km dal centro di Sarnico (circa 5 minuti in auto sulla SP469). \u00c8 la scelta pi\u00f9 pratica per parcheggio, orari serali e sabato, senza il traffico del lungolago.",
+      "Non ricevo in centro a Sarnico: lo studio \u00e8 a Credaro, Via Piave 7, a circa 2 km dal centro di Sarnico (circa 5 minuti in auto sulla SP469). \u00c8 la scelta pi\u00f9 pratica per parcheggio e orari Lun\u2013Ven 9\u201319, senza il traffico del lungolago.",
   },
   {
     question: 'Quanto ci vuole da Sarnico allo studio?',
@@ -64,7 +64,7 @@ export default function ZonaSarnicoPage() {
       <PageHeader
         eyebrow="Area servita"
         title="Psicologa a Sarnico e Lago d'Iseo: studio a Credaro a 2 km"
-        subtitle="Cerchi una psicologa a Sarnico? Ricevo a Credaro, a 5 minuti: parcheggio privato, anche il sabato. Il primo colloquio è in presenza, non in centro paese."
+        subtitle="Cerchi una psicologa a Sarnico? Ricevo a Credaro, a 5 minuti: parcheggio privato, orari Lun–Ven 9–19. Il primo colloquio è in presenza, non in centro paese."
       />
 
       <section className="section-container pb-16">
@@ -94,7 +94,7 @@ export default function ZonaSarnicoPage() {
               </p>
               <p className="body-md">
                 A Credaro c&apos;è parcheggio privato in cortile (niente giro
-                sul lungolago), orari anche serali e il sabato, e un accesso
+                sul lungolago), orari Lun&ndash;Ven 9&ndash;19, e un accesso
                 più semplice dal basso Lago d&apos;Iseo e dalla Val Calepio.
                 Per chi vive a Sarnico, Paratico, Capriolo o Villongo è lo
                 stesso bacino, con meno attrito pratico di una sede in centro.

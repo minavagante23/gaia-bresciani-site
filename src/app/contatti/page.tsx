@@ -29,7 +29,7 @@ import { MessageCircle, ExternalLink } from 'lucide-react';
 export const metadata: Metadata = createPageMetadata({
   title: 'Prenota un primo colloquio | Credaro, 5 min da Sarnico',
   description:
-    'WhatsApp per un primo colloquio a Credaro, 5 minuti da Sarnico. Risposta entro 24 ore. Parcheggio privato, anche il sabato. Oppure MioDottore o telefono.',
+    'WhatsApp per un primo colloquio a Credaro, 5 minuti da Sarnico. Risposta entro 24 ore. Parcheggio privato, orari Lun–Ven 9–19. Oppure MioDottore o telefono.',
   path: '/contatti',
   ogTitle: 'Prenota un primo colloquio | Gaia Bresciani',
   ogDescription:
@@ -184,7 +184,7 @@ export default function ContattiPage() {
                 <li className="px-2 -mx-2 py-1.5">
                     <p className="text-sm font-medium text-primary-light mb-0.5">Orari</p>
                     <p className="body-md text-primary !leading-snug">
-                      Lun-Ven 7-21, Sab 9-16:30
+                      Lun-Ven 9:00-19:00 · Chiuso sabato e domenica
                     </p>
                 </li>
                 <li>

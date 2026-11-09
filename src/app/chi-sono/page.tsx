@@ -10,7 +10,7 @@ import { createPageMetadata } from '@/lib/seo';
 export const metadata: Metadata = createPageMetadata({
   title: 'Gaia Bresciani, psicologa a Credaro vicino Sarnico',
   description:
-    'Psicologa e psicoterapeuta a Credaro, a 5 minuti da Sarnico. Albo Lombardia n. 22433. Percorsi per ansia, relazioni ed EMDR, anche il sabato.',
+    'Psicologa e psicoterapeuta a Credaro, a 5 minuti da Sarnico. Albo Lombardia n. 22433. Percorsi per ansia, relazioni ed EMDR, orari Lun–Ven 9–19.',
   path: '/chi-sono',
   ogDescription:
     'Approccio clinico adleriano ed EMDR, con percorsi personalizzati per ansia, relazioni, autostima e momenti di crisi.',

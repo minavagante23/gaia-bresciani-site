@@ -11,7 +11,7 @@ import { createPageMetadata } from '@/lib/seo';
 export const metadata: Metadata = createPageMetadata({
   title: 'Primo colloquio, costi e orari | Psicologa a Credaro',
   description:
-    'Quanto costa, quanto dura, orari anche il sabato e come funziona il primo colloquio. Studio a Credaro, 5 minuti da Sarnico.',
+    'Quanto costa, quanto dura, orari Lun–Ven 9–19 e come funziona il primo colloquio. Studio a Credaro, 5 minuti da Sarnico.',
   path: '/faq',
   ogTitle: 'Primo colloquio, costi e orari | Gaia Bresciani',
   ogDescription:
@@ -77,7 +77,7 @@ const faqItems = [
   {
     question: 'Lavori anche nel weekend o in orari serali?',
     answer:
-      'Sì: dal lunedì al venerdì ricevo su appuntamento anche in fascia serale (fino alle 21) e il sabato dalle 9 alle 16:30.',
+      'Dal lunedì al venerdì ricevo su appuntamento dalle 9 alle 19. Sabato e domenica lo studio è chiuso.',
   },
 ];
 

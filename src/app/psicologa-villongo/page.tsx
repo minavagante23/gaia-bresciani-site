@@ -42,7 +42,7 @@ export default function ZonaVillongoPage() {
       <PageHeader
         eyebrow="Area servita"
         title="Psicologa a Villongo e Val Calepio: studio a Credaro"
-        subtitle="Cerchi una psicologa a Villongo? Ricevo a Credaro, a pochi minuti dalla Val Calepio: parcheggio privato, anche il sabato. Il primo colloquio è in presenza."
+        subtitle="Cerchi una psicologa a Villongo? Ricevo a Credaro, a pochi minuti dalla Val Calepio: parcheggio privato, orari Lun–Ven 9–19. Il primo colloquio è in presenza."
       />
 
       <section className="section-container pb-16">

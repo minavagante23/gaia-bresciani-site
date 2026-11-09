@@ -49,7 +49,7 @@ const CRITICAL_CSS = `
 export const metadata: Metadata = {
   title: 'Psicologa a Credaro | 5 min da Sarnico, parcheggio',
   description:
-    'Studio a Credaro (BG), 5 minuti da Sarnico. Parcheggio privato, anche sabato e sera. Individuale, coppia ed EMDR. Recensioni 5/5. Primo colloquio in presenza.',
+    'Studio a Credaro (BG), 5 minuti da Sarnico. Parcheggio privato, orari Lun–Ven 9–19. Individuale, coppia ed EMDR. Recensioni 5/5. Primo colloquio in presenza.',
   metadataBase: new URL(SITE_URL),
   authors: [{ name: siteConfig.author, url: SITE_URL }],
   creator: siteConfig.author,
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Psicologa a Credaro | 5 min da Sarnico | Gaia Bresciani',
     description:
-      'Studio a Credaro (BG), 5 minuti da Sarnico. Parcheggio privato, anche sabato e sera. Individuale, coppia ed EMDR. Recensioni 5/5. Primo colloquio in presenza.',
+      'Studio a Credaro (BG), 5 minuti da Sarnico. Parcheggio privato, orari Lun–Ven 9–19. Individuale, coppia ed EMDR. Recensioni 5/5. Primo colloquio in presenza.',
     url: `${SITE_URL}/`,
     siteName: siteConfig.name,
     images: [
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Psicologa a Credaro | 5 min da Sarnico | Gaia Bresciani',
     description:
-      'Studio a Credaro (BG), 5 minuti da Sarnico. Parcheggio privato, anche sabato e sera. Individuale, coppia ed EMDR. Recensioni 5/5. Primo colloquio in presenza.',
+      'Studio a Credaro (BG), 5 minuti da Sarnico. Parcheggio privato, orari Lun–Ven 9–19. Individuale, coppia ed EMDR. Recensioni 5/5. Primo colloquio in presenza.',
     images: [siteConfig.ogImage],
   },
   robots: {
@@ -230,20 +230,14 @@ function SchemaOrgJsonLd() {
       geoMidpoint: { '@type': 'GeoCoordinates', latitude: '45.6690', longitude: '9.9615' },
       geoRadius: '20000',
     },
-    // Orari allineati alla scheda Google Business Profile (Lun-Ven 07-21, Sab 09-16:30):
+    // Orari allineati alla scheda Google Business Profile (Lun-Ven 09:00-19:00; sabato e domenica chiusi):
     // un conflitto orari schema/GBP genera un segnale di entità incoerente.
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-        opens: '07:00',
-        closes: '21:00',
-      },
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: 'Saturday',
         opens: '09:00',
-        closes: '16:30',
+        closes: '19:00',
       },
     ],
     hasOfferCatalog: {

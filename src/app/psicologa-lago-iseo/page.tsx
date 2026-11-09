@@ -10,7 +10,7 @@ import { MapPin, Laptop, Target } from 'lucide-react';
 export const metadata: Metadata = createPageMetadata({
   title: 'Psicologa Lago d\'Iseo | Studio a Credaro, basso Sebino',
   description:
-    'Studio a Credaro per chi vive sul Lago d\'Iseo: pochi minuti dal basso Sebino, parcheggio privato, anche il sabato. Individuale, coppia ed EMDR.',
+    'Studio a Credaro per chi vive sul Lago d\'Iseo: pochi minuti dal basso Sebino, parcheggio privato, orari Lun–Ven 9–19. Individuale, coppia ed EMDR.',
   path: '/psicologa-lago-iseo',
   ogTitle: 'Psicologa Lago d\'Iseo | Studio a Credaro',
   ogDescription:
@@ -42,7 +42,7 @@ export default function ZonaLagoIseoPage() {
       <PageHeader
         eyebrow="Area servita"
         title="Psicologa Lago d'Iseo: studio a Credaro, basso Sebino"
-        subtitle="Cerchi una psicologa sul Lago d'Iseo? Lo studio è a Credaro, a pochi minuti da Sarnico e dal basso Sebino: parcheggio privato, anche il sabato, online se sei più lontano."
+        subtitle="Cerchi una psicologa sul Lago d'Iseo? Lo studio è a Credaro, a pochi minuti da Sarnico e dal basso Sebino: parcheggio privato, orari Lun–Ven 9–19, online se sei più lontano."
       />
 
       <section className="section-container pb-16">

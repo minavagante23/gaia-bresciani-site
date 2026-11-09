@@ -9,11 +9,11 @@ import { createPageMetadata } from '@/lib/seo';
 export const metadata: Metadata = createPageMetadata({
   title: 'Psicologa per Palazzolo sull\'Oglio | 12 min da Credaro',
   description:
-    'Studio a Credaro, circa 12 minuti da Palazzolo sull\'Oglio via Grumello. Parcheggio privato, anche il sabato, primo colloquio in presenza.',
+    'Studio a Credaro, circa 12 minuti da Palazzolo sull\'Oglio via Grumello. Parcheggio privato, orari Lun–Ven 9–19, primo colloquio in presenza.',
   path: '/psicologa-palazzolo',
   ogTitle: 'Psicologa per Palazzolo sull\'Oglio | 12 min da Credaro',
   ogDescription:
-    'Da Palazzolo a Credaro in circa 12 minuti. Parcheggio privato, anche il sabato, primo colloquio in presenza.',
+    'Da Palazzolo a Credaro in circa 12 minuti. Parcheggio privato, orari Lun–Ven 9–19, primo colloquio in presenza.',
 });
 
 const highlights = [
@@ -26,8 +26,8 @@ const highlights = [
     text: 'Il primo incontro è in presenza in Via Piave 7. Online solo se serve continuità dopo l\'avvio in studio.',
   },
   {
-    title: 'Parcheggio e sabato',
-    text: 'Parcheggio privato nello studio. Orari serali nei feriali e il sabato, utili per chi torna da lavoro o dalla A4.',
+    title: 'Parcheggio e orari feriali',
+    text: 'Parcheggio privato nello studio. Dal lunedì al venerdì ricevo dalle 9 alle 19; sabato e domenica lo studio è chiuso.',
   },
 ];
 
@@ -38,7 +38,7 @@ export default function ZonaPalazzoloPage() {
       <PageHeader
         eyebrow="Area servita"
         title="Psicologa Palazzolo sull&apos;Oglio: studio a Credaro (12 min)"
-        subtitle="Cerchi una psicologa a Palazzolo sull&apos;Oglio? Ricevo a Credaro in circa 12 minuti: parcheggio privato, anche il sabato. Il primo colloquio è in presenza."
+        subtitle="Cerchi una psicologa a Palazzolo sull&apos;Oglio? Ricevo a Credaro in circa 12 minuti: parcheggio privato, orari Lun–Ven 9–19. Il primo colloquio è in presenza."
       />
 
       <section className="section-container pb-16">

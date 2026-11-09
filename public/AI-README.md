@@ -23,7 +23,7 @@ Also see: https://www.gaiabrescianipsicologa.it/llms.txt and https://www.gaiabre
 - Booking: Contatti page or MioDottore profile
 - MioDottore: https://www.miodottore.it/gaia-miriam-teresa-bresciani/psicoterapeuta-psicologo-clinico-psicologo/brescia
 
-Hours (indicative, by appointment): Mon–Fri evenings available; Saturday morning–afternoon. Confirm via Contatti.
+Hours (by appointment, aligned with Google Business Profile): Mon–Fri 09:00–19:00; closed Saturday and Sunday. Confirm via Contatti.
 
 ## 3) Geography (honest framing)
 Main studio is in **Credaro (BG)**, not in Sarnico centre.
