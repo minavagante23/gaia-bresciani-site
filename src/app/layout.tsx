@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Fraunces, Source_Sans_3 } from 'next/font/google';
+import { Hanken_Grotesk } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import DeferredChrome from '@/components/DeferredChrome';
@@ -15,21 +15,11 @@ export const viewport: Viewport = {
   themeColor: '#243D42',
 };
 
-const fraunces = Fraunces({
+const hanken = Hanken_Grotesk({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-fraunces',
-  weight: ['500', '600', '700'],
-  adjustFontFallback: true,
-  preload: true,
-  fallback: ['Georgia', 'Times New Roman', 'serif'],
-});
-
-const sourceSans = Source_Sans_3({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-source-sans',
-  weight: ['400', '500', '600'],
+  variable: '--font-hanken',
+  weight: ['400', '500', '600', '700'],
   adjustFontFallback: true,
   preload: true,
   fallback: ['system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
@@ -37,10 +27,10 @@ const sourceSans = Source_Sans_3({
 
 const CRITICAL_CSS = `
   html,body{margin:0;background:#F2F5F4;color:#243D42}
-  body{font-family:var(--font-source-sans),system-ui,-apple-system,sans-serif;line-height:1.7}
+  body{font-family:var(--font-hanken),system-ui,-apple-system,sans-serif;line-height:1.7}
   header{position:fixed;top:0;left:0;right:0;z-index:50;background:#fff;border-bottom:1px solid rgba(36,61,66,.1)}
   main{padding-top:4rem}
-  h1,h2,h3,.heading-xl{font-family:var(--font-fraunces),Georgia,'Times New Roman',serif;color:#243D42;line-height:1.25}
+  h1,h2,h3,.heading-xl{font-family:var(--font-hanken),system-ui,-apple-system,sans-serif;color:#243D42;line-height:1.25}
   .heading-xl{font-size:clamp(2.4rem,1.45rem + 4.2vw,4.25rem);font-weight:700;line-height:1.04;letter-spacing:-0.025em}
   .body-lg{font-size:1rem;line-height:1.82;color:rgba(36,61,66,.85)}
   img{max-width:100%;height:auto}
@@ -307,7 +297,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="it" className={`${fraunces.variable} ${sourceSans.variable}`}>
+    <html lang="it" className={hanken.variable}>
       <head>
         <style dangerouslySetInnerHTML={{ __html: CRITICAL_CSS }} />
         <meta httpEquiv="X-DNS-Prefetch-Control" content="on" />

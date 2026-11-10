@@ -23,8 +23,8 @@ const config: Config = {
         whatsapp: '#128C7E',
       },
       fontFamily: {
-        serif: ['var(--font-fraunces)', 'Georgia', 'Times New Roman', 'serif'],
-        sans: ['var(--font-source-sans)', 'system-ui', '-apple-system', 'sans-serif'],
+        serif: ['var(--font-hanken)', 'system-ui', '-apple-system', 'sans-serif'],
+        sans: ['var(--font-hanken)', 'system-ui', '-apple-system', 'sans-serif'],
       },
       boxShadow: {
         soft: '0 10px 30px -10px rgba(36,61,66,0.10)',
